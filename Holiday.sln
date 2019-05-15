@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{88645AEE-58C3-44B5-BFE4-AB4471898AFA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{80737CAC-FA41-4875-84A5-AF8321D3A622}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cosmos.Business.Extensions.Holiday", "src\Cosmos.Business.Extensions.Holiday\Cosmos.Business.Extensions.Holiday.csproj", "{42D4F72A-932D-4508-B9D0-A7CFB08EC38B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{42D4F72A-932D-4508-B9D0-A7CFB08EC38B} = {88645AEE-58C3-44B5-BFE4-AB4471898AFA}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42D4F72A-932D-4508-B9D0-A7CFB08EC38B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42D4F72A-932D-4508-B9D0-A7CFB08EC38B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42D4F72A-932D-4508-B9D0-A7CFB08EC38B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42D4F72A-932D-4508-B9D0-A7CFB08EC38B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

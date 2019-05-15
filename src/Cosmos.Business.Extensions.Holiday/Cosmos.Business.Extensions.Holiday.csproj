@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <RootNamespace />
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Cosmos.Extensions.DateTime" Version="0.1.1-alpha3-123029" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Cosmos\Business\Extensions\Holiday\Core" />
+    </ItemGroup>
+
+</Project>
