@@ -5,7 +5,7 @@ namespace Cosmos.Abstractions
 {
     public interface IBizWeekendDefinition
     {
-        CountryCode CountryCode { get; }
+        Country Country { get; }
         WeekendType WeekendType { get; }
     }
 }

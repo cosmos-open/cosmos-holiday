@@ -4,6 +4,6 @@ namespace Cosmos.Abstractions
 {
     public interface IBizRegionHolidayDefinition
     {
-        CountryCode BelongsToCountryCode { get; }
+        Country BelongsToCountry { get; }
     }
 }

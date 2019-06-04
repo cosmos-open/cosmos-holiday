@@ -6,7 +6,7 @@ using Cosmos.Date;
 
 namespace Cosmos.Business.Extensions.Weekends
 {
-    public partial class WeekendDictionary : IWeekendDictionary
+    public class WeekendDictionary : IWeekendDictionary
     {
         public WeekendDictionary(WeekendType type, params DayOfWeek[] weekendDays)
         {
@@ -29,7 +29,7 @@ namespace Cosmos.Business.Extensions.Weekends
             }
         }
 
-        public WeekendType Type { get; } = WeekendType.Universal;
+        public WeekendType Type { get; }
 
         public IEnumerable<DayOfWeek> WeekendDays { get; }
 
@@ -44,5 +44,17 @@ namespace Cosmos.Business.Extensions.Weekends
         public DayOfWeek FirstWeekendDay { get; }
 
         public DayOfWeek LastWeekendDay { get; }
+
+        #region Static
+
+        public static WeekendDictionary FridayOnly => new WeekendDictionary(WeekendType.FridayOnly, DayOfWeek.Friday);
+        public static WeekendDictionary SaturdayOnly => new WeekendDictionary(WeekendType.SaturdayOnly, DayOfWeek.Saturday);
+        public static WeekendDictionary SundayOnly => new WeekendDictionary(WeekendType.SundayOnly, DayOfWeek.Sunday);
+        public static WeekendDictionary FridaySunday => new WeekendDictionary(WeekendType.FridaySunday, DayOfWeek.Friday, DayOfWeek.Sunday);
+        public static WeekendDictionary SemiUniversal => new WeekendDictionary(WeekendType.SemiUniversal, DayOfWeek.Friday, DayOfWeek.Saturday);
+        public static WeekendDictionary Universal => new WeekendDictionary(WeekendType.Universal, DayOfWeek.Saturday, DayOfWeek.Sunday);
+
+
+        #endregion
     }
 }

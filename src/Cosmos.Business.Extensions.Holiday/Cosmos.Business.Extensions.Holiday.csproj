@@ -6,13 +6,10 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="Cosmos.Extensions" Version="0.1.1-alpha3-123029" />
       <PackageReference Include="Cosmos.Extensions.DateTime" Version="0.1.1-alpha3-123029" />
-      <PackageReference Include="Cosmos.I18N" Version="0.0.1-alpha1-100001" />
+      <PackageReference Include="Cosmos.I18N" Version="0.0.1-alpha1-100004" />
       <PackageReference Include="Enums.NET" Version="2.3.2" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Cosmos\I18N" />
     </ItemGroup>
 
 </Project>
