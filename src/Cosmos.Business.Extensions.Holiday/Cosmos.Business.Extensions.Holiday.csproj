@@ -12,4 +12,8 @@
       <PackageReference Include="Enums.NET" Version="2.3.2" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Cosmos\Business\Extensions\Holiday\Definitions\Asia" />
+    </ItemGroup>
+
 </Project>
