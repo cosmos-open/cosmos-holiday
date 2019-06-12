@@ -1,16 +1,28 @@
+using Cosmos.I18N.Countries;
+
 namespace Cosmos.Business.Extensions.Holiday.Core
 {
     public interface IFixedHolidayFunc
     {
-        /*
-         * 固定的假日，比如元旦、国庆等
-         * 这部分的假日将被优化为 DailyNodeTree
-         */
+        /// <summary>
+        /// 标记赌赢的国家或地区
+        /// </summary>
+        Country Country { get; }
+        
+        /// <summary>
+        /// 标记该国家或地区的所属国家
+        /// </summary>
+        Country BelongsToCountry { get; }
 
         /// <summary>
         /// 固定节日的名称
         /// </summary>
         string Name { get; }
+
+        /// <summary>
+        /// 固定节日类型
+        /// </summary>
+        HolidayType HolidayType { get; }
 
         /// <summary>
         /// 固定节日的月份

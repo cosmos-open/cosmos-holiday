@@ -1,4 +1,5 @@
 using Cosmos.Business.Extensions.Holiday.Core.Helpers;
+using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Core
 {
@@ -7,7 +8,13 @@ namespace Cosmos.Business.Extensions.Holiday.Core
     /// </summary>
     public class RuntimeFixedHolidayFunc : IFixedHolidayFunc
     {
+        public Country Country { get; set; }
+
+        public Country BelongsToCountry { get; set; }
+
         public string Name { get; set; }
+
+        public HolidayType HolidayType { get; set; }
 
         public int Month { get; set; }
 

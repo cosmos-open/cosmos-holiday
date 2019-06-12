@@ -1,3 +1,4 @@
+using System;
 using Cosmos.Date;
 
 namespace Cosmos.Business.Extensions.Holiday.Core
@@ -28,9 +29,22 @@ namespace Cosmos.Business.Extensions.Holiday.Core
             return this;
         }
 
+        public DailyAnswerBuilder From(DateTime date)
+        {
+            _answer.FromDate = date;
+            _answer.ToDate = _answer.FromDate;
+            return this;
+        }
+
         public DailyAnswerBuilder To(int year, int month, int day)
         {
             _answer.ToDate = new DateInfo(year, month, day);
+            return this;
+        }
+
+        public DailyAnswerBuilder To(DateTime date)
+        {
+            _answer.ToDate = date;
             return this;
         }
 

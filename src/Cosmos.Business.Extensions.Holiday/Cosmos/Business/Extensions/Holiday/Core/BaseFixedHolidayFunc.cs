@@ -1,10 +1,17 @@
 using Cosmos.Business.Extensions.Holiday.Core.Helpers;
+using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Core
 {
     public abstract class BaseFixedHolidayFunc : IFixedHolidayFunc
     {
+        public abstract Country Country { get; set; }
+
+        public abstract Country BelongsToCountry { get; set; }
+        
         public abstract string Name { get; }
+        
+        public abstract  HolidayType HolidayType { get; set; }
 
         public virtual int Month { get; set; }
 
