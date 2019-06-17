@@ -20,7 +20,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Public
 
         public override int Day { get; set; } = 1;
 
-        public override string I18NIdentityCode { get; } = "i18n_holiday_cn_guoqing";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_cn_china10";
 
         public override int? Since { get; } = 1949;
     }

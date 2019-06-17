@@ -8,23 +8,23 @@ using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao.Tradition
 {
-    public class MidAutumnFestival : ChineseVariableHolidayFunc
+    public class LanternFestival : ChineseVariableHolidayFunc
     {
         public override Country Country { get; set; } = Country.Macao;
 
         public override Country BelongsToCountry { get; set; } = Country.China;
 
         /// <summary>
-        /// Mid-Autumn Festival
+        /// Lantern Festival
         /// </summary>
-        public override string Name { get; } = "中秋節";
+        public override string Name { get; } = "元宵節";
 
         public override HolidayType HolidayType { get; set; } = HolidayType.Tradition;
 
-        protected override  int ChineseMonth { get; } = 8;
+        protected override int ChineseMonth { get; } = 1;
 
-        protected override  int ChineseDay { get; } = 15;
+        protected override int ChineseDay { get; } = 15;
 
-        public override string I18NIdentityCode { get; } = "i18n_holiday_mo_zhongqiu";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_mo_shangyuan";
     }
 }

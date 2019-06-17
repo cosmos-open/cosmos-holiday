@@ -28,8 +28,11 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan
         private static List<IVariableHolidayFunc> CnTwVariableHolidayFuncs = new List<IVariableHolidayFunc>
         {
             new ChineseNewYear(), //农历1-1
+            new LanternFestival(), //农历1-15
             new DragonBoatFestival(), //农历5-5
             new MidAutumnFestival(), //农历8-15
+            new DoubleNinthFestival(), //农历9-9
+            new LabaFestival(), //农历12-8
         };
 
         public override IEnumerable<string> GetSources()

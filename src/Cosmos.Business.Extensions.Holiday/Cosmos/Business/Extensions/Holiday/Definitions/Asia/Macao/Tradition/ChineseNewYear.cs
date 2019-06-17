@@ -21,9 +21,9 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao.Tradition
 
         public override HolidayType HolidayType { get; set; } = HolidayType.Tradition;
 
-        protected override  int Month { get; } = 1;
+        protected override  int ChineseMonth { get; } = 1;
 
-        protected override  int Day { get; } = 1;
+        protected override  int ChineseDay { get; } = 1;
 
         public override string I18NIdentityCode { get; } = "i18n_holiday_mo_chunjie";
     }

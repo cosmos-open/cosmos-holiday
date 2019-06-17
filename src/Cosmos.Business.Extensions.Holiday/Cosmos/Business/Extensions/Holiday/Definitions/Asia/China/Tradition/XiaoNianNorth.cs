@@ -3,23 +3,25 @@ using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Tradition
 {
-    public class ChineseNewYear : ChineseVariableHolidayFunc
+    public class XiaoNianNorth: ChineseVariableHolidayFunc
     {
         public override Country Country { get; set; } = Country.China;
 
         public override Country BelongsToCountry { get; set; } = Country.China;
 
         /// <summary>
-        /// Chinese New Year / Spring Festival
+        /// 12-23
         /// </summary>
-        public override string Name { get; } = "春节";
+        public override string Name { get; } = "北方小年(扫房)";
 
         public override HolidayType HolidayType { get; set; } = HolidayType.Tradition;
 
-        protected override int ChineseMonth { get; } = 1;
+        protected override int ChineseMonth { get; } = 12;
 
-        protected override int ChineseDay { get; } = 1;
+        protected override int ChineseDay { get; } = 23;
 
-        public override string I18NIdentityCode { get; } = "i18n_holiday_cn_chunjie";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_cn_beifangxiaonian";
+
+        
     }
 }

@@ -1,9 +1,10 @@
 using Cosmos.Business.Extensions.Holiday.Core;
+using Cosmos.Date.Chinese;
 using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Tradition
 {
-    public class TombSweepingDay : BaseFixedHolidayFunc
+    public class TombSweepingDay : BaseVariableHolidayFunc
     {
         public override Country Country { get; set; } = Country.China;
 
@@ -16,16 +17,26 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Tradition
 
         public override HolidayType HolidayType { get; set; } = HolidayType.Tradition;
 
-        public override int Month { get; set; } = 4;
-
-        public override int Day { get; set; } = 5;
-
         public override string I18NIdentityCode { get; } = "i18n_holiday_cn_qingmingjie";
+
+        public override DailyAnswer ToDailyAnswer(int year)
+        {
+            var date = ChineseDateInfo.Of(year, 4, 1);
+            var date15 = date.AddDays(-15);
+            while (true)
+            {
+                if (date15.GetSolarTerm() == "春分")
+                    break;
+                date = date.Tomorrow();
+                date15 = date15.Tomorrow();
+            }
+
+            return DailyAnswerBuilder.Create(Name).From(date.ToDateTime()).Build(year);
+        }
 
         /*
          * 公历4月5日前后，春分后的地15天
-         * todo: 将本节日从 FixedHoliday 调整为 VariableHoliday
-         *
+         * 
          * 清明节，又称踏青节、行清节、三月节、祭祖节，节期在仲春与暮春之交。
          * 清明节源自上古时代的祖先信仰与春祭活动，兼具自然与人文两大内涵，既是自然节气点，也是传统节日。
          * 

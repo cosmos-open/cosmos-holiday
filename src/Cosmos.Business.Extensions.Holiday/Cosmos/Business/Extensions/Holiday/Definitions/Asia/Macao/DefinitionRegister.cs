@@ -20,6 +20,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao
             new NewYearsDay(), //1-1
             new TombSweepingDay(), //4-5
             new NationalDay(), //10-1
+            new Christmas(),//12-25
         };
 
         protected override List<IVariableHolidayFunc> AllVariableHolidayFuncs { get; } = CnMoVariableHolidayFuncs;
@@ -27,8 +28,11 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao
         private static List<IVariableHolidayFunc> CnMoVariableHolidayFuncs = new List<IVariableHolidayFunc>
         {
             new ChineseNewYear(), //农历1-1
+            new LanternFestival(), //农历1-15
             new DragonBoatFestival(), //农历5-5
             new MidAutumnFestival(), //农历8-15
+            new DoubleNinthFestival(), //农历9-9
+            new LabaFestival(), //农历12-8
         };
 
         public override IEnumerable<string> GetSources()

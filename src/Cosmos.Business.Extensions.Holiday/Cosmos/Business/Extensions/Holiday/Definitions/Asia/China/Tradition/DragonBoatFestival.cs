@@ -16,9 +16,9 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Tradition
 
         public override HolidayType HolidayType { get; set; } = HolidayType.Tradition;
 
-        protected override  int Month { get; } = 5;
+        protected override  int ChineseMonth { get; } = 5;
 
-        protected override  int Day { get; } = 5;
+        protected override  int ChineseDay { get; } = 5;
 
         public override string I18NIdentityCode { get; } = "i18n_holiday_cn_duanwu";
     }

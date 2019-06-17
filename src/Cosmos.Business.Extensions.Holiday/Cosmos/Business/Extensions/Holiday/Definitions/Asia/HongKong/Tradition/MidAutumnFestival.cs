@@ -21,9 +21,9 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.HongKong.Tradition
 
         public override HolidayType HolidayType { get; set; } = HolidayType.Tradition;
 
-        protected override  int Month { get; } = 8;
+        protected override  int ChineseMonth { get; } = 8;
 
-        protected override  int Day { get; } = 15;
+        protected override  int ChineseDay { get; } = 15;
 
         public override string I18NIdentityCode { get; } = "i18n_holiday_hk_zhongqiu";
     }
