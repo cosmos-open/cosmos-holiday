@@ -48,6 +48,12 @@ namespace Cosmos.Business.Extensions.Holiday.Core
             return this;
         }
 
+        public DailyAnswerBuilder To(int length)
+        {
+            _answer.ToDate = _answer.ToDate.AddDays(length);
+            return this;
+        }
+
         public DailyAnswerBuilder Since(int year)
         {
             if (_answer._times == null)
