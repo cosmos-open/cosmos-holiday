@@ -5,9 +5,9 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Propaganda
 {
     public class WomensDay : BaseFixedHolidayFunc
     {
-        public override Country Country { get; set; } = Country.China;
+        public override Country Country { get; } = Country.China;
 
-        public override Country BelongsToCountry { get; set; } = Country.China;
+        public override Country BelongsToCountry { get; } = Country.China;
 
         /// <summary>
         /// International Women's Day
@@ -43,7 +43,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Propaganda
          * 强。在其推动下，纪念活动已成为一个号角，号召协力争取妇女权
          * 利和妇女对政治经济事务的参与。
          */
-        
+
         public override int? Since { get; } = 1975;
     }
 }

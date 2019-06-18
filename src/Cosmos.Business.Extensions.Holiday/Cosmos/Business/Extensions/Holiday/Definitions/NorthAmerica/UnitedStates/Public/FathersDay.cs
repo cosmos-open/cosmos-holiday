@@ -6,9 +6,9 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStat
 {
     public class FathersDay : WeekOffsetVariableHolidayFunc
     {
-        public override Country Country { get; set; } = Country.UnitedStates;
+        public override Country Country { get; } = Country.UnitedStates;
 
-        public override Country BelongsToCountry { get; set; } = Country.UnitedStates;
+        public override Country BelongsToCountry { get; } = Country.UnitedStates;
 
         /// <summary>
         /// Father's day

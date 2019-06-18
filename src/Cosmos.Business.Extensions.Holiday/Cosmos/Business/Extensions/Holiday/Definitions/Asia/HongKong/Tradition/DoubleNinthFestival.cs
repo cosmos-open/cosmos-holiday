@@ -10,9 +10,9 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.HongKong.Tradition
 {
     public class DoubleNinthFestival : ChineseVariableHolidayFunc
     {
-        public override Country Country { get; set; } = Country.HongKong;
+        public override Country Country { get; } = Country.HongKong;
 
-        public override Country BelongsToCountry { get; set; } = Country.China;
+        public override Country BelongsToCountry { get; } = Country.China;
 
         /// <summary>
         /// Doubel Ninth Festival

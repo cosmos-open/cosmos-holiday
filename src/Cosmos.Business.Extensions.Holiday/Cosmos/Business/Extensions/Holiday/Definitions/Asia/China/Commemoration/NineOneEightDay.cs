@@ -5,9 +5,9 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Commemoratio
 {
     public class NineOneEightDay : BaseFixedHolidayFunc
     {
-        public override Country Country { get; set; } = Country.China;
+        public override Country Country { get; } = Country.China;
 
-        public override Country BelongsToCountry { get; set; } = Country.China;
+        public override Country BelongsToCountry { get; } = Country.China;
 
         /// <summary>
         /// 9-18
@@ -23,7 +23,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Commemoratio
         public override string I18NIdentityCode { get; } = "i18n_holiday_cn_918";
 
         public override int? Since { get; } = 1931;
-        
+
         /*
          * 九一八事变（又称奉天事变、柳条湖事件）是日本在中国东北蓄意制造并发动的一场侵华战争，
          * 是日本帝国主义侵华的开端。

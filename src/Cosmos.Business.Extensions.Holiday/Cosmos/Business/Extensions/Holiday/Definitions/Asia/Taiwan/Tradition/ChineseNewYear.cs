@@ -10,9 +10,9 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan.Tradition
 {
     public class ChineseNewYear : ChineseVariableHolidayFunc
     {
-        public override Country Country { get; set; } = Country.Taiwan;
+        public override Country Country { get; } = Country.Taiwan;
 
-        public override Country BelongsToCountry { get; set; } = Country.China;
+        public override Country BelongsToCountry { get; } = Country.China;
 
         /// <summary>
         /// Chinese New Year / Spring Festival

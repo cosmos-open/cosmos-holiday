@@ -6,9 +6,9 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStat
 {
     public class MothersDay : WeekOffsetVariableHolidayFunc
     {
-        public override Country Country { get; set; } = Country.UnitedStates;
+        public override Country Country { get; } = Country.UnitedStates;
 
-        public override Country BelongsToCountry { get; set; } = Country.UnitedStates;
+        public override Country BelongsToCountry { get; } = Country.UnitedStates;
 
         /// <summary>
         /// Mother's day
@@ -28,7 +28,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStat
         /*
          * 1914年，美国参众两议院将每年5月第2个星期日定为母亲节。
          */
-        
+
         public override int? Since { get; } = 1914;
     }
 }

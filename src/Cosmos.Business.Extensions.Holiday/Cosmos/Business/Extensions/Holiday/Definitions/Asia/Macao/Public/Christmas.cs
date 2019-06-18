@@ -10,9 +10,9 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao.Public
 {
     public class Christmas : BaseFixedHolidayFunc
     {
-        public override Country Country { get; set; } = Country.Macao;
+        public override Country Country { get; } = Country.Macao;
 
-        public override Country BelongsToCountry { get; set; } = Country.China;
+        public override Country BelongsToCountry { get; } = Country.China;
 
         /// <summary>
         /// Christmas

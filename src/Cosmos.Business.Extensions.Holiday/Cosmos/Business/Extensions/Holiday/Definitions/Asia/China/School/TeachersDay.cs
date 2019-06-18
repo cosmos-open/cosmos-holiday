@@ -5,9 +5,9 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.School
 {
     public class TeachersDay : BaseFixedHolidayFunc
     {
-        public override Country Country { get; set; } = Country.China;
+        public override Country Country { get; } = Country.China;
 
-        public override Country BelongsToCountry { get; set; } = Country.China;
+        public override Country BelongsToCountry { get; } = Country.China;
 
         /// <summary>
         /// Teachers' Day 
@@ -23,7 +23,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.School
         public override string I18NIdentityCode { get; } = "i18n_holiday_cn_jiaoshijie";
 
         public override int? Since { get; } = 1985;
-        
+
         /*
          * 教师节，旨在肯定教师为教育事业所做的贡献。在中国近现代史上，
          * 多次以不同的日期作为过教师节。直至1985年，第六届全国人大常
