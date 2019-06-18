@@ -11,6 +11,25 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         public Country Country { get; set; }
 
         public Country BelongsToCountry { get; set; }
+        
+        public virtual string RegionCode { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Gets real region's code.<br />
+        /// 获取真实的地区编码。<br />
+        /// If <see cref="RegionCode"/> is empty, returns the name of <see cref="CountryCode"/> witch converted from <see cref="Country"/>.<br />
+        /// 如果地区编码 <see cref="RegionCode"/> 为空，则返回转换自 <see cref="Country"/> 的 <see cref="CountryCode"/> 的名称。<br />
+        /// <br />
+        /// If this holiday belongs to the whole nation, returns empty.<br />
+        /// 如果本节日属于国家级的节日（非地区级别的），则返回空 empty。
+        /// </summary>
+        /// <returns></returns>
+        public virtual string GetRegionName()
+        {
+            return string.IsNullOrWhiteSpace(RegionCode)
+                ? EnumsNET.Enums.GetName(Country.ToCode())
+                : RegionCode;
+        }
 
         public string Name { get; set; }
 

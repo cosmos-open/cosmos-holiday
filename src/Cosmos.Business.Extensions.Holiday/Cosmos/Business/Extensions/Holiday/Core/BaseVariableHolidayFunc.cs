@@ -4,14 +4,14 @@ namespace Cosmos.Business.Extensions.Holiday.Core
 {
     public abstract class BaseVariableHolidayFunc : IVariableHolidayFunc
     {
-        public abstract Country Country { get; set; }
+        public abstract Country Country { get; }
 
-        public abstract Country BelongsToCountry { get; set; }
-        
+        public abstract Country BelongsToCountry { get; }
+
         public abstract string Name { get; }
-        
-        public abstract  HolidayType HolidayType { get; set; }
-        
+
+        public abstract HolidayType HolidayType { get; set; }
+
         public abstract string I18NIdentityCode { get; }
 
         public virtual int? Since { get; } = null;

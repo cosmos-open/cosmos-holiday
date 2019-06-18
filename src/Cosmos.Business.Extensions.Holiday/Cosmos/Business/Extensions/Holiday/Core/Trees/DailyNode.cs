@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Core.Trees
 {
@@ -12,18 +14,108 @@ namespace Cosmos.Business.Extensions.Holiday.Core.Trees
             _fixedHolidayFuncs = new List<IFixedHolidayFunc>();
         }
 
-        public IReadOnlyList<IFixedHolidayFunc> GetFuncs() =>
-            _fixedHolidayFuncs.AsReadOnly();
+        #region GetFuncs
 
-        public IReadOnlyList<IFixedHolidayFunc> GetFuncs(int year) =>
-            _fixedHolidayFuncs
+        public IReadOnlyList<IFixedHolidayFunc> GetFuncs()
+        {
+            return _fixedHolidayFuncs.AsReadOnly();
+        }
+
+        public IReadOnlyList<IFixedHolidayFunc> GetFuncs(CountryCode code)
+        {
+            return GetFuncs(code.ToCountry());
+        }
+
+        public IReadOnlyList<IFixedHolidayFunc> GetFuncs(Country country)
+        {
+            return _fixedHolidayFuncs
+                .Where(f => f.Country == country)
+                .ToList()
+                .AsReadOnly();
+        }
+
+        public IReadOnlyList<IFixedHolidayFunc> GetFuncs(CountryCode code, string regionName)
+        {
+            return GetFuncs(code.ToCountry(), regionName);
+        }
+
+        public IReadOnlyList<IFixedHolidayFunc> GetFuncs(Country country, string regionName)
+        {
+            return _fixedHolidayFuncs
+                .Where(f => f.Country == country && f.GetRegionName() == regionName)
+                .ToList()
+                .AsReadOnly();
+        }
+
+        public IReadOnlyList<IFixedHolidayFunc> GetFuncs(int year)
+        {
+            return _fixedHolidayFuncs
                 .Where(f => (f.Since == null || f.Since <= year) && (f.End == null || f.End >= year))
                 .ToList()
                 .AsReadOnly();
+        }
+
+        public IReadOnlyList<IFixedHolidayFunc> GetFuncs(CountryCode code, int year)
+        {
+            return GetFuncs(code.ToCountry(), year);
+        }
+
+        public IReadOnlyList<IFixedHolidayFunc> GetFuncs(Country country, int year)
+        {
+            return _fixedHolidayFuncs
+                .Where(f => f.Country == country)
+                .Where(f => (f.Since == null || f.Since <= year) && (f.End == null || f.End >= year))
+                .ToList()
+                .AsReadOnly();
+        }
+
+        public IReadOnlyList<IFixedHolidayFunc> GetFuncs(CountryCode code, string regionName, int year)
+        {
+            return GetFuncs(code.ToCountry(), regionName, year);
+        }
+
+        public IReadOnlyList<IFixedHolidayFunc> GetFuncs(Country country, string regionName, int year)
+        {
+            return _fixedHolidayFuncs
+                .Where(f => f.Country == country && f.GetRegionName() == regionName)
+                .Where(f => (f.Since == null || f.Since <= year) && (f.End == null || f.End >= year))
+                .ToList()
+                .AsReadOnly();
+        }
 
         public IReadOnlyList<IFixedHolidayFunc> GetFuncs(int year, int month)
         {
             return _fixedHolidayFuncs
+                .Where(f => (f.Since == null || f.Since <= year) && (f.End == null || f.End >= year))
+                .Where(f => f.MatchDate(month))
+                .ToList()
+                .AsReadOnly();
+        }
+
+        public IReadOnlyList<IFixedHolidayFunc> GetFuncs(CountryCode code, int year, int month)
+        {
+            return GetFuncs(code.ToCountry(), year, month);
+        }
+
+        public IReadOnlyList<IFixedHolidayFunc> GetFuncs(Country country, int year, int month)
+        {
+            return _fixedHolidayFuncs
+                .Where(f => f.Country == country)
+                .Where(f => (f.Since == null || f.Since <= year) && (f.End == null || f.End >= year))
+                .Where(f => f.MatchDate(month))
+                .ToList()
+                .AsReadOnly();
+        }
+
+        public IReadOnlyList<IFixedHolidayFunc> GetFuncs(CountryCode code, string regionCode, int year, int month)
+        {
+            return GetFuncs(code.ToCountry(), regionCode, year, month);
+        }
+
+        public IReadOnlyList<IFixedHolidayFunc> GetFuncs(Country country, string regionCode, int year, int month)
+        {
+            return _fixedHolidayFuncs
+                .Where(f => f.Country == country && f.GetRegionName() == regionCode)
                 .Where(f => (f.Since == null || f.Since <= year) && (f.End == null || f.End >= year))
                 .Where(f => f.MatchDate(month))
                 .ToList()
@@ -39,15 +131,58 @@ namespace Cosmos.Business.Extensions.Holiday.Core.Trees
                 .AsReadOnly();
         }
 
-        public void Add(IFixedHolidayFunc func)
+        public IReadOnlyList<IFixedHolidayFunc> GetFuncs(CountryCode code, int year, int month, int day)
         {
-            if (Contains(func))
-                return;
-            _fixedHolidayFuncs.Add(func);
+            return GetFuncs(code.ToCountry(), year, month, day);
         }
 
+        public IReadOnlyList<IFixedHolidayFunc> GetFuncs(Country country, int year, int month, int day)
+        {
+            return _fixedHolidayFuncs
+                .Where(f => f.Country == country)
+                .Where(f => (f.Since == null || f.Since <= year) && (f.End == null || f.End >= year))
+                .Where(f => f.MatchDate(month, day))
+                .ToList()
+                .AsReadOnly();
+        }
+
+        public IReadOnlyList<IFixedHolidayFunc> GetFuncs(CountryCode code, string regionCode, int year, int month, int day)
+        {
+            return GetFuncs(code.ToCountry(), regionCode, year, month, day);
+        }
+
+        public IReadOnlyList<IFixedHolidayFunc> GetFuncs(Country country, string regionCode, int year, int month, int day)
+        {
+            return _fixedHolidayFuncs
+                .Where(f => f.Country == country && f.GetRegionName() == regionCode)
+                .Where(f => (f.Since == null || f.Since <= year) && (f.End == null || f.End >= year))
+                .Where(f => f.MatchDate(month, day))
+                .ToList()
+                .AsReadOnly();
+        }
+
+        #endregion
+
+        #region Add
+
+        public void Add(IFixedHolidayFunc func)
+        {
+            if (func == null)
+                return;
+
+            if (Contains(func))
+                return;
+
+            _fixedHolidayFuncs.Add(func);
+        }
+        
+        #endregion
+
+        #region Contains
+
         /// <summary>
-        /// Contains
+        /// Contains<br />
+        /// 包含
         /// </summary>
         /// <param name="func">An instance of <see cref="IFixedHolidayFunc"/>.</param>
         /// <returns></returns>
@@ -78,5 +213,8 @@ namespace Cosmos.Business.Extensions.Holiday.Core.Trees
 
             return false;
         }
+
+        #endregion
+
     }
 }
