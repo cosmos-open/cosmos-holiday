@@ -36,7 +36,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao.Tradition
                 date15 = date15.Tomorrow();
             }
 
-            return DailyAnswerBuilder.Create(Name).From(date.ToDateTime()).Build(year);
+            return DailyAnswerBuilder.Create(Name).From(date.ToDateTime()).I18N(I18NIdentityCode).Build(year);
         }
 
         /*

@@ -1,9 +1,13 @@
+using System.Collections.Generic;
 using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Core
 {
     public interface IFixedHolidayFunc
     {
+
+        #region Country and region
+
         /// <summary>
         /// 标记对应的国家或地区
         /// </summary>
@@ -22,6 +26,13 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         string RegionCode { get; }
 
         /// <summary>
+        /// 標記对应地区的名称列表，可为空。<br />
+        /// 对于国家：请留空<br />
+        /// 对于地区：如果留空，则将返回 RegionCode 的值
+        /// </summary>
+        List<string> RegionCodes { get; }
+
+        /// <summary>
         /// Gets real region's code.<br />
         /// 获取真实的地区编码。<br />
         /// If <see cref="RegionCode"/> is empty, returns the name of <see cref="CountryCode"/> witch converted from <see cref="Country"/>.<br />
@@ -31,7 +42,13 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         /// 如果本节日属于国家级的节日（非地区级别的），则返回空 empty。
         /// </summary>
         /// <returns></returns>
-        string GetRegionName();
+        string GetRegionCode();
+
+        bool MatchRegion(string regionCode);
+
+        #endregion
+
+        #region Name and type
 
         /// <summary>
         /// 固定节日的名称
@@ -42,6 +59,10 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         /// 固定节日类型
         /// </summary>
         HolidayType HolidayType { get; }
+
+        #endregion
+
+        #region Date
 
         /// <summary>
         /// 固定节日的月份
@@ -62,6 +83,11 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         /// 固定节日的截止日期，优先级高于 Month 和 Day
         /// </summary>
         (int Month, int Day)? ToDate { get; set; }
+        
+        /// <summary>
+        /// 节日长度
+        /// </summary>
+        int Length { get; }
 
         /// <summary>
         /// 用于判断指定月份是否命中本节日
@@ -78,6 +104,10 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         /// <returns></returns>
         bool MatchDate(int month, int day);
 
+        #endregion
+
+        #region Since and end
+
         /// <summary>
         /// 表示节日从何年开始生效（包含该年）
         /// </summary>
@@ -92,6 +122,9 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         /// 计算届数时每届间隔的时间
         /// </summary>
         int? TimeStepValue { get; }
+
+        #endregion
+
 
         /// <summary>
         /// I18N 识别码

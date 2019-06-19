@@ -46,7 +46,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan.Tradition
             var finalDate = ChineseDateInfo.OfLunar(date.ChineseYear, 12, lastDay);
 
             //农历十二月的最后一天，得到的是公历时间
-            return DailyAnswerBuilder.Create(Name).From(finalDate.ToDateTime()).Build(finalDate.ChineseYear);
+            return DailyAnswerBuilder.Create(Name).From(finalDate.ToDateTime()).I18N(I18NIdentityCode).Build(finalDate.ChineseYear);
         }
     }
 }

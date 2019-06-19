@@ -21,7 +21,5 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Tradition
         protected override int ChineseDay { get; } = 23;
 
         public override string I18NIdentityCode { get; } = "i18n_holiday_cn_beifangxiaonian";
-
-        
     }
 }

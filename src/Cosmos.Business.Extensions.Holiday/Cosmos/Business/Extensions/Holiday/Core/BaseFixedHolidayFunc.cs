@@ -1,15 +1,39 @@
+using System.Collections.Generic;
+using System.Linq;
 using Cosmos.Business.Extensions.Holiday.Core.Helpers;
 using Cosmos.I18N.Countries;
+using Cosmos.Joiners;
 
 namespace Cosmos.Business.Extensions.Holiday.Core
 {
     public abstract class BaseFixedHolidayFunc : IFixedHolidayFunc
     {
+
+        #region Country and region
+
+        /// <summary>
+        /// 标记对应的国家或地区
+        /// </summary>
         public abstract Country Country { get; }
 
+        /// <summary>
+        /// 标记该国家或地区的所属国家
+        /// </summary>
         public abstract Country BelongsToCountry { get; }
 
+        /// <summary>
+        /// 標記对应地区的名称，可为空。<br />
+        /// 对于国家：请留空<br />
+        /// 对于地区：如果留空，则将返回 Country 枚举的 Name 值
+        /// </summary>
         public virtual string RegionCode { get; } = string.Empty;
+
+        /// <summary>
+        /// 標記对应地区的名称列表，可为空。<br />
+        /// 对于国家：请留空<br />
+        /// 对于地区：如果留空，则将返回 RegionCode 的值
+        /// </summary>
+        public virtual List<string> RegionCodes { get; set; } = new List<string>();
 
         /// <summary>
         /// Gets real region's code.<br />
@@ -21,16 +45,35 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         /// 如果本节日属于国家级的节日（非地区级别的），则返回空 empty。
         /// </summary>
         /// <returns></returns>
-        public virtual string GetRegionName()
+        public virtual string GetRegionCode()
         {
+            if (RegionCodes.Any())
+                return Joiner.On(',').Join(RegionCodes);
             return string.IsNullOrWhiteSpace(RegionCode)
-                ? EnumsNET.Enums.GetName(Country.ToCode())
+                ? CountryHelper.GetRegionCode(Country, BelongsToCountry)
                 : RegionCode;
         }
+
+        public bool MatchRegion(string regionCode)
+        {
+            if (RegionCodes.Any())
+                return RegionCodes.Contains(regionCode);
+            if (!string.IsNullOrWhiteSpace(RegionCode))
+                return RegionCode == regionCode;
+            return CountryHelper.GetRegionCode(Country, BelongsToCountry) == regionCode;
+        }
+
+        #endregion
+
+        #region Name and type
 
         public abstract string Name { get; }
 
         public abstract HolidayType HolidayType { get; set; }
+
+        #endregion
+
+        #region Date
 
         public virtual int Month { get; set; }
 
@@ -39,6 +82,11 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         public virtual (int Month, int Day)? FromDate { get; set; }
 
         public virtual (int Month, int Day)? ToDate { get; set; }
+        
+        /// <summary>
+        /// 节日长度，默认为 1 天
+        /// </summary>
+        public virtual int Length { get; } = 1;
 
         public virtual bool MatchDate(int month)
         {
@@ -56,13 +104,23 @@ namespace Cosmos.Business.Extensions.Holiday.Core
             return Month == month && Day == day;
         }
 
-        public abstract string I18NIdentityCode { get; }
+        #endregion
+
+        #region Scince and end
 
         public virtual int? Since { get; } = null;
 
         public virtual int? End { get; } = null;
 
         public virtual int? TimeStepValue { get; } = null;
+
+        #endregion
+        
+        
+
+
+        public abstract string I18NIdentityCode { get; }
+
 
         public virtual DailyAnswer ToDailyAnswer(int year)
         {
@@ -77,7 +135,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core
             if (TimeStepValue.HasValue)
                 builder.Times(TimeStepValue.Value);
 
-            return builder.Build(year);
+            return builder.I18N(I18NIdentityCode).Build(year);
         }
     }
 }

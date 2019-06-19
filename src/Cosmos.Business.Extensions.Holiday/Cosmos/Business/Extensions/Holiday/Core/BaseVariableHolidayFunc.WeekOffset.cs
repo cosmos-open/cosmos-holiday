@@ -5,10 +5,13 @@ namespace Cosmos.Business.Extensions.Holiday.Core
 {
     public abstract class WeekOffsetVariableHolidayFunc : BaseVariableHolidayFunc
     {
+
+        #region Month, week and offset
+
         /// <summary>
         /// 月份
         /// </summary>
-        public  abstract int Month { get; }
+        public abstract int Month { get; }
 
         /// <summary>
         /// 月份中的第几个礼拜
@@ -23,10 +26,17 @@ namespace Cosmos.Business.Extensions.Holiday.Core
 
         protected int DayNumberOfWeek => DayOfWeek.ToInt();
 
+        #endregion
+
+        #region Length
+
         /// <summary>
         /// 节日长度，默认为 1 天
         /// </summary>
         protected virtual int Length { get; } = 1;
+
+        #endregion
+
 
         public override DailyAnswer ToDailyAnswer(int year)
         {
@@ -46,7 +56,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core
             if (TimeStepValue.HasValue)
                 builder.Times(TimeStepValue.Value);
 
-            return builder.Build(year);
+            return builder.I18N(I18NIdentityCode).Build(year);
         }
     }
 }
