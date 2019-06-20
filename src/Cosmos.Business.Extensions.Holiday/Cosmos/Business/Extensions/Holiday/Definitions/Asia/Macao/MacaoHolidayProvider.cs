@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Cosmos.Business.Extensions.Holiday.Core;
+using Cosmos.I18N.Countries;
 
 /*
  * Macao, a part of China
@@ -11,8 +12,17 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao
     using Public;
     using Tradition;
 
-    public class DefinitionRegister : BaseDefinitionRegister
+    public class MacaoHolidayProvider : BaseDefinitionRegister
     {
+        public override Country Country { get; } = Country.Macao;
+
+        public override Country BelongsToCountry { get; } = Country.China;
+        
+        public override IEnumerable<string> IncludeRegions()
+        {
+            return new[] {Core.Helpers.CountryHelper.GetRegionCode(Country, BelongsToCountry)};
+        }
+        
         protected override List<IFixedHolidayFunc> AllFixedHolidayFuncs { get; } = CnMoFixedHolidayFuncs;
 
         private static List<IFixedHolidayFunc> CnMoFixedHolidayFuncs = new List<IFixedHolidayFunc>

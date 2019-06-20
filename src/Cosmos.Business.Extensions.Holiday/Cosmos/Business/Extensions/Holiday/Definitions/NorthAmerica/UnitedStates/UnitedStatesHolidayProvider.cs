@@ -1,14 +1,18 @@
 using System.Collections.Generic;
 using Cosmos.Business.Extensions.Holiday.Core;
+using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStates
 {
     using Public;
     using Religion;
 
-    public class DefinitionRegister : BaseDefinitionRegister
+    public class UnitedStatesHolidayProvider : BaseDefinitionRegister
     {
+        public override Country Country { get; } = Country.UnitedStates;
 
+        public override Country BelongsToCountry { get; } = Country.UnitedStates;
+        
         protected override List<IFixedHolidayFunc> AllFixedHolidayFuncs { get; } = UsFixedHolidayFuncs;
 
         private static List<IFixedHolidayFunc> UsFixedHolidayFuncs = new List<IFixedHolidayFunc>();

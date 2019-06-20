@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Cosmos.Business.Extensions.Holiday.Core;
+using Cosmos.I18N.Countries;
 
 /*
  * Hong Kong, a part of China
@@ -11,15 +12,24 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.HongKong
     using Public;
     using Tradition;
 
-    public class DefinitionRegister : BaseDefinitionRegister
+    public class HongKongHolidayProvider : BaseDefinitionRegister
     {
+        public override Country Country { get; } = Country.HongKong;
+
+        public override Country BelongsToCountry { get; } = Country.China;
+
+        public override IEnumerable<string> IncludeRegions()
+        {
+            return new[] {Core.Helpers.CountryHelper.GetRegionCode(Country, BelongsToCountry)};
+        }
+
         protected override List<IFixedHolidayFunc> AllFixedHolidayFuncs { get; } = CnHkFixedHolidayFuncs;
 
         private static List<IFixedHolidayFunc> CnHkFixedHolidayFuncs = new List<IFixedHolidayFunc>
         {
             new NewYearsDay(), //1-1
             new NationalDay(), //10-1
-            new Christmas(),//12-25
+            new Christmas(), //12-25
         };
 
         protected override List<IVariableHolidayFunc> AllVariableHolidayFuncs { get; } = CnHkVariableHolidayFuncs;

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Cosmos.Business.Extensions.Holiday.Core;
+using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China
 {
@@ -10,8 +11,12 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China
     using School;
     using Tradition;
 
-    public class DefinitionRegister : BaseDefinitionRegister
+    public class ChinaHolidayProvider : BaseDefinitionRegister
     {
+        public override Country Country { get; } = Country.China;
+
+        public override Country BelongsToCountry { get; } = Country.China;
+        
         protected override List<IFixedHolidayFunc> AllFixedHolidayFuncs { get; } = CnFixedHolidayFuncs;
 
         private static List<IFixedHolidayFunc> CnFixedHolidayFuncs = new List<IFixedHolidayFunc>

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Cosmos.Business.Extensions.Holiday.Core;
+using Cosmos.I18N.Countries;
 
 /*
  * Taiwan, a part of China
@@ -11,8 +12,17 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan
     using Public;
     using Tradition;
 
-    public class DefinitionRegister : BaseDefinitionRegister
+    public class TaiwanHolidayProvider : BaseDefinitionRegister
     {
+        public override Country Country { get; } = Country.Taiwan;
+
+        public override Country BelongsToCountry { get; } = Country.China;
+        
+        public override IEnumerable<string> IncludeRegions()
+        {
+            return new[] {Core.Helpers.CountryHelper.GetRegionCode(Country, BelongsToCountry)};
+        }
+        
         protected override List<IFixedHolidayFunc> AllFixedHolidayFuncs { get; } = CnTwFixedHolidayFuncs;
 
         private static List<IFixedHolidayFunc> CnTwFixedHolidayFuncs = new List<IFixedHolidayFunc>
