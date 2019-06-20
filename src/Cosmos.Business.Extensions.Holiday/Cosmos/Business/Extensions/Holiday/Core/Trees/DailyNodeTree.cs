@@ -30,11 +30,11 @@ namespace Cosmos.Business.Extensions.Holiday.Core.Trees
         /// </summary>
         /// <param name="month">Special month</param>
         /// <returns><see cref="DailyNode"/>.</returns>
-        /// <exception cref="ArgumentOutOfRangeException">The value of month should be between 1 and 12.</exception>
+        /// <exception cref="DateTimeOutOfRangeException">The value of month should be between 1 and 12.</exception>
         private DailyNode GetDailyNode(int month)
         {
             if (month > 12 || month < 1)
-                throw new ArgumentOutOfRangeException(nameof(month), $"The value of {month} should be between 1 and 12.");
+                throw new DateTimeOutOfRangeException($"The value of month ('{month}') should be between 1 and 12.");
             return _monthDictionary[month];
         }
 
@@ -406,14 +406,14 @@ namespace Cosmos.Business.Extensions.Holiday.Core.Trees
         #endregion
 
         #region Get DailyAnswer collection by indexer
-        
+
         /// <summary>
         /// Get a collection of <see cref="DailyAnswer"/> by special year and month.
         /// </summary>
         /// <param name="year"></param>
         /// <param name="month"></param>
         public IEnumerable<DailyAnswer> this[int year, int month] => GetDailyAnswers(year, month);
-       
+
         /// <summary>
         /// Get a collection of <see cref="DailyAnswer"/> by special year and month.
         /// </summary>
@@ -421,7 +421,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core.Trees
         /// <param name="year"></param>
         /// <param name="month"></param>
         public IEnumerable<DailyAnswer> this[CountryCode code, int year, int month] => GetDailyAnswers(code, year, month);
-      
+
         /// <summary>
         /// Get a collection of <see cref="DailyAnswer"/> by special year and month.
         /// </summary>
@@ -429,7 +429,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core.Trees
         /// <param name="year"></param>
         /// <param name="month"></param>
         public IEnumerable<DailyAnswer> this[Country country, int year, int month] => GetDailyAnswers(country, year, month);
-       
+
         /// <summary>
         /// Get a collection of <see cref="DailyAnswer"/> by special year and month.
         /// </summary>
@@ -438,7 +438,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core.Trees
         /// <param name="year"></param>
         /// <param name="month"></param>
         public IEnumerable<DailyAnswer> this[CountryCode code, string regionCode, int year, int month] => GetDailyAnswers(code, regionCode, year, month);
-    
+
         /// <summary>
         /// Get a collection of <see cref="DailyAnswer"/> by special year and month.
         /// </summary>
@@ -447,7 +447,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core.Trees
         /// <param name="year"></param>
         /// <param name="month"></param>
         public IEnumerable<DailyAnswer> this[Country country, string regionCode, int year, int month] => GetDailyAnswers(country, regionCode, year, month);
-      
+
         /// <summary>
         /// Get a collection of <see cref="DailyAnswer"/> by special year, month and day.
         /// </summary>
@@ -455,7 +455,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core.Trees
         /// <param name="month"></param>
         /// <param name="day"></param>
         public IEnumerable<DailyAnswer> this[int year, int month, int day] => GetDailyAnswers(year, month, day);
-      
+
         /// <summary>
         /// Get a collection of <see cref="DailyAnswer"/> by special year, month and day.
         /// </summary>
@@ -464,7 +464,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core.Trees
         /// <param name="month"></param>
         /// <param name="day"></param>
         public IEnumerable<DailyAnswer> this[CountryCode code, int year, int month, int day] => GetDailyAnswers(code, year, month, day);
-       
+
         /// <summary>
         /// Get a collection of <see cref="DailyAnswer"/> by special year, month and day.
         /// </summary>
@@ -473,7 +473,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core.Trees
         /// <param name="month"></param>
         /// <param name="day"></param>
         public IEnumerable<DailyAnswer> this[Country country, int year, int month, int day] => GetDailyAnswers(country, year, month, day);
-      
+
         /// <summary>
         /// Get a collection of <see cref="DailyAnswer"/> by special year, month and day.
         /// </summary>
@@ -483,7 +483,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core.Trees
         /// <param name="month"></param>
         /// <param name="day"></param>
         public IEnumerable<DailyAnswer> this[CountryCode code, string regionCode, int year, int month, int day] => GetDailyAnswers(code, regionCode, year, month, day);
-      
+
         /// <summary>
         /// Get a collection of <see cref="DailyAnswer"/> by special year, month and day.
         /// </summary>

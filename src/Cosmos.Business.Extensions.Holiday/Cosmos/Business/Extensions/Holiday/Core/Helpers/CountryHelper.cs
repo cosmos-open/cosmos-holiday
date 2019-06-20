@@ -8,7 +8,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core.Helpers
         {
             if (country == belongsToCountry)
                 return EnumsNET.Enums.GetName(country.ToCode());
-            return $"{EnumsNET.Enums.GetName(belongsToCountry.ToCode())}-{EnumsNET.Enums.GetName(country.ToCode())}";
+            return $"{EnumsNET.Enums.GetName(belongsToCountry.ToCode()).ToUpper()}-{EnumsNET.Enums.GetName(country.ToCode()).ToUpper()}";
         }
     }
 }

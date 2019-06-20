@@ -1,5 +1,6 @@
 using System;
 using Cosmos.Date;
+using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Core
 {
@@ -55,6 +56,9 @@ namespace Cosmos.Business.Extensions.Holiday.Core
 
             if (TimeStepValue.HasValue)
                 builder.Times(TimeStepValue.Value);
+
+            builder.I18N(I18NIdentityCode);
+            builder.Country(Country.ToCode(), GetRegionCodeList());
 
             return builder.I18N(I18NIdentityCode).Build(year);
         }

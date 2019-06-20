@@ -47,11 +47,16 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         /// <returns></returns>
         public virtual string GetRegionCode()
         {
+            return Joiner.On(',').Join(GetRegionCodeList());
+        }
+
+        private List<string> GetRegionCodeList()
+        {
             if (RegionCodes.Any())
-                return Joiner.On(',').Join(RegionCodes);
-            return string.IsNullOrWhiteSpace(RegionCode)
-                ? CountryHelper.GetRegionCode(Country, BelongsToCountry)
-                : RegionCode;
+                return RegionCodes;
+            return !string.IsNullOrWhiteSpace(RegionCode)
+                ? new List<string> {RegionCode}
+                : new List<string> {CountryHelper.GetRegionCode(Country, BelongsToCountry)};
         }
 
         public bool MatchRegion(string regionCode)
@@ -82,7 +87,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         public virtual (int Month, int Day)? FromDate { get; set; }
 
         public virtual (int Month, int Day)? ToDate { get; set; }
-        
+
         /// <summary>
         /// 节日长度，默认为 1 天
         /// </summary>
@@ -115,12 +120,12 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         public virtual int? TimeStepValue { get; } = null;
 
         #endregion
-        
-        
 
+        #region I18N
 
         public abstract string I18NIdentityCode { get; }
 
+        #endregion
 
         public virtual DailyAnswer ToDailyAnswer(int year)
         {
@@ -135,7 +140,10 @@ namespace Cosmos.Business.Extensions.Holiday.Core
             if (TimeStepValue.HasValue)
                 builder.Times(TimeStepValue.Value);
 
-            return builder.I18N(I18NIdentityCode).Build(year);
+            builder.I18N(I18NIdentityCode);
+            builder.Country(Country.ToCode(), GetRegionCodeList());
+
+            return builder.Build(year);
         }
     }
 }

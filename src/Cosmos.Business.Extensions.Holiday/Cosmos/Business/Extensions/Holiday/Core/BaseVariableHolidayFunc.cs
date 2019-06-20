@@ -47,11 +47,16 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         /// <returns></returns>
         public virtual string GetRegionCode()
         {
+            return Joiner.On(',').Join(GetRegionCodeList());
+        }
+
+        protected virtual List<string> GetRegionCodeList()
+        {
             if (RegionCodes.Any())
-                return Joiner.On(',').Join(RegionCodes);
-            return string.IsNullOrWhiteSpace(RegionCode)
-                ? CountryHelper.GetRegionCode(Country, BelongsToCountry)
-                : RegionCode;
+                return RegionCodes;
+            return !string.IsNullOrWhiteSpace(RegionCode)
+                ? new List<string> {RegionCode}
+                : new List<string> {CountryHelper.GetRegionCode(Country, BelongsToCountry)};
         }
 
         public bool MatchRegion(string regionCode)
@@ -83,9 +88,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core
 
         #endregion
 
-
         public abstract string I18NIdentityCode { get; }
-
 
         public abstract DailyAnswer ToDailyAnswer(int year);
     }

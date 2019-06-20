@@ -81,7 +81,6 @@ namespace Cosmos.Business.Extensions.Holiday.Core
 
         #endregion
 
-
         /// <summary>
         /// I18N 识别码
         /// </summary>

@@ -1,5 +1,8 @@
 using System;
+using System.Linq;
+using System.Collections.Generic;
 using Cosmos.Date;
+using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Core
 {
@@ -75,6 +78,29 @@ namespace Cosmos.Business.Extensions.Holiday.Core
             if (_answer._times == null)
                 _answer._times = new DailyAnswer.DailyTimesAnswer();
             _answer._times.StepValue = value;
+            return this;
+        }
+
+        public DailyAnswerBuilder Country(CountryCode code, List<string> regionCodeList = null)
+        {
+            _answer.CountryCode = code;
+            if (regionCodeList != null)
+            {
+                var temp = _answer.RegionCodeList;
+                temp.AddRange(regionCodeList);
+                _answer.RegionCodeList = temp.Distinct().ToList();
+            }
+            return this;
+        }
+
+        public DailyAnswerBuilder Regions(List<string> regionCodeList)
+        {
+            if (regionCodeList != null)
+            {
+                var temp = _answer.RegionCodeList;
+                temp.AddRange(regionCodeList);
+                _answer.RegionCodeList = temp.Distinct().ToList();
+            }
             return this;
         }
 

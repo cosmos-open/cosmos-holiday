@@ -1,4 +1,5 @@
 using Cosmos.Business.Extensions.Holiday.Core.Helpers;
+using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Core
 {
@@ -19,14 +20,18 @@ namespace Cosmos.Business.Extensions.Holiday.Core
 
         #endregion
 
-
         public override DailyAnswer ToDailyAnswer(int year)
         {
             var calendar = ChineseLunisolarCalendarHelper.Instance;
             var leapMonth = calendar.GetLeapMonthAndCache(year);
             var date = calendar.ToDateTime(year, ChineseLunisolarCalendarHelper.MoveMonth(ChineseMonth, leapMonth), ChineseDay);
 
-            return DailyAnswerBuilder.Create(Name).From(date).I18N(I18NIdentityCode).Build(year);
+            return DailyAnswerBuilder
+                .Create(Name)
+                .From(date)
+                .Country(Country.ToCode(), GetRegionCodeList())
+                .I18N(I18NIdentityCode)
+                .Build(year);
         }
     }
 }
