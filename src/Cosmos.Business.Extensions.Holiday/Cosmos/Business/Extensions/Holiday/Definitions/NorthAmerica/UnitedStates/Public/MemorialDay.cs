@@ -25,7 +25,12 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStat
         public override DailyAnswer ToDailyAnswer(int year)
         {
             var calculationDay = DateTimeFactory.FindLastDay(year, 5, DayOfWeek.Monday);
-            return DailyAnswerBuilder.Create(Name).From(calculationDay).I18N(I18NIdentityCode).Build(year);
+            return DailyAnswerBuilder
+                .Create(Name)
+                .From(calculationDay)
+                .Country(Country.ToCode(), GetRegionCodeList())
+                .I18N(I18NIdentityCode)
+                .Build(year);
         }
     }
 }

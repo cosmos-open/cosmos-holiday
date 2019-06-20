@@ -22,7 +22,11 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStat
             var calculationDay = DateTimeFactory
                 .Create(year, 12, 25)
                 .Shift(saturday => saturday.AddDays(-1), sunday => sunday.AddDays(1));
-            return DailyAnswerBuilder.Create(Name).From(calculationDay).I18N(I18NIdentityCode).Build(year);
+            return DailyAnswerBuilder.Create(Name)
+                .From(calculationDay)
+                .Country(Country.ToCode(), GetRegionCodeList())
+                .I18N(I18NIdentityCode)
+                .Build(year);
         }
     }
 }

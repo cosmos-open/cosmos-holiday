@@ -10,7 +10,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStat
         public override Country Country { get; } = Country.UnitedStates;
 
         public override Country BelongsToCountry { get; } = Country.UnitedStates;
-        
+
         public override string Name { get; } = "Veterans Day";
 
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
@@ -24,7 +24,11 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStat
             var calculationDay = DateTimeFactory
                 .Create(year, 11, 11)
                 .Shift(saturday => saturday.AddDays(-1), sunday => sunday.AddDays(1));
-            return DailyAnswerBuilder.Create(Name).From(calculationDay).I18N(I18NIdentityCode).Build(year);
+            return DailyAnswerBuilder.Create(Name)
+                .From(calculationDay)
+                .Country(Country.ToCode(), GetRegionCodeList())
+                .I18N(I18NIdentityCode)
+                .Build(year);
         }
     }
 }

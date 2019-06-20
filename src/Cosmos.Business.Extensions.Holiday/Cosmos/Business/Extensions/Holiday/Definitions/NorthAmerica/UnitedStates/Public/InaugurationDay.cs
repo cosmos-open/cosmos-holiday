@@ -32,7 +32,10 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStat
                     builder = DailyAnswerBuilder.Create(Name).From(year, 3, 4);
                 }
 
-                return builder.I18N(I18NIdentityCode).Build(year);
+                return builder
+                    .Country(Country.ToCode(), GetRegionCodeList())
+                    .I18N(I18NIdentityCode)
+                    .Build(year);
             }
 
             return null;
