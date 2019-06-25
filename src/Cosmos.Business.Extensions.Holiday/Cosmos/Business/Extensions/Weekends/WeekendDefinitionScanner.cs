@@ -8,18 +8,36 @@ using Cosmos.Business.Extensions.Weekends.SpecialDefinitions;
 
 namespace Cosmos.Business.Extensions.Weekends
 {
+    /// <summary>
+    /// Weekend deginition scanner
+    /// </summary>
     public class WeekendDefinitionScanner
     {
+        /// <summary>
+        /// Create a new instance of <see cref="WeekendDefinitionScanner"/>
+        /// </summary>
+        /// <param name="includeExtendDefinitions"></param>
+        /// <param name="unlinkedAssembliesPattern"></param>
         public WeekendDefinitionScanner(bool includeExtendDefinitions = false, string unlinkedAssembliesPattern = "")
         {
             IncludeExtendDefinitions = includeExtendDefinitions;
             UnlinkedAssembliesPattern = unlinkedAssembliesPattern;
         }
 
+        /// <summary>
+        /// Include extend definitions
+        /// </summary>
         public bool IncludeExtendDefinitions { get; }
 
+        /// <summary>
+        /// Unlinked assemblies pattern
+        /// </summary>
         public string UnlinkedAssembliesPattern { get; }
 
+        /// <summary>
+        /// Do Scan
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<IBizWeekendDefinition> Scan()
         {
             foreach (var definition in BuildInDefinitions)

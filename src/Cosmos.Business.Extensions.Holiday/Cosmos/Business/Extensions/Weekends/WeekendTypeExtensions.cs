@@ -1,7 +1,15 @@
 namespace Cosmos.Business.Extensions.Weekends
 {
+    /// <summary>
+    /// Weekend type extensions
+    /// </summary>
     public static class WeekendTypeExtensions
     {
+        /// <summary>
+        /// To Weekend Dictionary
+        /// </summary>
+        /// <param name="weekendType"></param>
+        /// <returns></returns>
         public static IWeekendDictionary ToWeekendDictionary(this WeekendType weekendType)
         {
             switch (weekendType)

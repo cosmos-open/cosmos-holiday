@@ -6,6 +6,9 @@ using EnumsNET;
 
 namespace Cosmos.Business.Extensions.Weekends
 {
+    /// <summary>
+    /// Weekend manager
+    /// </summary>
     public static class WeekendManager
     {
         // ReSharper disable once InconsistentNaming
@@ -19,6 +22,11 @@ namespace Cosmos.Business.Extensions.Weekends
 
         #region GetWeekendDictionary
 
+        /// <summary>
+        /// Get weekend dictionary
+        /// </summary>
+        /// <param name="code"></param>
+        /// <returns></returns>
         public static IWeekendDictionary GetWeekendDictionary(CountryCode code)
         {
             return _nonUniversalWeekends.TryGetValue(code, out var dictionary)
@@ -26,11 +34,22 @@ namespace Cosmos.Business.Extensions.Weekends
                 : WeekendDictionary.Universal;
         }
 
+        /// <summary>
+        /// Get weekend dictionary
+        /// </summary>
+        /// <param name="country"></param>
+        /// <returns></returns>
         public static IWeekendDictionary GetWeekendDictionary(Country country)
         {
             return GetWeekendDictionary(country.ToCode());
         }
 
+        /// <summary>
+        /// Get weekend dictionary
+        /// </summary>
+        /// <param name="countryInfo"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException"></exception>
         public static IWeekendDictionary GetWeekendDictionary(CountryInfo countryInfo)
         {
             if (countryInfo == null)
@@ -38,16 +57,26 @@ namespace Cosmos.Business.Extensions.Weekends
             return GetWeekendDictionary(countryInfo.Country);
         }
 
+        /// <summary>
+        /// Get weekend dictionary
+        /// </summary>
+        /// <param name="weekendType"></param>
+        /// <returns></returns>
         public static IWeekendDictionary GetWeekendDictionary(string weekendType)
         {
             var type = EnumsNET.Enums.GetMember<WeekendType>(weekendType, EnumFormat.EnumMemberValue, EnumFormat.Name, EnumFormat.DecimalValue);
             return (type?.Value ?? WeekendType.Universal).ToWeekendDictionary();
         }
-        
+
         #endregion
 
         #region Register
 
+        /// <summary>
+        /// Register
+        /// </summary>
+        /// <param name="code"></param>
+        /// <param name="weekendDictionary"></param>
         internal static void Register(CountryCode code, IWeekendDictionary weekendDictionary)
         {
             if (weekendDictionary == null)
@@ -62,6 +91,10 @@ namespace Cosmos.Business.Extensions.Weekends
             _nonUniversalWeekends.Add(code, weekendDictionary);
         }
 
+        /// <summary>
+        /// Register
+        /// </summary>
+        /// <param name="definition"></param>
         internal static void Register(IBizWeekendDefinition definition)
         {
             if (definition == null)
@@ -71,7 +104,8 @@ namespace Cosmos.Business.Extensions.Weekends
                 definition.Country.ToCode(),
                 definition.WeekendType.ToWeekendDictionary());
         }
-        
+
         #endregion
+
     }
 }
