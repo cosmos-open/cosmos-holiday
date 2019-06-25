@@ -5,18 +5,27 @@ using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStates.Religion
 {
+    /// <summary>
+    /// Christmas Day
+    /// </summary>
     public class ChristmasDay : BaseVariableHolidayFunc
     {
+        /// <inheritdoc />
         public override Country Country { get; } = Country.UnitedStates;
 
+        /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.UnitedStates;
 
+        /// <inheritdoc />
         public override string Name { get; } = "Christmas Day";
 
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
+        /// <inheritdoc />
         public override string I18NIdentityCode { get; } = "i18n_holiday_us_christmasday";
 
+        /// <inheritdoc />
         public override DailyAnswer ToDailyAnswer(int year)
         {
             var calculationDay = DateTimeFactory

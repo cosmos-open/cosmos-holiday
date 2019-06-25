@@ -9,10 +9,15 @@ using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao.Tradition
 {
+    /// <summary>
+    /// 除夕
+    /// </summary>
     public class ChineseNewYearsEve : BaseVariableHolidayFunc
     {
+        /// <inheritdoc />
         public override Country Country { get; } = Country.Macao;
 
+        /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
         /// <summary>
@@ -20,10 +25,13 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao.Tradition
         /// </summary>
         public override string Name { get; } = "除夕";
 
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Tradition;
 
+        /// <inheritdoc />
         public override string I18NIdentityCode { get; } = "i18n_holiday_mo_chuxi";
 
+        /// <inheritdoc />
         public override DailyAnswer ToDailyAnswer(int year)
         {
             //算法一：根据元旦的农历时间算出其所在年份的十二月的最后一天（推荐）

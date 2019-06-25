@@ -4,10 +4,15 @@ using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStates.Public
 {
+    /// <summary>
+    /// Father's day
+    /// </summary>
     public class FathersDay : WeekOffsetVariableHolidayFunc
     {
+        /// <inheritdoc />
         public override Country Country { get; } = Country.UnitedStates;
 
+        /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.UnitedStates;
 
         /// <summary>
@@ -15,14 +20,19 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStat
         /// </summary>
         public override string Name { get; } = "Father's Day";
 
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
+        /// <inheritdoc />
         public override int Month { get; } = 6;
 
+        /// <inheritdoc />
         protected override int WeekAtMonth { get; } = 3;
 
+        /// <inheritdoc />
         protected override DayOfWeek DayOfWeek { get; } = DayOfWeek.Sunday;
 
+        /// <inheritdoc />
         public override string I18NIdentityCode { get; } = "i18n_holiday_us_fathersday";
 
         /*
@@ -34,7 +44,8 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStat
          * 务与每一个孩子的生活，经过几十年的辛苦，儿女们终于长大成人，当子女们盼望能让斯马特先生好好安享
          * 晚年之际，斯马特先生却因多年的过度劳累于1909年辞世。
          */
-        
+
+        /// <inheritdoc />
         public override int? Since { get; } = 1910;
     }
 }

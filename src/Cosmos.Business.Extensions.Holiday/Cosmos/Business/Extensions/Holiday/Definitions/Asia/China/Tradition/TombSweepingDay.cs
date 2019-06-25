@@ -4,10 +4,15 @@ using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Tradition
 {
+    /// <summary>
+    /// 清明节
+    /// </summary>
     public class TombSweepingDay : BaseVariableHolidayFunc
     {
+        /// <inheritdoc />
         public override Country Country { get; } = Country.China;
 
+        /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
         /// <summary>
@@ -15,10 +20,15 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Tradition
         /// </summary>
         public override string Name { get; } = "清明节";
 
+        /// <summary>
+        /// Type of holiday
+        /// </summary>
         public override HolidayType HolidayType { get; set; } = HolidayType.Tradition;
 
+        /// <inheritdoc />
         public override string I18NIdentityCode { get; } = "i18n_holiday_cn_qingmingjie";
 
+        /// <inheritdoc />
         public override DailyAnswer ToDailyAnswer(int year)
         {
             var date = ChineseDateInfo.Of(year, 4, 1);

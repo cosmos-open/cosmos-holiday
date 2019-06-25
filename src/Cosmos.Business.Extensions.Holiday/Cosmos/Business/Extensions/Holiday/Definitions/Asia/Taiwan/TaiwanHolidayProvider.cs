@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Cosmos.Abstractions;
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.I18N.Countries;
 
@@ -12,17 +13,33 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan
     using Public;
     using Tradition;
 
-    public class TaiwanHolidayProvider : BaseDefinitionRegister
+    /// <summary>
+    /// China Taiwan holiday provider
+    /// </summary>
+    public class TaiwanHolidayProvider : BaseDefinitionRegister, IBizHolidayDefinition, IBizRegionHolidayDefinition
     {
+        /// <summary>
+        /// Country or region
+        /// </summary>
         public override Country Country { get; } = Country.Taiwan;
 
+        /// <summary>
+        /// Belongs to country
+        /// </summary>
         public override Country BelongsToCountry { get; } = Country.China;
-        
+
+        /// <summary>
+        /// Include region
+        /// </summary>
+        /// <returns></returns>
         public override IEnumerable<string> IncludeRegions()
         {
             return new[] {Core.Helpers.CountryHelper.GetRegionCode(Country, BelongsToCountry)};
         }
-        
+
+        /// <summary>
+        /// Gets all fixed holiday funcs
+        /// </summary>
         protected override List<IFixedHolidayFunc> AllFixedHolidayFuncs { get; } = CnTwFixedHolidayFuncs;
 
         private static List<IFixedHolidayFunc> CnTwFixedHolidayFuncs = new List<IFixedHolidayFunc>
@@ -32,6 +49,9 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan
             new MinGuoNationalDay(), //10-10
         };
 
+        /// <summary>
+        /// Gets all variable holiday funcs
+        /// </summary>
         protected override List<IVariableHolidayFunc> AllVariableHolidayFuncs { get; } = CnTwVariableHolidayFuncs;
 
         private static List<IVariableHolidayFunc> CnTwVariableHolidayFuncs = new List<IVariableHolidayFunc>
@@ -46,9 +66,13 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan
             new LabaFestival(), //农历12-8
         };
 
+        /// <summary>
+        /// Get sources
+        /// </summary>
+        /// <returns></returns>
         public override IEnumerable<string> GetSources()
         {
-            return new string[]
+            return new[]
             {
                 "https://en.wikipedia.org/wiki/Public_holidays_in_China",
             };

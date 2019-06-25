@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using Cosmos.Business.Extensions.Holiday.Core;
+using Cosmos.Business.Extensions.Holiday.Core.Helpers;
 using Cosmos.I18N.Countries;
+using Cosmos.I18N.Countries.Asia;
 
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China
 {
@@ -11,12 +13,57 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China
     using School;
     using Tradition;
 
+    /// <summary>
+    /// China holiday provider
+    /// </summary>
     public class ChinaHolidayProvider : BaseDefinitionRegister
     {
+        private static IEnumerable<string> RegionCache { get; } = ChinaRegions.GetEndolandRegionCodes();
+
+        /// <summary>
+        /// Country or region
+        /// </summary>
         public override Country Country { get; } = Country.China;
 
+        /// <summary>
+        /// Belongs to country
+        /// </summary>
         public override Country BelongsToCountry { get; } = Country.China;
-        
+
+        /// <summary>
+        /// Include regions
+        /// </summary>
+        /// <returns></returns>
+        public override IEnumerable<string> IncludeRegions() => RegionCache;
+
+        /// <summary>
+        /// Does this provider include special type of regions?
+        /// </summary>
+        /// <param name="regionCode"></param>
+        /// <returns></returns>
+        public override bool DoesIncludeRegion(string regionCode)
+        {
+            if (string.IsNullOrWhiteSpace(regionCode))
+                return false;
+
+            regionCode = CountryHelper.FixRegionCode(Country.China, regionCode);
+
+            switch (regionCode)
+            {
+                case "CN-HK":
+                    return HolidayProviderManager.ContainsRegion(CountryCode.HK);
+                case "CN-MO":
+                    return HolidayProviderManager.ContainsRegion(CountryCode.MO);
+                case "CN-TW":
+                    return HolidayProviderManager.ContainsRegion(CountryCode.TW);
+                default:
+                    return base.DoesIncludeRegion(regionCode);
+            }
+        }
+
+        /// <summary>
+        /// Geta all fixed holiday funcs
+        /// </summary>
         protected override List<IFixedHolidayFunc> AllFixedHolidayFuncs { get; } = CnFixedHolidayFuncs;
 
         private static List<IFixedHolidayFunc> CnFixedHolidayFuncs = new List<IFixedHolidayFunc>
@@ -43,6 +90,9 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China
             new ChairmanMaosBirthday(), //12-26
         };
 
+        /// <summary>
+        /// Gets all variable holiday funcs
+        /// </summary>
         protected override List<IVariableHolidayFunc> AllVariableHolidayFuncs { get; } = CnVariableHolidayFuncs;
 
         private static List<IVariableHolidayFunc> CnVariableHolidayFuncs = new List<IVariableHolidayFunc>
@@ -64,6 +114,10 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China
             new XiaoNianSouth(), //农历12-24
         };
 
+        /// <summary>
+        /// Get sources
+        /// </summary>
+        /// <returns></returns>
         public override IEnumerable<string> GetSources()
         {
             return new[]

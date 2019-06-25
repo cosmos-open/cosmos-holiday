@@ -3,10 +3,15 @@ using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Commemoration
 {
+    /// <summary>
+    /// 918
+    /// </summary>
     public class NineOneEightDay : BaseFixedHolidayFunc
     {
+        /// <inheritdoc />
         public override Country Country { get; } = Country.China;
 
+        /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
         /// <summary>
@@ -14,14 +19,29 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Commemoratio
         /// </summary>
         public override string Name { get; } = "九·一八事变纪念日";
 
+        /// <summary>
+        /// Type of holiday
+        /// </summary>
         public override HolidayType HolidayType { get; set; } = HolidayType.Commemoration;
 
+        /// <summary>
+        /// Month
+        /// </summary>
         public override int Month { get; set; } = 9;
 
+        /// <summary>
+        /// Day
+        /// </summary>
         public override int Day { get; set; } = 18;
 
+        /// <summary>
+        /// i18n
+        /// </summary>
         public override string I18NIdentityCode { get; } = "i18n_holiday_cn_918";
 
+        /// <summary>
+        /// Since...
+        /// </summary>
         public override int? Since { get; } = 1931;
 
         /*

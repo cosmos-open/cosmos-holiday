@@ -8,10 +8,15 @@ using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.HongKong.Tradition
 {
+    /// <summary>
+    /// 中秋节
+    /// </summary>
     public class MidAutumnFestival : ChineseVariableHolidayFunc
     {
+        /// <inheritdoc />
         public override Country Country { get; } = Country.HongKong;
 
+        /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
         /// <summary>
@@ -19,12 +24,16 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.HongKong.Tradition
         /// </summary>
         public override string Name { get; } = "中秋節";
 
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Tradition;
 
-        protected override  int ChineseMonth { get; } = 8;
+        /// <inheritdoc />
+        protected override int ChineseMonth { get; } = 8;
 
-        protected override  int ChineseDay { get; } = 15;
+        /// <inheritdoc />
+        protected override int ChineseDay { get; } = 15;
 
+        /// <inheritdoc />
         public override string I18NIdentityCode { get; } = "i18n_holiday_hk_zhongqiu";
     }
 }

@@ -3,10 +3,15 @@ using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Propaganda
 {
+    /// <summary>
+    /// 国际消费者权益日
+    /// </summary>
     public class WorldConsumerRightsDay : BaseFixedHolidayFunc
     {
+        /// <inheritdoc />
         public override Country Country { get; } = Country.China;
 
+        /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
         /// <summary>
@@ -14,12 +19,18 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Propaganda
         /// </summary>
         public override string Name { get; } = "国际消费者权益日";
 
+        /// <summary>
+        /// Type of holiday
+        /// </summary>
         public override HolidayType HolidayType { get; set; } = HolidayType.Propaganda;
 
+        /// <inheritdoc />
         public override int Month { get; set; } = 3;
 
+        /// <inheritdoc />
         public override int Day { get; set; } = 15;
 
+        /// <inheritdoc />
         public override string I18NIdentityCode { get; } = "i18n_holiday_cn_315";
 
         /*
@@ -30,6 +41,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Propaganda
          * 主题为“信用让消费更放心”。
          */
 
+        /// <inheritdoc />
         public override int? Since { get; } = 1983;
     }
 }

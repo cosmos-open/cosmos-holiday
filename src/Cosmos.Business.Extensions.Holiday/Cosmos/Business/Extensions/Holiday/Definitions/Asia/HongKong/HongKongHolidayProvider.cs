@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Cosmos.Abstractions;
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.I18N.Countries;
 
@@ -12,17 +13,33 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.HongKong
     using Public;
     using Tradition;
 
-    public class HongKongHolidayProvider : BaseDefinitionRegister
+    /// <summary>
+    /// China HongKong holiday provider
+    /// </summary>
+    public class HongKongHolidayProvider : BaseDefinitionRegister, IBizHolidayDefinition, IBizRegionHolidayDefinition
     {
+        /// <summary>
+        /// Country or region
+        /// </summary>
         public override Country Country { get; } = Country.HongKong;
 
+        /// <summary>
+        /// Belongs to country
+        /// </summary>
         public override Country BelongsToCountry { get; } = Country.China;
 
+        /// <summary>
+        /// Include regions
+        /// </summary>
+        /// <returns></returns>
         public override IEnumerable<string> IncludeRegions()
         {
             return new[] {Core.Helpers.CountryHelper.GetRegionCode(Country, BelongsToCountry)};
         }
 
+        /// <summary>
+        /// Gets all fixed holiday funcs
+        /// </summary>
         protected override List<IFixedHolidayFunc> AllFixedHolidayFuncs { get; } = CnHkFixedHolidayFuncs;
 
         private static List<IFixedHolidayFunc> CnHkFixedHolidayFuncs = new List<IFixedHolidayFunc>
@@ -32,6 +49,9 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.HongKong
             new Christmas(), //12-25
         };
 
+        /// <summary>
+        /// Gets all variable holiday guncs
+        /// </summary>
         protected override List<IVariableHolidayFunc> AllVariableHolidayFuncs { get; } = CnHkVariableHolidayFuncs;
 
         private static List<IVariableHolidayFunc> CnHkVariableHolidayFuncs = new List<IVariableHolidayFunc>
@@ -46,6 +66,10 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.HongKong
             new LabaFestival(), //农历12-8
         };
 
+        /// <summary>
+        /// Get sources
+        /// </summary>
+        /// <returns></returns>
         public override IEnumerable<string> GetSources()
         {
             return new[]

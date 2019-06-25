@@ -8,10 +8,15 @@ using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.HongKong.Tradition
 {
+    /// <summary>
+    /// 腊八节
+    /// </summary>
     public class LabaFestival : ChineseVariableHolidayFunc
     {
+        /// <inheritdoc />
         public override Country Country { get; } = Country.HongKong;
 
+        /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
         /// <summary>
@@ -19,12 +24,16 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.HongKong.Tradition
         /// </summary>
         public override string Name { get; } = "臘八節";
 
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Tradition;
 
+        /// <inheritdoc />
         protected override int ChineseMonth { get; } = 12;
 
+        /// <inheritdoc />
         protected override int ChineseDay { get; } = 8;
 
+        /// <inheritdoc />
         public override string I18NIdentityCode { get; } = "i18n_holiday_hk_labajie";
         
         /*

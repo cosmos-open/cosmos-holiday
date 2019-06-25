@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Cosmos.Abstractions;
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.I18N.Countries;
 
@@ -12,17 +13,33 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao
     using Public;
     using Tradition;
 
-    public class MacaoHolidayProvider : BaseDefinitionRegister
+    /// <summary>
+    /// China Macao holiday provider
+    /// </summary>
+    public class MacaoHolidayProvider : BaseDefinitionRegister, IBizHolidayDefinition, IBizRegionHolidayDefinition
     {
+        /// <summary>
+        /// Country or region
+        /// </summary>
         public override Country Country { get; } = Country.Macao;
 
+        /// <summary>
+        /// Belongs to country
+        /// </summary>
         public override Country BelongsToCountry { get; } = Country.China;
         
+        /// <summary>
+        /// Include regions
+        /// </summary>
+        /// <returns></returns>
         public override IEnumerable<string> IncludeRegions()
         {
             return new[] {Core.Helpers.CountryHelper.GetRegionCode(Country, BelongsToCountry)};
         }
         
+        /// <summary>
+        /// Gets all fixed holiday funcs
+        /// </summary>
         protected override List<IFixedHolidayFunc> AllFixedHolidayFuncs { get; } = CnMoFixedHolidayFuncs;
 
         private static List<IFixedHolidayFunc> CnMoFixedHolidayFuncs = new List<IFixedHolidayFunc>
@@ -32,6 +49,9 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao
             new Christmas(),//12-25
         };
 
+        /// <summary>
+        /// Gets all variable holiday funcs
+        /// </summary>
         protected override List<IVariableHolidayFunc> AllVariableHolidayFuncs { get; } = CnMoVariableHolidayFuncs;
 
         private static List<IVariableHolidayFunc> CnMoVariableHolidayFuncs = new List<IVariableHolidayFunc>
@@ -46,9 +66,13 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao
             new LabaFestival(), //农历12-8
         };
 
+        /// <summary>
+        /// Get sources
+        /// </summary>
+        /// <returns></returns>
         public override IEnumerable<string> GetSources()
         {
-            return new string[]
+            return new[]
             {
                 "https://en.wikipedia.org/wiki/Public_holidays_in_China",
             };

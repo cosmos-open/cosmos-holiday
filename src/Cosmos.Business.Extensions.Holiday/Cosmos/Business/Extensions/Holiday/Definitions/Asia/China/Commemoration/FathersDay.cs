@@ -4,10 +4,19 @@ using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Commemoration
 {
+    /// <summary>
+    /// Father's Day
+    /// </summary>
     public class FathersDay : WeekOffsetVariableHolidayFunc
     {
+        /// <summary>
+        /// Country
+        /// </summary>
         public override Country Country { get; } = Country.China;
 
+        /// <summary>
+        /// Belongs to country
+        /// </summary>
         public override Country BelongsToCountry { get; } = Country.China;
 
         /// <summary>
@@ -15,14 +24,29 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Commemoratio
         /// </summary>
         public override string Name { get; } = "父亲节";
 
+        /// <summary>
+        /// Type of holiday
+        /// </summary>
         public override HolidayType HolidayType { get; set; } = HolidayType.Commemoration;
 
+        /// <summary>
+        /// Month
+        /// </summary>
         public override int Month { get; } = 6;
 
+        /// <summary>
+        /// Week at month
+        /// </summary>
         protected override int WeekAtMonth { get; } = 3;
 
+        /// <summary>
+        /// Day of week
+        /// </summary>
         protected override DayOfWeek DayOfWeek { get; } = DayOfWeek.Sunday;
 
+        /// <summary>
+        /// i18n
+        /// </summary>
         public override string I18NIdentityCode { get; } = "i18n_holiday_cn_fuqinjie";
 
         /*
@@ -45,6 +69,9 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Commemoratio
          * 故使用 1910 作為起始年
          */
 
+        /// <summary>
+        /// Since...
+        /// </summary>
         public override int? Since { get; } = 1910;
     }
 }

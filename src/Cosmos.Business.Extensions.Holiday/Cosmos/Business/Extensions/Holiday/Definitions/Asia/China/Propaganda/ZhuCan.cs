@@ -4,10 +4,15 @@ using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Propaganda
 {
-    public class ZhuCan: WeekOffsetVariableHolidayFunc
+    /// <summary>
+    /// 助残日
+    /// </summary>
+    public class ZhuCan : WeekOffsetVariableHolidayFunc
     {
+        /// <inheritdoc />
         public override Country Country { get; } = Country.China;
 
+        /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
         /// <summary>
@@ -15,14 +20,21 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Propaganda
         /// </summary>
         public override string Name { get; } = "全国助残日";
 
+        /// <summary>
+        /// Type of holiday
+        /// </summary>
         public override HolidayType HolidayType { get; set; } = HolidayType.Propaganda;
 
+        /// <inheritdoc />
         public override int Month { get; } = 5;
 
+        /// <inheritdoc />
         protected override int WeekAtMonth { get; } = 3;
 
+        /// <inheritdoc />
         protected override DayOfWeek DayOfWeek { get; } = DayOfWeek.Sunday;
 
+        /// <inheritdoc />
         public override string I18NIdentityCode { get; } = "i18n_holiday_cn_zhucanri";
 
         /*
@@ -34,7 +46,8 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Propaganda
          * 《中华人民共和国残疾人保障法》从1991年5月15日开始实施，“全国助残日”活动即从1991年开始进行。
          * 全国每年都进行“助残日”活动。
          */
-        
+
+        /// <inheritdoc />
         public override int? Since { get; } = 1991;
     }
 }

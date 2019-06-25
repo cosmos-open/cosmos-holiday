@@ -3,10 +3,15 @@ using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Public
 {
+    /// <summary>
+    /// 中国人民抗日战争胜利纪念日
+    /// </summary>
     public class ResistanceAgainstJapanDay : BaseFixedHolidayFunc
     {
+        /// <inheritdoc />
         public override Country Country { get; } = Country.China;
 
+        /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
         /// <summary>
@@ -14,12 +19,18 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Public
         /// </summary>
         public override string Name { get; } = "中国人民抗日战争胜利纪念日";
 
+        /// <summary>
+        /// Type of holiday
+        /// </summary>
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
+        /// <inheritdoc />
         public override int Month { get; set; } = 9;
 
+        /// <inheritdoc />
         public override int Day { get; set; } = 3;
 
+        /// <inheritdoc />
         public override string I18NIdentityCode { get; } = "i18n_holiday_cn_93";
 
         /*
@@ -35,6 +46,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Public
          * 法定确认时间  2014年2月27日
          * */
 
+        /// <inheritdoc />
         public override int? Since { get; } = 1946;
     }
 }

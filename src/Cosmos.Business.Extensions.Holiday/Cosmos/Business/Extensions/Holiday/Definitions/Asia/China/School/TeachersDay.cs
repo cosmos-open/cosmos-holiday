@@ -3,10 +3,15 @@ using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.School
 {
+    /// <summary>
+    /// 教师节
+    /// </summary>
     public class TeachersDay : BaseFixedHolidayFunc
     {
+        /// <inheritdoc />
         public override Country Country { get; } = Country.China;
 
+        /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
         /// <summary>
@@ -14,14 +19,21 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.School
         /// </summary>
         public override string Name { get; } = "教师节";
 
+        /// <summary>
+        /// Type of holiday
+        /// </summary>
         public override HolidayType HolidayType { get; set; } = HolidayType.School;
 
+        /// <inheritdoc />
         public override int Month { get; set; } = 9;
 
+        /// <inheritdoc />
         public override int Day { get; set; } = 10;
 
+        /// <inheritdoc />
         public override string I18NIdentityCode { get; } = "i18n_holiday_cn_jiaoshijie";
 
+        /// <inheritdoc />
         public override int? Since { get; } = 1985;
 
         /*

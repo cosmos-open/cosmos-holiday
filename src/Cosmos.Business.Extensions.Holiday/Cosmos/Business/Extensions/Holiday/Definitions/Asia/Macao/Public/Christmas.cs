@@ -8,10 +8,15 @@ using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao.Public
 {
+    /// <summary>
+    /// 圣诞节
+    /// </summary>
     public class Christmas : BaseFixedHolidayFunc
     {
+        /// <inheritdoc />
         public override Country Country { get; } = Country.Macao;
 
+        /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
         /// <summary>
@@ -19,10 +24,13 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao.Public
         /// </summary>
         public override string Name { get; } = "聖誕節";
 
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
+        /// <inheritdoc />
         public override int Month { get; set; } = 12;
 
+        /// <inheritdoc />
         public override int Day { get; set; } = 25;
 
         /*
@@ -39,6 +47,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao.Public
          * 来西亚、新加坡。
          */
 
+        /// <inheritdoc />
         public override string I18NIdentityCode { get; } = "i18n_holiday_mo_xmas";
 
     }

@@ -3,10 +3,15 @@ using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Public
 {
+    /// <summary>
+    /// 8-1
+    /// </summary>
     public class ArmyDay : BaseFixedHolidayFunc
     {
+        /// <inheritdoc />
         public override Country Country { get; } = Country.China;
 
+        /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
         /// <summary>
@@ -14,12 +19,18 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Public
         /// </summary>
         public override string Name { get; } = "建军节";
 
+        /// <summary>
+        /// Type of holiday
+        /// </summary>
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
+        /// <inheritdoc />
         public override int Month { get; set; } = 8;
 
+        /// <inheritdoc />
         public override int Day { get; set; } = 1;
 
+        /// <inheritdoc />
         public override string I18NIdentityCode { get; } = "i18n_holiday_cn_pla81";
 
         /*
@@ -33,6 +44,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Public
          * 后，将此纪念日改称为中国人民解放军建军节。
          */
 
+        /// <inheritdoc />
         public override int? Since { get; } = 1933;
     }
 }

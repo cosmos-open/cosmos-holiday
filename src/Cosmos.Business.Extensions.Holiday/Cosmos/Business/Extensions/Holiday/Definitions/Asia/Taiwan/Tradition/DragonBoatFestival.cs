@@ -8,10 +8,15 @@ using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan.Tradition
 {
+    /// <summary>
+    /// 端午节
+    /// </summary>
     public class DragonBoatFestival : ChineseVariableHolidayFunc
     {
+        /// <inheritdoc />
         public override Country Country { get; } = Country.Taiwan;
 
+        /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
         /// <summary>
@@ -19,12 +24,16 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan.Tradition
         /// </summary>
         public override string Name { get; } = "端午節";
 
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Tradition;
 
-        protected override  int ChineseMonth { get; } = 5;
+        /// <inheritdoc />
+        protected override int ChineseMonth { get; } = 5;
 
-        protected override  int ChineseDay { get; } = 5;
+        /// <inheritdoc />
+        protected override int ChineseDay { get; } = 5;
 
+        /// <inheritdoc />
         public override string I18NIdentityCode { get; } = "i18n_holiday_tw_duanwu";
     }
 }

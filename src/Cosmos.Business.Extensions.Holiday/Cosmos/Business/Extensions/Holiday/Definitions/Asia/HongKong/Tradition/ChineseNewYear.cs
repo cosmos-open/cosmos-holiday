@@ -8,10 +8,15 @@ using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.HongKong.Tradition
 {
+    /// <summary>
+    /// Chinese New Year
+    /// </summary>
     public class ChineseNewYear : ChineseVariableHolidayFunc
     {
+        /// <inheritdoc />
         public override Country Country { get; } = Country.HongKong;
 
+        /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
         /// <summary>
@@ -19,12 +24,16 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.HongKong.Tradition
         /// </summary>
         public override string Name { get; } = "春節";
 
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Tradition;
 
-        protected override  int ChineseMonth { get; } = 1;
+        /// <inheritdoc />
+        protected override int ChineseMonth { get; } = 1;
 
-        protected override  int ChineseDay { get; } = 1;
+        /// <inheritdoc />
+        protected override int ChineseDay { get; } = 1;
 
+        /// <inheritdoc />
         public override string I18NIdentityCode { get; } = "i18n_holiday_hk_chunjie";
     }
 }

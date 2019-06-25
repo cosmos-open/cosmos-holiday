@@ -3,10 +3,15 @@ using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Public
 {
+    /// <summary>
+    /// 五四青年节
+    /// </summary>
     public class YouthDay : BaseFixedHolidayFunc
     {
+        /// <inheritdoc />
         public override Country Country { get; } = Country.China;
 
+        /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
         /// <summary>
@@ -14,12 +19,18 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Public
         /// </summary>
         public override string Name { get; } = "五四青年节";
 
+        /// <summary>
+        /// Type of holiday
+        /// </summary>
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
+        /// <inheritdoc />
         public override int Month { get; set; } = 5;
 
+        /// <inheritdoc />
         public override int Day { get; set; } = 4;
 
+        /// <inheritdoc />
         public override string I18NIdentityCode { get; } = "i18n_holiday_cn_54";
 
         /*
@@ -32,7 +43,8 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Public
          * 青年们还要集中进行各种社会志愿和社会实践活动，
          * 还有许多地方在青年节期间举行成人仪式。
          */
-        
+
+        /// <inheritdoc />
         public override int? Since { get; } = 1939;
     }
 }

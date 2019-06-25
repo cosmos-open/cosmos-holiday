@@ -3,10 +3,15 @@ using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Public
 {
+    /// <summary>
+    /// May day
+    /// </summary>
     public class MayDay : BaseFixedHolidayFunc
     {
+        /// <inheritdoc />
         public override Country Country { get; } = Country.China;
 
+        /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
         /// <summary>
@@ -14,12 +19,18 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Public
         /// </summary>
         public override string Name { get; } = "国际劳动节";
 
+        /// <summary>
+        /// Type of holiday
+        /// </summary>
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
+        /// <inheritdoc />
         public override int Month { get; set; } = 5;
 
+        /// <inheritdoc />
         public override int Day { get; set; } = 1;
 
+        /// <inheritdoc />
         public override string I18NIdentityCode { get; } = "i18n_holiday_cn_laodongjie";
         
         /*

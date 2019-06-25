@@ -8,10 +8,15 @@ using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan.Commemoration
 {
+    /// <summary>
+    /// 父亲节
+    /// </summary>
     public class FathersDay : BaseFixedHolidayFunc
     {
+        /// <inheritdoc />
         public override Country Country { get; } = Country.Taiwan;
 
+        /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
         /// <summary>
@@ -19,12 +24,16 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan.Commemorati
         /// </summary>
         public override string Name { get; } = "父親節";
 
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
+        /// <inheritdoc />
         public override int Month { get; set; } = 8;
 
+        /// <inheritdoc />
         public override int Day { get; set; } = 8;
 
+        /// <inheritdoc />
         public override string I18NIdentityCode { get; } = "i18n_holiday_tw_fuqinjie";
 
         /*
@@ -48,7 +57,8 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan.Commemorati
          * 李石曾、宋汉章、王晓籁、杜月笙、吴稚晖、李登辉（原复旦大学校长）、钱永铭等数十人，
          * 联名向国民政府请求定每年的8月8日为“父亲节”。
          */
-        
+
+        /// <inheritdoc />
         public override int? Since { get; } = 1945;
     }
 }

@@ -3,10 +3,15 @@ using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Public
 {
+    /// <summary>
+    /// CPC Founding day
+    /// </summary>
     public class CPCFoundingDay : BaseFixedHolidayFunc
     {
+        /// <inheritdoc />
         public override Country Country { get; } = Country.China;
 
+        /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
         /// <summary>
@@ -14,12 +19,18 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Public
         /// </summary>
         public override string Name { get; } = "建党节";
 
+        /// <summary>
+        /// Type of holiday
+        /// </summary>
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
+        /// <inheritdoc />
         public override int Month { get; set; } = 7;
 
+        /// <inheritdoc />
         public override int Day { get; set; } = 1;
 
+        /// <inheritdoc />
         public override string I18NIdentityCode { get; } = "i18n_holiday_cn_cpc71";
 
         /*
@@ -35,7 +46,8 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Public
          * 2016年7月1日，庆祝中国共产党成立95周年大会在北京人民大
          * 会堂隆重举行。
          */
-        
+
+        /// <inheritdoc />
         public override int? Since { get; } = 1938;
     }
 }
