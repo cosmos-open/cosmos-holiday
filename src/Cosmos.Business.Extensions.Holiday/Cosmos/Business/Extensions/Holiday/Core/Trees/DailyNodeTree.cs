@@ -14,6 +14,9 @@ namespace Cosmos.Business.Extensions.Holiday.Core.Trees
     {
         private readonly Dictionary<int, DailyNode> _monthDictionary;
 
+        /// <summary>
+        /// Create a new instance of <see cref="DailyNodeTree"/>
+        /// </summary>
         public DailyNodeTree()
         {
             _monthDictionary = new Dictionary<int, DailyNode>();
@@ -254,6 +257,15 @@ namespace Cosmos.Business.Extensions.Holiday.Core.Trees
             return GetDailyNode(dateInfo.Month).GetFuncs(country, regionCode, dateInfo.Year, dateInfo.Month, dateInfo.Day);
         }
 
+        /// <summary>
+        /// Check date
+        /// </summary>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <param name="day"></param>
+        /// <param name="dateInfo"></param>
+        /// <exception cref="DateTimeOutOfRangeException"></exception>
+        /// <exception cref="InvalidDateTimeException"></exception>
         private void CheckDate(int year, int month, int day, out DateInfo dateInfo)
         {
             if (month > 12 || month < 1)

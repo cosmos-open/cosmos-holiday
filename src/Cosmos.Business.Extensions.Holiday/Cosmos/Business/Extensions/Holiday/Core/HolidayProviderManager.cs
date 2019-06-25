@@ -45,19 +45,27 @@ namespace Cosmos.Business.Extensions.Holiday.Core
             return provider;
         }
 
-        public static void Register<THolidayProvider>()
+        public static void Register<THolidayProvider>(params HolidayType[] registerHolidayTypes)
             where THolidayProvider : class, IHolidayProvider, new()
         {
-            Register(new THolidayProvider());
+            Register(new THolidayProvider(), registerHolidayTypes);
         }
 
-        public static void Register(IHolidayProvider provider)
+        public static void Register(IHolidayProvider provider, params HolidayType[] registerHolidayTypes)
         {
             if (provider == null)
                 throw new ArgumentNullException(nameof(provider));
+
             var type = provider.GetType();
             lock (_lockObj)
             {
+                //step 1. register holiday
+                if (registerHolidayTypes == null)
+                    provider.RegisterAll();
+                else
+                    provider.Register(registerHolidayTypes);
+
+                //step 2. register provider own.
                 if (_providerCache.ContainsKey(type))
                     return;
                 _providerCache.Add(type, provider);
@@ -71,5 +79,10 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         public static bool Contains(Country country) => _providerCache.Values.Any(x => x.BelongsToCountry == country);
 
         public static bool Contains(CountryCode code) => _providerCache.Values.Any(x => x.BelongsToCountry == code.ToCountry());
+
+        public static bool ContainsRegion(Country country) => _providerCache.Values.Any(x => x.Country == country);
+
+        public static bool ContainsRegion(CountryCode code) => _providerCache.Values.Any(x => x.Country == code.ToCountry());
+
     }
 }

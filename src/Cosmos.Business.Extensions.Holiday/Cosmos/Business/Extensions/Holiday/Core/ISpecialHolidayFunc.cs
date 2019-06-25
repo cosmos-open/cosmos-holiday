@@ -1,5 +1,8 @@
 namespace Cosmos.Business.Extensions.Holiday.Core
 {
+    /// <summary>
+    /// Interface of Special Holiday Func
+    /// </summary>
     public interface ISpecialHolidayFunc
     {
         /*

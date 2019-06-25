@@ -4,6 +4,9 @@ using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Core
 {
+    /// <summary>
+    /// WeekOffset variable holiday func
+    /// </summary>
     public abstract class WeekOffsetVariableHolidayFunc : BaseVariableHolidayFunc
     {
 
@@ -25,6 +28,9 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         /// </summary>
         protected abstract DayOfWeek DayOfWeek { get; }
 
+        /// <summary>
+        /// Day number of week
+        /// </summary>
         protected int DayNumberOfWeek => DayOfWeek.ToInt();
 
         #endregion
@@ -38,7 +44,11 @@ namespace Cosmos.Business.Extensions.Holiday.Core
 
         #endregion
 
-
+        /// <summary>
+        /// Convert to <see cref="DailyAnswer"/>
+        /// </summary>
+        /// <param name="year"></param>
+        /// <returns></returns>
         public override DailyAnswer ToDailyAnswer(int year)
         {
             var date = DateTimeFactory.OffsetByWeek(year, Month, WeekAtMonth, DayOfWeek);

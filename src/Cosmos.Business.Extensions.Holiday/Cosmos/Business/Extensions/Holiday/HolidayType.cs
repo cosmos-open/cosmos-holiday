@@ -1,5 +1,8 @@
 namespace Cosmos.Business.Extensions.Holiday
 {
+    /// <summary>
+    /// Holiday type
+    /// </summary>
     public enum HolidayType
     {
         /// <summary>

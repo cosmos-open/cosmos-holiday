@@ -6,6 +6,9 @@ using Cosmos.Joiners;
 
 namespace Cosmos.Business.Extensions.Holiday.Core
 {
+    /// <summary>
+    /// Base variable holiday func
+    /// </summary>
     public abstract class BaseVariableHolidayFunc : IVariableHolidayFunc
     {
 
@@ -50,6 +53,10 @@ namespace Cosmos.Business.Extensions.Holiday.Core
             return Joiner.On(',').Join(GetRegionCodeList());
         }
 
+        /// <summary>
+        /// Get region code list
+        /// </summary>
+        /// <returns></returns>
         protected virtual List<string> GetRegionCodeList()
         {
             if (RegionCodes.Any())
@@ -59,6 +66,11 @@ namespace Cosmos.Business.Extensions.Holiday.Core
                 : new List<string> {CountryHelper.GetRegionCode(Country, BelongsToCountry)};
         }
 
+        /// <summary>
+        /// Match region
+        /// </summary>
+        /// <param name="regionCode"></param>
+        /// <returns></returns>
         public bool MatchRegion(string regionCode)
         {
             if (RegionCodes.Any())
@@ -72,24 +84,56 @@ namespace Cosmos.Business.Extensions.Holiday.Core
 
         #region Name and type
 
+        /// <summary>
+        /// Name
+        /// </summary>
         public abstract string Name { get; }
 
+        /// <summary>
+        /// Type of holiday
+        /// </summary>
         public abstract HolidayType HolidayType { get; set; }
 
         #endregion
 
         #region Since and end
 
+        /// <summary>
+        /// Since
+        /// </summary>
         public virtual int? Since { get; } = null;
 
+        /// <summary>
+        /// End
+        /// </summary>
         public virtual int? End { get; } = null;
 
+        /// <summary>
+        /// Time step value
+        /// </summary>
         public virtual int? TimeStepValue { get; } = null;
 
         #endregion
 
+        #region i18n
+
+        /// <summary>
+        /// i18n
+        /// </summary>
         public abstract string I18NIdentityCode { get; }
 
+        #endregion
+
+        #region Convert to DailyAnswer
+
+        /// <summary>
+        /// Convert to <see cref="DailyAnswer"/>
+        /// </summary>
+        /// <param name="year"></param>
+        /// <returns></returns>
         public abstract DailyAnswer ToDailyAnswer(int year);
+
+        #endregion
+
     }
 }

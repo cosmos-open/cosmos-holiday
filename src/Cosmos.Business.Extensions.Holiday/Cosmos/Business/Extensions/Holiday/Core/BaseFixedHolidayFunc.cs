@@ -6,22 +6,31 @@ using Cosmos.Joiners;
 
 namespace Cosmos.Business.Extensions.Holiday.Core
 {
+    /// <summary>
+    /// Basic fixed holiday func
+    /// </summary>
     public abstract class BaseFixedHolidayFunc : IFixedHolidayFunc
     {
 
         #region Country and region
 
         /// <summary>
+        /// Country or region
+        /// <br />
         /// 标记对应的国家或地区
         /// </summary>
         public abstract Country Country { get; }
 
         /// <summary>
+        /// Belongs to country
+        /// <br />
         /// 标记该国家或地区的所属国家
         /// </summary>
         public abstract Country BelongsToCountry { get; }
 
         /// <summary>
+        /// Region code
+        /// <br />
         /// 標記对应地区的名称，可为空。<br />
         /// 对于国家：请留空<br />
         /// 对于地区：如果留空，则将返回 Country 枚举的 Name 值
@@ -29,6 +38,8 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         public virtual string RegionCode { get; } = string.Empty;
 
         /// <summary>
+        /// A list of region code
+        /// <br />
         /// 標記对应地区的名称列表，可为空。<br />
         /// 对于国家：请留空<br />
         /// 对于地区：如果留空，则将返回 RegionCode 的值
@@ -59,6 +70,11 @@ namespace Cosmos.Business.Extensions.Holiday.Core
                 : new List<string> {CountryHelper.GetRegionCode(Country, BelongsToCountry)};
         }
 
+        /// <summary>
+        /// Match region code
+        /// </summary>
+        /// <param name="regionCode"></param>
+        /// <returns></returns>
         public bool MatchRegion(string regionCode)
         {
             if (RegionCodes.Any())
@@ -72,27 +88,55 @@ namespace Cosmos.Business.Extensions.Holiday.Core
 
         #region Name and type
 
+        /// <summary>
+        /// Name
+        /// </summary>
         public abstract string Name { get; }
 
+        /// <summary>
+        /// Type of holiday
+        /// </summary>
+        // ReSharper disable once UnusedMember.Global
         public abstract HolidayType HolidayType { get; set; }
 
         #endregion
 
         #region Date
 
+        /// <summary>
+        /// Month
+        /// </summary>
+        // ReSharper disable once UnusedAutoPropertyAccessor.Global
         public virtual int Month { get; set; }
 
+        /// <summary>
+        /// Day
+        /// </summary>
+        // ReSharper disable once UnusedAutoPropertyAccessor.Global
         public virtual int Day { get; set; }
 
+        /// <summary>
+        /// From date...
+        /// </summary>
         public virtual (int Month, int Day)? FromDate { get; set; }
 
+        /// <summary>
+        /// To date...
+        /// </summary>
         public virtual (int Month, int Day)? ToDate { get; set; }
 
         /// <summary>
+        /// Length of holiday
+        /// <br />
         /// 节日长度，默认为 1 天
         /// </summary>
         public virtual int Length { get; } = 1;
 
+        /// <summary>
+        /// Match date
+        /// </summary>
+        /// <param name="month"></param>
+        /// <returns></returns>
         public virtual bool MatchDate(int month)
         {
             if (FromDate.HasValue && ToDate.HasValue)
@@ -101,6 +145,12 @@ namespace Cosmos.Business.Extensions.Holiday.Core
             return Month == month;
         }
 
+        /// <summary>
+        /// Match date
+        /// </summary>
+        /// <param name="month"></param>
+        /// <param name="day"></param>
+        /// <returns></returns>
         public virtual bool MatchDate(int month, int day)
         {
             if (FromDate.HasValue && ToDate.HasValue)
@@ -113,20 +163,39 @@ namespace Cosmos.Business.Extensions.Holiday.Core
 
         #region Scince and end
 
+        /// <summary>
+        /// Since...
+        /// </summary>
         public virtual int? Since { get; } = null;
 
+        /// <summary>
+        /// End...
+        /// </summary>
         public virtual int? End { get; } = null;
 
+        /// <summary>
+        /// Time step value...
+        /// </summary>
         public virtual int? TimeStepValue { get; } = null;
 
         #endregion
 
         #region I18N
 
+        /// <summary>
+        /// i18n identity code
+        /// </summary>
         public abstract string I18NIdentityCode { get; }
 
         #endregion
 
+        #region to daily answer
+
+        /// <summary>
+        /// Convet to <see cref="DailyAnswer"/>
+        /// </summary>
+        /// <param name="year"></param>
+        /// <returns></returns>
         public virtual DailyAnswer ToDailyAnswer(int year)
         {
             var builder = DailyAnswerBuilder.Create(Name).From(year, Month, Day);
@@ -145,5 +214,8 @@ namespace Cosmos.Business.Extensions.Holiday.Core
 
             return builder.Build(year);
         }
+
+        #endregion
+
     }
 }

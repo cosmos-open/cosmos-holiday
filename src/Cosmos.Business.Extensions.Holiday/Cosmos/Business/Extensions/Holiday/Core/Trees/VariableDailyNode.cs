@@ -4,16 +4,26 @@ using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Core.Trees
 {
+    /// <summary>
+    /// Variable daily node
+    /// </summary>
     public class VariableDailyNode
     {
         private readonly List<IVariableHolidayFunc> _variableHolidayFuncs;
 
+        /// <summary>
+        /// Create a new instance of <see cref="VariableDailyNode"/>
+        /// </summary>
+        /// <param name="country"></param>
         public VariableDailyNode(Country country)
         {
             Country = country;
             _variableHolidayFuncs = new List<IVariableHolidayFunc>();
         }
 
+        /// <summary>
+        /// Country
+        /// </summary>
         public Country Country { get; }
 
         #region GetFuncs

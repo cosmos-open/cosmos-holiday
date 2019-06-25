@@ -14,6 +14,9 @@ namespace Cosmos.Business.Extensions.Holiday.Core.Trees
     {
         private readonly ConcurrentDictionary<CountryCode, VariableDailyNode> _variableDailyNodes;
 
+        /// <summary>
+        /// Create a new instance of <see cref="VariableDailyNodeTree"/>
+        /// </summary>
         public VariableDailyNodeTree()
         {
             _variableDailyNodes = new ConcurrentDictionary<CountryCode, VariableDailyNode>();

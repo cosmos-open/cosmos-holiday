@@ -6,6 +6,9 @@ using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Core
 {
+    /// <summary>
+    /// Daily answer builder
+    /// </summary>
     public class DailyAnswerBuilder
     {
         private readonly DailyAnswer _answer;
@@ -17,14 +20,31 @@ namespace Cosmos.Business.Extensions.Holiday.Core
             _answer = new DailyAnswer {Name = name};
         }
 
+        /// <summary>
+        /// Create a new instance for <see cref="DailyAnswerBuilder"/>.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         public static DailyAnswerBuilder Create(string name) => new DailyAnswerBuilder(name);
 
+        /// <summary>
+        /// Sets i18n info
+        /// </summary>
+        /// <param name="identityCode"></param>
+        /// <returns></returns>
         public DailyAnswerBuilder I18N(string identityCode)
         {
             _answer.I18NIdentityCode = identityCode;
             return this;
         }
 
+        /// <summary>
+        /// Sets holiday from...
+        /// </summary>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <param name="day"></param>
+        /// <returns></returns>
         public DailyAnswerBuilder From(int year, int month, int day)
         {
             _answer.FromDate = new DateInfo(year, month, day);
@@ -32,6 +52,11 @@ namespace Cosmos.Business.Extensions.Holiday.Core
             return this;
         }
 
+        /// <summary>
+        /// Sets holiday from...
+        /// </summary>
+        /// <param name="date"></param>
+        /// <returns></returns>
         public DailyAnswerBuilder From(DateTime date)
         {
             _answer.FromDate = date;
@@ -39,24 +64,46 @@ namespace Cosmos.Business.Extensions.Holiday.Core
             return this;
         }
 
+        /// <summary>
+        /// Sets holiday to...
+        /// </summary>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <param name="day"></param>
+        /// <returns></returns>
         public DailyAnswerBuilder To(int year, int month, int day)
         {
             _answer.ToDate = new DateInfo(year, month, day);
             return this;
         }
 
+        /// <summary>
+        /// Sets holiday to...
+        /// </summary>
+        /// <param name="date"></param>
+        /// <returns></returns>
         public DailyAnswerBuilder To(DateTime date)
         {
             _answer.ToDate = date;
             return this;
         }
 
+        /// <summary>
+        /// Sets holiday to...
+        /// </summary>
+        /// <param name="length"></param>
+        /// <returns></returns>
         public DailyAnswerBuilder To(int length)
         {
             _answer.ToDate = _answer.ToDate.AddDays(length);
             return this;
         }
 
+        /// <summary>
+        /// Sets when the holiday launches from...
+        /// </summary>
+        /// <param name="year"></param>
+        /// <returns></returns>
         public DailyAnswerBuilder Since(int year)
         {
             if (_answer._times == null)
@@ -65,6 +112,11 @@ namespace Cosmos.Business.Extensions.Holiday.Core
             return this;
         }
 
+        /// <summary>
+        /// Sets when the holiday end...
+        /// </summary>
+        /// <param name="year"></param>
+        /// <returns></returns>
         public DailyAnswerBuilder End(int year)
         {
             if (_answer._times == null)
@@ -73,6 +125,11 @@ namespace Cosmos.Business.Extensions.Holiday.Core
             return this;
         }
 
+        /// <summary>
+        /// Sets times
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public DailyAnswerBuilder Times(int value)
         {
             if (_answer._times == null)
@@ -81,6 +138,12 @@ namespace Cosmos.Business.Extensions.Holiday.Core
             return this;
         }
 
+        /// <summary>
+        /// Sets country info and region info
+        /// </summary>
+        /// <param name="code"></param>
+        /// <param name="regionCodeList"></param>
+        /// <returns></returns>
         public DailyAnswerBuilder Country(CountryCode code, List<string> regionCodeList = null)
         {
             _answer.CountryCode = code;
@@ -93,6 +156,11 @@ namespace Cosmos.Business.Extensions.Holiday.Core
             return this;
         }
 
+        /// <summary>
+        /// Sets region info.
+        /// </summary>
+        /// <param name="regionCodeList"></param>
+        /// <returns></returns>
         public DailyAnswerBuilder Regions(List<string> regionCodeList)
         {
             if (regionCodeList != null)
@@ -104,6 +172,11 @@ namespace Cosmos.Business.Extensions.Holiday.Core
             return this;
         }
 
+        /// <summary>
+        /// Build, and return an instance of <see cref="DailyAnswer"/>.
+        /// </summary>
+        /// <param name="targetYear"></param>
+        /// <returns></returns>
         public DailyAnswer Build(int targetYear)
         {
             var times = _answer.Times;

@@ -4,10 +4,16 @@ using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Core.Trees
 {
+    /// <summary>
+    /// Daily node
+    /// </summary>
     public class DailyNode
     {
         private readonly List<IFixedHolidayFunc> _fixedHolidayFuncs;
 
+        /// <summary>
+        /// Create a new instance of <see cref="DailyNode"/>
+        /// </summary>
         public DailyNode()
         {
             _fixedHolidayFuncs = new List<IFixedHolidayFunc>();

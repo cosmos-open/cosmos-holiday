@@ -3,47 +3,124 @@ using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday
 {
+    /// <summary>
+    /// Interface of holiday info
+    /// </summary>
     public interface IHolidayInfo
     {
         /// <summary>
-        /// 英语节日名称
+        /// Holiday name<br />
+        /// 节假日名称
         /// </summary>
         string Name { get; }
 
         /// <summary>
-        /// 当地节日名称
+        /// Country code
         /// </summary>
-        string LocalName { get; set; }
+        CountryCode CountryCode { get; }
 
         /// <summary>
-        /// ISO 3166-1 alpha-2
-        /// </summary>
-        CountryCode CountryCode { get; set; }
-
-        /// <summary>
-        /// ISO 3166-1 alpha-2
-        /// </summary>
-        CountryCode BelongsToCountryCode { get; set; }
-
-        /// <summary>
-        /// 节日长度
+        /// Length
         /// </summary>
         int Length { get; }
 
         /// <summary>
-        /// 返回节日的每一天
+        /// Since...
         /// </summary>
-        /// <returns></returns>
-        IEnumerable<HolidayInfo> GetAllDates();
+        int? LaunchYear { get; }
 
         /// <summary>
-        /// 标记是否为休息日
+        /// End...
         /// </summary>
-        bool IsRestDay { get; }
-        
+        int? EndYear { get; }
+
         /// <summary>
-        /// 节日开始的年份
+        /// I18N Identity Code
         /// </summary>
-        int? LaunchYear{get; set; }
+        string I18NIdentityCode { get; }
+
+        /// <summary>
+        /// Match date by year
+        /// </summary>
+        /// <param name="year"></param>
+        /// <returns></returns>
+        bool Match(int year);
+
+        /// <summary>
+        /// Match date by year and month.
+        /// </summary>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <returns></returns>
+        bool Match(int year, int month);
+
+        /// <summary>
+        /// Match date by year, month and day
+        /// </summary>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <param name="day"></param>
+        /// <returns></returns>
+        bool Match(int year, int month, int day);
+
+        /// <summary>
+        /// Match country
+        /// </summary>
+        /// <param name="country"></param>
+        /// <returns></returns>
+        bool Match(Country country);
+
+        /// <summary>
+        /// Match country
+        /// </summary>
+        /// <param name="code"></param>
+        /// <returns></returns>
+        bool Match(CountryCode code);
+
+        /// <summary>
+        /// Match region
+        /// </summary>
+        /// <param name="regionCode"></param>
+        /// <returns></returns>
+        bool Match(string regionCode);
+
+        /// <summary>
+        /// Match country and region
+        /// </summary>
+        /// <param name="country"></param>
+        /// <param name="regionCode"></param>
+        /// <returns></returns>
+        bool Match(Country country, string regionCode);
+
+        /// <summary>
+        /// Match country and region
+        /// </summary>
+        /// <param name="code"></param>
+        /// <param name="regionCode"></param>
+        /// <returns></returns>
+        bool Match(CountryCode code, string regionCode);
+
+        /// <summary>
+        /// Match regions
+        /// </summary>
+        /// <param name="regionCodeList"></param>
+        /// <returns></returns>
+        bool Match(IEnumerable<string> regionCodeList);
+
+        /// <summary>
+        /// Match country and regions
+        /// </summary>
+        /// <param name="country"></param>
+        /// <param name="regionCodeList"></param>
+        /// <returns></returns>
+        bool Match(Country country, IEnumerable<string> regionCodeList);
+
+        /// <summary>
+        /// Match country and regions
+        /// </summary>
+        /// <param name="code"></param>
+        /// <param name="regionCodeList"></param>
+        /// <returns></returns>
+        bool Match(CountryCode code, IEnumerable<string> regionCodeList);
     }
 }

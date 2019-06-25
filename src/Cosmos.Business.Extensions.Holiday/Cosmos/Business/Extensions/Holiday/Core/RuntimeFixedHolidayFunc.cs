@@ -57,6 +57,11 @@ namespace Cosmos.Business.Extensions.Holiday.Core
                 : RegionCode;
         }
 
+        /// <summary>
+        /// Match region
+        /// </summary>
+        /// <param name="regionCode"></param>
+        /// <returns></returns>
         public bool MatchRegion(string regionCode)
         {
             if (RegionCodes.Any())
@@ -70,24 +75,50 @@ namespace Cosmos.Business.Extensions.Holiday.Core
 
         #region Name and type
 
+        /// <summary>
+        /// Name
+        /// </summary>
         public string Name { get; set; }
 
+        /// <summary>
+        /// Type of holiday
+        /// </summary>
         public HolidayType HolidayType { get; set; }
 
         #endregion
 
         #region Date
 
+        /// <summary>
+        /// Month
+        /// </summary>
         public int Month { get; set; }
 
+        /// <summary>
+        /// Day
+        /// </summary>
         public int Day { get; set; }
 
+        /// <summary>
+        /// From date...
+        /// </summary>
         public (int Month, int Day)? FromDate { get; set; }
 
+        /// <summary>
+        /// To date...
+        /// </summary>
         public (int Month, int Day)? ToDate { get; set; }
 
+        /// <summary>
+        /// Length of holiday
+        /// </summary>
         public int Length { get; set; } = 1;
 
+        /// <summary>
+        /// Match date
+        /// </summary>
+        /// <param name="month"></param>
+        /// <returns></returns>
         public bool MatchDate(int month)
         {
             if (FromDate.HasValue && ToDate.HasValue)
@@ -96,6 +127,12 @@ namespace Cosmos.Business.Extensions.Holiday.Core
             return Month == month;
         }
 
+        /// <summary>
+        /// Match date
+        /// </summary>
+        /// <param name="month"></param>
+        /// <param name="day"></param>
+        /// <returns></returns>
         public bool MatchDate(int month, int day)
         {
             if (FromDate.HasValue && ToDate.HasValue)
@@ -108,18 +145,39 @@ namespace Cosmos.Business.Extensions.Holiday.Core
 
         #region Since and end
 
+        /// <summary>
+        /// Since
+        /// </summary>
         public int? Since { get; set; }
 
+        /// <summary>
+        /// Ed
+        /// </summary>
         public int? End { get; set; }
 
+        /// <summary>
+        /// Time step value...
+        /// </summary>
         public int? TimeStepValue { get; set; }
 
         #endregion
 
+        #region I18N
 
+        /// <summary>
+        /// i18n
+        /// </summary>
         public string I18NIdentityCode { get; set; }
 
+        #endregion
 
+        #region To DailyAnswer
+
+        /// <summary>
+        /// Convert to <see cref="DailyAnswer"/>
+        /// </summary>
+        /// <param name="year"></param>
+        /// <returns></returns>
         public DailyAnswer ToDailyAnswer(int year)
         {
             var builder = DailyAnswerBuilder.Create(Name).From(year, Month, Day);
@@ -138,5 +196,8 @@ namespace Cosmos.Business.Extensions.Holiday.Core
 
             return builder.I18N(I18NIdentityCode).Build(year);
         }
+
+        #endregion
+        
     }
 }

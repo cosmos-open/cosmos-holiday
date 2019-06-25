@@ -3,6 +3,9 @@ using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Core
 {
+    /// <summary>
+    /// Interface of variable holiday func
+    /// </summary>
     public interface IVariableHolidayFunc
     {
 
@@ -44,6 +47,11 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         /// <returns></returns>
         string GetRegionCode();
 
+        /// <summary>
+        /// Match region 
+        /// </summary>
+        /// <param name="regionCode"></param>
+        /// <returns></returns>
         bool MatchRegion(string regionCode);
 
         #endregion
@@ -81,16 +89,28 @@ namespace Cosmos.Business.Extensions.Holiday.Core
 
         #endregion
 
+        #region i18n
+
         /// <summary>
         /// I18N 识别码
         /// </summary>
         string I18NIdentityCode { get; }
 
+        #endregion
+
+        #region To DailyAnswer
+
         /// <summary>
+        /// Convert to <see cref="DailyAnswer"/>
+        /// <br />
         /// 转换为 DailyAnswer
         /// </summary>
         /// <param name="year"></param>
         /// <returns></returns>
         DailyAnswer ToDailyAnswer(int year);
+
+        #endregion
+
+
     }
 }

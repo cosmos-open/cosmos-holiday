@@ -754,6 +754,11 @@ namespace Cosmos.Business.Extensions.Holiday.Core
 
         #region Mixed getter
 
+        /// <summary>
+        /// Gets mixed <see cref="DailyAnswer"/> collection with <see cref="IFixedHolidayFunc"/> and <see cref="IVariableHolidayFunc"/> one.
+        /// </summary>
+        /// <param name="year"></param>
+        /// <returns></returns>
         public static IEnumerable<DailyAnswer> GetHolidays(int year)
         {
             foreach (var answer in GetFixedHolidays(year))
@@ -762,6 +767,12 @@ namespace Cosmos.Business.Extensions.Holiday.Core
                 yield return answer;
         }
 
+        /// <summary>
+        /// Gets mixed <see cref="DailyAnswer"/> collection with <see cref="IFixedHolidayFunc"/> and <see cref="IVariableHolidayFunc"/> one.
+        /// </summary>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <returns></returns>
         public static IEnumerable<DailyAnswer> GetHolidays(int year, int month)
         {
             foreach (var answer in GetFixedHolidays(year, month))
@@ -770,6 +781,13 @@ namespace Cosmos.Business.Extensions.Holiday.Core
                 yield return answer;
         }
 
+        /// <summary>
+        /// Gets mixed <see cref="DailyAnswer"/> collection with <see cref="IFixedHolidayFunc"/> and <see cref="IVariableHolidayFunc"/> one.
+        /// </summary>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <param name="day"></param>
+        /// <returns></returns>
         public static IEnumerable<DailyAnswer> GetHolidays(int year, int month, int day)
         {
             foreach (var answer in GetFixedHolidays(year, month, day))
@@ -778,6 +796,12 @@ namespace Cosmos.Business.Extensions.Holiday.Core
                 yield return answer;
         }
 
+        /// <summary>
+        /// Gets mixed <see cref="DailyAnswer"/> collection with <see cref="IFixedHolidayFunc"/> and <see cref="IVariableHolidayFunc"/> one.
+        /// </summary>
+        /// <param name="code"></param>
+        /// <param name="year"></param>
+        /// <returns></returns>
         public static IEnumerable<DailyAnswer> GetHolidays(CountryCode code, int year)
         {
             foreach (var answer in GetFixedHolidays(code, year))
@@ -786,6 +810,13 @@ namespace Cosmos.Business.Extensions.Holiday.Core
                 yield return answer;
         }
 
+        /// <summary>
+        /// Gets mixed <see cref="DailyAnswer"/> collection with <see cref="IFixedHolidayFunc"/> and <see cref="IVariableHolidayFunc"/> one.
+        /// </summary>
+        /// <param name="code"></param>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <returns></returns>
         public static IEnumerable<DailyAnswer> GetHolidays(CountryCode code, int year, int month)
         {
             foreach (var answer in GetFixedHolidays(code, year, month))
@@ -794,6 +825,14 @@ namespace Cosmos.Business.Extensions.Holiday.Core
                 yield return answer;
         }
 
+        /// <summary>
+        /// Gets mixed <see cref="DailyAnswer"/> collection with <see cref="IFixedHolidayFunc"/> and <see cref="IVariableHolidayFunc"/> one.
+        /// </summary>
+        /// <param name="code"></param>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <param name="day"></param>
+        /// <returns></returns>
         public static IEnumerable<DailyAnswer> GetHolidays(CountryCode code, int year, int month, int day)
         {
             foreach (var answer in GetFixedHolidays(code, year, month, day))
@@ -802,6 +841,12 @@ namespace Cosmos.Business.Extensions.Holiday.Core
                 yield return answer;
         }
 
+        /// <summary>
+        /// Gets mixed <see cref="DailyAnswer"/> collection with <see cref="IFixedHolidayFunc"/> and <see cref="IVariableHolidayFunc"/> one.
+        /// </summary>
+        /// <param name="country"></param>
+        /// <param name="year"></param>
+        /// <returns></returns>
         public static IEnumerable<DailyAnswer> GetHolidays(Country country, int year)
         {
             foreach (var answer in GetFixedHolidays(country, year))
@@ -810,6 +855,13 @@ namespace Cosmos.Business.Extensions.Holiday.Core
                 yield return answer;
         }
 
+        /// <summary>
+        /// Gets mixed <see cref="DailyAnswer"/> collection with <see cref="IFixedHolidayFunc"/> and <see cref="IVariableHolidayFunc"/> one.
+        /// </summary>
+        /// <param name="country"></param>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <returns></returns>
         public static IEnumerable<DailyAnswer> GetHolidays(Country country, int year, int month)
         {
             foreach (var answer in GetFixedHolidays(country, year, month))
@@ -818,6 +870,14 @@ namespace Cosmos.Business.Extensions.Holiday.Core
                 yield return answer;
         }
 
+        /// <summary>
+        /// Gets mixed <see cref="DailyAnswer"/> collection with <see cref="IFixedHolidayFunc"/> and <see cref="IVariableHolidayFunc"/> one.
+        /// </summary>
+        /// <param name="country"></param>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <param name="day"></param>
+        /// <returns></returns>
         public static IEnumerable<DailyAnswer> GetHolidays(Country country, int year, int month, int day)
         {
             foreach (var answer in GetFixedHolidays(country, year, month, day))
@@ -826,6 +886,13 @@ namespace Cosmos.Business.Extensions.Holiday.Core
                 yield return answer;
         }
 
+        /// <summary>
+        /// Gets mixed <see cref="DailyAnswer"/> collection with <see cref="IFixedHolidayFunc"/> and <see cref="IVariableHolidayFunc"/> one.
+        /// </summary>
+        /// <param name="code"></param>
+        /// <param name="regionCode"></param>
+        /// <param name="year"></param>
+        /// <returns></returns>
         public static IEnumerable<DailyAnswer> GetHolidays(CountryCode code, string regionCode, int year)
         {
             foreach (var answer in GetFixedHolidays(code, regionCode, year))
@@ -834,6 +901,14 @@ namespace Cosmos.Business.Extensions.Holiday.Core
                 yield return answer;
         }
 
+        /// <summary>
+        /// Gets mixed <see cref="DailyAnswer"/> collection with <see cref="IFixedHolidayFunc"/> and <see cref="IVariableHolidayFunc"/> one.
+        /// </summary>
+        /// <param name="code"></param>
+        /// <param name="regionCode"></param>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <returns></returns>
         public static IEnumerable<DailyAnswer> GetHolidays(CountryCode code, string regionCode, int year, int month)
         {
             foreach (var answer in GetFixedHolidays(code, regionCode, year, month))
@@ -842,6 +917,15 @@ namespace Cosmos.Business.Extensions.Holiday.Core
                 yield return answer;
         }
 
+        /// <summary>
+        /// Gets mixed <see cref="DailyAnswer"/> collection with <see cref="IFixedHolidayFunc"/> and <see cref="IVariableHolidayFunc"/> one.
+        /// </summary>
+        /// <param name="code"></param>
+        /// <param name="regionCode"></param>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <param name="day"></param>
+        /// <returns></returns>
         public static IEnumerable<DailyAnswer> GetHolidays(CountryCode code, string regionCode, int year, int month, int day)
         {
             foreach (var answer in GetFixedHolidays(code, regionCode, year, month, day))
@@ -850,6 +934,13 @@ namespace Cosmos.Business.Extensions.Holiday.Core
                 yield return answer;
         }
 
+        /// <summary>
+        /// Gets mixed <see cref="DailyAnswer"/> collection with <see cref="IFixedHolidayFunc"/> and <see cref="IVariableHolidayFunc"/> one.
+        /// </summary>
+        /// <param name="country"></param>
+        /// <param name="regionCode"></param>
+        /// <param name="year"></param>
+        /// <returns></returns>
         public static IEnumerable<DailyAnswer> GetHolidays(Country country, string regionCode, int year)
         {
             foreach (var answer in GetFixedHolidays(country, regionCode, year))
@@ -858,6 +949,14 @@ namespace Cosmos.Business.Extensions.Holiday.Core
                 yield return answer;
         }
 
+        /// <summary>
+        /// Gets mixed <see cref="DailyAnswer"/> collection with <see cref="IFixedHolidayFunc"/> and <see cref="IVariableHolidayFunc"/> one.
+        /// </summary>
+        /// <param name="country"></param>
+        /// <param name="regionCode"></param>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <returns></returns>
         public static IEnumerable<DailyAnswer> GetHolidays(Country country, string regionCode, int year, int month)
         {
             foreach (var answer in GetFixedHolidays(country, regionCode, year, month))
@@ -866,6 +965,15 @@ namespace Cosmos.Business.Extensions.Holiday.Core
                 yield return answer;
         }
 
+        /// <summary>
+        /// Gets mixed <see cref="DailyAnswer"/> collection with <see cref="IFixedHolidayFunc"/> and <see cref="IVariableHolidayFunc"/> one.
+        /// </summary>
+        /// <param name="country"></param>
+        /// <param name="regionCode"></param>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <param name="day"></param>
+        /// <returns></returns>
         public static IEnumerable<DailyAnswer> GetHolidays(Country country, string regionCode, int year, int month, int day)
         {
             foreach (var answer in GetFixedHolidays(country, regionCode, year, month, day))

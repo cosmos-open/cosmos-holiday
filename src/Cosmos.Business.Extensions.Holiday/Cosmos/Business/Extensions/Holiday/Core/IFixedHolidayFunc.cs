@@ -3,6 +3,9 @@ using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Core
 {
+    /// <summary>
+    /// Interface for fixed holiday func
+    /// </summary>
     public interface IFixedHolidayFunc
     {
 
@@ -44,6 +47,11 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         /// <returns></returns>
         string GetRegionCode();
 
+        /// <summary>
+        /// Match region code...
+        /// </summary>
+        /// <param name="regionCode"></param>
+        /// <returns></returns>
         bool MatchRegion(string regionCode);
 
         #endregion
@@ -83,7 +91,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         /// 固定节日的截止日期，优先级高于 Month 和 Day
         /// </summary>
         (int Month, int Day)? ToDate { get; set; }
-        
+
         /// <summary>
         /// 节日长度
         /// </summary>
@@ -125,17 +133,30 @@ namespace Cosmos.Business.Extensions.Holiday.Core
 
         #endregion
 
+        #region I18N
 
         /// <summary>
+        /// i18n identity code
+        /// <br />
         /// I18N 识别码
         /// </summary>
         string I18NIdentityCode { get; }
 
+        #endregion
+
+        #region ToDailyAnswer
+
         /// <summary>
+        /// Convert to <see cref="DailyAnswer"/>
+        /// <br />
         /// 转换为 DailyAnswer
         /// </summary>
         /// <param name="year"></param>
         /// <returns></returns>
         DailyAnswer ToDailyAnswer(int year);
+
+        #endregion
+
+
     }
 }

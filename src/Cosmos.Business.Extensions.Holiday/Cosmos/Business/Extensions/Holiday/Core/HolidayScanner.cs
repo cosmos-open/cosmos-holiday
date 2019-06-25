@@ -1,7 +1,7 @@
 namespace Cosmos.Business.Extensions.Holiday.Core
 {
-    public class HolidayScanner
-    {
-        
-    }
+    /// <summary>
+    /// Holiday scanner
+    /// </summary>
+    public class HolidayScanner { }
 }

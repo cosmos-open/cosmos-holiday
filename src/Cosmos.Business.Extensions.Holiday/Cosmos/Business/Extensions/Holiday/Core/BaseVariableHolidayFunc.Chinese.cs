@@ -3,6 +3,9 @@ using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Core
 {
+    /// <summary>
+    /// Chinese variable holiday func
+    /// </summary>
     public abstract class ChineseVariableHolidayFunc : BaseVariableHolidayFunc
     {
 
@@ -20,6 +23,13 @@ namespace Cosmos.Business.Extensions.Holiday.Core
 
         #endregion
 
+        #region To daily answer
+
+        /// <summary>
+        /// Convert to <see cref="DailyAnswer"/>
+        /// </summary>
+        /// <param name="year"></param>
+        /// <returns></returns>
         public override DailyAnswer ToDailyAnswer(int year)
         {
             var calendar = ChineseLunisolarCalendarHelper.Instance;
@@ -33,5 +43,8 @@ namespace Cosmos.Business.Extensions.Holiday.Core
                 .I18N(I18NIdentityCode)
                 .Build(year);
         }
+
+        #endregion
+
     }
 }

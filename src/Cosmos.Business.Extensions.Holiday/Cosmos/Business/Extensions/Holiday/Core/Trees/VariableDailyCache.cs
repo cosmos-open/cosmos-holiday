@@ -15,6 +15,10 @@ namespace Cosmos.Business.Extensions.Holiday.Core.Trees
         private readonly Dictionary<CountryCode, List<int>> _cacheKeys;
         private readonly object _lockObj = new object();
 
+        /// <summary>
+        /// Create a new instance of <see cref="VariableDailyCache"/>
+        /// </summary>
+        /// <param name="root"></param>
         public VariableDailyCache(VariableDailyNodeTree root)
         {
             _root = root ?? throw new ArgumentNullException(nameof(root));
@@ -282,6 +286,9 @@ namespace Cosmos.Business.Extensions.Holiday.Core.Trees
 
         #region Root
 
+        /// <summary>
+        /// Gets root
+        /// </summary>
         public VariableDailyNodeTree ExposeRoot => _root;
 
         #endregion Root
