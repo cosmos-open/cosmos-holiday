@@ -6,6 +6,30 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{80737CAC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cosmos.Business.Extensions.Holiday", "src\Cosmos.Business.Extensions.Holiday\Cosmos.Business.Extensions.Holiday.csproj", "{42D4F72A-932D-4508-B9D0-A7CFB08EC38B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dependency", "dependency", "{CDC11BCF-A868-4D85-9A12-B02A0E87D083}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cosmos.Business.Extensions.Holiday.Extensions.Autofac", "src\Cosmos.Business.Extensions.Holiday.Extensions.Autofac\Cosmos.Business.Extensions.Holiday.Extensions.Autofac.csproj", "{9FE83D8C-DC8A-4493-BD3E-B61EE7B424A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cosmos.Business.Extensions.Holiday.Extensions.DependencyInjection", "src\Cosmos.Business.Extensions.Holiday.Extensions.DependencyInjection\Cosmos.Business.Extensions.Holiday.Extensions.DependencyInjection.csproj", "{D3BA5131-B21E-4B41-A7B1-5CF3F3CE821B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{A45880BE-4DD9-425F-92DE-3C927650FB45}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{506E3109-09C2-4F76-92E3-61B67F883183}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{0213669B-97AF-4E34-A934-BD9C82B26CCD}"
+ProjectSection(SolutionItems) = preProject
+	build\version.props = build\version.props
+	build\common.props = build\common.props
+EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "publish", "publish", "{F5F53600-AB21-4851-9087-14733F516605}"
+ProjectSection(SolutionItems) = preProject
+	Publish.bat = Publish.bat
+	PublishToMyGet.bat = PublishToMyGet.bat
+EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cosmos.Extensions.Business.Holiday.Tests", "tests\Cosmos.Extensions.Business.Holiday.Tests\Cosmos.Extensions.Business.Holiday.Tests.csproj", "{BAB42ED0-8A41-4D92-A2A3-38648720342B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,11 +37,27 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{42D4F72A-932D-4508-B9D0-A7CFB08EC38B} = {88645AEE-58C3-44B5-BFE4-AB4471898AFA}
+		{CDC11BCF-A868-4D85-9A12-B02A0E87D083} = {88645AEE-58C3-44B5-BFE4-AB4471898AFA}
+		{9FE83D8C-DC8A-4493-BD3E-B61EE7B424A3} = {CDC11BCF-A868-4D85-9A12-B02A0E87D083}
+		{D3BA5131-B21E-4B41-A7B1-5CF3F3CE821B} = {CDC11BCF-A868-4D85-9A12-B02A0E87D083}
+		{BAB42ED0-8A41-4D92-A2A3-38648720342B} = {80737CAC-FA41-4875-84A5-AF8321D3A622}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{42D4F72A-932D-4508-B9D0-A7CFB08EC38B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{42D4F72A-932D-4508-B9D0-A7CFB08EC38B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42D4F72A-932D-4508-B9D0-A7CFB08EC38B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42D4F72A-932D-4508-B9D0-A7CFB08EC38B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FE83D8C-DC8A-4493-BD3E-B61EE7B424A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FE83D8C-DC8A-4493-BD3E-B61EE7B424A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FE83D8C-DC8A-4493-BD3E-B61EE7B424A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FE83D8C-DC8A-4493-BD3E-B61EE7B424A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3BA5131-B21E-4B41-A7B1-5CF3F3CE821B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3BA5131-B21E-4B41-A7B1-5CF3F3CE821B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3BA5131-B21E-4B41-A7B1-5CF3F3CE821B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3BA5131-B21E-4B41-A7B1-5CF3F3CE821B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAB42ED0-8A41-4D92-A2A3-38648720342B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAB42ED0-8A41-4D92-A2A3-38648720342B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAB42ED0-8A41-4D92-A2A3-38648720342B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAB42ED0-8A41-4D92-A2A3-38648720342B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
