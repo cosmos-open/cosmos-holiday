@@ -5,30 +5,55 @@ using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Core
 {
-    internal static class HolidayProviderManager
+    /// <summary>
+    /// Holiday provider manager
+    /// </summary>
+    public class HolidayProviderManager : IHolidayProviderManager
     {
-        private static readonly Dictionary<Type, IHolidayProvider> _providerCache;
-        private static readonly object _lockObj = new object();
+        // ReSharper disable once InconsistentNaming
+        private readonly Dictionary<Type, IHolidayProvider> _providerCache;
 
-        static HolidayProviderManager()
+        // ReSharper disable once InconsistentNaming
+        private readonly object _lockObj = new object();
+
+        /// <summary>
+        /// Create a new instance of <see cref="HolidayProviderManager"/>
+        /// </summary>
+        public HolidayProviderManager()
         {
             _providerCache = new Dictionary<Type, IHolidayProvider>();
         }
 
-        public static IHolidayProvider GetProvider(Type type)
+        /// <summary>
+        /// Get provider
+        /// </summary>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        public IHolidayProvider GetProvider(Type type)
         {
             if (type == null)
                 return null;
             return _providerCache.TryGetValue(type, out var provider) ? provider : null;
         }
 
-        public static THolidayProvider GetProvider<THolidayProvider>()
+        /// <summary>
+        /// Get provider
+        /// </summary>
+        /// <typeparam name="THolidayProvider"></typeparam>
+        /// <returns></returns>
+        public THolidayProvider GetProvider<THolidayProvider>()
             where THolidayProvider : class, IHolidayProvider, new()
         {
             return (THolidayProvider) GetProvider(typeof(THolidayProvider));
         }
 
-        public static IHolidayProvider GetRequiredProvider(Type type)
+        /// <summary>
+        /// Get required provider
+        /// </summary>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentException"></exception>
+        public IHolidayProvider GetRequiredProvider(Type type)
         {
             var provider = GetProvider(type);
             if (provider == null)
@@ -36,7 +61,13 @@ namespace Cosmos.Business.Extensions.Holiday.Core
             return provider;
         }
 
-        public static THolidayProvider GetRequiredProvider<THolidayProvider>()
+        /// <summary>
+        /// Get required provider
+        /// </summary>
+        /// <typeparam name="THolidayProvider"></typeparam>
+        /// <returns></returns>
+        /// <exception cref="ArgumentException"></exception>
+        public THolidayProvider GetRequiredProvider<THolidayProvider>()
             where THolidayProvider : class, IHolidayProvider, new()
         {
             var provider = GetProvider<THolidayProvider>();
@@ -45,13 +76,24 @@ namespace Cosmos.Business.Extensions.Holiday.Core
             return provider;
         }
 
-        public static void Register<THolidayProvider>(params HolidayType[] registerHolidayTypes)
+        /// <summary>
+        /// Register
+        /// </summary>
+        /// <param name="registerHolidayTypes"></param>
+        /// <typeparam name="THolidayProvider"></typeparam>
+        public void Register<THolidayProvider>(params HolidayType[] registerHolidayTypes)
             where THolidayProvider : class, IHolidayProvider, new()
         {
             Register(new THolidayProvider(), registerHolidayTypes);
         }
 
-        public static void Register(IHolidayProvider provider, params HolidayType[] registerHolidayTypes)
+        /// <summary>
+        /// Register
+        /// </summary>
+        /// <param name="provider"></param>
+        /// <param name="registerHolidayTypes"></param>
+        /// <exception cref="ArgumentNullException"></exception>
+        public void Register(IHolidayProvider provider, params HolidayType[] registerHolidayTypes)
         {
             if (provider == null)
                 throw new ArgumentNullException(nameof(provider));
@@ -72,17 +114,43 @@ namespace Cosmos.Business.Extensions.Holiday.Core
             }
         }
 
-        public static IEnumerable<Type> Keys => _providerCache.Keys;
+        /// <summary>
+        /// Keys
+        /// </summary>
+        public IEnumerable<Type> Keys => _providerCache.Keys;
 
-        public static int Count => _providerCache.Count;
+        /// <summary>
+        /// Count
+        /// </summary>
+        public int Count => _providerCache.Count;
 
-        public static bool Contains(Country country) => _providerCache.Values.Any(x => x.BelongsToCountry == country);
+        /// <summary>
+        /// Contains
+        /// </summary>
+        /// <param name="country"></param>
+        /// <returns></returns>
+        public bool Contains(Country country) => _providerCache.Values.Any(x => x.BelongsToCountry == country);
 
-        public static bool Contains(CountryCode code) => _providerCache.Values.Any(x => x.BelongsToCountry == code.ToCountry());
+        /// <summary>
+        /// Contains
+        /// </summary>
+        /// <param name="code"></param>
+        /// <returns></returns>
+        public bool Contains(CountryCode code) => _providerCache.Values.Any(x => x.BelongsToCountry == code.ToCountry());
 
-        public static bool ContainsRegion(Country country) => _providerCache.Values.Any(x => x.Country == country);
+        /// <summary>
+        /// Contains region
+        /// </summary>
+        /// <param name="country"></param>
+        /// <returns></returns>
+        public bool ContainsRegion(Country country) => _providerCache.Values.Any(x => x.Country == country);
 
-        public static bool ContainsRegion(CountryCode code) => _providerCache.Values.Any(x => x.Country == code.ToCountry());
+        /// <summary>
+        /// Contains region
+        /// </summary>
+        /// <param name="code"></param>
+        /// <returns></returns>
+        public bool ContainsRegion(CountryCode code) => _providerCache.Values.Any(x => x.Country == code.ToCountry());
 
     }
 }

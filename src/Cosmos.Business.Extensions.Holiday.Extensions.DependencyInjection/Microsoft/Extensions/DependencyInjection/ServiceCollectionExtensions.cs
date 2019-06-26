@@ -22,7 +22,9 @@ namespace Microsoft.Extensions.DependencyInjection
             if (services == null)
                 throw new ArgumentNullException(nameof(services));
 
-            var options = new MSDIHolidayOptions();
+            var holidayProviderManager = new HolidayProviderManager();
+
+            var options = new MSDIHolidayOptions(holidayProviderManager);
 
             //todo 读取配置，获取 Holiday 配置信息
 
@@ -38,6 +40,9 @@ namespace Microsoft.Extensions.DependencyInjection
 
             services.AddSingleton<IHolidayGetter, HolidayGetter>();
             services.AddSingleton(typeof(IHolidayGetter<>), typeof(HolidayGetter<>));
+            services.AddSingleton<IHolidayProviderManager>(holidayProviderManager);
+            
+            InternalSingleInstanceServiceLocator.SetHolidayProviderManager(holidayProviderManager);
 
             return services;
         }

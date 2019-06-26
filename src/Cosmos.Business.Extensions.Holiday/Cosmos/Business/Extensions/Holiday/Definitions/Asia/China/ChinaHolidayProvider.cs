@@ -51,11 +51,11 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China
             switch (regionCode)
             {
                 case "CN-HK":
-                    return HolidayProviderManager.ContainsRegion(CountryCode.HK);
+                    return InternalSingleInstanceServiceLocator.HolidayProviderManager.ContainsRegion(CountryCode.HK);
                 case "CN-MO":
-                    return HolidayProviderManager.ContainsRegion(CountryCode.MO);
+                    return InternalSingleInstanceServiceLocator.HolidayProviderManager.ContainsRegion(CountryCode.MO);
                 case "CN-TW":
-                    return HolidayProviderManager.ContainsRegion(CountryCode.TW);
+                    return InternalSingleInstanceServiceLocator.HolidayProviderManager.ContainsRegion(CountryCode.TW);
                 default:
                     return base.DoesIncludeRegion(regionCode);
             }

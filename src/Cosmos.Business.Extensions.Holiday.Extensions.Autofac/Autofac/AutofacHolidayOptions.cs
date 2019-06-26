@@ -10,10 +10,17 @@ namespace Autofac
     /// </summary>
     public class AutofacHolidayOptions : HolidayOptions<AutofacHolidayOptions>
     {
+
+        /// <summary>
+        /// Create a new instance of <see cref="AutofacHolidayOptions"/>
+        /// </summary>
+        /// <param name="holidayProviderManager"></param>
+        public AutofacHolidayOptions(IHolidayProviderManager holidayProviderManager) : base(holidayProviderManager) { }
+        
         /// <summary>
         /// RuntimeFixedHolidayFuncs
         /// </summary>
-        internal IReadOnlyList<RuntimeFixedHolidayFunc> RuntimeFixedHolidayFuncs => _RuntimeFixedHolidayFuncs;
+        internal IReadOnlyList<RuntimeFixedHolidayFunc> RuntimeFixedHolidayFuncs => _runtimeFixedHolidayFuncs;
 
         /// <summary>
         /// BizWeekendDefinitions

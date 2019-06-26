@@ -12,18 +12,25 @@ namespace Cosmos.Business.Extensions.Holiday.Configuration
     public abstract class HolidayOptions<TOptions> where TOptions : HolidayOptions<TOptions>
     {
         /// <summary>
+        /// Holiday provider manager
+        /// </summary>
+        // ReSharper disable once InconsistentNaming
+        protected readonly IHolidayProviderManager _holidayProviderManager;
+
+        /// <summary>
         /// Runtime fixed holiday funcs
         /// </summary>
         // ReSharper disable once InconsistentNaming
-        // ReSharper disable once CollectionNeverUpdated.Global
-        protected List<RuntimeFixedHolidayFunc> _RuntimeFixedHolidayFuncs { get; set; }
-
+        protected readonly List<RuntimeFixedHolidayFunc> _runtimeFixedHolidayFuncs;
+        
         /// <summary>
         /// Holiday options
         /// </summary>
-        protected HolidayOptions()
+        /// <param name="holidayProviderManager"></param>
+        protected HolidayOptions(IHolidayProviderManager holidayProviderManager)
         {
-            _RuntimeFixedHolidayFuncs = new List<RuntimeFixedHolidayFunc>();
+            _holidayProviderManager = holidayProviderManager ?? throw new ArgumentNullException(nameof(holidayProviderManager));
+            _runtimeFixedHolidayFuncs = new List<RuntimeFixedHolidayFunc>();
         }
 
         /// <summary>
@@ -34,7 +41,7 @@ namespace Cosmos.Business.Extensions.Holiday.Configuration
         /// <returns></returns>
         public TOptions Use<TProvider>(params HolidayType[] holidayTypes) where TProvider : class, IHolidayProvider, new()
         {
-            HolidayProviderManager.Register<TProvider>(holidayTypes);
+            _holidayProviderManager.Register<TProvider>(holidayTypes);
             return this as TOptions;
         }
 
@@ -47,10 +54,9 @@ namespace Cosmos.Business.Extensions.Holiday.Configuration
         /// <returns></returns>
         public TOptions Use<TProvider>(TProvider provider, params HolidayType[] holidayTypes) where TProvider : class, IHolidayProvider, new()
         {
-            HolidayProviderManager.Register(provider ?? throw new ArgumentNullException(nameof(provider)), holidayTypes);
+            _holidayProviderManager.Register(provider ?? throw new ArgumentNullException(nameof(provider)), holidayTypes);
             return this as TOptions;
         }
-
 
         #region Weekend
 

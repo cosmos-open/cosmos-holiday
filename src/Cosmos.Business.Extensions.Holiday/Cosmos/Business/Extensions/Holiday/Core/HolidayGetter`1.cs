@@ -26,10 +26,14 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         /// <summary>
         /// Holiday getter
         /// </summary>
+        /// <param name="holidayProviderManager"></param>
         /// <param name="anonymousGetter"></param>
-        public HolidayGetter(IHolidayGetter anonymousGetter)
+        public HolidayGetter(IHolidayProviderManager holidayProviderManager, IHolidayGetter anonymousGetter)
         {
-            _provider = HolidayProviderManager.GetRequiredProvider<THolidayProvider>();
+            if (holidayProviderManager == null)
+                throw new ArgumentNullException(nameof(holidayProviderManager));
+
+            _provider = holidayProviderManager.GetRequiredProvider<THolidayProvider>();
             _anonymousGetter = anonymousGetter ?? new HolidayGetter();
         }
 
@@ -128,7 +132,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         }
 
         #endregion
-        
+
         #region AnonymousGetter
 
         /// <summary>

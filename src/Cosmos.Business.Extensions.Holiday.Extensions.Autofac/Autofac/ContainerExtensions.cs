@@ -22,7 +22,9 @@ namespace Autofac
             if (builder == null)
                 throw new ArgumentNullException(nameof(builder));
 
-            var options = new AutofacHolidayOptions();
+            var holidayProviderManager = new HolidayProviderManager();
+
+            var options = new AutofacHolidayOptions(holidayProviderManager);
 
             //todo 读取配置，获取 Holiday 配置信息
 
@@ -38,6 +40,9 @@ namespace Autofac
 
             builder.RegisterType<HolidayGetter>().As<IHolidayGetter>().SingleInstance();
             builder.RegisterType(typeof(HolidayGetter<>)).As(typeof(IHolidayGetter<>)).SingleInstance();
+            builder.RegisterInstance(holidayProviderManager).As<IHolidayProviderManager>().SingleInstance();
+
+            InternalSingleInstanceServiceLocator.SetHolidayProviderManager(holidayProviderManager);
 
             return builder;
         }
