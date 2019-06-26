@@ -10,10 +10,10 @@ for /R "nuget_pub" %%s in (*) do (
     del %%s
 )
 
-::Core
+::core
 dotnet pack src/Cosmos.Business.Extensions.Holiday -c Release -o ../../nuget_pub
 
-::Extensions for dependency
+::extensions for dependency
 dotnet pack src/Cosmos.Business.Extensions.Holiday.Extensions.Autofac -c Release -o ../../nuget_pub
 dotnet pack src/Cosmos.Business.Extensions.Holiday.Extensions.DependencyInjection -c Release -o ../../nuget_pub
 

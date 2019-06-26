@@ -14,8 +14,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cosmos.Business.Extensions.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{A45880BE-4DD9-425F-92DE-3C927650FB45}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{506E3109-09C2-4F76-92E3-61B67F883183}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{0213669B-97AF-4E34-A934-BD9C82B26CCD}"
 ProjectSection(SolutionItems) = preProject
 	build\version.props = build\version.props

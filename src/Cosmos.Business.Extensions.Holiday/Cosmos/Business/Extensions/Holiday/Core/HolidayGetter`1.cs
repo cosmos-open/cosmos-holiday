@@ -13,6 +13,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core
     public class HolidayGetter<THolidayProvider> : IHolidayGetter<THolidayProvider>
         where THolidayProvider : class, IHolidayProvider, new()
     {
+        private readonly IHolidayManager _manager;
         private readonly THolidayProvider _provider;
         private readonly IHolidayGetter _anonymousGetter;
 
@@ -26,15 +27,17 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         /// <summary>
         /// Holiday getter
         /// </summary>
-        /// <param name="holidayProviderManager"></param>
         /// <param name="anonymousGetter"></param>
-        public HolidayGetter(IHolidayProviderManager holidayProviderManager, IHolidayGetter anonymousGetter)
+        /// <param name="holidayManager"></param>
+        /// <param name="holidayProviderManager"></param>
+        public HolidayGetter(IHolidayGetter anonymousGetter, IHolidayManager holidayManager, IHolidayProviderManager holidayProviderManager)
         {
             if (holidayProviderManager == null)
                 throw new ArgumentNullException(nameof(holidayProviderManager));
 
+            _manager = holidayManager ?? throw new ArgumentNullException(nameof(holidayManager));
             _provider = holidayProviderManager.GetRequiredProvider<THolidayProvider>();
-            _anonymousGetter = anonymousGetter ?? new HolidayGetter();
+            _anonymousGetter = anonymousGetter ?? new HolidayGetter(holidayManager);
         }
 
         #region GetHolidays
@@ -46,7 +49,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         /// <returns></returns>
         public IEnumerable<IHolidayInfo> GetHolidays(int year)
         {
-            return HolidayManager.GetHolidays(Country, year).Select(HolidayFactory.Create);
+            return _manager.GetHolidays(Country, year).Select(HolidayFactory.Create);
         }
 
         /// <summary>
@@ -57,7 +60,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         /// <returns></returns>
         public IEnumerable<IHolidayInfo> GetHolidays(int year, int month)
         {
-            return HolidayManager.GetHolidays(Country, year, month).Select(HolidayFactory.Create);
+            return _manager.GetHolidays(Country, year, month).Select(HolidayFactory.Create);
         }
 
         /// <summary>
@@ -69,7 +72,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         /// <returns></returns>
         public IEnumerable<IHolidayInfo> GetHolidays(int year, int month, int day)
         {
-            return HolidayManager.GetHolidays(Country, year, month, day).Select(HolidayFactory.Create);
+            return _manager.GetHolidays(Country, year, month, day).Select(HolidayFactory.Create);
         }
 
         /// <summary>
@@ -83,7 +86,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core
             regionCode = CountryHelper.FixRegionCode(Country, regionCode);
             if (!IncludeRegionCode(regionCode))
                 return Enumerable.Empty<IHolidayInfo>();
-            return HolidayManager.GetHolidays(Country, regionCode, year).Select(HolidayFactory.Create);
+            return _manager.GetHolidays(Country, regionCode, year).Select(HolidayFactory.Create);
         }
 
         /// <summary>
@@ -98,7 +101,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core
             regionCode = CountryHelper.FixRegionCode(Country, regionCode);
             if (!IncludeRegionCode(regionCode))
                 return Enumerable.Empty<IHolidayInfo>();
-            return HolidayManager.GetHolidays(Country, regionCode, year, month).Select(HolidayFactory.Create);
+            return _manager.GetHolidays(Country, regionCode, year, month).Select(HolidayFactory.Create);
         }
 
         /// <summary>
@@ -114,7 +117,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core
             regionCode = CountryHelper.FixRegionCode(Country, regionCode);
             if (!IncludeRegionCode(regionCode))
                 return Enumerable.Empty<IHolidayInfo>();
-            return HolidayManager.GetHolidays(Country, regionCode, year, month, day).Select(HolidayFactory.Create);
+            return _manager.GetHolidays(Country, regionCode, year, month, day).Select(HolidayFactory.Create);
         }
 
         /// <summary>

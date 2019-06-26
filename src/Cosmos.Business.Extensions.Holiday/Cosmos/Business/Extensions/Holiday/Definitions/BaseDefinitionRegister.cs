@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.Business.Extensions.Holiday.Core.Helpers;
+using Cosmos.Business.Extensions.Holiday.Core.Internals;
 using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Definitions
@@ -156,13 +157,13 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions
         private static void RegisterFixedFuncs(IEnumerable<IFixedHolidayFunc> funcs)
         {
             foreach (var func in funcs)
-                HolidayManager.Add(func);
+                InternalSingleInstanceServiceLocator.HolidayManager.Add(func);
         }
 
         private static void RegisterVariableFuncs(IEnumerable<IVariableHolidayFunc> funcs)
         {
             foreach (var func in funcs)
-                HolidayManager.Add(func);
+                InternalSingleInstanceServiceLocator.HolidayManager.Add(func);
         }
 
         /// <summary>

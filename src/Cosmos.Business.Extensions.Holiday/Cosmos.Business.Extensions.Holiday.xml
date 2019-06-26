@@ -50,15 +50,21 @@
             </summary>
             <typeparam name="TOptions"></typeparam>
         </member>
-        <member name="P:Cosmos.Business.Extensions.Holiday.Configuration.HolidayOptions`1._RuntimeFixedHolidayFuncs">
+        <member name="F:Cosmos.Business.Extensions.Holiday.Configuration.HolidayOptions`1._holidayProviderManager">
+            <summary>
+            Holiday provider manager
+            </summary>
+        </member>
+        <member name="F:Cosmos.Business.Extensions.Holiday.Configuration.HolidayOptions`1._runtimeFixedHolidayFuncs">
             <summary>
             Runtime fixed holiday funcs
             </summary>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Configuration.HolidayOptions`1.#ctor">
+        <member name="M:Cosmos.Business.Extensions.Holiday.Configuration.HolidayOptions`1.#ctor(Cosmos.Business.Extensions.Holiday.Core.IHolidayProviderManager)">
             <summary>
             Holiday options
             </summary>
+            <param name="holidayProviderManager"></param>
         </member>
         <member name="M:Cosmos.Business.Extensions.Holiday.Configuration.HolidayOptions`1.Use``1(Cosmos.Business.Extensions.Holiday.HolidayType[])">
             <summary>
@@ -632,6 +638,12 @@
             Holiday getter
             </summary>
         </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayGetter.#ctor(Cosmos.Business.Extensions.Holiday.Core.IHolidayManager)">
+            <summary>
+            Holiday getter
+            </summary>
+            <param name="holidayManager"></param>
+        </member>
         <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayGetter.GetHolidays(Cosmos.I18N.Countries.Country,System.Int32)">
             <summary>
             Gets holiday
@@ -757,11 +769,13 @@
             Country or region
             </summary>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayGetter`1.#ctor(Cosmos.Business.Extensions.Holiday.IHolidayGetter)">
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayGetter`1.#ctor(Cosmos.Business.Extensions.Holiday.IHolidayGetter,Cosmos.Business.Extensions.Holiday.Core.IHolidayManager,Cosmos.Business.Extensions.Holiday.Core.IHolidayProviderManager)">
             <summary>
             Holiday getter
             </summary>
             <param name="anonymousGetter"></param>
+            <param name="holidayManager"></param>
+            <param name="holidayProviderManager"></param>
         </member>
         <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayGetter`1.GetHolidays(System.Int32)">
             <summary>
@@ -830,6 +844,160 @@
             <summary>
             Holiday Manager
             </summary>
+            <summary>
+            Holiday Manager
+            </summary>
+            <summary>
+            Holiday Manager
+            </summary>
+            <summary>
+            Holiday Manager
+            </summary>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.#ctor(Cosmos.Business.Extensions.Holiday.Core.Trees.DailyNodeTree,Cosmos.Business.Extensions.Holiday.Core.Trees.VariableDailyNodeTree)">
+            <summary>
+            Create a new instance of <see cref="T:Cosmos.Business.Extensions.Holiday.Core.HolidayManager"/>
+            </summary>
+            <param name="dailyNodeTree"></param>
+            <param name="variableDailyNodeTree"></param>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetHolidays(System.Int32)">
+            <summary>
+            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
+            </summary>
+            <param name="year"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetHolidays(System.Int32,System.Int32)">
+            <summary>
+            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
+            </summary>
+            <param name="year"></param>
+            <param name="month"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetHolidays(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
+            </summary>
+            <param name="year"></param>
+            <param name="month"></param>
+            <param name="day"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetHolidays(Cosmos.I18N.Countries.CountryCode,System.Int32)">
+            <summary>
+            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
+            </summary>
+            <param name="code"></param>
+            <param name="year"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetHolidays(Cosmos.I18N.Countries.CountryCode,System.Int32,System.Int32)">
+            <summary>
+            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
+            </summary>
+            <param name="code"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetHolidays(Cosmos.I18N.Countries.CountryCode,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
+            </summary>
+            <param name="code"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <param name="day"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetHolidays(Cosmos.I18N.Countries.Country,System.Int32)">
+            <summary>
+            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
+            </summary>
+            <param name="country"></param>
+            <param name="year"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetHolidays(Cosmos.I18N.Countries.Country,System.Int32,System.Int32)">
+            <summary>
+            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
+            </summary>
+            <param name="country"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetHolidays(Cosmos.I18N.Countries.Country,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
+            </summary>
+            <param name="country"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <param name="day"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetHolidays(Cosmos.I18N.Countries.CountryCode,System.String,System.Int32)">
+            <summary>
+            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
+            </summary>
+            <param name="code"></param>
+            <param name="regionCode"></param>
+            <param name="year"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetHolidays(Cosmos.I18N.Countries.CountryCode,System.String,System.Int32,System.Int32)">
+            <summary>
+            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
+            </summary>
+            <param name="code"></param>
+            <param name="regionCode"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetHolidays(Cosmos.I18N.Countries.CountryCode,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
+            </summary>
+            <param name="code"></param>
+            <param name="regionCode"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <param name="day"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetHolidays(Cosmos.I18N.Countries.Country,System.String,System.Int32)">
+            <summary>
+            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
+            </summary>
+            <param name="country"></param>
+            <param name="regionCode"></param>
+            <param name="year"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetHolidays(Cosmos.I18N.Countries.Country,System.String,System.Int32,System.Int32)">
+            <summary>
+            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
+            </summary>
+            <param name="country"></param>
+            <param name="regionCode"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetHolidays(Cosmos.I18N.Countries.Country,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
+            </summary>
+            <param name="country"></param>
+            <param name="regionCode"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <param name="day"></param>
+            <returns></returns>
         </member>
         <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.Add(Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc)">
             <summary>
@@ -843,29 +1011,29 @@
             <summary>
             Add a collection of <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> into <see cref="T:Cosmos.Business.Extensions.Holiday.Core.HolidayManager"/>.
             </summary>
-            <param name="funcs"></param>
+            <param name="funcColl"></param>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetFixedHolidayFuncs">
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.Cosmos#Business#Extensions#Holiday#Core#IFixedHolidayManager#Get">
             <summary>
             Get all fixed holiday func
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetFixedHolidayFuncs(Cosmos.I18N.Countries.CountryCode)">
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.Cosmos#Business#Extensions#Holiday#Core#IFixedHolidayManager#Get(Cosmos.I18N.Countries.CountryCode)">
             <summary>
             Get all fixed holiday func by special country code
             </summary>
             <param name="code"></param>
             <returns></returns>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetFixedHolidayFuncs(Cosmos.I18N.Countries.Country)">
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.Cosmos#Business#Extensions#Holiday#Core#IFixedHolidayManager#Get(Cosmos.I18N.Countries.Country)">
             <summary>
             Get all fixed holiday func by special country
             </summary>
             <param name="country"></param>
             <returns></returns>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetFixedHolidayFuncs(Cosmos.I18N.Countries.CountryCode,System.String)">
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.Cosmos#Business#Extensions#Holiday#Core#IFixedHolidayManager#Get(Cosmos.I18N.Countries.CountryCode,System.String)">
             <summary>
             Get all fixed holiday func by special country code and region code
             </summary>
@@ -873,7 +1041,7 @@
             <param name="regionCode"></param>
             <returns></returns>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetFixedHolidayFuncs(Cosmos.I18N.Countries.Country,System.String)">
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.Cosmos#Business#Extensions#Holiday#Core#IFixedHolidayManager#Get(Cosmos.I18N.Countries.Country,System.String)">
             <summary>
             Get all fixed holiday func by special country and region code
             </summary>
@@ -881,14 +1049,14 @@
             <param name="regionCode"></param>
             <returns></returns>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetFixedHolidayFuncs(System.Int32)">
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.Cosmos#Business#Extensions#Holiday#Core#IFixedHolidayManager#Get(System.Int32)">
             <summary>
             Get all fixed holiday func by special month
             </summary>
             <param name="month"></param>
             <returns></returns>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetFixedHolidayFuncs(Cosmos.I18N.Countries.CountryCode,System.Int32)">
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.Cosmos#Business#Extensions#Holiday#Core#IFixedHolidayManager#Get(Cosmos.I18N.Countries.CountryCode,System.Int32)">
             <summary>
             Get all fixed holiday func by special month and country code
             </summary>
@@ -896,7 +1064,7 @@
             <param name="month"></param>
             <returns></returns>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetFixedHolidayFuncs(Cosmos.I18N.Countries.Country,System.Int32)">
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.Cosmos#Business#Extensions#Holiday#Core#IFixedHolidayManager#Get(Cosmos.I18N.Countries.Country,System.Int32)">
             <summary>
             Get all fixed holiday func by special month and country
             </summary>
@@ -904,7 +1072,7 @@
             <param name="month"></param>
             <returns></returns>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetFixedHolidayFuncs(Cosmos.I18N.Countries.CountryCode,System.String,System.Int32)">
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.Cosmos#Business#Extensions#Holiday#Core#IFixedHolidayManager#Get(Cosmos.I18N.Countries.CountryCode,System.String,System.Int32)">
             <summary>
             Get all fixed holiday func by special month, country coed and region code
             </summary>
@@ -913,7 +1081,7 @@
             <param name="month"></param>
             <returns></returns>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetFixedHolidayFuncs(Cosmos.I18N.Countries.Country,System.String,System.Int32)">
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.Cosmos#Business#Extensions#Holiday#Core#IFixedHolidayManager#Get(Cosmos.I18N.Countries.Country,System.String,System.Int32)">
             <summary>
             Get all fixed holiday func by special month, country and region code
             </summary>
@@ -922,7 +1090,7 @@
             <param name="month"></param>
             <returns></returns>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetFixedHolidayFuncs(System.Int32,System.Int32)">
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.Cosmos#Business#Extensions#Holiday#Core#IFixedHolidayManager#Get(System.Int32,System.Int32)">
             <summary>
             Get all fixed holiday func by special year and month.
             </summary>
@@ -930,7 +1098,7 @@
             <param name="month"></param>
             <returns></returns>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetFixedHolidayFuncs(Cosmos.I18N.Countries.CountryCode,System.Int32,System.Int32)">
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.Cosmos#Business#Extensions#Holiday#Core#IFixedHolidayManager#Get(Cosmos.I18N.Countries.CountryCode,System.Int32,System.Int32)">
             <summary>
             Get all fixed holiday func by special year, month and country code..
             </summary>
@@ -939,7 +1107,7 @@
             <param name="month"></param>
             <returns></returns>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetFixedHolidayFuncs(Cosmos.I18N.Countries.Country,System.Int32,System.Int32)">
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.Cosmos#Business#Extensions#Holiday#Core#IFixedHolidayManager#Get(Cosmos.I18N.Countries.Country,System.Int32,System.Int32)">
             <summary>
             Get all fixed holiday func by special year, month and country.
             </summary>
@@ -948,7 +1116,7 @@
             <param name="month"></param>
             <returns></returns>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetFixedHolidayFuncs(Cosmos.I18N.Countries.CountryCode,System.String,System.Int32,System.Int32)">
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.Cosmos#Business#Extensions#Holiday#Core#IFixedHolidayManager#Get(Cosmos.I18N.Countries.CountryCode,System.String,System.Int32,System.Int32)">
             <summary>
             Get all fixed holiday func by special year, month, country code and region code.
             </summary>
@@ -958,7 +1126,7 @@
             <param name="month"></param>
             <returns></returns>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetFixedHolidayFuncs(Cosmos.I18N.Countries.Country,System.String,System.Int32,System.Int32)">
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.Cosmos#Business#Extensions#Holiday#Core#IFixedHolidayManager#Get(Cosmos.I18N.Countries.Country,System.String,System.Int32,System.Int32)">
             <summary>
             Get all fixed holiday func by special year, month, country and region code.
             </summary>
@@ -968,7 +1136,7 @@
             <param name="month"></param>
             <returns></returns>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetFixedHolidayFuncs(System.Int32,System.Int32,System.Int32)">
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.Cosmos#Business#Extensions#Holiday#Core#IFixedHolidayManager#Get(System.Int32,System.Int32,System.Int32)">
             <summary>
             Get all fixed holiday func by special year, month abd day.
             </summary>
@@ -977,7 +1145,7 @@
             <param name="day"></param>
             <returns></returns>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetFixedHolidayFuncs(Cosmos.I18N.Countries.CountryCode,System.Int32,System.Int32,System.Int32)">
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.Cosmos#Business#Extensions#Holiday#Core#IFixedHolidayManager#Get(Cosmos.I18N.Countries.CountryCode,System.Int32,System.Int32,System.Int32)">
             <summary>
             Get all fixed holiday func by special year, month, day and country code.
             </summary>
@@ -987,7 +1155,7 @@
             <param name="day"></param>
             <returns></returns>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetFixedHolidayFuncs(Cosmos.I18N.Countries.Country,System.Int32,System.Int32,System.Int32)">
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.Cosmos#Business#Extensions#Holiday#Core#IFixedHolidayManager#Get(Cosmos.I18N.Countries.Country,System.Int32,System.Int32,System.Int32)">
             <summary>
             Get all fixed holiday func by special year, month, day and country.
             </summary>
@@ -997,7 +1165,7 @@
             <param name="day"></param>
             <returns></returns>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetFixedHolidayFuncs(Cosmos.I18N.Countries.CountryCode,System.String,System.Int32,System.Int32,System.Int32)">
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.Cosmos#Business#Extensions#Holiday#Core#IFixedHolidayManager#Get(Cosmos.I18N.Countries.CountryCode,System.String,System.Int32,System.Int32,System.Int32)">
             <summary>
             Get all fixed holiday func by special year, month, day, country code and region code.
             </summary>
@@ -1008,7 +1176,7 @@
             <param name="day"></param>
             <returns></returns>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetFixedHolidayFuncs(Cosmos.I18N.Countries.Country,System.String,System.Int32,System.Int32,System.Int32)">
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.Cosmos#Business#Extensions#Holiday#Core#IFixedHolidayManager#Get(Cosmos.I18N.Countries.Country,System.String,System.Int32,System.Int32,System.Int32)">
             <summary>
             Get all fixed holiday func by special year, month , day, country and region code.
             </summary>
@@ -1167,36 +1335,36 @@
             <summary>
             Add a collection of <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> into <see cref="T:Cosmos.Business.Extensions.Holiday.Core.HolidayManager"/>.
             </summary>
-            <param name="funcs"></param>
+            <param name="funcColl"></param>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetVariableHolidayFuncs">
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.Cosmos#Business#Extensions#Holiday#Core#IVariableHolidayManager#Get">
             <summary>
             Get all variable holiday func
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetVariableHolidayFuncs(System.Int32)">
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.Cosmos#Business#Extensions#Holiday#Core#IVariableHolidayManager#Get(System.Int32)">
             <summary>
             Get all variable holiday func by special year
             </summary>
             <param name="year"></param>
             <returns></returns>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetVariableHolidayFuncs(Cosmos.I18N.Countries.CountryCode)">
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.Cosmos#Business#Extensions#Holiday#Core#IVariableHolidayManager#Get(Cosmos.I18N.Countries.CountryCode)">
             <summary>
             Get all variable holiday func by special country code
             </summary>
             <param name="code"></param>
             <returns></returns>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetVariableHolidayFuncs(Cosmos.I18N.Countries.Country)">
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.Cosmos#Business#Extensions#Holiday#Core#IVariableHolidayManager#Get(Cosmos.I18N.Countries.Country)">
             <summary>
             Get all variable holiday func by special country
             </summary>
             <param name="country"></param>
             <returns></returns>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetVariableHolidayFuncs(Cosmos.I18N.Countries.CountryCode,System.String)">
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.Cosmos#Business#Extensions#Holiday#Core#IVariableHolidayManager#Get(Cosmos.I18N.Countries.CountryCode,System.String)">
             <summary>
             Get all variable holiday func by special country code and region code
             </summary>
@@ -1204,7 +1372,7 @@
             <param name="regionCode"></param>
             <returns></returns>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetVariableHolidayFuncs(Cosmos.I18N.Countries.Country,System.String)">
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.Cosmos#Business#Extensions#Holiday#Core#IVariableHolidayManager#Get(Cosmos.I18N.Countries.Country,System.String)">
             <summary>
             Get all variable holiday func by special country and region code
             </summary>
@@ -1212,7 +1380,7 @@
             <param name="regionCode"></param>
             <returns></returns>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetVariableHolidayFuncs(Cosmos.I18N.Countries.CountryCode,System.Int32)">
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.Cosmos#Business#Extensions#Holiday#Core#IVariableHolidayManager#Get(Cosmos.I18N.Countries.CountryCode,System.Int32)">
             <summary>
             Get all variable holiday func by special year and country code
             </summary>
@@ -1220,7 +1388,7 @@
             <param name="year"></param>
             <returns></returns>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetVariableHolidayFuncs(Cosmos.I18N.Countries.Country,System.Int32)">
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.Cosmos#Business#Extensions#Holiday#Core#IVariableHolidayManager#Get(Cosmos.I18N.Countries.Country,System.Int32)">
             <summary>
             Get all variable holiday func by special year and country
             </summary>
@@ -1228,7 +1396,7 @@
             <param name="year"></param>
             <returns></returns>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetVariableHolidayFuncs(Cosmos.I18N.Countries.CountryCode,System.String,System.Int32)">
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.Cosmos#Business#Extensions#Holiday#Core#IVariableHolidayManager#Get(Cosmos.I18N.Countries.CountryCode,System.String,System.Int32)">
             <summary>
             Get all variable holiday func by special year, country code and region code
             </summary>
@@ -1237,7 +1405,7 @@
             <param name="year"></param>
             <returns></returns>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetVariableHolidayFuncs(Cosmos.I18N.Countries.Country,System.String,System.Int32)">
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.Cosmos#Business#Extensions#Holiday#Core#IVariableHolidayManager#Get(Cosmos.I18N.Countries.Country,System.String,System.Int32)">
             <summary>
             Get all variable holiday func by special year, country and region code
             </summary>
@@ -1246,143 +1414,50 @@
             <param name="year"></param>
             <returns></returns>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetHolidays(System.Int32)">
-            <summary>
-            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
-            </summary>
-            <param name="year"></param>
-            <returns></returns>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetVariableHolidays(System.Int32)">
+            <inheritdoc />
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetHolidays(System.Int32,System.Int32)">
-            <summary>
-            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
-            </summary>
-            <param name="year"></param>
-            <param name="month"></param>
-            <returns></returns>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetVariableHolidays(System.Int32,System.Int32)">
+            <inheritdoc />
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetHolidays(System.Int32,System.Int32,System.Int32)">
-            <summary>
-            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
-            </summary>
-            <param name="year"></param>
-            <param name="month"></param>
-            <param name="day"></param>
-            <returns></returns>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetVariableHolidays(System.Int32,System.Int32,System.Int32)">
+            <inheritdoc />
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetHolidays(Cosmos.I18N.Countries.CountryCode,System.Int32)">
-            <summary>
-            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
-            </summary>
-            <param name="code"></param>
-            <param name="year"></param>
-            <returns></returns>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetVariableHolidays(Cosmos.I18N.Countries.CountryCode,System.Int32)">
+            <inheritdoc />
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetHolidays(Cosmos.I18N.Countries.CountryCode,System.Int32,System.Int32)">
-            <summary>
-            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
-            </summary>
-            <param name="code"></param>
-            <param name="year"></param>
-            <param name="month"></param>
-            <returns></returns>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetVariableHolidays(Cosmos.I18N.Countries.Country,System.Int32)">
+            <inheritdoc />
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetHolidays(Cosmos.I18N.Countries.CountryCode,System.Int32,System.Int32,System.Int32)">
-            <summary>
-            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
-            </summary>
-            <param name="code"></param>
-            <param name="year"></param>
-            <param name="month"></param>
-            <param name="day"></param>
-            <returns></returns>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetVariableHolidays(Cosmos.I18N.Countries.CountryCode,System.String,System.Int32)">
+            <inheritdoc />
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetHolidays(Cosmos.I18N.Countries.Country,System.Int32)">
-            <summary>
-            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
-            </summary>
-            <param name="country"></param>
-            <param name="year"></param>
-            <returns></returns>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetVariableHolidays(Cosmos.I18N.Countries.Country,System.String,System.Int32)">
+            <inheritdoc />
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetHolidays(Cosmos.I18N.Countries.Country,System.Int32,System.Int32)">
-            <summary>
-            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
-            </summary>
-            <param name="country"></param>
-            <param name="year"></param>
-            <param name="month"></param>
-            <returns></returns>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetVariableHolidays(Cosmos.I18N.Countries.CountryCode,System.Int32,System.Int32)">
+            <inheritdoc />
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetHolidays(Cosmos.I18N.Countries.Country,System.Int32,System.Int32,System.Int32)">
-            <summary>
-            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
-            </summary>
-            <param name="country"></param>
-            <param name="year"></param>
-            <param name="month"></param>
-            <param name="day"></param>
-            <returns></returns>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetVariableHolidays(Cosmos.I18N.Countries.Country,System.Int32,System.Int32)">
+            <inheritdoc />
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetHolidays(Cosmos.I18N.Countries.CountryCode,System.String,System.Int32)">
-            <summary>
-            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
-            </summary>
-            <param name="code"></param>
-            <param name="regionCode"></param>
-            <param name="year"></param>
-            <returns></returns>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetVariableHolidays(Cosmos.I18N.Countries.CountryCode,System.String,System.Int32,System.Int32)">
+            <inheritdoc />
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetHolidays(Cosmos.I18N.Countries.CountryCode,System.String,System.Int32,System.Int32)">
-            <summary>
-            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
-            </summary>
-            <param name="code"></param>
-            <param name="regionCode"></param>
-            <param name="year"></param>
-            <param name="month"></param>
-            <returns></returns>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetVariableHolidays(Cosmos.I18N.Countries.Country,System.String,System.Int32,System.Int32)">
+            <inheritdoc />
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetHolidays(Cosmos.I18N.Countries.CountryCode,System.String,System.Int32,System.Int32,System.Int32)">
-            <summary>
-            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
-            </summary>
-            <param name="code"></param>
-            <param name="regionCode"></param>
-            <param name="year"></param>
-            <param name="month"></param>
-            <param name="day"></param>
-            <returns></returns>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetVariableHolidays(Cosmos.I18N.Countries.CountryCode,System.Int32,System.Int32,System.Int32)">
+            <inheritdoc />
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetHolidays(Cosmos.I18N.Countries.Country,System.String,System.Int32)">
-            <summary>
-            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
-            </summary>
-            <param name="country"></param>
-            <param name="regionCode"></param>
-            <param name="year"></param>
-            <returns></returns>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetVariableHolidays(Cosmos.I18N.Countries.Country,System.Int32,System.Int32,System.Int32)">
+            <inheritdoc />
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetHolidays(Cosmos.I18N.Countries.Country,System.String,System.Int32,System.Int32)">
-            <summary>
-            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
-            </summary>
-            <param name="country"></param>
-            <param name="regionCode"></param>
-            <param name="year"></param>
-            <param name="month"></param>
-            <returns></returns>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetVariableHolidays(Cosmos.I18N.Countries.CountryCode,System.String,System.Int32,System.Int32,System.Int32)">
+            <inheritdoc />
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetHolidays(Cosmos.I18N.Countries.Country,System.String,System.Int32,System.Int32,System.Int32)">
-            <summary>
-            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
-            </summary>
-            <param name="country"></param>
-            <param name="regionCode"></param>
-            <param name="year"></param>
-            <param name="month"></param>
-            <param name="day"></param>
-            <returns></returns>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetVariableHolidays(Cosmos.I18N.Countries.Country,System.String,System.Int32,System.Int32,System.Int32)">
+            <inheritdoc />
         </member>
         <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManager.GetWeekendDictionary(Cosmos.I18N.Countries.CountryCode)">
             <summary>
@@ -1396,6 +1471,118 @@
             Gets <see cref="T:Cosmos.Business.Extensions.Weekends.WeekendDictionary"/> by weekend type.
             </summary>
             <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Cosmos.Business.Extensions.Holiday.Core.HolidayManagerFactory">
+            <summary>
+            Holiday manager factory
+            </summary>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManagerFactory.Create">
+            <summary>
+            Create
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayManagerFactory.Create(Cosmos.Business.Extensions.Holiday.Core.Trees.DailyNodeTree,Cosmos.Business.Extensions.Holiday.Core.Trees.VariableDailyNodeTree)">
+            <summary>
+            Create
+            </summary>
+            <param name="dailyNodeTree"></param>
+            <param name="variableDailyNodeTree"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Cosmos.Business.Extensions.Holiday.Core.HolidayProviderManager">
+            <summary>
+            Holiday provider manager
+            </summary>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayProviderManager.#ctor">
+            <summary>
+            Create a new instance of <see cref="T:Cosmos.Business.Extensions.Holiday.Core.HolidayProviderManager"/>
+            </summary>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayProviderManager.GetProvider(System.Type)">
+            <summary>
+            Get provider
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayProviderManager.GetProvider``1">
+            <summary>
+            Get provider
+            </summary>
+            <typeparam name="THolidayProvider"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayProviderManager.GetRequiredProvider(System.Type)">
+            <summary>
+            Get required provider
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayProviderManager.GetRequiredProvider``1">
+            <summary>
+            Get required provider
+            </summary>
+            <typeparam name="THolidayProvider"></typeparam>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayProviderManager.Register``1(Cosmos.Business.Extensions.Holiday.HolidayType[])">
+            <summary>
+            Register
+            </summary>
+            <param name="registerHolidayTypes"></param>
+            <typeparam name="THolidayProvider"></typeparam>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayProviderManager.Register(Cosmos.Business.Extensions.Holiday.Core.IHolidayProvider,Cosmos.Business.Extensions.Holiday.HolidayType[])">
+            <summary>
+            Register
+            </summary>
+            <param name="provider"></param>
+            <param name="registerHolidayTypes"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="P:Cosmos.Business.Extensions.Holiday.Core.HolidayProviderManager.Keys">
+            <summary>
+            Keys
+            </summary>
+        </member>
+        <member name="P:Cosmos.Business.Extensions.Holiday.Core.HolidayProviderManager.Count">
+            <summary>
+            Count
+            </summary>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayProviderManager.Contains(Cosmos.I18N.Countries.Country)">
+            <summary>
+            Contains
+            </summary>
+            <param name="country"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayProviderManager.Contains(Cosmos.I18N.Countries.CountryCode)">
+            <summary>
+            Contains
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayProviderManager.ContainsRegion(Cosmos.I18N.Countries.Country)">
+            <summary>
+            Contains region
+            </summary>
+            <param name="country"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.HolidayProviderManager.ContainsRegion(Cosmos.I18N.Countries.CountryCode)">
+            <summary>
+            Contains region
+            </summary>
+            <param name="code"></param>
             <returns></returns>
         </member>
         <member name="T:Cosmos.Business.Extensions.Holiday.Core.HolidayScanner">
@@ -1532,6 +1719,731 @@
             <param name="year"></param>
             <returns></returns>
         </member>
+        <member name="T:Cosmos.Business.Extensions.Holiday.Core.IHolidayManager">
+            <summary>
+            Interface of Holiday Manager
+            </summary>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IHolidayManager.GetHolidays(System.Int32)">
+            <summary>
+            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
+            </summary>
+            <param name="year"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IHolidayManager.GetHolidays(System.Int32,System.Int32)">
+            <summary>
+            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
+            </summary>
+            <param name="year"></param>
+            <param name="month"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IHolidayManager.GetHolidays(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
+            </summary>
+            <param name="year"></param>
+            <param name="month"></param>
+            <param name="day"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IHolidayManager.GetHolidays(Cosmos.I18N.Countries.CountryCode,System.Int32)">
+            <summary>
+            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
+            </summary>
+            <param name="code"></param>
+            <param name="year"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IHolidayManager.GetHolidays(Cosmos.I18N.Countries.CountryCode,System.Int32,System.Int32)">
+            <summary>
+            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
+            </summary>
+            <param name="code"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IHolidayManager.GetHolidays(Cosmos.I18N.Countries.CountryCode,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
+            </summary>
+            <param name="code"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <param name="day"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IHolidayManager.GetHolidays(Cosmos.I18N.Countries.Country,System.Int32)">
+            <summary>
+            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
+            </summary>
+            <param name="country"></param>
+            <param name="year"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IHolidayManager.GetHolidays(Cosmos.I18N.Countries.Country,System.Int32,System.Int32)">
+            <summary>
+            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
+            </summary>
+            <param name="country"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IHolidayManager.GetHolidays(Cosmos.I18N.Countries.Country,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
+            </summary>
+            <param name="country"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <param name="day"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IHolidayManager.GetHolidays(Cosmos.I18N.Countries.CountryCode,System.String,System.Int32)">
+            <summary>
+            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
+            </summary>
+            <param name="code"></param>
+            <param name="regionCode"></param>
+            <param name="year"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IHolidayManager.GetHolidays(Cosmos.I18N.Countries.CountryCode,System.String,System.Int32,System.Int32)">
+            <summary>
+            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
+            </summary>
+            <param name="code"></param>
+            <param name="regionCode"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IHolidayManager.GetHolidays(Cosmos.I18N.Countries.CountryCode,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
+            </summary>
+            <param name="code"></param>
+            <param name="regionCode"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <param name="day"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IHolidayManager.GetHolidays(Cosmos.I18N.Countries.Country,System.String,System.Int32)">
+            <summary>
+            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
+            </summary>
+            <param name="country"></param>
+            <param name="regionCode"></param>
+            <param name="year"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IHolidayManager.GetHolidays(Cosmos.I18N.Countries.Country,System.String,System.Int32,System.Int32)">
+            <summary>
+            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
+            </summary>
+            <param name="country"></param>
+            <param name="regionCode"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IHolidayManager.GetHolidays(Cosmos.I18N.Countries.Country,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Gets mixed <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> collection with <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> and <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> one.
+            </summary>
+            <param name="country"></param>
+            <param name="regionCode"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <param name="day"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager">
+            <summary>
+            Interface of Fixed Holiday Manager
+            </summary>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager.Add(Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc)">
+            <summary>
+            Add <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> into <see cref="T:Cosmos.Business.Extensions.Holiday.Core.HolidayManager"/>.
+            </summary>
+            <param name="func">An instance of <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/>.</param>
+            <exception cref="T:System.ArgumentNullException">The instance of <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> func should not be null.</exception>
+            <exception cref="T:System.InvalidOperationException">Failed to add <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> func.</exception>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager.AddRange(System.Collections.Generic.IEnumerable{Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc})">
+            <summary>
+            Add a collection of <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayFunc"/> into <see cref="T:Cosmos.Business.Extensions.Holiday.Core.HolidayManager"/>.
+            </summary>
+            <param name="funcColl"></param>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager.Get">
+            <summary>
+            Get all fixed holiday func
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager.Get(Cosmos.I18N.Countries.CountryCode)">
+            <summary>
+            Get all fixed holiday func by special country code
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager.Get(Cosmos.I18N.Countries.Country)">
+            <summary>
+            Get all fixed holiday func by special country
+            </summary>
+            <param name="country"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager.Get(Cosmos.I18N.Countries.CountryCode,System.String)">
+            <summary>
+            Get all fixed holiday func by special country code and region code
+            </summary>
+            <param name="code"></param>
+            <param name="regionCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager.Get(Cosmos.I18N.Countries.Country,System.String)">
+            <summary>
+            Get all fixed holiday func by special country and region code
+            </summary>
+            <param name="country"></param>
+            <param name="regionCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager.Get(System.Int32)">
+            <summary>
+            Get all fixed holiday func by special month
+            </summary>
+            <param name="month"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager.Get(Cosmos.I18N.Countries.CountryCode,System.Int32)">
+            <summary>
+            Get all fixed holiday func by special month and country code
+            </summary>
+            <param name="code"></param>
+            <param name="month"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager.Get(Cosmos.I18N.Countries.Country,System.Int32)">
+            <summary>
+            Get all fixed holiday func by special month and country
+            </summary>
+            <param name="country"></param>
+            <param name="month"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager.Get(Cosmos.I18N.Countries.CountryCode,System.String,System.Int32)">
+            <summary>
+            Get all fixed holiday func by special month, country coed and region code
+            </summary>
+            <param name="code"></param>
+            <param name="regionCode"></param>
+            <param name="month"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager.Get(Cosmos.I18N.Countries.Country,System.String,System.Int32)">
+            <summary>
+            Get all fixed holiday func by special month, country and region code
+            </summary>
+            <param name="country"></param>
+            <param name="regionCode"></param>
+            <param name="month"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager.Get(System.Int32,System.Int32)">
+            <summary>
+            Get all fixed holiday func by special year and month.
+            </summary>
+            <param name="year"></param>
+            <param name="month"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager.Get(Cosmos.I18N.Countries.CountryCode,System.Int32,System.Int32)">
+            <summary>
+            Get all fixed holiday func by special year, month and country code..
+            </summary>
+            <param name="code"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager.Get(Cosmos.I18N.Countries.Country,System.Int32,System.Int32)">
+            <summary>
+            Get all fixed holiday func by special year, month and country.
+            </summary>
+            <param name="country"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager.Get(Cosmos.I18N.Countries.CountryCode,System.String,System.Int32,System.Int32)">
+            <summary>
+            Get all fixed holiday func by special year, month, country code and region code.
+            </summary>
+            <param name="code"></param>
+            <param name="regionCode"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager.Get(Cosmos.I18N.Countries.Country,System.String,System.Int32,System.Int32)">
+            <summary>
+            Get all fixed holiday func by special year, month, country and region code.
+            </summary>
+            <param name="country"></param>
+            <param name="regionCode"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager.Get(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Get all fixed holiday func by special year, month abd day.
+            </summary>
+            <param name="year"></param>
+            <param name="month"></param>
+            <param name="day"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager.Get(Cosmos.I18N.Countries.CountryCode,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Get all fixed holiday func by special year, month, day and country code.
+            </summary>
+            <param name="code"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <param name="day"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager.Get(Cosmos.I18N.Countries.Country,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Get all fixed holiday func by special year, month, day and country.
+            </summary>
+            <param name="country"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <param name="day"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager.Get(Cosmos.I18N.Countries.CountryCode,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Get all fixed holiday func by special year, month, day, country code and region code.
+            </summary>
+            <param name="code"></param>
+            <param name="regionCode"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <param name="day"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager.Get(Cosmos.I18N.Countries.Country,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Get all fixed holiday func by special year, month , day, country and region code.
+            </summary>
+            <param name="country"></param>
+            <param name="regionCode"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <param name="day"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager.GetFixedHolidays(System.Int32)">
+            <summary>
+            Get all fixed holiday <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> instance by special year.
+            </summary>
+            <param name="year"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager.GetFixedHolidays(Cosmos.I18N.Countries.CountryCode,System.Int32)">
+            <summary>
+            Get all fixed holiday <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> instance by special year and country code.
+            </summary>
+            <param name="code"></param>
+            <param name="year"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager.GetFixedHolidays(Cosmos.I18N.Countries.Country,System.Int32)">
+            <summary>
+            Get all fixed holiday <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> instance by special year and country.
+            </summary>
+            <param name="country"></param>
+            <param name="year"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager.GetFixedHolidays(Cosmos.I18N.Countries.CountryCode,System.String,System.Int32)">
+            <summary>
+            Get all fixed holiday <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> instance by special year, country code and region code.
+            </summary>
+            <param name="code"></param>
+            <param name="regionCode"></param>
+            <param name="year"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager.GetFixedHolidays(Cosmos.I18N.Countries.Country,System.String,System.Int32)">
+            <summary>
+            Get all fixed holiday <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> instance by special year, country and region code.
+            </summary>
+            <param name="country"></param>
+            <param name="regionCode"></param>
+            <param name="year"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager.GetFixedHolidays(System.Int32,System.Int32)">
+            <summary>
+            Get all fixed holiday <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> instance by special year and month.
+            </summary>
+            <param name="year"></param>
+            <param name="month"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager.GetFixedHolidays(Cosmos.I18N.Countries.CountryCode,System.Int32,System.Int32)">
+            <summary>
+            Get all fixed holiday <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> instance by special year, month and country code.
+            </summary>
+            <param name="code"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager.GetFixedHolidays(Cosmos.I18N.Countries.Country,System.Int32,System.Int32)">
+            <summary>
+            Get all fixed holiday <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> instance by special year, month and country.
+            </summary>
+            <param name="country"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager.GetFixedHolidays(Cosmos.I18N.Countries.CountryCode,System.String,System.Int32,System.Int32)">
+            <summary>
+            Get all fixed holiday <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> instance by special year, month, country code and region code.
+            </summary>
+            <param name="code"></param>
+            <param name="regionCode"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager.GetFixedHolidays(Cosmos.I18N.Countries.Country,System.String,System.Int32,System.Int32)">
+            <summary>
+            Get all fixed holiday <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> instance by special year, month, country and region code.
+            </summary>
+            <param name="country"></param>
+            <param name="regionCode"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager.GetFixedHolidays(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Get all fixed holiday <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> instance by special year, month and day.
+            </summary>
+            <param name="year"></param>
+            <param name="month"></param>
+            <param name="day"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager.GetFixedHolidays(Cosmos.I18N.Countries.CountryCode,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Get all fixed holiday <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> instance by special year, month, day and country code.
+            </summary>
+            <param name="code"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <param name="day"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager.GetFixedHolidays(Cosmos.I18N.Countries.Country,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Get all fixed holiday <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> instance by special year, month, day and country.
+            </summary>
+            <param name="country"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <param name="day"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager.GetFixedHolidays(Cosmos.I18N.Countries.CountryCode,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Get all fixed holiday <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> instance by special year, month, day, country code and region code.
+            </summary>
+            <param name="code"></param>
+            <param name="regionCode"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <param name="day"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IFixedHolidayManager.GetFixedHolidays(Cosmos.I18N.Countries.Country,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Get all fixed holiday <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> instance by special year, month, day, country and region code.
+            </summary>
+            <param name="country"></param>
+            <param name="regionCode"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <param name="day"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayManager">
+            <summary>
+            Interface of Variable Holiday Manager
+            </summary>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayManager.Add(Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc)">
+            <summary>
+            Add <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> into <see cref="T:Cosmos.Business.Extensions.Holiday.Core.HolidayManager"/>.
+            </summary>
+            <param name="func"></param>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayManager.AdRange(System.Collections.Generic.IEnumerable{Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc})">
+            <summary>
+            Add a collection of <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/> into <see cref="T:Cosmos.Business.Extensions.Holiday.Core.HolidayManager"/>.
+            </summary>
+            <param name="funcColl"></param>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayManager.Get">
+            <summary>
+            Get all variable holiday func
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayManager.Get(System.Int32)">
+            <summary>
+            Get all variable holiday func by special year
+            </summary>
+            <param name="year"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayManager.Get(Cosmos.I18N.Countries.CountryCode)">
+            <summary>
+            Get all variable holiday func by special country code
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayManager.Get(Cosmos.I18N.Countries.Country)">
+            <summary>
+            Get all variable holiday func by special country
+            </summary>
+            <param name="country"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayManager.Get(Cosmos.I18N.Countries.CountryCode,System.String)">
+            <summary>
+            Get all variable holiday func by special country code and region code
+            </summary>
+            <param name="code"></param>
+            <param name="regionCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayManager.Get(Cosmos.I18N.Countries.Country,System.String)">
+            <summary>
+            Get all variable holiday func by special country and region code
+            </summary>
+            <param name="country"></param>
+            <param name="regionCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayManager.Get(Cosmos.I18N.Countries.CountryCode,System.Int32)">
+            <summary>
+            Get all variable holiday func by special year and country code
+            </summary>
+            <param name="code"></param>
+            <param name="year"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayManager.Get(Cosmos.I18N.Countries.Country,System.Int32)">
+            <summary>
+            Get all variable holiday func by special year and country
+            </summary>
+            <param name="country"></param>
+            <param name="year"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayManager.Get(Cosmos.I18N.Countries.CountryCode,System.String,System.Int32)">
+            <summary>
+            Get all variable holiday func by special year, country code and region code
+            </summary>
+            <param name="code"></param>
+            <param name="regionCode"></param>
+            <param name="year"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayManager.Get(Cosmos.I18N.Countries.Country,System.String,System.Int32)">
+            <summary>
+            Get all variable holiday func by special year, country and region code
+            </summary>
+            <param name="country"></param>
+            <param name="regionCode"></param>
+            <param name="year"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayManager.GetVariableHolidays(System.Int32)">
+            <summary>
+            Get all variable holiday <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> instance by special year
+            </summary>
+            <param name="year"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayManager.GetVariableHolidays(System.Int32,System.Int32)">
+            <summary>
+            Get all variable holiday <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> instance by special year and month.
+            </summary>
+            <param name="year"></param>
+            <param name="month"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayManager.GetVariableHolidays(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Get all variable holiday <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> instance by special year, month and day.
+            </summary>
+            <param name="year"></param>
+            <param name="month"></param>
+            <param name="day"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayManager.GetVariableHolidays(Cosmos.I18N.Countries.CountryCode,System.Int32)">
+            <summary>
+            Get all variable holiday <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> instance by special year and country code.
+            </summary>
+            <param name="code"></param>
+            <param name="year"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayManager.GetVariableHolidays(Cosmos.I18N.Countries.Country,System.Int32)">
+            <summary>
+            Get all variable holiday <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> instance by special year and country code.
+            </summary>
+            <param name="country"></param>
+            <param name="year"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayManager.GetVariableHolidays(Cosmos.I18N.Countries.CountryCode,System.String,System.Int32)">
+            <summary>
+            Get all variable holiday <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> instance by special month, country code and region code.
+            </summary>
+            <param name="code"></param>
+            <param name="regionCode"></param>
+            <param name="year"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayManager.GetVariableHolidays(Cosmos.I18N.Countries.Country,System.String,System.Int32)">
+            <summary>
+            Get all variable holiday <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> instance by special month, country code and region code.
+            </summary>
+            <param name="country"></param>
+            <param name="regionCode"></param>
+            <param name="year"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayManager.GetVariableHolidays(Cosmos.I18N.Countries.CountryCode,System.Int32,System.Int32)">
+            <summary>
+            Get all variable holiday <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> instance by special year, month and country code.
+            </summary>
+            <param name="code"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayManager.GetVariableHolidays(Cosmos.I18N.Countries.Country,System.Int32,System.Int32)">
+            <summary>
+            Get all variable holiday <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> instance by special year, month and country code.
+            </summary>
+            <param name="country"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayManager.GetVariableHolidays(Cosmos.I18N.Countries.CountryCode,System.String,System.Int32,System.Int32)">
+            <summary>
+            Get all variable holiday <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> instance by special year, month, country code and region code.
+            </summary>
+            <param name="code"></param>
+            <param name="regionCode"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayManager.GetVariableHolidays(Cosmos.I18N.Countries.Country,System.String,System.Int32,System.Int32)">
+            <summary>
+            Get all variable holiday <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> instance by special year, month, country code and region code.
+            </summary>
+            <param name="country"></param>
+            <param name="regionCode"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayManager.GetVariableHolidays(Cosmos.I18N.Countries.CountryCode,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Get all variable holiday <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> instance by special year, month, day and country code.
+            </summary>
+            <param name="code"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <param name="day"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayManager.GetVariableHolidays(Cosmos.I18N.Countries.Country,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Get all variable holiday <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> instance by special year, month, day and country code.
+            </summary>
+            <param name="country"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <param name="day"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayManager.GetVariableHolidays(Cosmos.I18N.Countries.CountryCode,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Get all variable holiday <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> instance by special year, month, day, country code and region code.
+            </summary>
+            <param name="code"></param>
+            <param name="regionCode"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <param name="day"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayManager.GetVariableHolidays(Cosmos.I18N.Countries.Country,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Get all variable holiday <see cref="T:Cosmos.Business.Extensions.Holiday.Core.DailyAnswer"/> instance by special year, month, day, country and region code.
+            </summary>
+            <param name="country"></param>
+            <param name="regionCode"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+            <param name="day"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Cosmos.Business.Extensions.Holiday.Core.IWeekendHolidayManager">
+            <summary>
+            Interface of Weekend Holiday Manager
+            </summary>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IWeekendHolidayManager.GetWeekendDictionary(Cosmos.I18N.Countries.CountryCode)">
+            <summary>
+            Gets <see cref="T:Cosmos.Business.Extensions.Weekends.WeekendDictionary"/> by <see cref="T:Cosmos.I18N.Countries.CountryCode"/>.
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IWeekendHolidayManager.GetWeekendDictionary(System.String)">
+            <summary>
+            Gets <see cref="T:Cosmos.Business.Extensions.Weekends.WeekendDictionary"/> by weekend type.
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
         <member name="T:Cosmos.Business.Extensions.Holiday.Core.IHolidayProvider">
             <summary>
             Interface of holiday provider
@@ -1570,6 +2482,118 @@
             Register spacial type of holiday
             </summary>
             <param name="types"></param>
+        </member>
+        <member name="T:Cosmos.Business.Extensions.Holiday.Core.IHolidayProviderManager">
+            <summary>
+            Interface for holiday provider manager
+            </summary>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IHolidayProviderManager.GetProvider(System.Type)">
+            <summary>
+            Get holiday provider
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IHolidayProviderManager.GetProvider``1">
+            <summary>
+            Get holiday provider
+            </summary>
+            <typeparam name="THolidayProvider"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IHolidayProviderManager.GetRequiredProvider(System.Type)">
+            <summary>
+            Get holiday provider
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IHolidayProviderManager.GetRequiredProvider``1">
+            <summary>
+            Get holiday provider
+            </summary>
+            <typeparam name="THolidayProvider"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IHolidayProviderManager.Register``1(Cosmos.Business.Extensions.Holiday.HolidayType[])">
+            <summary>
+            Register
+            </summary>
+            <param name="registerHolidayTypes"></param>
+            <typeparam name="THolidayProvider"></typeparam>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IHolidayProviderManager.Register(Cosmos.Business.Extensions.Holiday.Core.IHolidayProvider,Cosmos.Business.Extensions.Holiday.HolidayType[])">
+            <summary>
+            Register
+            </summary>
+            <param name="provider"></param>
+            <param name="registerHolidayTypes"></param>
+        </member>
+        <member name="P:Cosmos.Business.Extensions.Holiday.Core.IHolidayProviderManager.Keys">
+            <summary>
+            Keys
+            </summary>
+        </member>
+        <member name="P:Cosmos.Business.Extensions.Holiday.Core.IHolidayProviderManager.Count">
+            <summary>
+            Count
+            </summary>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IHolidayProviderManager.Contains(Cosmos.I18N.Countries.Country)">
+            <summary>
+            Contains
+            </summary>
+            <param name="country"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IHolidayProviderManager.Contains(Cosmos.I18N.Countries.CountryCode)">
+            <summary>
+            Contains
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IHolidayProviderManager.ContainsRegion(Cosmos.I18N.Countries.Country)">
+            <summary>
+            Contains region
+            </summary>
+            <param name="country"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.IHolidayProviderManager.ContainsRegion(Cosmos.I18N.Countries.CountryCode)">
+            <summary>
+            Contains region
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Cosmos.Business.Extensions.Holiday.Core.InternalSingleInstanceServiceLocator">
+            <summary>
+            Internal single instance service locator
+            </summary>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.InternalSingleInstanceServiceLocator.SetHolidayProviderManager(Cosmos.Business.Extensions.Holiday.Core.IHolidayProviderManager)">
+            <summary>
+            Sets
+            </summary>
+            <param name="manager"></param>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.InternalSingleInstanceServiceLocator.SetHolidayManager(Cosmos.Business.Extensions.Holiday.Core.IHolidayManager)">
+            <summary>
+            Sets
+            </summary>
+            <param name="manager"></param>
+        </member>
+        <member name="P:Cosmos.Business.Extensions.Holiday.Core.InternalSingleInstanceServiceLocator.HolidayProviderManager">
+            <summary>
+            Gets
+            </summary>
+        </member>
+        <member name="P:Cosmos.Business.Extensions.Holiday.Core.InternalSingleInstanceServiceLocator.HolidayManager">
+            <summary>
+            Gets
+            </summary>
         </member>
         <member name="T:Cosmos.Business.Extensions.Holiday.Core.ISpecialHolidayFunc">
             <summary>

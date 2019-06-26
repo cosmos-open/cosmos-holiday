@@ -1,6 +1,7 @@
 using System;
 using Cosmos.Business.Extensions.Holiday;
 using Cosmos.Business.Extensions.Holiday.Core;
+using Cosmos.Business.Extensions.Holiday.Core.Internals;
 using Cosmos.Business.Extensions.Weekends;
 
 namespace Microsoft.Extensions.DependencyInjection
@@ -22,7 +23,11 @@ namespace Microsoft.Extensions.DependencyInjection
             if (services == null)
                 throw new ArgumentNullException(nameof(services));
 
+            var holidayManager = HolidayManagerFactory.Create();
             var holidayProviderManager = new HolidayProviderManager();
+
+            InternalSingleInstanceServiceLocator.SetHolidayManager(holidayManager);
+            InternalSingleInstanceServiceLocator.SetHolidayProviderManager(holidayProviderManager);
 
             var options = new MSDIHolidayOptions(holidayProviderManager);
 
@@ -38,11 +43,8 @@ namespace Microsoft.Extensions.DependencyInjection
             //To Activate Weekend options.
             services.RegisterWeekendDefinitions(options);
 
-            services.AddSingleton<IHolidayGetter, HolidayGetter>();
-            services.AddSingleton(typeof(IHolidayGetter<>), typeof(HolidayGetter<>));
-            services.AddSingleton<IHolidayProviderManager>(holidayProviderManager);
-            
-            InternalSingleInstanceServiceLocator.SetHolidayProviderManager(holidayProviderManager);
+            services.RegisterManagers(holidayManager, holidayProviderManager);
+            services.RegisterGetters();
 
             return services;
         }
@@ -63,6 +65,29 @@ namespace Microsoft.Extensions.DependencyInjection
             }
 
             weekendRegister.Scan().Register(options.BizWeekendDefinitions).Done();
+
+            return services;
+        }
+
+        // ReSharper disable once UnusedMethodReturnValue.Local
+        private static IServiceCollection RegisterManagers(this IServiceCollection services, IHolidayManager holidayManager, IHolidayProviderManager holidayProviderManager)
+        {
+            // ReSharper disable once RedundantTypeArgumentsOfMethod
+            services.AddSingleton<IHolidayManager>(holidayManager);
+            services.AddSingleton<IFixedHolidayManager>(holidayManager);
+            services.AddSingleton<IVariableHolidayManager>(holidayManager);
+            services.AddSingleton<IWeekendHolidayManager>(holidayManager);
+            // ReSharper disable once RedundantTypeArgumentsOfMethod
+            services.AddSingleton<IHolidayProviderManager>(holidayProviderManager);
+
+            return services;
+        }
+
+        // ReSharper disable once UnusedMethodReturnValue.Local
+        private static IServiceCollection RegisterGetters(this IServiceCollection services)
+        {
+            services.AddSingleton<IHolidayGetter, HolidayGetter>();
+            services.AddSingleton(typeof(IHolidayGetter<>), typeof(HolidayGetter<>));
 
             return services;
         }
