@@ -2568,29 +2568,29 @@
             <param name="code"></param>
             <returns></returns>
         </member>
-        <member name="T:Cosmos.Business.Extensions.Holiday.Core.InternalSingleInstanceServiceLocator">
+        <member name="T:Cosmos.Business.Extensions.Holiday.Core.Internals.InternalSingleInstanceServiceLocator">
             <summary>
             Internal single instance service locator
             </summary>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.InternalSingleInstanceServiceLocator.SetHolidayProviderManager(Cosmos.Business.Extensions.Holiday.Core.IHolidayProviderManager)">
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.Internals.InternalSingleInstanceServiceLocator.SetHolidayProviderManager(Cosmos.Business.Extensions.Holiday.Core.IHolidayProviderManager)">
             <summary>
             Sets
             </summary>
             <param name="manager"></param>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Core.InternalSingleInstanceServiceLocator.SetHolidayManager(Cosmos.Business.Extensions.Holiday.Core.IHolidayManager)">
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.Internals.InternalSingleInstanceServiceLocator.SetHolidayManager(Cosmos.Business.Extensions.Holiday.Core.IHolidayManager)">
             <summary>
             Sets
             </summary>
             <param name="manager"></param>
         </member>
-        <member name="P:Cosmos.Business.Extensions.Holiday.Core.InternalSingleInstanceServiceLocator.HolidayProviderManager">
+        <member name="P:Cosmos.Business.Extensions.Holiday.Core.Internals.InternalSingleInstanceServiceLocator.HolidayProviderManager">
             <summary>
             Gets
             </summary>
         </member>
-        <member name="P:Cosmos.Business.Extensions.Holiday.Core.InternalSingleInstanceServiceLocator.HolidayManager">
+        <member name="P:Cosmos.Business.Extensions.Holiday.Core.Internals.InternalSingleInstanceServiceLocator.HolidayManager">
             <summary>
             Gets
             </summary>
@@ -3669,6 +3669,83 @@
             <param name="func">An instance of <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/>.</param>
             <returns></returns>
         </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.Trees.EmptyVariableDailyNode.GetFuncs">
+            <summary>
+            Get a readonly collection of <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/>.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.Trees.EmptyVariableDailyNode.GetFuncs(Cosmos.I18N.Countries.CountryCode)">
+            <summary>
+            Get a readonly collection of <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/>.
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.Trees.EmptyVariableDailyNode.GetFuncs(Cosmos.I18N.Countries.Country)">
+            <summary>
+            Get a readonly collection of <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/>.
+            </summary>
+            <param name="country"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.Trees.EmptyVariableDailyNode.GetFuncs(Cosmos.I18N.Countries.CountryCode,System.String)">
+            <summary>
+            Get a readonly collection of <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/>.
+            </summary>
+            <param name="code"></param>
+            <param name="regionCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.Trees.EmptyVariableDailyNode.GetFuncs(Cosmos.I18N.Countries.Country,System.String)">
+            <summary>
+            Get a readonly collection of <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/>.
+            </summary>
+            <param name="country"></param>
+            <param name="regionCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.Trees.EmptyVariableDailyNode.GetFuncs(System.Int32)">
+            <summary>
+            Get a readonly collection of <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/>.
+            </summary>
+            <param name="year"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.Trees.EmptyVariableDailyNode.GetFuncs(Cosmos.I18N.Countries.CountryCode,System.Int32)">
+            <summary>
+            Get a readonly collection of <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/>.
+            </summary>
+            <param name="code"></param>
+            <param name="year"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.Trees.EmptyVariableDailyNode.GetFuncs(Cosmos.I18N.Countries.Country,System.Int32)">
+            <summary>
+            Get a readonly collection of <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/>.
+            </summary>
+            <param name="country"></param>
+            <param name="year"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.Trees.EmptyVariableDailyNode.GetFuncs(Cosmos.I18N.Countries.CountryCode,System.String,System.Int32)">
+            <summary>
+            Get a readonly collection of <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/>.
+            </summary>
+            <param name="code"></param>
+            <param name="regionCode"></param>
+            <param name="year"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.Core.Trees.EmptyVariableDailyNode.GetFuncs(Cosmos.I18N.Countries.Country,System.String,System.Int32)">
+            <summary>
+            Get a readonly collection of <see cref="T:Cosmos.Business.Extensions.Holiday.Core.IVariableHolidayFunc"/>.
+            </summary>
+            <param name="country"></param>
+            <param name="regionCode"></param>
+            <param name="year"></param>
+            <returns></returns>
+        </member>
         <member name="T:Cosmos.Business.Extensions.Holiday.Core.Trees.VariableDailyNodeTree">
             <summary>
             用于 VariableHoliday 模式的节点树<br />
@@ -3829,48 +3906,62 @@
             </summary>
             <param name="funcsFunc"></param>
         </member>
-        <member name="T:Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.ChinaHolidayProvider">
+        <member name="T:Cosmos.Business.Extensions.Holiday.ChinaHolidayProvider">
             <summary>
             China holiday provider
             </summary>
         </member>
-        <member name="P:Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.ChinaHolidayProvider.Country">
+        <member name="P:Cosmos.Business.Extensions.Holiday.ChinaHolidayProvider.Country">
             <summary>
             Country or region
             </summary>
         </member>
-        <member name="P:Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.ChinaHolidayProvider.BelongsToCountry">
+        <member name="P:Cosmos.Business.Extensions.Holiday.ChinaHolidayProvider.BelongsToCountry">
             <summary>
             Belongs to country
             </summary>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.ChinaHolidayProvider.IncludeRegions">
+        <member name="M:Cosmos.Business.Extensions.Holiday.ChinaHolidayProvider.IncludeRegions">
             <summary>
             Include regions
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.ChinaHolidayProvider.DoesIncludeRegion(System.String)">
+        <member name="M:Cosmos.Business.Extensions.Holiday.ChinaHolidayProvider.DoesIncludeRegion(System.String)">
             <summary>
             Does this provider include special type of regions?
             </summary>
             <param name="regionCode"></param>
             <returns></returns>
         </member>
-        <member name="P:Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.ChinaHolidayProvider.AllFixedHolidayFuncs">
+        <member name="P:Cosmos.Business.Extensions.Holiday.ChinaHolidayProvider.AllFixedHolidayFuncs">
             <summary>
             Geta all fixed holiday funcs
             </summary>
         </member>
-        <member name="P:Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.ChinaHolidayProvider.AllVariableHolidayFuncs">
+        <member name="P:Cosmos.Business.Extensions.Holiday.ChinaHolidayProvider.AllVariableHolidayFuncs">
             <summary>
             Gets all variable holiday funcs
             </summary>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.ChinaHolidayProvider.GetSources">
+        <member name="M:Cosmos.Business.Extensions.Holiday.ChinaHolidayProvider.GetSources">
             <summary>
             Get sources
             </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Cosmos.Business.Extensions.Holiday.ChinaHolidayProviderExtensions">
+            <summary>
+            China holiday provider extensions
+            </summary>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.ChinaHolidayProviderExtensions.UseChina``1(Cosmos.Business.Extensions.Holiday.Configuration.HolidayOptions{``0},Cosmos.Business.Extensions.Holiday.HolidayType[])">
+            <summary>
+            Use China holiday provider
+            </summary>
+            <param name="options"></param>
+            <param name="holidayTypes"></param>
+            <typeparam name="TOptions"></typeparam>
             <returns></returns>
         </member>
         <member name="T:Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Commemoration.ChairmanMaosBirthday">
@@ -5072,43 +5163,6 @@
         <member name="P:Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Tradition.ZhongYuanDay.I18NIdentityCode">
             <inheritdoc />
         </member>
-        <member name="T:Cosmos.Business.Extensions.Holiday.Definitions.Asia.HongKong.HongKongHolidayProvider">
-            <summary>
-            China HongKong holiday provider
-            </summary>
-        </member>
-        <member name="P:Cosmos.Business.Extensions.Holiday.Definitions.Asia.HongKong.HongKongHolidayProvider.Country">
-            <summary>
-            Country or region
-            </summary>
-        </member>
-        <member name="P:Cosmos.Business.Extensions.Holiday.Definitions.Asia.HongKong.HongKongHolidayProvider.BelongsToCountry">
-            <summary>
-            Belongs to country
-            </summary>
-        </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Definitions.Asia.HongKong.HongKongHolidayProvider.IncludeRegions">
-            <summary>
-            Include regions
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="P:Cosmos.Business.Extensions.Holiday.Definitions.Asia.HongKong.HongKongHolidayProvider.AllFixedHolidayFuncs">
-            <summary>
-            Gets all fixed holiday funcs
-            </summary>
-        </member>
-        <member name="P:Cosmos.Business.Extensions.Holiday.Definitions.Asia.HongKong.HongKongHolidayProvider.AllVariableHolidayFuncs">
-            <summary>
-            Gets all variable holiday guncs
-            </summary>
-        </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Definitions.Asia.HongKong.HongKongHolidayProvider.GetSources">
-            <summary>
-            Get sources
-            </summary>
-            <returns></returns>
-        </member>
         <member name="T:Cosmos.Business.Extensions.Holiday.Definitions.Asia.HongKong.Public.Christmas">
             <summary>
             圣诞节
@@ -5414,43 +5468,6 @@
         </member>
         <member name="M:Cosmos.Business.Extensions.Holiday.Definitions.Asia.HongKong.Tradition.TombSweepingDay.ToDailyAnswer(System.Int32)">
             <inheritdoc />
-        </member>
-        <member name="T:Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao.MacaoHolidayProvider">
-            <summary>
-            China Macao holiday provider
-            </summary>
-        </member>
-        <member name="P:Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao.MacaoHolidayProvider.Country">
-            <summary>
-            Country or region
-            </summary>
-        </member>
-        <member name="P:Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao.MacaoHolidayProvider.BelongsToCountry">
-            <summary>
-            Belongs to country
-            </summary>
-        </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao.MacaoHolidayProvider.IncludeRegions">
-            <summary>
-            Include regions
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="P:Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao.MacaoHolidayProvider.AllFixedHolidayFuncs">
-            <summary>
-            Gets all fixed holiday funcs
-            </summary>
-        </member>
-        <member name="P:Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao.MacaoHolidayProvider.AllVariableHolidayFuncs">
-            <summary>
-            Gets all variable holiday funcs
-            </summary>
-        </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao.MacaoHolidayProvider.GetSources">
-            <summary>
-            Get sources
-            </summary>
-            <returns></returns>
         </member>
         <member name="T:Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao.Public.Christmas">
             <summary>
@@ -5882,43 +5899,6 @@
         </member>
         <member name="P:Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan.Public.NewYearsDay.Since">
             <inheritdoc />
-        </member>
-        <member name="T:Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan.TaiwanHolidayProvider">
-            <summary>
-            China Taiwan holiday provider
-            </summary>
-        </member>
-        <member name="P:Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan.TaiwanHolidayProvider.Country">
-            <summary>
-            Country or region
-            </summary>
-        </member>
-        <member name="P:Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan.TaiwanHolidayProvider.BelongsToCountry">
-            <summary>
-            Belongs to country
-            </summary>
-        </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan.TaiwanHolidayProvider.IncludeRegions">
-            <summary>
-            Include region
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="P:Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan.TaiwanHolidayProvider.AllFixedHolidayFuncs">
-            <summary>
-            Gets all fixed holiday funcs
-            </summary>
-        </member>
-        <member name="P:Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan.TaiwanHolidayProvider.AllVariableHolidayFuncs">
-            <summary>
-            Gets all variable holiday funcs
-            </summary>
-        </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan.TaiwanHolidayProvider.GetSources">
-            <summary>
-            Get sources
-            </summary>
-            <returns></returns>
         </member>
         <member name="T:Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan.Tradition.ChineseNewYear">
             <summary>
@@ -6583,48 +6563,41 @@
         <member name="P:Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStates.Religion.ThanksgivingDay.Since">
             <inheritdoc />
         </member>
-        <member name="T:Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStates.UnitedStatesHolidayProvider">
+        <member name="T:Cosmos.Business.Extensions.Holiday.HongKongHolidayProvider">
             <summary>
-            United States Holiday Provider
+            China HongKong holiday provider
             </summary>
         </member>
-        <member name="P:Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStates.UnitedStatesHolidayProvider.Country">
+        <member name="P:Cosmos.Business.Extensions.Holiday.HongKongHolidayProvider.Country">
             <summary>
             Country or region
             </summary>
         </member>
-        <member name="P:Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStates.UnitedStatesHolidayProvider.BelongsToCountry">
+        <member name="P:Cosmos.Business.Extensions.Holiday.HongKongHolidayProvider.BelongsToCountry">
             <summary>
             Belongs to country
             </summary>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStates.UnitedStatesHolidayProvider.IncludeRegions">
-            <inheritdoc />
-        </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStates.UnitedStatesHolidayProvider.DoesIncludeRegion(System.String)">
-            <inheritdoc />
-        </member>
-        <member name="P:Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStates.UnitedStatesHolidayProvider.AllFixedHolidayFuncs">
-            <inheritdoc />
-        </member>
-        <member name="P:Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStates.UnitedStatesHolidayProvider.AllVariableHolidayFuncs">
-            <inheritdoc />
-        </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStates.UnitedStatesHolidayProvider.GetSources">
-            <inheritdoc />
-        </member>
-        <member name="T:Cosmos.Business.Extensions.Holiday.ChinaHolidayProviderExtensions">
+        <member name="M:Cosmos.Business.Extensions.Holiday.HongKongHolidayProvider.IncludeRegions">
             <summary>
-            China holiday provider extensions
+            Include regions
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Cosmos.Business.Extensions.Holiday.HongKongHolidayProvider.AllFixedHolidayFuncs">
+            <summary>
+            Gets all fixed holiday funcs
             </summary>
         </member>
-        <member name="M:Cosmos.Business.Extensions.Holiday.ChinaHolidayProviderExtensions.UseChina``1(Cosmos.Business.Extensions.Holiday.Configuration.HolidayOptions{``0},Cosmos.Business.Extensions.Holiday.HolidayType[])">
+        <member name="P:Cosmos.Business.Extensions.Holiday.HongKongHolidayProvider.AllVariableHolidayFuncs">
             <summary>
-            Use China holiday provider
+            Gets all variable holiday guncs
             </summary>
-            <param name="options"></param>
-            <param name="holidayTypes"></param>
-            <typeparam name="TOptions"></typeparam>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.HongKongHolidayProvider.GetSources">
+            <summary>
+            Get sources
+            </summary>
             <returns></returns>
         </member>
         <member name="T:Cosmos.Business.Extensions.Holiday.ChinaHkHolidayProviderExtensions">
@@ -6641,6 +6614,43 @@
             <typeparam name="TOptions"></typeparam>
             <returns></returns>
         </member>
+        <member name="T:Cosmos.Business.Extensions.Holiday.MacaoHolidayProvider">
+            <summary>
+            China Macao holiday provider
+            </summary>
+        </member>
+        <member name="P:Cosmos.Business.Extensions.Holiday.MacaoHolidayProvider.Country">
+            <summary>
+            Country or region
+            </summary>
+        </member>
+        <member name="P:Cosmos.Business.Extensions.Holiday.MacaoHolidayProvider.BelongsToCountry">
+            <summary>
+            Belongs to country
+            </summary>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.MacaoHolidayProvider.IncludeRegions">
+            <summary>
+            Include regions
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Cosmos.Business.Extensions.Holiday.MacaoHolidayProvider.AllFixedHolidayFuncs">
+            <summary>
+            Gets all fixed holiday funcs
+            </summary>
+        </member>
+        <member name="P:Cosmos.Business.Extensions.Holiday.MacaoHolidayProvider.AllVariableHolidayFuncs">
+            <summary>
+            Gets all variable holiday funcs
+            </summary>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.MacaoHolidayProvider.GetSources">
+            <summary>
+            Get sources
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:Cosmos.Business.Extensions.Holiday.ChinaMoHolidayProviderExtensions">
             <summary>
             China Macao holiday provider extensions
@@ -6653,6 +6663,43 @@
             <param name="options"></param>
             <param name="holidayTypes"></param>
             <typeparam name="TOptions"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:Cosmos.Business.Extensions.Holiday.TaiwanHolidayProvider">
+            <summary>
+            China Taiwan holiday provider
+            </summary>
+        </member>
+        <member name="P:Cosmos.Business.Extensions.Holiday.TaiwanHolidayProvider.Country">
+            <summary>
+            Country or region
+            </summary>
+        </member>
+        <member name="P:Cosmos.Business.Extensions.Holiday.TaiwanHolidayProvider.BelongsToCountry">
+            <summary>
+            Belongs to country
+            </summary>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.TaiwanHolidayProvider.IncludeRegions">
+            <summary>
+            Include region
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Cosmos.Business.Extensions.Holiday.TaiwanHolidayProvider.AllFixedHolidayFuncs">
+            <summary>
+            Gets all fixed holiday funcs
+            </summary>
+        </member>
+        <member name="P:Cosmos.Business.Extensions.Holiday.TaiwanHolidayProvider.AllVariableHolidayFuncs">
+            <summary>
+            Gets all variable holiday funcs
+            </summary>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.TaiwanHolidayProvider.GetSources">
+            <summary>
+            Get sources
+            </summary>
             <returns></returns>
         </member>
         <member name="T:Cosmos.Business.Extensions.Holiday.ChinaTwHolidayProviderExtensions">
@@ -6668,6 +6715,36 @@
             <param name="holidayTypes"></param>
             <typeparam name="TOptions"></typeparam>
             <returns></returns>
+        </member>
+        <member name="T:Cosmos.Business.Extensions.Holiday.UnitedStatesHolidayProvider">
+            <summary>
+            United States Holiday Provider
+            </summary>
+        </member>
+        <member name="P:Cosmos.Business.Extensions.Holiday.UnitedStatesHolidayProvider.Country">
+            <summary>
+            Country or region
+            </summary>
+        </member>
+        <member name="P:Cosmos.Business.Extensions.Holiday.UnitedStatesHolidayProvider.BelongsToCountry">
+            <summary>
+            Belongs to country
+            </summary>
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.UnitedStatesHolidayProvider.IncludeRegions">
+            <inheritdoc />
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.UnitedStatesHolidayProvider.DoesIncludeRegion(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="P:Cosmos.Business.Extensions.Holiday.UnitedStatesHolidayProvider.AllFixedHolidayFuncs">
+            <inheritdoc />
+        </member>
+        <member name="P:Cosmos.Business.Extensions.Holiday.UnitedStatesHolidayProvider.AllVariableHolidayFuncs">
+            <inheritdoc />
+        </member>
+        <member name="M:Cosmos.Business.Extensions.Holiday.UnitedStatesHolidayProvider.GetSources">
+            <inheritdoc />
         </member>
         <member name="T:Cosmos.Business.Extensions.Holiday.UnitedStatesHolidayProviderExtensions">
             <summary>

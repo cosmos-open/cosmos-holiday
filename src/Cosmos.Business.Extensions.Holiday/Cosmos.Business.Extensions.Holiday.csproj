@@ -14,7 +14,7 @@
     <ItemGroup>
       <PackageReference Include="Cosmos.Extensions" Version="0.1.1-alpha3-123037" />
       <PackageReference Include="Cosmos.Extensions.DateTime" Version="0.1.1-alpha3-123037" />
-      <PackageReference Include="Cosmos.I18N" Version="0.0.1-alpha1-100006" />
+      <PackageReference Include="Cosmos.I18N" Version="0.0.1-alpha1-100007" />
       <PackageReference Include="Enums.NET" Version="2.3.2" />
     </ItemGroup>
 

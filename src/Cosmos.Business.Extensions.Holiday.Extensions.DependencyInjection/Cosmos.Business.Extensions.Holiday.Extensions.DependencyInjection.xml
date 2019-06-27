@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cosmos.Business.Extensions.Holiday.Extensions.DependencyInjection</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Extensions.DependencyInjection.MSDIHolidayOptions">
+            <summary>
+            Holiday options for MS DI
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.MSDIHolidayOptions.#ctor(Cosmos.Business.Extensions.Holiday.Core.IHolidayProviderManager)">
+            <summary>
+            Create a new instance of <see cref="T:Microsoft.Extensions.DependencyInjection.MSDIHolidayOptions"/>
+            </summary>
+            <param name="holidayProviderManager"></param>
+        </member>
+        <member name="P:Microsoft.Extensions.DependencyInjection.MSDIHolidayOptions.RuntimeFixedHolidayFuncs">
+            <summary>
+            RuntimeFixedHolidayFuncs
+            </summary>
+        </member>
+        <member name="P:Microsoft.Extensions.DependencyInjection.MSDIHolidayOptions.BizWeekendDefinitions">
+            <summary>
+            BizWeekendDefinitions
+            </summary>
+        </member>
+        <member name="P:Microsoft.Extensions.DependencyInjection.MSDIHolidayOptions.WeekendUnlinkedAssembliesPattern">
+            <summary>
+            WeekendUnlinkedAssembliesPattern
+            </summary>
+        </member>
+        <member name="P:Microsoft.Extensions.DependencyInjection.MSDIHolidayOptions.WeekendIncludeExtendDefinitions">
+            <summary>
+            WeekendIncludeExtendDefinitions
+            </summary>
+        </member>
+        <member name="T:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions">
+            <summary>
+            Service collection extensions
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddHoliday(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.Extensions.DependencyInjection.MSDIHolidayOptions})">
+            <summary>
+            Register holiday
+            </summary>
+            <param name="services"></param>
+            <param name="optionsAction"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+    </members>
+</doc>
