@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Cosmos.Abstractions;
 using Cosmos.Business.Extensions.Holiday.Core;
+using Cosmos.Business.Extensions.Holiday.Definitions;
 using Cosmos.I18N.Countries;
 
 /*
@@ -8,10 +9,11 @@ using Cosmos.I18N.Countries;
  * 台湾，中华人民共和国的一部分
  */
 
-namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan
+// ReSharper disable once CheckNamespace
+namespace Cosmos.Business.Extensions.Holiday
 {
-    using Public;
-    using Tradition;
+    using Definitions.Asia.Taiwan.Public;
+    using Definitions.Asia.Taiwan.Tradition;
 
     /// <summary>
     /// China Taiwan holiday provider

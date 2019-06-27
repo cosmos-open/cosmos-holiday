@@ -2,13 +2,15 @@ using System.Collections.Generic;
 using System.Linq;
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.Business.Extensions.Holiday.Core.Helpers;
+using Cosmos.Business.Extensions.Holiday.Definitions;
 using Cosmos.I18N.Countries;
 using Cosmos.I18N.Countries.NorthAmerica;
 
-namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStates
+// ReSharper disable once CheckNamespace
+namespace Cosmos.Business.Extensions.Holiday
 {
-    using Public;
-    using Religion;
+    using Definitions.NorthAmerica.UnitedStates.Public;
+    using Definitions.NorthAmerica.UnitedStates.Religion;
 
     /// <summary>
     /// United States Holiday Provider

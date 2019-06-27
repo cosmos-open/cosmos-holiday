@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Cosmos.Abstractions;
 using Cosmos.Business.Extensions.Holiday.Core;
+using Cosmos.Business.Extensions.Holiday.Definitions;
 using Cosmos.I18N.Countries;
 
 /*
@@ -8,10 +9,11 @@ using Cosmos.I18N.Countries;
  * 澳门，中华人民共和国的一部分
  */
 
-namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao
+// ReSharper disable once CheckNamespace
+namespace Cosmos.Business.Extensions.Holiday
 {
-    using Public;
-    using Tradition;
+    using Definitions.Asia.Macao.Public;
+    using Definitions.Asia.Macao.Tradition;
 
     /// <summary>
     /// China Macao holiday provider
@@ -27,7 +29,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao
         /// Belongs to country
         /// </summary>
         public override Country BelongsToCountry { get; } = Country.China;
-        
+
         /// <summary>
         /// Include regions
         /// </summary>
@@ -36,7 +38,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao
         {
             return new[] {Core.Helpers.CountryHelper.GetRegionCode(Country, BelongsToCountry)};
         }
-        
+
         /// <summary>
         /// Gets all fixed holiday funcs
         /// </summary>
@@ -46,7 +48,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao
         {
             new NewYearsDay(), //1-1
             new NationalDay(), //10-1
-            new Christmas(),//12-25
+            new Christmas(), //12-25
         };
 
         /// <summary>

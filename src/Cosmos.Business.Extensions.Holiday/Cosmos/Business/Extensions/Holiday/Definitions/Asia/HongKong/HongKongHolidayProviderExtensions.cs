@@ -1,5 +1,9 @@
 using Cosmos.Business.Extensions.Holiday.Configuration;
-using Cosmos.Business.Extensions.Holiday.Definitions.Asia.HongKong;
+
+/*
+ * Hong Kong, a part of China
+ * 香港，中华人民共和国的一部分
+ */
 
 // ReSharper disable once CheckNamespace
 namespace Cosmos.Business.Extensions.Holiday

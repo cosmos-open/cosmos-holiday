@@ -69,7 +69,8 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions
         public void Register(params HolidayType[] types)
         {
             //if types is null, register all definitions.
-            types = types ?? _allTypes;
+            if (types == null || types.Length == 0)
+                types = _allTypes;
 
             if (types.Contains(HolidayType.Public))
                 RegisterPublicHoliday();

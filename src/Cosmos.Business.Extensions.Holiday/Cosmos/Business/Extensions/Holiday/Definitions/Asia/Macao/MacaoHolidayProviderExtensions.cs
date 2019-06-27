@@ -1,6 +1,11 @@
 using Cosmos.Business.Extensions.Holiday.Configuration;
 using Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao;
 
+/*
+ * Macao, a part of China
+ * 澳门，中华人民共和国的一部分
+ */
+
 // ReSharper disable once CheckNamespace
 namespace Cosmos.Business.Extensions.Holiday
 {

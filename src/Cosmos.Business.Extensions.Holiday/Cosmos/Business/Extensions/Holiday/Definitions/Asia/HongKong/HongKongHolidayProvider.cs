@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Cosmos.Abstractions;
 using Cosmos.Business.Extensions.Holiday.Core;
+using Cosmos.Business.Extensions.Holiday.Definitions;
 using Cosmos.I18N.Countries;
 
 /*
@@ -8,10 +9,11 @@ using Cosmos.I18N.Countries;
  * 香港，中华人民共和国的一部分
  */
 
-namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.HongKong
+// ReSharper disable once CheckNamespace
+namespace Cosmos.Business.Extensions.Holiday
 {
-    using Public;
-    using Tradition;
+    using Definitions.Asia.HongKong.Public;
+    using Definitions.Asia.HongKong.Tradition;
 
     /// <summary>
     /// China HongKong holiday provider

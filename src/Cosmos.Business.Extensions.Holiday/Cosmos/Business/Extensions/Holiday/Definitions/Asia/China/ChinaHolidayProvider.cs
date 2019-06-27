@@ -2,17 +2,19 @@ using System.Collections.Generic;
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.Business.Extensions.Holiday.Core.Helpers;
 using Cosmos.Business.Extensions.Holiday.Core.Internals;
+using Cosmos.Business.Extensions.Holiday.Definitions;
 using Cosmos.I18N.Countries;
 using Cosmos.I18N.Countries.Asia;
 
-namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China
+// ReSharper disable once CheckNamespace
+namespace Cosmos.Business.Extensions.Holiday
 {
-    using Commemoration;
-    using Propaganda;
-    using Public;
-    using Religion;
-    using School;
-    using Tradition;
+    using Definitions.Asia.China.Commemoration;
+    using Definitions.Asia.China.Propaganda;
+    using Definitions.Asia.China.Public;
+    using Definitions.Asia.China.Religion;
+    using Definitions.Asia.China.School;
+    using Definitions.Asia.China.Tradition;
 
     /// <summary>
     /// China holiday provider
