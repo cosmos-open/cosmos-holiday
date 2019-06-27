@@ -102,7 +102,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core
             lock (_lockObj)
             {
                 //step 1. register holiday
-                if (registerHolidayTypes == null)
+                if (registerHolidayTypes == null || registerHolidayTypes.Length == 0)
                     provider.RegisterAll();
                 else
                     provider.Register(registerHolidayTypes);

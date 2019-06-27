@@ -31,7 +31,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core.Trees
         /// <returns></returns>
         public VariableDailyNode GetDailyNode(CountryCode code)
         {
-            return _variableDailyNodes.TryGetValue(code, out var node) ? node : null;
+            return _variableDailyNodes.TryGetValue(code, out var node) ? node : EmptyVariableDailyNode.Create(code);
         }
 
         /// <summary>

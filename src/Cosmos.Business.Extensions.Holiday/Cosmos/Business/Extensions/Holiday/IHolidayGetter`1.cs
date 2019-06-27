@@ -7,6 +7,7 @@ namespace Cosmos.Business.Extensions.Holiday
     /// Interface of holiday getter
     /// </summary>
     /// <typeparam name="THolidayProvider"></typeparam>
+    // ReSharper disable once UnusedTypeParameter
     public interface IHolidayGetter<THolidayProvider> where THolidayProvider : class, IHolidayProvider
     {
         /// <summary>

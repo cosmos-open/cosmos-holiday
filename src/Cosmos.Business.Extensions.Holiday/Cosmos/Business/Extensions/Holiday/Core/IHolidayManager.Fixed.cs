@@ -347,6 +347,5 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         IEnumerable<DailyAnswer> GetFixedHolidays(Country country, string regionCode, int year, int month, int day);
 
         #endregion
-
     }
 }

@@ -55,11 +55,11 @@ namespace Cosmos.Business.Extensions.Holiday.Core.Trees
         public IReadOnlyList<IVariableHolidayFunc> GetFuncs(Country country)
         {
             return _variableHolidayFuncs
-                .Where(f => f.BelongsToCountry == country)
+                .Where(f => f.BelongsToCountry == country || f.Country == country)
                 .ToList()
                 .AsReadOnly();
         }
-        
+
         /// <summary>
         /// Get a readonly collection of <see cref="IVariableHolidayFunc"/>.
         /// </summary>
@@ -80,7 +80,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core.Trees
         public IReadOnlyList<IVariableHolidayFunc> GetFuncs(Country country, string regionCode)
         {
             return _variableHolidayFuncs
-                .Where(f => f.BelongsToCountry == country && f.MatchRegion(regionCode))
+                .Where(f => (f.BelongsToCountry == country || f.Country == country) && f.MatchRegion(regionCode))
                 .ToList()
                 .AsReadOnly();
         }
@@ -97,7 +97,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core.Trees
                 .ToList()
                 .AsReadOnly();
         }
-        
+
         /// <summary>
         /// Get a readonly collection of <see cref="IVariableHolidayFunc"/>.
         /// </summary>
@@ -118,7 +118,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core.Trees
         public IReadOnlyList<IVariableHolidayFunc> GetFuncs(Country country, int year)
         {
             return _variableHolidayFuncs
-                .Where(f => f.BelongsToCountry == country)
+                .Where(f => f.BelongsToCountry == country || f.Country == country)
                 .Where(f => (f.Since == null || f.Since <= year) && (f.End == null || f.End >= year))
                 .ToList()
                 .AsReadOnly();
@@ -146,12 +146,12 @@ namespace Cosmos.Business.Extensions.Holiday.Core.Trees
         public IReadOnlyList<IVariableHolidayFunc> GetFuncs(Country country, string regionCode, int year)
         {
             return _variableHolidayFuncs
-                .Where(f => f.BelongsToCountry == country && f.MatchRegion(regionCode))
+                .Where(f => (f.BelongsToCountry == country || f.Country == country) && f.MatchRegion(regionCode))
                 .Where(f => (f.Since == null || f.Since <= year) && (f.End == null || f.End >= year))
                 .ToList()
                 .AsReadOnly();
         }
-        
+
         #endregion
 
         #region Add

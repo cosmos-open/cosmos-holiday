@@ -131,7 +131,10 @@ namespace Cosmos.Business.Extensions.Holiday.Core
             if (!RegionIncluded.Any())
                 return true;
 
-            return RegionIncluded.Any(x => x == regionCode);
+            if(RegionIncluded.Any(x => x == regionCode))
+                return true;
+
+            return _provider.DoesIncludeRegion(regionCode);
         }
 
         #endregion

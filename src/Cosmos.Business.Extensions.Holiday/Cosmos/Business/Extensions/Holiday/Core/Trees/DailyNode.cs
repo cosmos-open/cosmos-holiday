@@ -48,7 +48,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core.Trees
         public IReadOnlyList<IFixedHolidayFunc> GetFuncs(Country country)
         {
             return _fixedHolidayFuncs
-                .Where(f => f.BelongsToCountry == country)
+                .Where(f => f.BelongsToCountry == country || f.Country == country)
                 .ToList()
                 .AsReadOnly();
         }
@@ -73,7 +73,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core.Trees
         public IReadOnlyList<IFixedHolidayFunc> GetFuncs(Country country, string regionCode)
         {
             return _fixedHolidayFuncs
-                .Where(f => f.BelongsToCountry == country && f.MatchRegion(regionCode))
+                .Where(f => (f.BelongsToCountry == country || f.Country == country) && f.MatchRegion(regionCode))
                 .ToList()
                 .AsReadOnly();
         }
@@ -111,7 +111,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core.Trees
         public IReadOnlyList<IFixedHolidayFunc> GetFuncs(Country country, int year)
         {
             return _fixedHolidayFuncs
-                .Where(f => f.BelongsToCountry == country)
+                .Where(f => f.BelongsToCountry == country || f.Country == country)
                 .Where(f => (f.Since == null || f.Since <= year) && (f.End == null || f.End >= year))
                 .ToList()
                 .AsReadOnly();
@@ -139,7 +139,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core.Trees
         public IReadOnlyList<IFixedHolidayFunc> GetFuncs(Country country, string regionCode, int year)
         {
             return _fixedHolidayFuncs
-                .Where(f => f.BelongsToCountry == country && f.MatchRegion(regionCode))
+                .Where(f => (f.BelongsToCountry == country || f.Country == country) && f.MatchRegion(regionCode))
                 .Where(f => (f.Since == null || f.Since <= year) && (f.End == null || f.End >= year))
                 .ToList()
                 .AsReadOnly();
@@ -182,7 +182,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core.Trees
         public IReadOnlyList<IFixedHolidayFunc> GetFuncs(Country country, int year, int month)
         {
             return _fixedHolidayFuncs
-                .Where(f => f.BelongsToCountry == country)
+                .Where(f => f.BelongsToCountry == country || f.Country == country)
                 .Where(f => (f.Since == null || f.Since <= year) && (f.End == null || f.End >= year))
                 .Where(f => f.MatchDate(month))
                 .ToList()
@@ -213,7 +213,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core.Trees
         public IReadOnlyList<IFixedHolidayFunc> GetFuncs(Country country, string regionCode, int year, int month)
         {
             return _fixedHolidayFuncs
-                .Where(f => f.BelongsToCountry == country && f.MatchRegion(regionCode))
+                .Where(f => (f.BelongsToCountry == country || f.Country == country) && f.MatchRegion(regionCode))
                 .Where(f => (f.Since == null || f.Since <= year) && (f.End == null || f.End >= year))
                 .Where(f => f.MatchDate(month))
                 .ToList()
@@ -260,7 +260,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core.Trees
         public IReadOnlyList<IFixedHolidayFunc> GetFuncs(Country country, int year, int month, int day)
         {
             return _fixedHolidayFuncs
-                .Where(f => f.BelongsToCountry == country)
+                .Where(f => f.BelongsToCountry == country || f.Country == country)
                 .Where(f => (f.Since == null || f.Since <= year) && (f.End == null || f.End >= year))
                 .Where(f => f.MatchDate(month, day))
                 .ToList()
@@ -293,7 +293,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core.Trees
         public IReadOnlyList<IFixedHolidayFunc> GetFuncs(Country country, string regionCode, int year, int month, int day)
         {
             return _fixedHolidayFuncs
-                .Where(f => f.BelongsToCountry == country && f.MatchRegion(regionCode))
+                .Where(f => (f.BelongsToCountry == country || f.Country == country) && f.MatchRegion(regionCode))
                 .Where(f => (f.Since == null || f.Since <= year) && (f.End == null || f.End >= year))
                 .Where(f => f.MatchDate(month, day))
                 .ToList()
@@ -337,25 +337,25 @@ namespace Cosmos.Business.Extensions.Holiday.Core.Trees
             if (_fixedHolidayFuncs.Any(x => x.I18NIdentityCode == func.I18NIdentityCode))
                 return true;
 
-            if (_fixedHolidayFuncs.Any(x => x.Name == func.Name && x.BelongsToCountry == func.BelongsToCountry))
+            if (_fixedHolidayFuncs.Any(x => x.Name == func.Name && x.Country == func.Country && x.BelongsToCountry == func.BelongsToCountry))
                 return true;
 
-            if (func.FromDate.HasValue && func.ToDate.HasValue)
-            {
-                if (_fixedHolidayFuncs
-                    .Where(x => x.FromDate.HasValue && x.ToDate.HasValue)
-                    .Any(x =>
-                        x.FromDate.Value.Month == func.FromDate.Value.Month && x.FromDate.Value.Day == func.FromDate.Value.Day &&
-                        x.ToDate.Value.Month == func.ToDate.Value.Month && x.ToDate.Value.Day == func.ToDate.Value.Day))
-                    return true;
-            }
-            else
-            {
-                if (_fixedHolidayFuncs
-                    .Where(x => !x.FromDate.HasValue && !x.ToDate.HasValue)
-                    .Any(x => x.Month == func.Month && x.Day == func.Day))
-                    return true;
-            }
+//            if (func.FromDate.HasValue && func.ToDate.HasValue)
+//            {
+//                if (_fixedHolidayFuncs
+//                    .Where(x => x.FromDate.HasValue && x.ToDate.HasValue)
+//                    .Any(x =>
+//                        x.FromDate.Value.Month == func.FromDate.Value.Month && x.FromDate.Value.Day == func.FromDate.Value.Day &&
+//                        x.ToDate.Value.Month == func.ToDate.Value.Month && x.ToDate.Value.Day == func.ToDate.Value.Day))
+//                    return true;
+//            }
+//            else
+//            {
+//                if (_fixedHolidayFuncs
+//                    .Where(x => !x.FromDate.HasValue && !x.ToDate.HasValue)
+//                    .Any(x => x.Month == func.Month && x.Day == func.Day))
+//                    return true;
+//            }
 
             return false;
         }
