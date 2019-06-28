@@ -337,8 +337,8 @@ namespace Cosmos.Business.Extensions.Holiday.Core.Trees
             if (_fixedHolidayFuncs.Any(x => x.I18NIdentityCode == func.I18NIdentityCode))
                 return true;
 
-            if (_fixedHolidayFuncs.Any(x => x.Name == func.Name && x.Country == func.Country && x.BelongsToCountry == func.BelongsToCountry))
-                return true;
+//            if (_fixedHolidayFuncs.Any(x => x.Name == func.Name && x.Country == func.Country && x.BelongsToCountry == func.BelongsToCountry))
+//                return true;
 
 //            if (func.FromDate.HasValue && func.ToDate.HasValue)
 //            {
