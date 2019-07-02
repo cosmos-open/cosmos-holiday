@@ -83,7 +83,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         /// <returns></returns>
         public IEnumerable<IHolidayInfo> GetHolidays(string regionCode, int year)
         {
-            regionCode = CountryHelper.FixRegionCode(Country, regionCode);
+            regionCode = FixRegionCode(regionCode);
             if (!IncludeRegionCode(regionCode))
                 return Enumerable.Empty<IHolidayInfo>();
             return _manager.GetHolidays(Country, regionCode, year).Select(HolidayFactory.Create);
@@ -98,7 +98,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         /// <returns></returns>
         public IEnumerable<IHolidayInfo> GetHolidays(string regionCode, int year, int month)
         {
-            regionCode = CountryHelper.FixRegionCode(Country, regionCode);
+            regionCode = FixRegionCode(regionCode);
             if (!IncludeRegionCode(regionCode))
                 return Enumerable.Empty<IHolidayInfo>();
             return _manager.GetHolidays(Country, regionCode, year, month).Select(HolidayFactory.Create);
@@ -114,7 +114,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         /// <returns></returns>
         public IEnumerable<IHolidayInfo> GetHolidays(string regionCode, int year, int month, int day)
         {
-            regionCode = CountryHelper.FixRegionCode(Country, regionCode);
+            regionCode = FixRegionCode(regionCode);
             if (!IncludeRegionCode(regionCode))
                 return Enumerable.Empty<IHolidayInfo>();
             return _manager.GetHolidays(Country, regionCode, year, month, day).Select(HolidayFactory.Create);
@@ -131,10 +131,21 @@ namespace Cosmos.Business.Extensions.Holiday.Core
             if (!RegionIncluded.Any())
                 return true;
 
-            if(RegionIncluded.Any(x => x == regionCode))
+            if (RegionIncluded.Any(x => x == regionCode))
                 return true;
 
             return _provider.DoesIncludeRegion(regionCode);
+        }
+
+        /// <summary>
+        /// Fix region code after check exist.
+        /// </summary>
+        /// <param name="regionCode"></param>
+        /// <returns></returns>
+        private string FixRegionCode(string regionCode)
+        {
+            regionCode = CountryHelper.FixRegionCode(Country, regionCode);
+            return _provider.FixRegionCode(regionCode);
         }
 
         #endregion

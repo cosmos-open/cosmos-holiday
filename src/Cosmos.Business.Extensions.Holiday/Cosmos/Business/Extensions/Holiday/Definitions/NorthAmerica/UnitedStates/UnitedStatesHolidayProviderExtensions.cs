@@ -1,5 +1,4 @@
 using Cosmos.Business.Extensions.Holiday.Configuration;
-using Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStates;
 
 // ReSharper disable once CheckNamespace
 namespace Cosmos.Business.Extensions.Holiday

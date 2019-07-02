@@ -44,6 +44,16 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions
             return regions.Any(x => x == regionCode);
         }
 
+        /// <summary>
+        /// Fix RegionCode
+        /// </summary>
+        /// <param name="regionCode"></param>
+        /// <returns></returns>
+        public virtual string FixRegionCode(string regionCode)
+        {
+            return regionCode;
+        }
+
         // ReSharper disable once InconsistentNaming
         private static readonly HolidayType[] _allTypes =
         {

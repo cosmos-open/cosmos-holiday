@@ -32,6 +32,13 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         bool DoesIncludeRegion(string regionCode);
 
         /// <summary>
+        /// Fix RegionCode
+        /// </summary>
+        /// <param name="regionCode"></param>
+        /// <returns></returns>
+        string FixRegionCode(string regionCode);
+
+        /// <summary>
         /// Register all type of holiday
         /// </summary>
         void RegisterAll();

@@ -9,7 +9,7 @@ namespace Cosmos.Business.Extensions.Holiday
     public static class JapanHolidayProviderExtensions
     {
         /// <summary>
-        /// Use China holiday provider
+        /// Use Japan holiday provider
         /// </summary>
         /// <param name="options"></param>
         /// <param name="holidayTypes"></param>

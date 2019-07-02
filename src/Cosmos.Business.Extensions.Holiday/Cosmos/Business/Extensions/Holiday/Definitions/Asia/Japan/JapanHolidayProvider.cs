@@ -37,9 +37,9 @@ namespace Cosmos.Business.Extensions.Holiday
         /// <summary>
         /// Geta all fixed holiday funcs
         /// </summary>
-        protected override List<IFixedHolidayFunc> AllFixedHolidayFuncs { get; } = CnFixedHolidayFuncs;
+        protected override List<IFixedHolidayFunc> AllFixedHolidayFuncs { get; } = JpFixedHolidayFuncs;
 
-        private static List<IFixedHolidayFunc> CnFixedHolidayFuncs = new List<IFixedHolidayFunc>
+        private static List<IFixedHolidayFunc> JpFixedHolidayFuncs = new List<IFixedHolidayFunc>
         {
             new 銀行休業日(), //1-2 ~ 1-3
             new ComingOfAgeDay2000b(), //1-15
@@ -49,9 +49,9 @@ namespace Cosmos.Business.Extensions.Holiday
         /// <summary>
         /// Gets all variable holiday funcs
         /// </summary>
-        protected override List<IVariableHolidayFunc> AllVariableHolidayFuncs { get; } = CnVariableHolidayFuncs;
+        protected override List<IVariableHolidayFunc> AllVariableHolidayFuncs { get; } = JpVariableHolidayFuncs;
 
-        private static List<IVariableHolidayFunc> CnVariableHolidayFuncs = new List<IVariableHolidayFunc>
+        private static List<IVariableHolidayFunc> JpVariableHolidayFuncs = new List<IVariableHolidayFunc>
         {
             new NewYearsDay(), //1-1
             new ComingOfAgeDay(), //1月的第二个周一

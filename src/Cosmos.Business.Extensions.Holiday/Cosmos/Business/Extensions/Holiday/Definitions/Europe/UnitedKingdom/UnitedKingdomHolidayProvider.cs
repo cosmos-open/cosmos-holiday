@@ -36,26 +36,11 @@ namespace Cosmos.Business.Extensions.Holiday
         public override IEnumerable<string> IncludeRegions() => RegionCache;
 
         /// <summary>
-        /// Does this provider include special type of regions?
-        /// </summary>
-        /// <param name="regionCode"></param>
-        /// <returns></returns>
-        public override bool DoesIncludeRegion(string regionCode)
-        {
-            if (string.IsNullOrWhiteSpace(regionCode))
-                return false;
-
-            regionCode = CountryHelper.FixRegionCode(Country.China, regionCode);
-
-            return base.DoesIncludeRegion(regionCode);
-        }
-
-        /// <summary>
         /// Geta all fixed holiday funcs
         /// </summary>
-        protected override List<IFixedHolidayFunc> AllFixedHolidayFuncs { get; } = CnFixedHolidayFuncs;
+        protected override List<IFixedHolidayFunc> AllFixedHolidayFuncs { get; } = GbFixedHolidayFuncs;
 
-        private static List<IFixedHolidayFunc> CnFixedHolidayFuncs = new List<IFixedHolidayFunc>
+        private static List<IFixedHolidayFunc> GbFixedHolidayFuncs = new List<IFixedHolidayFunc>
         {
             new SaintPatrickDay(), //3-17
             new BattleOfTheBoyne(), //7-12
@@ -65,9 +50,9 @@ namespace Cosmos.Business.Extensions.Holiday
         /// <summary>
         /// Gets all variable holiday funcs
         /// </summary>
-        protected override List<IVariableHolidayFunc> AllVariableHolidayFuncs { get; } = CnVariableHolidayFuncs;
+        protected override List<IVariableHolidayFunc> AllVariableHolidayFuncs { get; } = GbVariableHolidayFuncs;
 
-        private static List<IVariableHolidayFunc> CnVariableHolidayFuncs = new List<IVariableHolidayFunc>
+        private static List<IVariableHolidayFunc> GbVariableHolidayFuncs = new List<IVariableHolidayFunc>
         {
             new NewYearsDay(), //1-1
             new NewYearsDayNir(), //1-1
