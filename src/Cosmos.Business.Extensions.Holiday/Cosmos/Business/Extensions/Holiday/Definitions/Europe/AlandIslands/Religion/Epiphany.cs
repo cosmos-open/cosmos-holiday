@@ -1,7 +1,7 @@
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.I18N.Countries;
 
-namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.AlandIslands.Public
+namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.AlandIslands.Religion
 {
     /// <summary>
     /// Epiphany
@@ -18,13 +18,13 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.AlandIslands.Pub
         public override string Name { get; } = "Trettondagen";
 
         /// <inheritdoc />
-        public override HolidayType HolidayType { get; set; } = HolidayType.Public;
+        public override HolidayType HolidayType { get; set; } = HolidayType.Religion;
 
         /// <inheritdoc />
-        public override int Month { get; set; } = 6;
+        public override int Month { get; set; } = 1;
 
         /// <inheritdoc />
-        public override int Day { get; set; } = 1;
+        public override int Day { get; set; } = 6;
 
         /// <inheritdoc />
         public override string I18NIdentityCode { get; } = "i18n_holiday_ax_epiphany";

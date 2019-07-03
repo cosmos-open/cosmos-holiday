@@ -85,8 +85,8 @@ namespace Cosmos.Business.Extensions.Holiday
         private static List<IFixedHolidayFunc> FiFixedHolidayFuncs = new List<IFixedHolidayFunc>
         {
             new NewYearsDay(), //1-1
+            new Epiphany(), //1-6
             new MayDay(), //5-1
-            new Epiphany(), //6-1
             new IndependenceDay(), //12-6
             new ChristmasEve(), //12-24
             new ChristmasDay(), //12-25
