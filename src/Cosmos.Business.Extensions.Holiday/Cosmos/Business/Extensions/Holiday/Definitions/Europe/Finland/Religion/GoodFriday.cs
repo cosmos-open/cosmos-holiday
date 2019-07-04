@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Finland.Religion
     /// <summary>
     /// Good Friday
     /// </summary>
-    public class GoodFriday : BaseVariableHolidayFunc
+    public class GoodFriday : CatholicVariableHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Finland;
@@ -21,18 +21,9 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Finland.Religion
         public override HolidayType HolidayType { get; set; } = HolidayType.Religion;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_fi_good_friday";
+        protected override int OffsetEasterSunday { get; } = -2;
 
         /// <inheritdoc />
-        public override DailyAnswer ToDailyAnswer(int year)
-        {
-            var calculationDay = Core.Helpers.CatholicHelper.EasterSunday(year).AddDays(-2);
-            return DailyAnswerBuilder
-                .Create(Name)
-                .From(calculationDay)
-                .Country(Country.ToCode(), GetRegionCodeList())
-                .I18N(I18NIdentityCode)
-                .Build(year);
-        }
+        public override string I18NIdentityCode { get; } = "i18n_holiday_fi_good_friday";
     }
 }

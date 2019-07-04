@@ -35,11 +35,11 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStat
                 DailyAnswerBuilder builder;
                 if (year >= 1937)
                 {
-                    builder = DailyAnswerBuilder.Create(Name).From(year, 1, 20);
+                    builder = DailyAnswerBuilder.Create(Name, HolidayType).From(year, 1, 20);
                 }
                 else
                 {
-                    builder = DailyAnswerBuilder.Create(Name).From(year, 3, 4);
+                    builder = DailyAnswerBuilder.Create(Name, HolidayType).From(year, 3, 4);
                 }
 
                 return builder

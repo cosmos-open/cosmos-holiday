@@ -8,7 +8,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStat
     /// <summary>
     /// Independence Day
     /// </summary>
-    public class IndependenceDay : BaseVariableHolidayFunc
+    public class IndependenceDay : ShiftVariableHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.UnitedStates;
@@ -23,20 +23,18 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStat
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_us_independenceday";
+        public override int Month { get; } = 7;
 
         /// <inheritdoc />
-        public override DailyAnswer ToDailyAnswer(int year)
-        {
-            var calculationDay = DateTimeFactory
-                .Create(year, 7, 4)
-                .Shift(saturday => saturday.AddDays(-1), sunday => sunday.AddDays(1));
-            return DailyAnswerBuilder
-                .Create(Name)
-                .From(calculationDay)
-                .Country(Country.ToCode(), GetRegionCodeList())
-                .I18N(I18NIdentityCode)
-                .Build(year);
-        }
+        public override int Day { get; } = 4;
+
+        /// <inheritdoc />
+        protected override int SaturdayShift { get; } = -1;
+
+        /// <inheritdoc />
+        protected override int SundayShift { get; } = 1;
+
+        /// <inheritdoc />
+        public override string I18NIdentityCode { get; } = "i18n_holiday_us_independence_day";
     }
 }

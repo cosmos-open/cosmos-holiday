@@ -1,6 +1,4 @@
 using Cosmos.Business.Extensions.Holiday.Core;
-using Cosmos.Business.Extensions.Holiday.Core.Extensions;
-using Cosmos.Date;
 using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Japan.Public
@@ -8,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Japan.Public
     /// <summary>
     /// children's Day
     /// </summary>
-    public class ChildrensDay : BaseVariableHolidayFunc
+    public class ChildrensDay : ShiftVariableHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Japan;
@@ -23,20 +21,15 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Japan.Public
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_jp_childrensday";
+        public override int Month { get; } = 5;
 
         /// <inheritdoc />
-        public override DailyAnswer ToDailyAnswer(int year)
-        {
-            var calculationDay = DateTimeFactory
-                .Create(year, 5, 5)
-                .Shift(saturday => saturday, sunday => sunday.AddDays(1));
-            return DailyAnswerBuilder
-                .Create(Name)
-                .From(calculationDay)
-                .Country(Country.ToCode(), GetRegionCodeList())
-                .I18N(I18NIdentityCode)
-                .Build(year);
-        }
+        public override int Day { get; } = 5;
+
+        /// <inheritdoc />
+        protected override int SundayShift { get; } = 1;
+
+        /// <inheritdoc />
+        public override string I18NIdentityCode { get; } = "i18n_holiday_jp_childrensday";
     }
 }

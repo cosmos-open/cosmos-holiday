@@ -53,7 +53,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         {
             var date = DateTimeFactory.OffsetByWeek(year, Month, WeekAtMonth, DayOfWeek);
 
-            var builder = DailyAnswerBuilder.Create(Name).From(date);
+            var builder = DailyAnswerBuilder.Create(Name, HolidayType).From(date);
 
             if (Length > 1)
                 builder.To(Length);
@@ -66,8 +66,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core
 
             if (TimeStepValue.HasValue)
                 builder.Times(TimeStepValue.Value);
-
-            builder.I18N(I18NIdentityCode);
+            
             builder.Country(Country.ToCode(), GetRegionCodeList());
 
             return builder.I18N(I18NIdentityCode).Build(year);

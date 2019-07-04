@@ -15,9 +15,9 @@ namespace Cosmos.Business.Extensions.Holiday.Core
 
         private DailyAnswerBuilder() { }
 
-        private DailyAnswerBuilder(string name)
+        private DailyAnswerBuilder(string name, HolidayType type)
         {
-            _answer = new DailyAnswer {Name = name};
+            _answer = new DailyAnswer {Name = name, Type = type};
         }
 
         /// <summary>
@@ -25,7 +25,10 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        public static DailyAnswerBuilder Create(string name) => new DailyAnswerBuilder(name);
+        public static DailyAnswerBuilder Create(string name, HolidayType type)
+        {
+            return new DailyAnswerBuilder(name, type);
+        }
 
         /// <summary>
         /// Sets i18n info
@@ -55,6 +58,19 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         /// <summary>
         /// Sets holiday from...
         /// </summary>
+        /// <param name="year"></param>
+        /// <param name="tuple"></param>
+        /// <returns></returns>
+        public DailyAnswerBuilder From(int year, (int Month, int Day) tuple)
+        {
+            _answer.FromDate = new DateInfo(year, tuple.Month, tuple.Day);
+            _answer.ToDate = _answer.FromDate;
+            return this;
+        }
+
+        /// <summary>
+        /// Sets holiday from...
+        /// </summary>
         /// <param name="date"></param>
         /// <returns></returns>
         public DailyAnswerBuilder From(DateTime date)
@@ -74,6 +90,18 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         public DailyAnswerBuilder To(int year, int month, int day)
         {
             _answer.ToDate = new DateInfo(year, month, day);
+            return this;
+        }
+
+        /// <summary>
+        /// Sets holiday to...
+        /// </summary>
+        /// <param name="year"></param>
+        /// <param name="tuple"></param>
+        /// <returns></returns>
+        public DailyAnswerBuilder To(int year, (int Month, int Day) tuple)
+        {
+            _answer.ToDate = new DateInfo(year, tuple.Month, tuple.Day);
             return this;
         }
 
@@ -153,6 +181,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core
                 temp.AddRange(regionCodeList);
                 _answer.RegionCodeList = temp.Distinct().ToList();
             }
+
             return this;
         }
 
@@ -169,6 +198,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core
                 temp.AddRange(regionCodeList);
                 _answer.RegionCodeList = temp.Distinct().ToList();
             }
+
             return this;
         }
 

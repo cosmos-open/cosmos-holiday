@@ -36,7 +36,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.UnitedKingdom.Pu
             //当元旦为周末时，使用 Region 定义器来定义
             if (WeekendManager.GetWeekendDictionary(CountryCode.GB).IsWeekend(calculationDay))
                 return DailyAnswerBuilder
-                    .Create(Name)
+                    .Create(Name, HolidayType)
                     .From(calculationDay)
                     .Country(Country.ToCode(), GetRegionCodeList())
                     .I18N(I18NIdentityCode)

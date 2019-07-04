@@ -43,7 +43,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.UnitedKingdom.Ba
             }
 
             return DailyAnswerBuilder
-                .Create(Name)
+                .Create(Name, HolidayType)
                 .From(calculationDay)
                 .Country(Country.ToCode(), GetRegionCodeList())
                 .I18N(I18NIdentityCode)

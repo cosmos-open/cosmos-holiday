@@ -36,12 +36,20 @@ namespace Cosmos.Business.Extensions.Holiday.Core
             var leapMonth = calendar.GetLeapMonthAndCache(year);
             var date = calendar.ToDateTime(year, ChineseLunisolarCalendarHelper.MoveMonth(ChineseMonth, leapMonth), ChineseDay);
 
-            return DailyAnswerBuilder
-                .Create(Name)
-                .From(date)
-                .Country(Country.ToCode(), GetRegionCodeList())
-                .I18N(I18NIdentityCode)
-                .Build(year);
+            var builder = DailyAnswerBuilder.Create(Name, HolidayType).From(date);
+
+            if (Since.HasValue)
+                builder.Since(Since.Value);
+
+            if (End.HasValue)
+                builder.End(End.Value);
+
+            if (TimeStepValue.HasValue)
+                builder.Times(TimeStepValue.Value);
+
+            builder.Country(Country.ToCode(), GetRegionCodeList());
+
+            return builder.I18N(I18NIdentityCode).Build(year);
         }
 
         #endregion

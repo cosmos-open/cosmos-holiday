@@ -33,7 +33,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Oceania.Australia.Publi
         public override DailyAnswer ToDailyAnswer(int year)
         {
             return DailyAnswerBuilder
-                .Create(Name)
+                .Create(Name, HolidayType)
                 .From(DateTimeFactory.FindDayBefore(year, 9, 30, DayOfWeek.Monday))
                 .Country(Country.ToCode(), GetRegionCodeList())
                 .I18N(I18NIdentityCode)

@@ -198,7 +198,16 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         /// <returns></returns>
         public virtual DailyAnswer ToDailyAnswer(int year)
         {
-            var builder = DailyAnswerBuilder.Create(Name).From(year, Month, Day);
+            var builder = DailyAnswerBuilder.Create(Name, HolidayType);
+
+            if (!FromDate.HasValue && !ToDate.HasValue)
+                builder.From(year, Month, Day);
+            else if (FromDate.HasValue && !ToDate.HasValue)
+                builder.From(year, FromDate.Value);
+            else if (FromDate.HasValue)
+                builder.From(year, FromDate.Value).To(year, ToDate.Value);
+            else
+                throw new InvalidDateTimeException("Invalid datetime when convert holiday definition to DailyAnswer.");
 
             if (Since.HasValue)
                 builder.Since(Since.Value);

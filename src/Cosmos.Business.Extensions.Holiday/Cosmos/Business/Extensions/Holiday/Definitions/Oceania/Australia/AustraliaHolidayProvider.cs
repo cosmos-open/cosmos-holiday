@@ -10,7 +10,11 @@ using Cosmos.I18N.Countries.Oceania;
 namespace Cosmos.Business.Extensions.Holiday
 {
     using Definitions.Oceania.Australia.Public;
+    using Definitions.Oceania.Australia.Religion;
 
+    /// <summary>
+    /// Australia Holiday Provider
+    /// </summary>
     public class AustraliaHolidayProvider : BaseDefinitionRegister
     {
         private static IEnumerable<string> RegionCache { get; } = AustraliaRegions.GetMainlandRegionCodes();
@@ -26,12 +30,12 @@ namespace Cosmos.Business.Extensions.Holiday
         /// <summary>
         /// Country or region
         /// </summary>
-        public override Country Country { get; } = Country.Japan;
+        public override Country Country { get; } = Country.Australia;
 
         /// <summary>
         /// Belongs to country
         /// </summary>
-        public override Country BelongsToCountry { get; } = Country.Japan;
+        public override Country BelongsToCountry { get; } = Country.Australia;
 
         /// <summary>
         /// Include regions
@@ -45,7 +49,7 @@ namespace Cosmos.Business.Extensions.Holiday
             if (string.IsNullOrWhiteSpace(regionCode))
                 return false;
 
-            regionCode = CountryHelper.FixRegionCode(Country.China, regionCode);
+            regionCode = CountryHelper.FixRegionCode(Country.Australia, regionCode);
 
             return OverseasRegionCache.Contains(regionCode) || base.DoesIncludeRegion(regionCode);
         }

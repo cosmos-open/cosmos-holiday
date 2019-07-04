@@ -42,9 +42,9 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Tradition
             }
 
             return DailyAnswerBuilder
-                .Create(Name)
+                .Create(Name, HolidayType)
                 .From(date.ToDateTime())
-                .Country(Country.ToCode(),GetRegionCodeList())
+                .Country(Country.ToCode(), GetRegionCodeList())
                 .I18N(I18NIdentityCode).Build(year);
         }
 

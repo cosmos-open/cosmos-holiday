@@ -1,3 +1,4 @@
+using System;
 using Cosmos.Business.Extensions.Holiday.Core.Extensions;
 using Cosmos.Date;
 using Cosmos.I18N.Countries;
@@ -29,28 +30,42 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         /// <summary>
         /// Saturday shift days
         /// </summary>
-        protected abstract int SaturdayShift { get; }
+        protected virtual int SaturdayShift { get; } = 0;
 
         /// <summary>
         /// Sunday shift days
         /// </summary>
-        protected abstract int SundayShift { get; }
+        protected virtual int SundayShift { get; } = 0;
 
         #endregion
 
         /// <inheritdoc />
         public override DailyAnswer ToDailyAnswer(int year)
         {
+            var saturdayFunc = SaturdayShift == 0 ? Self() : Shift(SaturdayShift);
+            var sundayFunc = SundayShift == 0 ? Self() : Shift(SundayShift);
+
             var calculationDay = DateTimeFactory
                 .Create(year, Month, Day)
-                .Shift(saturday => saturday.AddDays(SaturdayShift), sunday => sunday.AddDays(SundayShift));
+                .Shift(saturdayFunc, sundayFunc);
 
-            return DailyAnswerBuilder
-                .Create(Name)
-                .From(calculationDay)
-                .Country(Country.ToCode(), GetRegionCodeList())
-                .I18N(I18NIdentityCode)
-                .Build(year);
+            var builder = DailyAnswerBuilder.Create(Name, HolidayType).From(calculationDay);
+
+            if (Since.HasValue)
+                builder.Since(Since.Value);
+
+            if (End.HasValue)
+                builder.End(End.Value);
+
+            if (TimeStepValue.HasValue)
+                builder.Times(TimeStepValue.Value);
+
+            builder.Country(Country.ToCode(), GetRegionCodeList());
+
+            return builder.I18N(I18NIdentityCode).Build(year);
         }
+
+        private static Func<DateTime, DateTime> Self() => dt => dt;
+        private static Func<DateTime, DateTime> Shift(int days) => dt => dt.AddDays(days);
     }
 }

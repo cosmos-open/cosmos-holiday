@@ -45,7 +45,7 @@ namespace Cosmos.Business.Extensions.Holiday
             if (string.IsNullOrWhiteSpace(regionCode))
                 return false;
 
-            regionCode = CountryHelper.FixRegionCode(Country.China, regionCode);
+            regionCode = CountryHelper.FixRegionCode(Country.UnitedStates, regionCode);
 
             return OverseasRegionCache.Contains(regionCode) || base.DoesIncludeRegion(regionCode);
         }

@@ -17,6 +17,11 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         public string Name { get; set; }
 
         /// <summary>
+        /// Holiday Type
+        /// </summary>
+        public HolidayType Type { get; set; }
+
+        /// <summary>
         /// I18N
         /// </summary>
         public string I18NIdentityCode { get; set; }

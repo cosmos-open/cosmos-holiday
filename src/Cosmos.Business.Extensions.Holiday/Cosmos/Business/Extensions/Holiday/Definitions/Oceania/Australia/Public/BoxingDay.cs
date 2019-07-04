@@ -44,7 +44,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Oceania.Australia.Publi
                 caculationDate = caculationDate.AddDays(1);
 
             return DailyAnswerBuilder
-                .Create(Name)
+                .Create(Name, HolidayType)
                 .From(caculationDate)
                 .Country(Country.ToCode(), GetRegionCodeList())
                 .I18N(I18NIdentityCode)

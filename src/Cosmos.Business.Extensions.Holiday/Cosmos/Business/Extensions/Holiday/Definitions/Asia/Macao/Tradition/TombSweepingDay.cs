@@ -45,7 +45,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao.Tradition
             }
 
             return DailyAnswerBuilder
-                .Create(Name)
+                .Create(Name, HolidayType)
                 .From(date.ToDateTime())
                 .Country(Country.ToCode(), GetRegionCodeList())
                 .I18N(I18NIdentityCode)

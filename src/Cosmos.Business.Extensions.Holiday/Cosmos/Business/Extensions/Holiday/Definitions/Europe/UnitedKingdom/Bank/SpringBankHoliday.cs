@@ -33,7 +33,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.UnitedKingdom.Ba
         {
             var calculationDay = DateTimeFactory.FindLastDay(year, 5, DayOfWeek.Monday);
             return DailyAnswerBuilder
-                .Create(Name)
+                .Create(Name, HolidayType)
                 .From(calculationDay)
                 .Country(Country.ToCode(), GetRegionCodeList())
                 .I18N(I18NIdentityCode)

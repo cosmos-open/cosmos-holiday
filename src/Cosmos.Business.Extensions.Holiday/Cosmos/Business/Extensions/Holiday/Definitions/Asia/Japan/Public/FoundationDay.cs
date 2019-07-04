@@ -8,7 +8,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Japan.Public
     /// <summary>
     /// Foundation Day
     /// </summary>
-    public class FoundationDay : BaseVariableHolidayFunc
+    public class FoundationDay : ShiftVariableHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Japan;
@@ -23,20 +23,15 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Japan.Public
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_jp_foundation";
+        public override int Month { get; } = 2;
 
         /// <inheritdoc />
-        public override DailyAnswer ToDailyAnswer(int year)
-        {
-            var calculationDay = DateTimeFactory
-                .Create(year, 2, 11)
-                .Shift(saturday => saturday, sunday => sunday.AddDays(1));
-            return DailyAnswerBuilder
-                .Create(Name)
-                .From(calculationDay)
-                .Country(Country.ToCode(), GetRegionCodeList())
-                .I18N(I18NIdentityCode)
-                .Build(year);
-        }
+        public override int Day { get; } = 11;
+
+        /// <inheritdoc />
+        protected override int SundayShift { get; } = 1;
+
+        /// <inheritdoc />
+        public override string I18NIdentityCode { get; } = "i18n_holiday_jp_foundation";
     }
 }

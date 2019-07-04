@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.AlandIslands.Rel
     /// <summary>
     /// Easter Sunday
     /// </summary>
-    public class EasterSunday : BaseVariableHolidayFunc
+    public class EasterSunday : CatholicVariableHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.AlandIslands;
@@ -22,17 +22,5 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.AlandIslands.Rel
 
         /// <inheritdoc />
         public override string I18NIdentityCode { get; } = "i18n_holiday_ax_easter_sunday";
-
-        /// <inheritdoc />
-        public override DailyAnswer ToDailyAnswer(int year)
-        {
-            var calculationDay = Core.Helpers.CatholicHelper.EasterSunday(year);
-            return DailyAnswerBuilder
-                .Create(Name)
-                .From(calculationDay)
-                .Country(Country.ToCode(), GetRegionCodeList())
-                .I18N(I18NIdentityCode)
-                .Build(year);
-        }
     }
 }

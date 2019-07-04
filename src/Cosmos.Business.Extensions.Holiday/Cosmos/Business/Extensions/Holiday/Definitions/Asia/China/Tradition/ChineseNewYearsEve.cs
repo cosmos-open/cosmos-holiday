@@ -52,7 +52,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Tradition
 
             //农历十二月的最后一天，得到的是公历时间
             return DailyAnswerBuilder
-                .Create(Name)
+                .Create(Name, HolidayType)
                 .From(finalDate.ToDateTime())
                 .Country(Country.ToCode(),GetRegionCodeList())
                 .I18N(I18NIdentityCode)

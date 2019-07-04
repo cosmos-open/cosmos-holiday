@@ -180,7 +180,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         /// <returns></returns>
         public DailyAnswer ToDailyAnswer(int year)
         {
-            var builder = DailyAnswerBuilder.Create(Name).From(year, Month, Day);
+            var builder = DailyAnswerBuilder.Create(Name, HolidayType).From(year, Month, Day);
 
             if (Length > 1)
                 builder.To(Length);
@@ -198,6 +198,6 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         }
 
         #endregion
-        
+
     }
 }

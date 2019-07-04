@@ -40,7 +40,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.UnitedKingdom.Pu
             {
                 calculationDay = DateTimeFactory.FindNextDay(year, 1, 1, DayOfWeek.Monday);
                 return DailyAnswerBuilder
-                    .Create(Name)
+                    .Create(Name, HolidayType)
                     .From(calculationDay)
                     .Country(Country.ToCode(), GetRegionCodeList())
                     .I18N(I18NIdentityCode)
