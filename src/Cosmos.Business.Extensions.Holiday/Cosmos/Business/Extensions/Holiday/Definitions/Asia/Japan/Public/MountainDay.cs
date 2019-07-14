@@ -8,7 +8,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Japan.Public
     /// <summary>
     /// Mountain Day
     /// </summary>
-    public class MountainDay : ShiftVariableHolidayFunc
+    public class MountainDay : WeekShiftVariableHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Japan;

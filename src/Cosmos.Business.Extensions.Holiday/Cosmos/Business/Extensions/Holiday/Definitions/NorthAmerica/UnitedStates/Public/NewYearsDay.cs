@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStat
     /// <summary>
     /// New year's day
     /// </summary>
-    public class NewYearsDay : ShiftVariableHolidayFunc
+    public class NewYearsDay : WeekShiftVariableHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.UnitedStates;

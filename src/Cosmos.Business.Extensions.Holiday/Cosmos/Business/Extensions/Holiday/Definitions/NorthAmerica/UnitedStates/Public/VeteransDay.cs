@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStat
     /// <summary>
     /// Veteran's Day
     /// </summary>
-    public class VeteransDay : ShiftVariableHolidayFunc
+    public class VeteransDay : WeekShiftVariableHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.UnitedStates;

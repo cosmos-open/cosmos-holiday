@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Japan.Public
     /// <summary>
     /// Culture Day
     /// </summary>
-    public class CultureDay : ShiftVariableHolidayFunc
+    public class CultureDay : WeekShiftVariableHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Japan;

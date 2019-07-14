@@ -8,7 +8,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Japan.Public
     /// <summary>
     /// Constitution Memorial Day
     /// </summary>
-    public class MemorialDay : ShiftVariableHolidayFunc
+    public class MemorialDay : WeekShiftVariableHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Japan;

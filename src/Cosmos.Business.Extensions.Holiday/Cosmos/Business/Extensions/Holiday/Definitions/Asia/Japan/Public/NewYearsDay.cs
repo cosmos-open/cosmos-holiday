@@ -8,7 +8,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Japan.Public
     /// <summary>
     /// New year's day
     /// </summary>
-    public class NewYearsDay : ShiftVariableHolidayFunc
+    public class NewYearsDay : WeekShiftVariableHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Japan;

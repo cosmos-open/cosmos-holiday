@@ -8,7 +8,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.UnitedKingdom.Pu
     /// <summary>
     /// New Year's Day
     /// </summary>
-    public class NewYear2Day : ShiftVariableHolidayFunc
+    public class NewYear2Day : WeekShiftVariableHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.UnitedKingdom;

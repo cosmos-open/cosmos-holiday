@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Japan.Public
     /// <summary>
     /// Labour Thanksgiving Day
     /// </summary>
-    public class LabourThanksgivingDay : ShiftVariableHolidayFunc
+    public class LabourThanksgivingDay : WeekShiftVariableHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Japan;

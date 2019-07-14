@@ -8,7 +8,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.UnitedKingdom.Pu
     /// <summary>
     /// St. Stephen Day
     /// </summary>
-    public class StStephenDay : ShiftVariableHolidayFunc
+    public class StStephenDay : WeekShiftVariableHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.UnitedKingdom;

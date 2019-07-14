@@ -23,6 +23,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Belgium.Religion
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_at_easter_sunday";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_be_easter_sunday";
     }
 }

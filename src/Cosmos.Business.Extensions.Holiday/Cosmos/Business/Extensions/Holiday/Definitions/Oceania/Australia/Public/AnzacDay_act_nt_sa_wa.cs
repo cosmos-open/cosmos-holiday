@@ -7,7 +7,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Oceania.Australia.Publi
     /// <summary>
     /// Anzac Day for AU-ACT, AU-NT, AU-SA and AU-WA
     /// </summary>
-    public class AnzacDayActNtSaWa : ShiftVariableHolidayFunc
+    public class AnzacDayActNtSaWa : WeekShiftVariableHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Australia;

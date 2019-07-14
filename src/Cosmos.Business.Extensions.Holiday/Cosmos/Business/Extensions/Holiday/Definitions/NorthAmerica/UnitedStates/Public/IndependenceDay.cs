@@ -8,7 +8,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStat
     /// <summary>
     /// Independence Day
     /// </summary>
-    public class IndependenceDay : ShiftVariableHolidayFunc
+    public class IndependenceDay : WeekShiftVariableHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.UnitedStates;
