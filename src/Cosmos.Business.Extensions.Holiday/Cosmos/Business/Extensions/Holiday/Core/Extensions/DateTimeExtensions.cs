@@ -13,17 +13,65 @@ namespace Cosmos.Business.Extensions.Holiday.Core.Extensions
             switch (dt.DayOfWeek)
             {
                 case DayOfWeek.Saturday:
-                    return saturday.Invoke(dt);
+                    return dt.SaturdayShift(saturday);
 
                 case DayOfWeek.Sunday:
-                    return sunday.Invoke(dt);
+                    return dt.SundayShift(sunday);
 
                 case DayOfWeek.Monday:
-                    if (monday != null)
-                        return monday.Invoke(dt);
-                    break;
+                    return dt.MondayShift(monday);
             }
 
+            return dt;
+        }
+
+        public static DateTime SundayShift(this DateTime dt, Func<DateTime, DateTime> func)
+        {
+            if (dt.DayOfWeek == DayOfWeek.Sunday)
+                return func?.Invoke(dt) ?? dt;
+            return dt;
+        }
+
+        public static DateTime MondayShift(this DateTime dt, Func<DateTime, DateTime> func)
+        {
+            if (dt.DayOfWeek == DayOfWeek.Monday)
+                return func?.Invoke(dt) ?? dt;
+            return dt;
+        }
+
+        public static DateTime TuesdayShift(this DateTime dt, Func<DateTime, DateTime> func)
+        {
+            if (dt.DayOfWeek == DayOfWeek.Tuesday)
+                return func?.Invoke(dt) ?? dt;
+            return dt;
+        }
+
+        public static DateTime WednesdayShift(this DateTime dt, Func<DateTime, DateTime> func)
+        {
+            if (dt.DayOfWeek == DayOfWeek.Wednesday)
+                return func?.Invoke(dt) ?? dt;
+            return dt;
+        }
+
+        public static DateTime ThursdayShift(this DateTime dt, Func<DateTime, DateTime> func)
+        {
+            if (dt.DayOfWeek == DayOfWeek.Thursday)
+                return func?.Invoke(dt) ?? dt;
+            return dt;
+        }
+        
+        public static DateTime FridayShift(this DateTime dt, Func<DateTime, DateTime> func)
+        {
+            if (dt.DayOfWeek == DayOfWeek.Friday)
+                return func?.Invoke(dt) ?? dt;
+            return dt;
+        }
+
+
+        public static DateTime SaturdayShift(this DateTime dt, Func<DateTime, DateTime> func)
+        {
+            if (dt.DayOfWeek == DayOfWeek.Saturday)
+                return func?.Invoke(dt) ?? dt;
             return dt;
         }
     }

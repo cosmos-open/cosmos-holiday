@@ -8,7 +8,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core
     /// <summary>
     /// Shift variable holiday func
     /// </summary>
-    public abstract class ShiftVariableHolidayFunc : BaseVariableHolidayFunc
+    public abstract class WeekShiftVariableHolidayFunc : BaseVariableHolidayFunc
     {
 
         #region Date
@@ -39,6 +39,35 @@ namespace Cosmos.Business.Extensions.Holiday.Core
 
         #endregion
 
+        #region Shift additional
+
+        /// <summary>
+        /// Monday shift days
+        /// </summary>
+        protected virtual int MondayShift { get; } = 0;
+
+        /// <summary>
+        /// Tuesday shift days
+        /// </summary>
+        protected virtual int TuesdayShift { get; } = 0;
+
+        /// <summary>
+        /// Wednesday shift days
+        /// </summary>
+        protected virtual int WednesdayShift { get; } = 0;
+        
+        /// <summary>
+        /// Thursday shift days
+        /// </summary>
+        protected virtual int ThursdayShift { get; } = 0;
+        
+        /// <summary>
+        /// Friday shift days
+        /// </summary>
+        protected virtual int FridayShift { get; } = 0;
+
+        #endregion
+
         /// <inheritdoc />
         public override DailyAnswer ToDailyAnswer(int year)
         {
@@ -48,6 +77,21 @@ namespace Cosmos.Business.Extensions.Holiday.Core
             var calculationDay = DateTimeFactory
                 .Create(year, Month, Day)
                 .Shift(saturdayFunc, sundayFunc);
+
+            if (MondayShift != 0)
+                calculationDay = calculationDay.MondayShift(Shift(MondayShift));
+
+            if (TuesdayShift != 0)
+                calculationDay = calculationDay.TuesdayShift(Shift(TuesdayShift));
+
+            if (WednesdayShift != 0)
+                calculationDay = calculationDay.WednesdayShift(Shift(WednesdayShift));
+            
+            if (ThursdayShift != 0)
+                calculationDay = calculationDay.ThursdayShift(Shift(ThursdayShift));
+            
+            if (FridayShift != 0)
+                calculationDay = calculationDay.FridayShift(Shift(FridayShift));
 
             var builder = DailyAnswerBuilder.Create(Name, HolidayType).From(calculationDay);
 
