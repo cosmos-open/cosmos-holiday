@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.Business.Extensions.Holiday.Core.Helpers;
+using Cosmos.Business.Extensions.Holiday.Core.Internals;
 using Cosmos.Business.Extensions.Holiday.Definitions;
 using Cosmos.I18N.Countries;
 using Cosmos.I18N.Countries.Europe;
@@ -11,6 +12,7 @@ namespace Cosmos.Business.Extensions.Holiday
     using Definitions.Europe.UnitedKingdom.Commemoration;
     using Definitions.Europe.UnitedKingdom.Public;
     using Definitions.Europe.UnitedKingdom.Bank;
+    using Definitions.Europe.UnitedKingdom.Religion;
 
     /// <summary>
     /// United Kingdom holiday provider
@@ -34,6 +36,53 @@ namespace Cosmos.Business.Extensions.Holiday
         /// </summary>
         /// <returns></returns>
         public override IEnumerable<string> IncludeRegions() => RegionCache;
+
+        /// <summary>
+        /// Does this provider include special type of regions?
+        /// </summary>
+        /// <param name="regionCode"></param>
+        /// <returns></returns>
+        public override bool DoesIncludeRegion(string regionCode)
+        {
+            if (string.IsNullOrWhiteSpace(regionCode))
+                return false;
+
+            regionCode = CountryHelper.FixRegionCode(Country.UnitedKingdom, regionCode);
+
+            switch (regionCode)
+            {
+                case "GB-GG":
+                    return InternalSingleInstanceServiceLocator.HolidayProviderManager.ContainsRegion(CountryCode.GG);
+                case "GB-JE":
+                    return InternalSingleInstanceServiceLocator.HolidayProviderManager.ContainsRegion(CountryCode.JE);
+                case "GB-IM":
+                    return InternalSingleInstanceServiceLocator.HolidayProviderManager.ContainsRegion(CountryCode.IM);
+                case "GB-GI":
+                    return InternalSingleInstanceServiceLocator.HolidayProviderManager.ContainsRegion(CountryCode.GI);
+                case "GB-BM":
+                    return InternalSingleInstanceServiceLocator.HolidayProviderManager.ContainsRegion(CountryCode.BM);
+                case "GB-KY":
+                    return InternalSingleInstanceServiceLocator.HolidayProviderManager.ContainsRegion(CountryCode.KY);
+                case "GB-TC":
+                    return InternalSingleInstanceServiceLocator.HolidayProviderManager.ContainsRegion(CountryCode.TC);
+                case "GB-VG":
+                    return InternalSingleInstanceServiceLocator.HolidayProviderManager.ContainsRegion(CountryCode.VG);
+                case "GB-AI":
+                    return InternalSingleInstanceServiceLocator.HolidayProviderManager.ContainsRegion(CountryCode.AI);
+                case "GB-MS":
+                    return InternalSingleInstanceServiceLocator.HolidayProviderManager.ContainsRegion(CountryCode.MS);
+                case "GB-SH":
+                    return InternalSingleInstanceServiceLocator.HolidayProviderManager.ContainsRegion(CountryCode.SH);
+                case "GB-GS":
+                    return InternalSingleInstanceServiceLocator.HolidayProviderManager.ContainsRegion(CountryCode.GS);
+                case "GB-IO":
+                    return InternalSingleInstanceServiceLocator.HolidayProviderManager.ContainsRegion(CountryCode.IO);
+                case "GB-PN":
+                    return InternalSingleInstanceServiceLocator.HolidayProviderManager.ContainsRegion(CountryCode.PN);
+                default:
+                    return base.DoesIncludeRegion(regionCode);
+            }
+        }
 
         /// <summary>
         /// Geta all fixed holiday funcs
@@ -64,7 +113,7 @@ namespace Cosmos.Business.Extensions.Holiday
             new SummerBankHolidaySct(), //8月第一个周一
             new SummerBankHoliday(), //8月最后一个周一
             new ChristmasDay(), //12-25
-            new StStephenDay(), //12-16
+            new StStephensDay(), //12-16
             new EasterMonday(),
             new GoodFriday()
         };

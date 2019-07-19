@@ -27,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Benin.Public
         public override int Day { get; set; } = 1;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_by_all_saints_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_bj_all_saints_day";
     }
 }

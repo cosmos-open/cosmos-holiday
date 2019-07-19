@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.Business.Extensions.Holiday.Core.Helpers;
+using Cosmos.Business.Extensions.Holiday.Core.Internals;
 using Cosmos.Business.Extensions.Holiday.Definitions;
 using Cosmos.I18N.Countries;
 using Cosmos.I18N.Countries.NorthAmerica;
@@ -46,6 +47,34 @@ namespace Cosmos.Business.Extensions.Holiday
                 return false;
 
             regionCode = CountryHelper.FixRegionCode(Country.UnitedStates, regionCode);
+            var result = false;
+
+            switch (regionCode)
+            {
+                case "US-VI":
+                    result = InternalSingleInstanceServiceLocator.HolidayProviderManager.ContainsRegion(CountryCode.VI);
+                    break;
+                case "US-MP":
+                    result = InternalSingleInstanceServiceLocator.HolidayProviderManager.ContainsRegion(CountryCode.MP);
+                    break;
+                case "US-PR":
+                    result = InternalSingleInstanceServiceLocator.HolidayProviderManager.ContainsRegion(CountryCode.PR);
+                    break;
+                case "US-GU":
+                    result = InternalSingleInstanceServiceLocator.HolidayProviderManager.ContainsRegion(CountryCode.GU);
+                    break;
+                case "US-AS":
+                    result = InternalSingleInstanceServiceLocator.HolidayProviderManager.ContainsRegion(CountryCode.AS);
+                    break;
+                case "US-UM":
+                    result = InternalSingleInstanceServiceLocator.HolidayProviderManager.ContainsRegion(CountryCode.UM);
+                    break;
+            }
+
+            if (result)
+            {
+                return true;
+            }
 
             return OverseasRegionCache.Contains(regionCode) || base.DoesIncludeRegion(regionCode);
         }
