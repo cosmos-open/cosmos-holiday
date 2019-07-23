@@ -27,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.ElSalvador.Comme
         public override int Day { get; set; } = 10;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_sv_fathers_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_sv_fathers";
     }
 }

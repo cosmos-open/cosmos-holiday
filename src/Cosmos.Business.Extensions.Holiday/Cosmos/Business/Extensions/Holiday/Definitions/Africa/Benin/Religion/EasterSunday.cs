@@ -18,7 +18,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Benin.Religion
         public override string Name { get; } = "Easter Sunday";
 
         /// <inheritdoc />
-        public override HolidayType HolidayType { get; set; } = HolidayType.Public;
+        public override HolidayType HolidayType { get; set; } = HolidayType.Religion;
 
         /// <inheritdoc />
         public override string I18NIdentityCode { get; } = "i18n_holiday_bj_easter_sunday";

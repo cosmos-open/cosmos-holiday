@@ -27,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Morocco.Public
         public override int Day { get; set; } = 18;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_ma_independence_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_ma_independence";
     }
 }

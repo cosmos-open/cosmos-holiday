@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.Business.Extensions.Holiday.Definitions;
 using Cosmos.I18N.Countries;
@@ -66,7 +65,8 @@ namespace Cosmos.Business.Extensions.Holiday
         {
             return new[]
             {
-                "https://en.wikipedia.org/wiki/Public_holidays_in_Morocco"
+                "https://en.wikipedia.org/wiki/Public_holidays_in_Morocco",
+                "http://www.dniwolne.eu/zn-%E9%9D%9E%E6%B4%B2-%E5%81%87%E6%9C%9F-%E6%91%A9%E6%B4%9B%E5%93%A5.html"
             };
         }
     }

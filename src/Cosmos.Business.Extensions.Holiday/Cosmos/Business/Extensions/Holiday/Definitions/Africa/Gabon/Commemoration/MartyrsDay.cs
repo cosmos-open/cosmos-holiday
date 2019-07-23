@@ -1,7 +1,7 @@
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.I18N.Countries;
 
-namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Gabon.Public
+namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Gabon.Commemoration
 {
     /// <summary>
     /// Martyr's Day
@@ -18,7 +18,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Gabon.Public
         public override string Name { get; } = "Martyr's Day";
 
         /// <inheritdoc />
-        public override HolidayType HolidayType { get; set; } = HolidayType.Public;
+        public override HolidayType HolidayType { get; set; } = HolidayType.Commemoration;
 
         /// <inheritdoc />
         public override int Month { get; set; } = 5;
@@ -27,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Gabon.Public
         public override int Day { get; set; } = 6;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_ga_martyrs_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_ga_martyr";
     }
 }

@@ -4,9 +4,9 @@ using Cosmos.I18N.Countries;
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Gabon.Religion
 {
     /// <summary>
-    /// Easter Monday
+    /// Christmas Day
     /// </summary>
-    public class EasterMonday : CatholicVariableHolidayFunc
+    public class ChristmasDay : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Gabon;
@@ -15,15 +15,18 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Gabon.Religion
         public override Country BelongsToCountry { get; } = Country.Gabon;
 
         /// <inheritdoc />
-        public override string Name { get; } = "Easter Monday";
+        public override string Name { get; } = "Božić";
 
         /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Religion;
 
         /// <inheritdoc />
-        protected override int OffsetEasterSunday { get; } = 1;
+        public override int Month { get; set; } = 12;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_ga_easter_monday";
+        public override int Day { get; set; } = 25;
+
+        /// <inheritdoc />
+        public override string I18NIdentityCode { get; } = "i18n_holiday_ga_christmas";
     }
 }

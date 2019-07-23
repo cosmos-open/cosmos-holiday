@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Lesotho.Commemor
     /// <summary>
     /// Heroes' Day
     /// </summary>
-    public class HeroesDay: BaseFixedHolidayFunc
+    public class HeroesDay : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Lesotho;
@@ -27,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Lesotho.Commemor
         public override int Day { get; set; } = 25;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_ls_heroes_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_ls_heroes";
     }
 }

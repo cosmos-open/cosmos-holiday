@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Gabon.Public
     /// <summary>
     /// Independence Day
     /// </summary>
-    public class IndependenceDay: BaseFixedHolidayFunc
+    public class IndependenceDay : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Gabon;
@@ -27,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Gabon.Public
         public override int Day { get; set; } = 17;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_ga_independence_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_ga_independence";
     }
 }

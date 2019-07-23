@@ -4,7 +4,7 @@ using Cosmos.I18N.Countries;
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Benin.Public
 {
     /// <summary>
-    /// Armed Forces Day
+    /// Armed Force's Day
     /// </summary>
     public class ArmedForcesDay : BaseFixedHolidayFunc
     {
@@ -15,7 +15,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Benin.Public
         public override Country BelongsToCountry { get; } = Country.Benin;
 
         /// <inheritdoc />
-        public override string Name { get; } = "Armed Forces Day";
+        public override string Name { get; } = "Armed Force's Day";
 
         /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
@@ -27,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Benin.Public
         public override int Day { get; set; } = 26;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_bj_armed_forces_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_bj_armed_forces";
     }
 }

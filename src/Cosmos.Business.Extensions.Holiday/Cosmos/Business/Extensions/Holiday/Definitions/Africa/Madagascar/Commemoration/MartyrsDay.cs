@@ -1,7 +1,7 @@
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.I18N.Countries;
 
-namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Madagascar.Public
+namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Madagascar.Commemoration
 {
     /// <summary>
     /// Martyrs' Day
@@ -18,7 +18,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Madagascar.Publi
         public override string Name { get; } = "Martyrs' Day";
 
         /// <inheritdoc />
-        public override HolidayType HolidayType { get; set; } = HolidayType.Public;
+        public override HolidayType HolidayType { get; set; } = HolidayType.Commemoration;
 
         /// <inheritdoc />
         public override int Month { get; set; } = 3;
@@ -27,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Madagascar.Publi
         public override int Day { get; set; } = 29;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_mg_martyrs_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_mg_martyr";
     }
 }

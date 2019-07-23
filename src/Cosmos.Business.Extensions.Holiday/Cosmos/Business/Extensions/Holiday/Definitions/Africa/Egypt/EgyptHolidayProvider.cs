@@ -54,8 +54,7 @@ namespace Cosmos.Business.Extensions.Holiday
         /// </summary>
         protected override List<IVariableHolidayFunc> AllVariableHolidayFuncs { get; } = EgVariableHolidayFuncs;
 
-        private static List<IVariableHolidayFunc> EgVariableHolidayFuncs = new List<IVariableHolidayFunc>
-            { };
+        private static List<IVariableHolidayFunc> EgVariableHolidayFuncs = new List<IVariableHolidayFunc>();
 
         /// <summary>
         /// Get sources

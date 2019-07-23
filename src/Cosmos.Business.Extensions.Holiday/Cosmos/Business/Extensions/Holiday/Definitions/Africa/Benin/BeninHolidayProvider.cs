@@ -7,9 +7,9 @@ using Cosmos.I18N.Countries.Africa;
 // ReSharper disable once CheckNamespace
 namespace Cosmos.Business.Extensions.Holiday
 {
-    using Definitions.Africa.Benin.Commemoration;
     using Definitions.Africa.Benin.Public;
     using Definitions.Africa.Benin.Religion;
+    using Definitions.Africa.Benin.Tradition;
 
     /// <summary>
     /// Benin holiday provider

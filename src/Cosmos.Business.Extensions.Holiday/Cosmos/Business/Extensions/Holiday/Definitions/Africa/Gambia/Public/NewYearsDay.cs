@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Gambia.Public
     /// <summary>
     /// New Year's Day
     /// </summary>
-    public class NewYearsDay: BaseFixedHolidayFunc
+    public class NewYearsDay : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Gambia;
@@ -27,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Gambia.Public
         public override int Day { get; set; } = 1;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_gm_new_years_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_gm_new_year";
     }
 }

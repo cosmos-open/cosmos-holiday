@@ -27,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.ElSalvador.Publi
         public override int Day { get; set; } = 1;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_sv_childrens_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_sv_childrens";
     }
 }

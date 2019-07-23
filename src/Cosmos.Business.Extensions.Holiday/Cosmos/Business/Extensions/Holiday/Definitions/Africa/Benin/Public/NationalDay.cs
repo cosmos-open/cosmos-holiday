@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Benin.Public
     /// <summary>
     /// National Day
     /// </summary>
-    public class NationalDay: BaseFixedHolidayFunc
+    public class NationalDay : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Benin;
@@ -27,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Benin.Public
         public override int Day { get; set; } = 30;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_bj_national_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_bj_national";
     }
 }

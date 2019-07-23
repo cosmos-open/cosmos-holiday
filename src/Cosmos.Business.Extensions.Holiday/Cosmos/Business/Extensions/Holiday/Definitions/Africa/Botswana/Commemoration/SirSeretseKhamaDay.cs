@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Botswana.Commemo
     /// <summary>
     /// Sir Seretse Khama Day
     /// </summary>
-    public class SirSeretseKhamaDay: BaseFixedHolidayFunc
+    public class SirSeretseKhamaDay : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Botswana;
@@ -27,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Botswana.Commemo
         public override int Day { get; set; } = 1;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_bw_sir_seretse_khama_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_bw_sir_seretse_khama";
     }
 }

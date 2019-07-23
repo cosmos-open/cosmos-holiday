@@ -14,29 +14,19 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Egypt.Public
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.Egypt;
 
-        /// <summary>
-        /// April Fool's Day
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "عيد ثورة 23 يوليو";
 
-        /// <summary>
-        /// Type of holiday
-        /// </summary>
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
-        /// <summary>
-        /// Month
-        /// </summary>
+        /// <inheritdoc />
         public override int Month { get; set; } = 7;
 
-        /// <summary>
-        /// Day
-        /// </summary>
+        /// <inheritdoc />
         public override int Day { get; set; } = 23;
 
-        /// <summary>
-        /// i18n
-        /// </summary>
-        public override string I18NIdentityCode { get; } = "i18n_holiday_eg_revolution_day";
+        /// <inheritdoc />
+        public override string I18NIdentityCode { get; } = "i18n_holiday_eg_revolution";
     }
 }

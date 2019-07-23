@@ -27,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Egypt.Public
         public override int Day { get; set; } = 6;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_eg_armed_forces_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_eg_armed_forces";
     }
 }

@@ -1,7 +1,7 @@
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.I18N.Countries;
 
-namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Madagascar.Public
+namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Botswana.Religion
 {
     /// <summary>
     /// Christmas Day
@@ -9,16 +9,16 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Madagascar.Publi
     public class ChristmasDay: BaseFixedHolidayFunc
     {
         /// <inheritdoc />
-        public override Country Country { get; } = Country.Madagascar;
+        public override Country Country { get; } = Country.Botswana;
 
         /// <inheritdoc />
-        public override Country BelongsToCountry { get; } = Country.Madagascar;
+        public override Country BelongsToCountry { get; } = Country.Botswana;
 
         /// <inheritdoc />
         public override string Name { get; } = "Christmas Day";
 
         /// <inheritdoc />
-        public override HolidayType HolidayType { get; set; } = HolidayType.Public;
+        public override HolidayType HolidayType { get; set; } = HolidayType.Religion;
 
         /// <inheritdoc />
         public override int Month { get; set; } = 12;
@@ -27,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Madagascar.Publi
         public override int Day { get; set; } = 25;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_mg_christmas";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_bw_christmas";
     }
 }

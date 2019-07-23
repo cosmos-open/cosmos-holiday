@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.ElSalvador.Publi
     /// <summary>
     /// Independence Day
     /// </summary>
-    public class IndependenceDay: BaseFixedHolidayFunc
+    public class IndependenceDay : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.ElSalvador;
@@ -15,7 +15,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.ElSalvador.Publi
         public override Country BelongsToCountry { get; } = Country.ElSalvador;
 
         /// <inheritdoc />
-        public override string Name { get; } ="Día de la Independencia";
+        public override string Name { get; } = "Día de la Independencia";
 
         /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
@@ -27,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.ElSalvador.Publi
         public override int Day { get; set; } = 15;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_sv_independence_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_sv_independence";
     }
 }

@@ -17,13 +17,10 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Botswana.Public
         public override Country BelongsToCountry { get; } = Country.Botswana;
 
         /// <inheritdoc />
-        public override string Name { get; } = "residents' Day";
+        public override string Name { get; } = "Presidents' Day";
 
         /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
-
-        /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_bw_presidents_day";
 
         /// <inheritdoc />
         public override int Month { get; } = 7;
@@ -33,5 +30,8 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Botswana.Public
 
         /// <inheritdoc />
         protected override DayOfWeek DayOfWeek { get; } = DayOfWeek.Monday;
+
+        /// <inheritdoc />
+        public override string I18NIdentityCode { get; } = "i18n_holiday_bw_presidents";
     }
 }

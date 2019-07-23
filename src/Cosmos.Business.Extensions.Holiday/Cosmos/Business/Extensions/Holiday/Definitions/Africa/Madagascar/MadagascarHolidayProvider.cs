@@ -3,11 +3,11 @@ using System.Linq;
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.Business.Extensions.Holiday.Definitions;
 using Cosmos.I18N.Countries;
-using Cosmos.I18N.Countries.Africa;
 
 // ReSharper disable once CheckNamespace
 namespace Cosmos.Business.Extensions.Holiday
 {
+    using Definitions.Africa.Madagascar.Commemoration;
     using Definitions.Africa.Madagascar.Public;
     using Definitions.Africa.Madagascar.Religion;
 

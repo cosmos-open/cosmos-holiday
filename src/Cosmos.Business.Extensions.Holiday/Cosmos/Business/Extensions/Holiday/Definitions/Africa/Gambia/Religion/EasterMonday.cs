@@ -18,7 +18,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Gambia.Religion
         public override string Name { get; } = "Easter Monday";
 
         /// <inheritdoc />
-        public override HolidayType HolidayType { get; set; } = HolidayType.Public;
+        public override HolidayType HolidayType { get; set; } = HolidayType.Religion;
 
         /// <inheritdoc />
         protected override int OffsetEasterSunday { get; } = 1;

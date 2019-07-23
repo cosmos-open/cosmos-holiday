@@ -1,7 +1,7 @@
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.I18N.Countries;
 
-namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Benin.Public
+namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Benin.Religion
 {
     /// <summary>
     /// Assumption Day
@@ -18,7 +18,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Benin.Public
         public override string Name { get; } = "Assumption Day";
 
         /// <inheritdoc />
-        public override HolidayType HolidayType { get; set; } = HolidayType.Public;
+        public override HolidayType HolidayType { get; set; } = HolidayType.Religion;
 
         /// <inheritdoc />
         public override int Month { get; set; } = 8;
@@ -28,5 +28,8 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Benin.Public
 
         /// <inheritdoc />
         public override string I18NIdentityCode { get; } = "i18n_holiday_bj_assumption_day";
+
+        /// <inheritdoc />
+        public override int? Since { get; } = 1568;
     }
 }

@@ -27,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Gambia.Public
         public override int Day { get; set; } = 22;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_gm_revolution_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_gm_revolution";
     }
 }

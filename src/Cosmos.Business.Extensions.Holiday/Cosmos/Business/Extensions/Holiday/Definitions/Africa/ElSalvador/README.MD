@@ -1,5 +1,5 @@
-# The Republic of Benin
+# The Democratic Republic of Sao Tome and Principe
 
-贝宁（The Republic of Benin，非洲，BJ，BEN，204），贝宁共和国
+萨尔瓦多（The Democratic Republic of Sao Tome and Principe，非洲，SV，SLV，222），萨尔瓦多共和国
 
-Cosmos i18n code: i18n_country_beining
+Cosmos i18n code: i18n_country_saerwaduo

@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.ElSalvador.Publi
     /// <summary>
     /// New Year's Eve
     /// </summary>
-    public class NewYearsEve: BaseFixedHolidayFunc
+    public class NewYearsEve : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.ElSalvador;
@@ -27,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.ElSalvador.Publi
         public override int Day { get; set; } = 31;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_bw_new_years_eve";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_bw_new_year_eve";
     }
 }

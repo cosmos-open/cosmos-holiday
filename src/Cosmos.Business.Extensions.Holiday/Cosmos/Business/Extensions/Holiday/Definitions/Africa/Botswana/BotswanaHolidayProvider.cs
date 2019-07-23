@@ -1,10 +1,8 @@
 using System.Collections.Generic;
 using Cosmos.Business.Extensions.Holiday.Core;
-using Cosmos.Business.Extensions.Holiday.Core.Helpers;
 using Cosmos.Business.Extensions.Holiday.Definitions;
 using Cosmos.I18N.Countries;
 using Cosmos.I18N.Countries.Africa;
-using Cosmos.I18N.Countries.Europe;
 
 // ReSharper disable once CheckNamespace
 namespace Cosmos.Business.Extensions.Holiday

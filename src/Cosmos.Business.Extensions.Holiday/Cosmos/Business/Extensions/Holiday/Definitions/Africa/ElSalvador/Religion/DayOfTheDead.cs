@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.ElSalvador.Relig
     /// <summary>
     /// Day of the Dead
     /// </summary>
-    public class DayOfTheDead: BaseFixedHolidayFunc
+    public class DayOfTheDead : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.ElSalvador;

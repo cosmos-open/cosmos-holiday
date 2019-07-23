@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.ElSalvador.Publi
     /// <summary>
     /// National Pupusa Festival
     /// </summary>
-    public class NationalPupusaFestival: BaseFixedHolidayFunc
+    public class NationalPupusaFestival : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.ElSalvador;

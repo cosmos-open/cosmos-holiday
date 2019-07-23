@@ -5,6 +5,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Morocco.Public
 {
     /// <summary>
     /// Revolution of the King and the People
+    /// <br />国王和人民革命纪念日
     /// </summary>
     public class RevolutionDay : BaseFixedHolidayFunc
     {
@@ -27,6 +28,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Morocco.Public
         public override int Day { get; set; } = 20;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_ma_revolution_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_ma_revolution";
     }
 }

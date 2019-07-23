@@ -4,7 +4,8 @@ using Cosmos.I18N.Countries;
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Morocco.Public
 {
     /// <summary>
-    /// Zikra Oued Ed-Dahab
+    /// Zikra Oued Ed-Dahab 忠诚日
+    /// <br />Oued Eddahab
     /// </summary>
     public class ZikraOuedEdDahab : BaseFixedHolidayFunc
     {

@@ -10,6 +10,7 @@ namespace Cosmos.Business.Extensions.Holiday
     using Definitions.Africa.Gabon.Commemoration;
     using Definitions.Africa.Gabon.Public;
     using Definitions.Africa.Gabon.Religion;
+    using Definitions.Africa.Gabon.Tradition;
 
     /// <summary>
     /// Gabon holiday provider

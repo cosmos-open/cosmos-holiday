@@ -1,12 +1,12 @@
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.I18N.Countries;
 
-namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.ElSalvador.Public
+namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.ElSalvador.Religion
 {
     /// <summary>
     /// Christmas Day
     /// </summary>
-    public class ChristmasDay: BaseFixedHolidayFunc
+    public class ChristmasDay : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.ElSalvador;
@@ -18,7 +18,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.ElSalvador.Publi
         public override string Name { get; } = "Noche Buena";
 
         /// <inheritdoc />
-        public override HolidayType HolidayType { get; set; } = HolidayType.Public;
+        public override HolidayType HolidayType { get; set; } = HolidayType.Religion;
 
         /// <inheritdoc />
         public override int Month { get; set; } = 12;

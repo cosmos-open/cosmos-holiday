@@ -4,7 +4,7 @@ using Cosmos.I18N.Countries;
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Benin.Religion
 {
     /// <summary>
-    /// Christi Himmelfahrt
+    /// Whit Monday
     /// </summary>
     public class WhitMonday : CatholicVariableHolidayFunc
     {
@@ -24,6 +24,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Benin.Religion
         protected override int OffsetEasterSunday { get; } = 1 + 7 * 7;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_by_whit_monday";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_bj_whit_monday";
     }
 }
