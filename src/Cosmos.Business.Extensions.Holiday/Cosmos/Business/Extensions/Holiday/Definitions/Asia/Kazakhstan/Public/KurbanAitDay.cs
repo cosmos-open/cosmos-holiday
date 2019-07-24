@@ -17,9 +17,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Kazakhstan.Public
         /// <inheritdoc />
         public override string Name { get; } = "Курбан Айт";
 
-        /// <summary>
-        /// Type of holiday
-        /// </summary>
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
         /// <inheritdoc />

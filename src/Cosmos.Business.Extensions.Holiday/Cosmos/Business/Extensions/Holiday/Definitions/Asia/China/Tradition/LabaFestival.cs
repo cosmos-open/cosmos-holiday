@@ -19,9 +19,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Tradition
         /// </summary>
         public override string Name { get; } = "腊八节";
 
-        /// <summary>
-        /// Type of holiday
-        /// </summary>
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Tradition;
 
         /// <inheritdoc />
@@ -31,7 +29,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Tradition
         protected override int ChineseDay { get; } = 8;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_cn_labajie";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_cn_1208";
         
         /*
          * 腊八节，俗称“腊八” ，日期在农历十二月初八。

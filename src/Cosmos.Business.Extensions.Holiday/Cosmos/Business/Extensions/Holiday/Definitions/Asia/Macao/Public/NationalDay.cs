@@ -34,7 +34,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao.Public
         public override int Day { get; set; } = 1;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_mo_guoqing";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_mo_china10";
 
         /// <inheritdoc />
         public override int? Since { get; } = 1949;

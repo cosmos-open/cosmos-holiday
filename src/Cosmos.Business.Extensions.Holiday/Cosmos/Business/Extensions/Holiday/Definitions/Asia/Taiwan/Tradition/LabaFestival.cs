@@ -34,8 +34,8 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan.Tradition
         protected override int ChineseDay { get; } = 8;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_tw_labajie";
-        
+        public override string I18NIdentityCode { get; } = "i18n_holiday_tw_1208";
+
         /*
          * 腊八节，俗称“腊八” ，日期在农历十二月初八。
          * 古时我国一些地方有在腊月祭祀祖先和神灵（包括门神、户神、宅神、灶神、井神）、祈求丰收吉祥的传统，

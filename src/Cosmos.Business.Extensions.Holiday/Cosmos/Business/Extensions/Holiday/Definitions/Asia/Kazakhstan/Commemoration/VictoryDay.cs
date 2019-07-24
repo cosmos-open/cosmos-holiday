@@ -17,9 +17,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Kazakhstan.Commemo
         /// <inheritdoc />
         public override string Name { get; } = "День Победы";
 
-        /// <summary>
-        /// Type of holiday
-        /// </summary>
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Commemoration;
 
         /// <inheritdoc />
@@ -29,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Kazakhstan.Commemo
         public override int Day { get; set; } = 9;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_kz_victory_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_kz_victory";
     }
 }

@@ -19,9 +19,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.School
         /// </summary>
         public override string Name { get; } = "教师节";
 
-        /// <summary>
-        /// Type of holiday
-        /// </summary>
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.School;
 
         /// <inheritdoc />
@@ -31,7 +29,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.School
         public override int Day { get; set; } = 10;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_cn_jiaoshijie";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_cn_jiaoshi";
 
         /// <inheritdoc />
         public override int? Since { get; } = 1985;

@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Commemoratio
     /// <summary>
     /// 918
     /// </summary>
-    public class NineOneEightDay : BaseFixedHolidayFunc
+    public class _0918 : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.China;
@@ -14,34 +14,22 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Commemoratio
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
-        /// <summary>
-        /// 9-18
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "九·一八事变纪念日";
 
-        /// <summary>
-        /// Type of holiday
-        /// </summary>
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Commemoration;
 
-        /// <summary>
-        /// Month
-        /// </summary>
+        /// <inheritdoc />
         public override int Month { get; set; } = 9;
 
-        /// <summary>
-        /// Day
-        /// </summary>
+        /// <inheritdoc />
         public override int Day { get; set; } = 18;
 
-        /// <summary>
-        /// i18n
-        /// </summary>
+        /// <inheritdoc />
         public override string I18NIdentityCode { get; } = "i18n_holiday_cn_918";
 
-        /// <summary>
-        /// Since...
-        /// </summary>
+        /// <inheritdoc />
         public override int? Since { get; } = 1931;
 
         /*

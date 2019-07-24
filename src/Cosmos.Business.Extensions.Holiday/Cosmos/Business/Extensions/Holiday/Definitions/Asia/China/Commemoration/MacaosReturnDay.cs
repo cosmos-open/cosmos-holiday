@@ -8,44 +8,28 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Commemoratio
     /// </summary>
     public class MacaosReturnDay : BaseFixedHolidayFunc
     {
-        /// <summary>
-        /// Country
-        /// </summary>
+        /// <inheritdoc />
         public override Country Country { get; } = Country.China;
 
-        /// <summary>
-        /// Belongs to country
-        /// </summary>
+        /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
-        /// <summary>
-        /// Macao's return day
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "澳门回归纪念日";
 
-        /// <summary>
-        /// Type of holiday
-        /// </summary>
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Commemoration;
 
-        /// <summary>
-        /// Month
-        /// </summary>
+        /// <inheritdoc />
         public override int Month { get; set; } = 12;
 
-        /// <summary>
-        /// Day
-        /// </summary>
+        /// <inheritdoc />
         public override int Day { get; set; } = 20;
 
-        /// <summary>
-        /// i18n
-        /// </summary>
+        /// <inheritdoc />
         public override string I18NIdentityCode { get; } = "i18n_holiday_cn_mo1999";
 
-        /// <summary>
-        /// Since...
-        /// </summary>
+        /// <inheritdoc />
         public override int? Since { get; } = 1999;
     }
 }

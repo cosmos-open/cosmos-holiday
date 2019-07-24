@@ -34,7 +34,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan.Public
         public override int Day { get; set; } = 10;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_tw_guoqing_mg";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_tw_china1010_mg";
 
         /*
          * 中华民国（1912-1949），位于亚洲东部、东临太平洋。是辛亥革命以后建立的亚洲第一个民主共和国，简称民国。

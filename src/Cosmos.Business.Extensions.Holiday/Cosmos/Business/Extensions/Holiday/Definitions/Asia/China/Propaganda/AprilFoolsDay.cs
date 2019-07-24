@@ -14,29 +14,19 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Propaganda
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
-        /// <summary>
-        /// April Fool's Day
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "愚人节";
 
-        /// <summary>
-        /// Type of holiday
-        /// </summary>
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Propaganda;
 
-        /// <summary>
-        /// Month
-        /// </summary>
+        /// <inheritdoc />
         public override int Month { get; set; } = 4;
 
-        /// <summary>
-        /// Day
-        /// </summary>
+        /// <inheritdoc />
         public override int Day { get; set; } = 1;
 
-        /// <summary>
-        /// i18n
-        /// </summary>
+        /// <inheritdoc />
         public override string I18NIdentityCode { get; } = "i18n_holiday_cn_41";
     }
 }

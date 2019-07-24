@@ -14,14 +14,10 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Public
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
-        /// <summary>
-        /// Youth Day
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "五四青年节";
 
-        /// <summary>
-        /// Type of holiday
-        /// </summary>
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
         /// <inheritdoc />

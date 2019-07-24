@@ -14,14 +14,10 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Public
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
-        /// <summary>
-        /// New Year's Day
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "元旦";
 
-        /// <summary>
-        /// Type of holiday
-        /// </summary>
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
         /// <inheritdoc />
@@ -47,6 +43,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Public
          * 1949年9月27日，第一届中国人民政治协商会议，在决定建立中华人民共和国的同时，
          * 也决定采用世界通用的公元纪年法，即我们所说的阳历。元旦，指西元纪年的岁首第一天。
          */
+        
         /// <inheritdoc />
         public override int? Since { get; } = 1912;
     }

@@ -13,6 +13,7 @@ using Cosmos.I18N.Countries;
 namespace Cosmos.Business.Extensions.Holiday
 {
     using Definitions.Asia.Macao.Public;
+    using Definitions.Asia.Macao.Religion;
     using Definitions.Asia.Macao.Tradition;
 
     /// <summary>

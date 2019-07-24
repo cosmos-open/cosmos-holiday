@@ -19,9 +19,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Tradition
         /// </summary>
         public override string Name { get; } = "北方小年(扫房)";
 
-        /// <summary>
-        /// Type of holiday
-        /// </summary>
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Tradition;
 
         /// <inheritdoc />
@@ -31,6 +29,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Tradition
         protected override int ChineseDay { get; } = 23;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_cn_beifangxiaonian";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_cn_xiaonian_bei";
     }
 }

@@ -17,9 +17,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Kazakhstan.Public
         /// <inheritdoc />
         public override string Name { get; } = "Новый год";
 
-        /// <summary>
-        /// Type of holiday
-        /// </summary>
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
         /// <inheritdoc />
@@ -29,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Kazakhstan.Public
         public override int Day { get; set; } = 1;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_kz_newyearsday";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_kz_new_year";
     }
 }

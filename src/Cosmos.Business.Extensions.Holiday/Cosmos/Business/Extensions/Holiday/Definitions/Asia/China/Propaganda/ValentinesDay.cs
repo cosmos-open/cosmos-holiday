@@ -14,14 +14,10 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Propaganda
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
-        /// <summary>
-        /// Valentine's Day
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "情人节";
 
-        /// <summary>
-        /// Type of holiday
-        /// </summary>
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Propaganda;
 
         /// <inheritdoc />

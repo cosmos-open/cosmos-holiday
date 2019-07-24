@@ -15,34 +15,22 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Commemoratio
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
-        /// <summary>
-        /// Mother's day
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "母亲节";
 
-        /// <summary>
-        /// Type of holiday
-        /// </summary>
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Commemoration;
 
-        /// <summary>
-        /// Month
-        /// </summary>
+        /// <inheritdoc />
         public override int Month { get; } = 5;
 
-        /// <summary>
-        /// Week at month
-        /// </summary>
+        /// <inheritdoc />
         protected override int WeekAtMonth { get; } = 2;
 
-        /// <summary>
-        /// Day of week
-        /// </summary>
+        /// <inheritdoc />
         protected override DayOfWeek DayOfWeek { get; } = DayOfWeek.Sunday;
 
-        /// <summary>
-        /// i18n
-        /// </summary>
+        /// <inheritdoc />
         public override string I18NIdentityCode { get; } = "i18n_holiday_cn_muqinjie";
 
         /*
@@ -50,9 +38,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Commemoratio
          * 我国国内民间约定成俗，故使用美国 1914 年作为起始年份
          */
 
-        /// <summary>
-        /// Since...
-        /// </summary>
+        /// <inheritdoc />
         public override int? Since { get; } = 1914;
     }
 }

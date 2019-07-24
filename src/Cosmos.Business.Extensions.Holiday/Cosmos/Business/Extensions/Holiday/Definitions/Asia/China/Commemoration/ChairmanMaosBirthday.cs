@@ -8,44 +8,28 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Commemoratio
     /// </summary>
     public class ChairmanMaosBirthday : BaseFixedHolidayFunc
     {
-        /// <summary>
-        /// Country
-        /// </summary>
+        /// <inheritdoc />
         public override Country Country { get; } = Country.China;
 
-        /// <summary>
-        /// Belongs to country
-        /// </summary>
+        /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
-        /// <summary>
-        /// 毛泽东同志诞辰纪念日
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "毛泽东同志诞辰纪念日";
 
-        /// <summary>
-        /// Type f holiday
-        /// </summary>
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Commemoration;
 
-        /// <summary>
-        /// Month
-        /// </summary>
+        /// <inheritdoc />
         public override int Month { get; set; } = 12;
 
-        /// <summary>
-        /// Day
-        /// </summary>
+        /// <inheritdoc />
         public override int Day { get; set; } = 26;
 
-        /// <summary>
-        /// i18n
-        /// </summary>
-        public override string I18NIdentityCode { get; } = "i18n_holiday_cn_mao_danchen";
+        /// <inheritdoc />
+        public override string I18NIdentityCode { get; } = "i18n_holiday_cn_mao1226";
 
-        /// <summary>
-        /// Since...
-        /// </summary>
+        /// <inheritdoc />
         public override int? Since { get; } = 1893;
     }
 }

@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Kazakhstan.Public
     /// <summary>
     /// Capital Day - July 6th
     /// </summary>
-    public class CapitalDay: BaseFixedHolidayFunc
+    public class CapitalDay : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Kazakhstan;
@@ -17,9 +17,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Kazakhstan.Public
         /// <inheritdoc />
         public override string Name { get; } = "День столицы";
 
-        /// <summary>
-        /// Type of holiday
-        /// </summary>
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
         /// <inheritdoc />
@@ -29,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Kazakhstan.Public
         public override int Day { get; set; } = 6;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_kz_capital_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_kz_capital";
     }
 }

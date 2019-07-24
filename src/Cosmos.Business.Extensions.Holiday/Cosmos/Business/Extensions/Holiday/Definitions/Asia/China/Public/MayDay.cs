@@ -19,9 +19,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Public
         /// </summary>
         public override string Name { get; } = "国际劳动节";
 
-        /// <summary>
-        /// Type of holiday
-        /// </summary>
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
         /// <inheritdoc />
@@ -31,8 +29,8 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Public
         public override int Day { get; set; } = 1;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_cn_laodongjie";
-        
+        public override string I18NIdentityCode { get; } = "i18n_holiday_cn_51";
+
         /*
         * 国际劳动节又称“五一国际劳动节”、“国际示威游行日”（International Workers' Day或者May Day），
          * 是世界上80多个国家的全国性节日。定在每年的五月一日。它是全世界劳动人民共同拥有的节日。

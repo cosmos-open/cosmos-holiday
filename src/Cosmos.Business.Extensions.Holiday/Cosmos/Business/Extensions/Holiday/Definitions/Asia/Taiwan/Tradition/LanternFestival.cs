@@ -34,6 +34,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan.Tradition
         protected override int ChineseDay { get; } = 15;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_tw_shangyuan";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_tw_115";
     }
 }

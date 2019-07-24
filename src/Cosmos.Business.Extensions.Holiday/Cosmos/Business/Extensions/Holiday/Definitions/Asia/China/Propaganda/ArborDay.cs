@@ -14,27 +14,19 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Propaganda
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
-        /// <summary>
-        /// International  Children's Day
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "植树节";
 
-        /// <summary>
-        /// Type of holiday
-        /// </summary>
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Propaganda;
 
-        /// <summary>
-        /// Month
-        /// </summary>
+        /// <inheritdoc />
         public override int Month { get; set; } = 3;
 
         /// <inheritdoc />
         public override int Day { get; set; } = 12;
 
-        /// <summary>
-        /// i18n
-        /// </summary>
+        /// <inheritdoc />
         public override string I18NIdentityCode { get; } = "i18n_holiday_cn_312";
 
         /*
@@ -46,9 +38,8 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Propaganda
          * 节。1928年，国民政府为纪念孙中山逝世三周年将植树节改为3月12日。新中国成立后的1979年，
          * 在邓小平提议下，第五届全国人大常委会第六次会议决定每年3月12日为我国的植树节。
          */
-        /// <summary>
-        /// Since...
-        /// </summary>
+
+        /// <inheritdoc />
         public override int? Since { get; } = 1979;
     }
 }

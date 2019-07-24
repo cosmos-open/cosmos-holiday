@@ -2,11 +2,11 @@ using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.I18N.Countries;
 
 /*
- * Macao, a part of China
- * 澳门，中华人民共和国的一部分
+ * Hong Kong, a part of China
+ * 香港，中华人民共和国的一部分
  */
 
-namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao.Public
+namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.HongKong.Religion
 {
     /// <summary>
     /// 圣诞节
@@ -14,7 +14,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao.Public
     public class Christmas : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
-        public override Country Country { get; } = Country.Macao;
+        public override Country Country { get; } = Country.HongKong;
 
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
@@ -25,7 +25,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao.Public
         public override string Name { get; } = "聖誕節";
 
         /// <inheritdoc />
-        public override HolidayType HolidayType { get; set; } = HolidayType.Public;
+        public override HolidayType HolidayType { get; set; } = HolidayType.Religion;
 
         /// <inheritdoc />
         public override int Month { get; set; } = 12;
@@ -48,7 +48,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao.Public
          */
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_mo_xmas";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_hk_christmas";
 
     }
 }

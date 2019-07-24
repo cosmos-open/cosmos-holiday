@@ -36,10 +36,10 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan.Tradition
         {
             //算法一：根据元旦的农历时间算出其所在年份的十二月的最后一天（推荐）
             //算法二：根据指定年的农历大年初一向前倒退一天
-            
+
             //推荐算法一的原因：
             //元旦通常在农历新年前，因此不存在修正 ChineseYear 的情况
-            
+
             var date = ChineseDateInfo.Of(year, 1, 1);
             var chineseMonth = date.ChineseMonth;
 
@@ -52,12 +52,12 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan.Tradition
 
             var lastDay = date.GetDaysInMonth();
             var finalDate = ChineseDateInfo.OfLunar(date.ChineseYear, 12, lastDay);
-            
+
             //农历十二月的最后一天，得到的是公历时间
             return DailyAnswerBuilder
                 .Create(Name, HolidayType)
                 .From(finalDate.ToDateTime())
-                .Country(Country.ToCode(),GetRegionCodeList())
+                .Country(Country.ToCode(), GetRegionCodeList())
                 .I18N(I18NIdentityCode)
                 .Build(finalDate.ChineseYear);
         }

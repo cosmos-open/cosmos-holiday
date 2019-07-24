@@ -20,13 +20,11 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Tradition
         /// </summary>
         public override string Name { get; } = "清明节";
 
-        /// <summary>
-        /// Type of holiday
-        /// </summary>
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Tradition;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_cn_qingmingjie";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_cn_qingming";
 
         /// <inheritdoc />
         public override DailyAnswer ToDailyAnswer(int year)

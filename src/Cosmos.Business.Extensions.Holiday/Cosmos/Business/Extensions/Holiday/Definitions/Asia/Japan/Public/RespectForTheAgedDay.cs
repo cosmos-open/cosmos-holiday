@@ -31,6 +31,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Japan.Public
         protected override DayOfWeek DayOfWeek { get; } = DayOfWeek.Monday;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_jp_respectage";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_jp_respect_age";
     }
 }

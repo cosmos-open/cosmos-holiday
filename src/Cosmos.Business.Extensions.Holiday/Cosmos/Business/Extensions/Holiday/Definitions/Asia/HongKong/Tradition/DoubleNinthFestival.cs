@@ -34,7 +34,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.HongKong.Tradition
         protected override int ChineseDay { get; } = 9;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_hk_chongyang";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_hk_99";
 
         /*
          * 重阳节，为每年的农历九月初九日，是中国民间的传统节日。

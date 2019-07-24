@@ -29,7 +29,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao.Tradition
         public override HolidayType HolidayType { get; set; } = HolidayType.Tradition;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_mo_qingmingjie";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_mo_qingming";
 
         /// <inheritdoc />
         public override DailyAnswer ToDailyAnswer(int year)

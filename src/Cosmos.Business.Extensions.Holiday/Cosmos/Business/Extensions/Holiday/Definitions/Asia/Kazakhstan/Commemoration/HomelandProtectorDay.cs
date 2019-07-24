@@ -27,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Kazakhstan.Commemo
         public override int Day { get; set; } = 7;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_kz_homeland_protector_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_kz_homeland_protector";
     }
 }

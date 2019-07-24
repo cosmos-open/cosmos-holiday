@@ -19,9 +19,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.HongKong.Public
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
-        /// <summary>
-        /// National Day
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "國慶節";
 
         /// <inheritdoc />
@@ -34,7 +32,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.HongKong.Public
         public override int Day { get; set; } = 1;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_hk_guoqing";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_hk_china10";
 
         /// <inheritdoc />
         public override int? Since { get; } = 1949;

@@ -34,7 +34,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao.Tradition
         protected override int ChineseDay { get; } = 8;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_mo_labajie";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_mo_1208";
         
         /*
          * 腊八节，俗称“腊八” ，日期在农历十二月初八。

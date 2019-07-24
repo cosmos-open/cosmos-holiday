@@ -20,7 +20,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Japan.Public
 
         /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
-        
+
         /// <inheritdoc />
         public override int Month { get; } = 1;
 
@@ -31,7 +31,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Japan.Public
         protected override DayOfWeek DayOfWeek { get; } = DayOfWeek.Monday;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_jp_comingofage";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_jp_coming_of_age";
 
         /// <inheritdoc />
         public override int? Since { get; } = 2000;

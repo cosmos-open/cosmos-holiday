@@ -13,6 +13,7 @@ using Cosmos.I18N.Countries;
 namespace Cosmos.Business.Extensions.Holiday
 {
     using Definitions.Asia.HongKong.Public;
+    using Definitions.Asia.HongKong.Religion;
     using Definitions.Asia.HongKong.Tradition;
 
     /// <summary>

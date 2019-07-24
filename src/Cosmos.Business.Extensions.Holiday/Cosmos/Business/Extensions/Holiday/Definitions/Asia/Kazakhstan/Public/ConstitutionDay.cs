@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Kazakhstan.Public
     /// <summary>
     /// Constitution Day - August 30th
     /// </summary>
-    public class ConstitutionDay: BaseFixedHolidayFunc
+    public class ConstitutionDay : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Kazakhstan;
@@ -17,9 +17,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Kazakhstan.Public
         /// <inheritdoc />
         public override string Name { get; } = "День Конституции";
 
-        /// <summary>
-        /// Type of holiday
-        /// </summary>
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
         /// <inheritdoc />
@@ -29,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Kazakhstan.Public
         public override int Day { get; set; } = 30;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_kz_constitution_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_kz_constitution";
     }
 }

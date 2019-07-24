@@ -28,12 +28,12 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao.Tradition
         public override HolidayType HolidayType { get; set; } = HolidayType.Tradition;
 
         /// <inheritdoc />
-        protected override  int ChineseMonth { get; } = 8;
+        protected override int ChineseMonth { get; } = 8;
 
         /// <inheritdoc />
-        protected override  int ChineseDay { get; } = 15;
+        protected override int ChineseDay { get; } = 15;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_mo_zhongqiu";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_mo_815";
     }
 }

@@ -15,14 +15,10 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Propaganda
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
-        /// <summary>
-        /// 全国助残日
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "全国助残日";
 
-        /// <summary>
-        /// Type of holiday
-        /// </summary>
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Propaganda;
 
         /// <inheritdoc />
@@ -35,7 +31,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Propaganda
         protected override DayOfWeek DayOfWeek { get; } = DayOfWeek.Sunday;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_cn_zhucanri";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_cn_zhucan";
 
         /*
          * 中国全国助残日是中国残疾人节日。

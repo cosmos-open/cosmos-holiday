@@ -86,7 +86,7 @@ namespace Cosmos.Business.Extensions.Holiday
             new ResistanceAgainstJapanDay(), //9-3
             new ChairmanMaosMemorialDay(), //9-9
             new TeachersDay(), //9-10
-            new NineOneEightDay(), //9-18
+            new _0918(), //9-18
             new NationalDay(), //10-1
             new MacaosReturnDay(), //12-20
             new Christmas(), //12-25

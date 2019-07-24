@@ -14,15 +14,11 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Religion
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
-        /// <summary>
-        /// Christmas
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "圣诞节";
 
-        /// <summary>
-        /// Type of holiday
-        /// </summary>
-        public override HolidayType HolidayType { get; set; } = HolidayType.Propaganda;
+        /// <inheritdoc />
+        public override HolidayType HolidayType { get; set; } = HolidayType.Religion;
 
         /// <inheritdoc />
         public override int Month { get; set; } = 12;
@@ -45,7 +41,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Religion
          */
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_cn_xmas";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_cn_christmas";
 
     }
 }

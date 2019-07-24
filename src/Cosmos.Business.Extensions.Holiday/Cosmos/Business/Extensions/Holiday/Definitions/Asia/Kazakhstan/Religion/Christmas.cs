@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Kazakhstan.Religio
     /// <summary>
     /// Christmas
     /// </summary>
-    public class Christmas: BaseFixedHolidayFunc
+    public class Christmas : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Kazakhstan;
@@ -17,10 +17,8 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Kazakhstan.Religio
         /// <inheritdoc />
         public override string Name { get; } = "Рождество Христово";
 
-        /// <summary>
-        /// Type of holiday
-        /// </summary>
-        public override HolidayType HolidayType { get; set; } = HolidayType.Public;
+        /// <inheritdoc />
+        public override HolidayType HolidayType { get; set; } = HolidayType.Religion;
 
         /// <inheritdoc />
         public override int Month { get; set; } = 1;

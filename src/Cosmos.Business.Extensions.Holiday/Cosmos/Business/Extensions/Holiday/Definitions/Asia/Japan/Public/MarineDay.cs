@@ -7,7 +7,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Japan.Public
     /// <summary>
     /// Marine Day
     /// </summary>
-    public class MarineDay: WeekOffsetVariableHolidayFunc
+    public class MarineDay : WeekOffsetVariableHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Japan;
@@ -20,7 +20,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Japan.Public
 
         /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
-        
+
         /// <inheritdoc />
         public override int Month { get; } = 7;
 
@@ -31,6 +31,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Japan.Public
         protected override DayOfWeek DayOfWeek { get; } = DayOfWeek.Monday;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_jp_marineday";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_jp_marine";
     }
 }

@@ -6,6 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Public
     /// <summary>
     /// CPC Founding day
     /// </summary>
+    // ReSharper disable once InconsistentNaming
     public class CPCFoundingDay : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
@@ -19,9 +20,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Public
         /// </summary>
         public override string Name { get; } = "建党节";
 
-        /// <summary>
-        /// Type of holiday
-        /// </summary>
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
         /// <inheritdoc />
