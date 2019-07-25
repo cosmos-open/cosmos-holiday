@@ -121,5 +121,131 @@ namespace Cosmos.Business.Extensions.Holiday
         /// <param name="day"></param>
         /// <returns></returns>
         IEnumerable<IHolidayInfo> GetHolidays(CountryCode code, string regionCode, int year, int month, int day);
+
+        /// <summary>
+        /// Get holiday
+        /// </summary>
+        /// <param name="country"></param>
+        /// <param name="year"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        IEnumerable<IHolidayInfo> GetHolidays(Country country, int year, HolidayType type);
+
+        /// <summary>
+        /// Get holiday
+        /// </summary>
+        /// <param name="code"></param>
+        /// <param name="year"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        IEnumerable<IHolidayInfo> GetHolidays(CountryCode code, int year, HolidayType type);
+
+        /// <summary>
+        /// Get holiday
+        /// </summary>
+        /// <param name="country"></param>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        IEnumerable<IHolidayInfo> GetHolidays(Country country, int year, int month, HolidayType type);
+
+        /// <summary>
+        /// Get holiday
+        /// </summary>
+        /// <param name="code"></param>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        IEnumerable<IHolidayInfo> GetHolidays(CountryCode code, int year, int month, HolidayType type);
+
+        /// <summary>
+        /// Get holiday
+        /// </summary>
+        /// <param name="country"></param>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <param name="day"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        IEnumerable<IHolidayInfo> GetHolidays(Country country, int year, int month, int day, HolidayType type);
+
+        /// <summary>
+        /// Get holiday
+        /// </summary>
+        /// <param name="code"></param>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <param name="day"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        IEnumerable<IHolidayInfo> GetHolidays(CountryCode code, int year, int month, int day, HolidayType type);
+
+        /// <summary>
+        /// Get holiday
+        /// </summary>
+        /// <param name="country"></param>
+        /// <param name="regionCode"></param>
+        /// <param name="year"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        IEnumerable<IHolidayInfo> GetHolidays(Country country, string regionCode, int year, HolidayType type);
+
+        /// <summary>
+        /// Get holiday
+        /// </summary>
+        /// <param name="code"></param>
+        /// <param name="regionCode"></param>
+        /// <param name="year"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        IEnumerable<IHolidayInfo> GetHolidays(CountryCode code, string regionCode, int year, HolidayType type);
+
+        /// <summary>
+        /// Get holiday
+        /// </summary>
+        /// <param name="country"></param>
+        /// <param name="regionCode"></param>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        IEnumerable<IHolidayInfo> GetHolidays(Country country, string regionCode, int year, int month, HolidayType type);
+
+        /// <summary>
+        /// Get holiday
+        /// </summary>
+        /// <param name="code"></param>
+        /// <param name="regionCode"></param>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        IEnumerable<IHolidayInfo> GetHolidays(CountryCode code, string regionCode, int year, int month, HolidayType type);
+
+        /// <summary>
+        /// Get holiday
+        /// </summary>
+        /// <param name="country"></param>
+        /// <param name="regionCode"></param>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <param name="day"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        IEnumerable<IHolidayInfo> GetHolidays(Country country, string regionCode, int year, int month, int day, HolidayType type);
+
+        /// <summary>
+        /// Get holiday
+        /// </summary>
+        /// <param name="code"></param>
+        /// <param name="regionCode"></param>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <param name="day"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        IEnumerable<IHolidayInfo> GetHolidays(CountryCode code, string regionCode, int year, int month, int day, HolidayType type);
     }
 }

@@ -23,6 +23,12 @@ namespace Cosmos.Business.Extensions.Holiday
         public string Name => _dailyAnswer.Name;
 
         /// <summary>
+        /// Holiday Type<br />
+        /// 假期类型
+        /// </summary>
+        public HolidayType Type => _dailyAnswer.Type;
+
+        /// <summary>
         /// Country code
         /// </summary>
         public CountryCode CountryCode => _dailyAnswer.CountryCode;
@@ -46,12 +52,12 @@ namespace Cosmos.Business.Extensions.Holiday
         /// End...
         /// </summary>
         public int? EndYear => _dailyAnswer._times?.EndYear;
-        
+
         /// <summary>
         /// I18N Identity Code
         /// </summary>
         public string I18NIdentityCode => _dailyAnswer.I18NIdentityCode;
-        
+
         /// <summary>
         /// Match date by year
         /// </summary>
@@ -75,7 +81,7 @@ namespace Cosmos.Business.Extensions.Holiday
         /// <param name="day"></param>
         /// <returns></returns>
         public bool Match(int year, int month, int day) => _dailyAnswer.Match(year, month, day);
-        
+
         /// <summary>
         /// Match country
         /// </summary>
@@ -112,7 +118,7 @@ namespace Cosmos.Business.Extensions.Holiday
         /// <param name="regionCode"></param>
         /// <returns></returns>
         public bool Match(CountryCode code, string regionCode) => Match(code) && Match(regionCode);
-        
+
         /// <summary>
         /// Match regions
         /// </summary>

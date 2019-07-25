@@ -15,6 +15,12 @@ namespace Cosmos.Business.Extensions.Holiday
         string Name { get; }
 
         /// <summary>
+        /// Holiday Type<br />
+        /// 假期类型
+        /// </summary>
+        HolidayType Type { get; }
+
+        /// <summary>
         /// Country code
         /// </summary>
         CountryCode CountryCode { get; }

@@ -60,5 +60,67 @@ namespace Cosmos.Business.Extensions.Holiday
         /// <param name="day"></param>
         /// <returns></returns>
         IEnumerable<IHolidayInfo> GetHolidays(string regionCode, int year, int month, int day);
+
+        /// <summary>
+        /// Get holiday
+        /// </summary>
+        /// <param name="year"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        IEnumerable<IHolidayInfo> GetHolidays(int year, HolidayType type);
+
+        /// <summary>
+        /// Get holiday
+        /// </summary>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        IEnumerable<IHolidayInfo> GetHolidays(int year, int month, HolidayType type);
+
+        /// <summary>
+        /// Get holiday
+        /// </summary>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <param name="day"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        IEnumerable<IHolidayInfo> GetHolidays(int year, int month, int day, HolidayType type);
+
+        /// <summary>
+        /// Get holiday
+        /// </summary>
+        /// <param name="regionCode"></param>
+        /// <param name="year"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        IEnumerable<IHolidayInfo> GetHolidays(string regionCode, int year, HolidayType type);
+
+        /// <summary>
+        /// Get holiday
+        /// </summary>
+        /// <param name="regionCode"></param>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        IEnumerable<IHolidayInfo> GetHolidays(string regionCode, int year, int month, HolidayType type);
+
+        /// <summary>
+        /// Get holiday
+        /// </summary>
+        /// <param name="regionCode"></param>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <param name="day"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        IEnumerable<IHolidayInfo> GetHolidays(string regionCode, int year, int month, int day, HolidayType type);
+
+        /// <summary>
+        /// Anonymous holiday getter
+        /// </summary>
+        IHolidayGetter Anonymous { get; }
     }
 }

@@ -123,6 +123,87 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         /// <summary>
         /// Gets holiday
         /// </summary>
+        /// <param name="year"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        /// <exception cref="NotImplementedException"></exception>
+        public IEnumerable<IHolidayInfo> GetHolidays(int year, HolidayType type)
+        {
+            return GetHolidays(year).Filter(type);
+        }
+
+        /// <summary>
+        /// Gets holiday
+        /// </summary>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        /// <exception cref="NotImplementedException"></exception>
+        public IEnumerable<IHolidayInfo> GetHolidays(int year, int month, HolidayType type)
+        {
+            return GetHolidays(year, month).Filter(type);
+        }
+
+        /// <summary>
+        /// Gets holiday
+        /// </summary>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <param name="day"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        /// <exception cref="NotImplementedException"></exception>
+        public IEnumerable<IHolidayInfo> GetHolidays(int year, int month, int day, HolidayType type)
+        {
+            return GetHolidays(year, month, day).Filter(type);
+        }
+
+        /// <summary>
+        /// Gets holiday
+        /// </summary>
+        /// <param name="regionCode"></param>
+        /// <param name="year"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        /// <exception cref="NotImplementedException"></exception>
+        public IEnumerable<IHolidayInfo> GetHolidays(string regionCode, int year, HolidayType type)
+        {
+            return GetHolidays(regionCode, year).Filter(type);
+        }
+
+        /// <summary>
+        /// Gets holiday
+        /// </summary>
+        /// <param name="regionCode"></param>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        /// <exception cref="NotImplementedException"></exception>
+        public IEnumerable<IHolidayInfo> GetHolidays(string regionCode, int year, int month, HolidayType type)
+        {
+            return GetHolidays(regionCode, year, month).Filter(type);
+        }
+
+        /// <summary>
+        /// Gets holiday
+        /// </summary>
+        /// <param name="regionCode"></param>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <param name="day"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        /// <exception cref="NotImplementedException"></exception>
+        public IEnumerable<IHolidayInfo> GetHolidays(string regionCode, int year, int month, int day, HolidayType type)
+        {
+            return GetHolidays(regionCode, year, month, day).Filter(type);
+        }
+
+        /// <summary>
+        /// Gets holiday
+        /// </summary>
         /// <param name="regionCode"></param>
         /// <returns></returns>
         private bool IncludeRegionCode(string regionCode)

@@ -23,6 +23,12 @@ namespace Cosmos.Business.Extensions.Holiday
         public string Name => _dailyAnswer.Name;
 
         /// <summary>
+        /// Holiday Type<br />
+        /// 假期类型
+        /// </summary>
+        public HolidayType Type => _dailyAnswer.Type;
+
+        /// <summary>
         /// Country code
         /// </summary>
         public CountryCode CountryCode => _dailyAnswer.CountryCode;
