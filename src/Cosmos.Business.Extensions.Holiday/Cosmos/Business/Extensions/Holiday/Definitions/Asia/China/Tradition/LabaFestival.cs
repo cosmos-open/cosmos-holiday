@@ -4,7 +4,7 @@ using Cosmos.I18N.Countries;
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Tradition
 {
     /// <summary>
-    /// 腊八节
+    /// 腊八节 The Laba Rice Porridge Festival 
     /// </summary>
     public class LabaFestival : ChineseVariableHolidayFunc
     {
@@ -14,9 +14,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Tradition
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
-        /// <summary>
-        /// The Laba Rice Porridge Festival 
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "腊八节";
 
         /// <inheritdoc />
@@ -30,7 +28,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Tradition
 
         /// <inheritdoc />
         public override string I18NIdentityCode { get; } = "i18n_holiday_cn_1208";
-        
+
         /*
          * 腊八节，俗称“腊八” ，日期在农历十二月初八。
          * 古时我国一些地方有在腊月祭祀祖先和神灵（包括门神、户神、宅神、灶神、井神）、祈求丰收吉祥的传统，

@@ -15,9 +15,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Tradition
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
-        /// <summary>
-        /// Chinese New Year's Eve 
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "除夕";
 
         /// <inheritdoc />

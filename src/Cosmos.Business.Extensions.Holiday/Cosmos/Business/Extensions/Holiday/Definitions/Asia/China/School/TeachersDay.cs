@@ -4,7 +4,7 @@ using Cosmos.I18N.Countries;
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.School
 {
     /// <summary>
-    /// 教师节
+    /// 教师节 Teachers' Day 
     /// </summary>
     public class TeachersDay : BaseFixedHolidayFunc
     {
@@ -14,9 +14,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.School
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
-        /// <summary>
-        /// Teachers' Day 
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "教师节";
 
         /// <inheritdoc />

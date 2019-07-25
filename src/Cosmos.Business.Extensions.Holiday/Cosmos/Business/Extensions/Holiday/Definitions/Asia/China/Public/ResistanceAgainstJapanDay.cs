@@ -5,6 +5,8 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Public
 {
     /// <summary>
     /// 中国人民抗日战争胜利纪念日
+    /// <br />
+    /// Chinese people's war of resistance against Japan
     /// </summary>
     public class ResistanceAgainstJapanDay : BaseFixedHolidayFunc
     {
@@ -14,9 +16,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Public
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
-        /// <summary>
-        /// Chinese people's war of resistance against Japan
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "中国人民抗日战争胜利纪念日";
 
         /// <inheritdoc />

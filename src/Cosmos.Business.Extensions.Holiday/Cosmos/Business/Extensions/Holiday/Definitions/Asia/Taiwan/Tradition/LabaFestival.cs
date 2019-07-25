@@ -10,6 +10,8 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan.Tradition
 {
     /// <summary>
     /// 腊八节
+    /// <br />
+    /// The Laba Rice Porridge Festival 
     /// </summary>
     public class LabaFestival : ChineseVariableHolidayFunc
     {
@@ -19,9 +21,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan.Tradition
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
-        /// <summary>
-        /// The Laba Rice Porridge Festival 
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "臘八節";
 
         /// <inheritdoc />

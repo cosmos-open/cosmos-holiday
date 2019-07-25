@@ -10,6 +10,8 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan.Public
 {
     /// <summary>
     /// 国庆节
+    /// <br />
+    /// National Day
     /// </summary>
     public class NationalDay : BaseFixedHolidayFunc
     {
@@ -19,9 +21,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan.Public
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
-        /// <summary>
-        /// National Day
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "國慶節";
 
         /// <inheritdoc />

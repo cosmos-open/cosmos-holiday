@@ -20,9 +20,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.HongKong.Tradition
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
-        /// <summary>
-        /// Tomb-Sweeping Day
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "清明節";
 
         /// <inheritdoc />

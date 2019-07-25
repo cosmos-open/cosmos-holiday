@@ -19,9 +19,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.HongKong.Tradition
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
-        /// <summary>
-        /// Doubel Ninth Festival
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "重陽節";
 
         /// <inheritdoc />

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Cosmos.Abstractions;
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.Business.Extensions.Holiday.Core.Helpers;
 using Cosmos.Business.Extensions.Holiday.Core.Internals;
@@ -19,7 +20,7 @@ namespace Cosmos.Business.Extensions.Holiday
     /// <summary>
     /// China holiday provider
     /// </summary>
-    public class ChinaHolidayProvider : BaseDefinitionRegister
+    public class ChinaHolidayProvider : BaseDefinitionRegister, IBizHolidayDefinition
     {
         private static IEnumerable<string> RegionCache { get; } = ChinaRegions.GetEndolandRegionCodes();
 

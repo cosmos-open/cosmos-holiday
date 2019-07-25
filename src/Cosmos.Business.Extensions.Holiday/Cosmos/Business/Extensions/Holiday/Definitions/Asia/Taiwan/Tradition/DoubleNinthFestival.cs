@@ -10,6 +10,8 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan.Tradition
 {
     /// <summary>
     /// 重阳节
+    /// <br />
+    /// Doubel Ninth Festival
     /// </summary>
     public class DoubleNinthFestival : ChineseVariableHolidayFunc
     {
@@ -19,9 +21,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan.Tradition
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
-        /// <summary>
-        /// Doubel Ninth Festival
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "重陽節";
 
         /// <inheritdoc />

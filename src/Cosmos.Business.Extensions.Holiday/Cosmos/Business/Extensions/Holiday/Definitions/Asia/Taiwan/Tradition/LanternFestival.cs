@@ -10,6 +10,8 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan.Tradition
 {
     /// <summary>
     /// 元宵节
+    /// <br />
+    /// Lantern Festival
     /// </summary>
     public class LanternFestival : ChineseVariableHolidayFunc
     {
@@ -19,9 +21,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan.Tradition
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
-        /// <summary>
-        /// Lantern Festival
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "元宵節";
 
         /// <inheritdoc />

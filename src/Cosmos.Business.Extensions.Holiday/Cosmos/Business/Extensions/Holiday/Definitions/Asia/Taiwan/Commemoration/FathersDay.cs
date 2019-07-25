@@ -10,6 +10,8 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan.Commemorati
 {
     /// <summary>
     /// 父亲节
+    /// <br />
+    /// Father's Day
     /// </summary>
     public class FathersDay : BaseFixedHolidayFunc
     {
@@ -19,9 +21,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan.Commemorati
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
-        /// <summary>
-        /// Father's Day
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "父親節";
 
         /// <inheritdoc />

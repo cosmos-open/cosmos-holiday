@@ -10,7 +10,7 @@ using Cosmos.I18N.Countries;
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao.Tradition
 {
     /// <summary>
-    /// 清明节
+    /// 清明节 Tomb-Sweeping Day
     /// </summary>
     public class TombSweepingDay : BaseVariableHolidayFunc
     {
@@ -20,9 +20,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao.Tradition
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
-        /// <summary>
-        /// Tomb-Sweeping Day
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "清明節";
 
         /// <inheritdoc />

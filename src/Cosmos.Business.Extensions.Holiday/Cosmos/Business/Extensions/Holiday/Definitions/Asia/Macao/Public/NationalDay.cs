@@ -19,9 +19,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao.Public
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
-        /// <summary>
-        /// National Day
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "國慶節";
 
         /// <inheritdoc />

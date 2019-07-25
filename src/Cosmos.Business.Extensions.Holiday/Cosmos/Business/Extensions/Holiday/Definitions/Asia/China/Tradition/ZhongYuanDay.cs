@@ -14,9 +14,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Tradition
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
-        /// <summary>
-        /// 7-15
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "中元节";
 
         /// <inheritdoc />

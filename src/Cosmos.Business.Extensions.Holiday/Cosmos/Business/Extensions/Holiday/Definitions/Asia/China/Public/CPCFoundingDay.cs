@@ -4,7 +4,7 @@ using Cosmos.I18N.Countries;
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Public
 {
     /// <summary>
-    /// CPC Founding day
+    /// CPC Founding day 中国共产党建党日 CPC Founding Day
     /// </summary>
     // ReSharper disable once InconsistentNaming
     public class CPCFoundingDay : BaseFixedHolidayFunc
@@ -15,9 +15,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Public
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
-        /// <summary>
-        /// 中国共产党建党日 CPC Founding Day
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "建党节";
 
         /// <inheritdoc />

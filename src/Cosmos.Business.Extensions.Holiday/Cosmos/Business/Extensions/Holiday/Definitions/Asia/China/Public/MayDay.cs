@@ -4,7 +4,7 @@ using Cosmos.I18N.Countries;
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Public
 {
     /// <summary>
-    /// May day
+    /// International Workers' Day / May Day
     /// </summary>
     public class MayDay : BaseFixedHolidayFunc
     {
@@ -14,9 +14,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Public
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
-        /// <summary>
-        /// International Workers' Day / May Day
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "国际劳动节";
 
         /// <inheritdoc />

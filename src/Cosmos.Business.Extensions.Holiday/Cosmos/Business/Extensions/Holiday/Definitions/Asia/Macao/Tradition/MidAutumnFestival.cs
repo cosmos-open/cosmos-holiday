@@ -9,7 +9,7 @@ using Cosmos.I18N.Countries;
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao.Tradition
 {
     /// <summary>
-    /// 中秋节
+    /// 中秋节 Mid-Autumn Festival
     /// </summary>
     public class MidAutumnFestival : ChineseVariableHolidayFunc
     {
@@ -19,9 +19,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao.Tradition
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
-        /// <summary>
-        /// Mid-Autumn Festival
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "中秋節";
 
         /// <inheritdoc />

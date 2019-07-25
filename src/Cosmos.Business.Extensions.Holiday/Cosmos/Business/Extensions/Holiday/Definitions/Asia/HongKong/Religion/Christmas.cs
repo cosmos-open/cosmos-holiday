@@ -19,9 +19,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.HongKong.Religion
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
-        /// <summary>
-        /// Christmas
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "聖誕節";
 
         /// <inheritdoc />

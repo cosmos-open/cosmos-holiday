@@ -10,6 +10,8 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan.Tradition
 {
     /// <summary>
     /// 中秋节
+    /// <br />
+    /// Mid-Autumn Festival
     /// </summary>
     public class MidAutumnFestival : ChineseVariableHolidayFunc
     {
@@ -19,9 +21,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan.Tradition
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.China;
 
-        /// <summary>
-        /// Mid-Autumn Festival
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "中秋節";
 
         /// <inheritdoc />
