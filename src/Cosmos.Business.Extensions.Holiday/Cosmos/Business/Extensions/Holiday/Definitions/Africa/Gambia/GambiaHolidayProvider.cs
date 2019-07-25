@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Cosmos.Abstractions;
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.Business.Extensions.Holiday.Definitions;
 using Cosmos.I18N.Countries;
@@ -14,7 +15,7 @@ namespace Cosmos.Business.Extensions.Holiday
     /// <summary>
     /// Gambia holiday provider
     /// </summary>
-    public class GambiaHolidayProvider : BaseDefinitionRegister
+    public class GambiaHolidayProvider : BaseDefinitionRegister, IBizHolidayDefinition
     {
         private static IEnumerable<string> RegionCache { get; } = GambiaRegions.GetAllRegonCodes();
 

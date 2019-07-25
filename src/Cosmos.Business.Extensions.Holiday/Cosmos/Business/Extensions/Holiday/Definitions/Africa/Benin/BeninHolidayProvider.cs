@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Cosmos.Abstractions;
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.Business.Extensions.Holiday.Definitions;
 using Cosmos.I18N.Countries;
@@ -14,7 +15,7 @@ namespace Cosmos.Business.Extensions.Holiday
     /// <summary>
     /// Benin holiday provider
     /// </summary>
-    public class BeninHolidayProvider : BaseDefinitionRegister
+    public class BeninHolidayProvider : BaseDefinitionRegister, IBizHolidayDefinition
     {
         private static IEnumerable<string> RegionCache { get; } = BeninRegions.GetAllRegonCodes();
 
@@ -44,12 +45,12 @@ namespace Cosmos.Business.Extensions.Holiday
             new NewYearsDay(), //1-1
             new AscensionDay(), //5-25
             new IndependenceDay(), //8-1
-            new AssumptionDay(),//8-15
+            new AssumptionDay(), //8-15
             new ArmedForcesDay(), //10-26
             new AllSaintsDay(), //11-1
-            new NationalDay(),//11-30
+            new NationalDay(), //11-30
             new ChristmasDay(), //12-25
-            new BoxingDay(),//12-26
+            new BoxingDay(), //12-26
         };
 
         /// <summary>

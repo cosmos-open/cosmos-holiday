@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Cosmos.Abstractions;
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.Business.Extensions.Holiday.Definitions;
 using Cosmos.I18N.Countries;
@@ -14,7 +15,7 @@ namespace Cosmos.Business.Extensions.Holiday
     /// <summary>
     /// Suriname holiday provider
     /// </summary>
-    public class SurinameHolidayProvider : BaseDefinitionRegister
+    public class SurinameHolidayProvider : BaseDefinitionRegister, IBizHolidayDefinition
     {
         private static IEnumerable<string> RegionCache { get; } = SurinameRegions.GetAllRegonCodes();
 
@@ -45,16 +46,16 @@ namespace Cosmos.Business.Extensions.Holiday
             new ThreeKingsDay(), //1-6
             new DayOfTheRevolution(), //2-25
             new LabourDay(), //5-1
-            new AscensionDay(),//5-25
+            new AscensionDay(), //5-25
             new IndianArrivalDay(), //6-5
             new KetiKoti(), //7-1
-            new JavaneseArrivalDay(),//8-8
-            new IndigenousPeoplesDay(),//8-9
-            new DayOfTheMaroons(),//10-10
-            new ChineseArrivalDay(),//10-20
+            new JavaneseArrivalDay(), //8-8
+            new IndigenousPeoplesDay(), //8-9
+            new DayOfTheMaroons(), //10-10
+            new ChineseArrivalDay(), //10-20
             new IndependenceDay(), //11-25
             new ChristmasDay(), //12-25
-            new BoxingDay(),//12-26
+            new BoxingDay(), //12-26
         };
 
         /// <summary>

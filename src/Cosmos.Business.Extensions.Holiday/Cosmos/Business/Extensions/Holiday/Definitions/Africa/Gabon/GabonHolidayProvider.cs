@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Cosmos.Abstractions;
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.Business.Extensions.Holiday.Definitions;
 using Cosmos.I18N.Countries;
@@ -15,7 +16,7 @@ namespace Cosmos.Business.Extensions.Holiday
     /// <summary>
     /// Gabon holiday provider
     /// </summary>
-    public class GabonHolidayProvider : BaseDefinitionRegister
+    public class GabonHolidayProvider : BaseDefinitionRegister, IBizHolidayDefinition
     {
         private static IEnumerable<string> RegionCache { get; } = GabonRegions.GetAllRegonCodes();
 

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Cosmos.Abstractions;
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.Business.Extensions.Holiday.Definitions;
 using Cosmos.I18N.Countries;
@@ -14,7 +15,7 @@ namespace Cosmos.Business.Extensions.Holiday
     /// <summary>
     /// Namibia holiday provider
     /// </summary>
-    public class NamibiaHolidayProvider : BaseDefinitionRegister
+    public class NamibiaHolidayProvider : BaseDefinitionRegister, IBizHolidayDefinition
     {
         private static IEnumerable<string> RegionCache { get; } = Enumerable.Empty<string>();
 

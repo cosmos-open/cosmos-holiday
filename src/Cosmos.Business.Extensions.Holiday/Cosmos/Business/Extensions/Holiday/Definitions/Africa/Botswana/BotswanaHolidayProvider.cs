@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Cosmos.Abstractions;
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.Business.Extensions.Holiday.Definitions;
 using Cosmos.I18N.Countries;
@@ -14,7 +15,7 @@ namespace Cosmos.Business.Extensions.Holiday
     /// <summary>
     /// Botswana holiday provider
     /// </summary>
-    public class BotswanaHolidayProvider : BaseDefinitionRegister
+    public class BotswanaHolidayProvider : BaseDefinitionRegister, IBizHolidayDefinition
     {
         private static IEnumerable<string> RegionCache { get; } = BotswanaRegions.GetAllRegonCodes();
 
@@ -43,7 +44,7 @@ namespace Cosmos.Business.Extensions.Holiday
         {
             new NewYearsDay(), //1-1
             new LabourDay(), //5-1
-            new SirSeretseKhamaDay(),//7-1
+            new SirSeretseKhamaDay(), //7-1
             new IndependenceDay(), //9-30
             new BotswanaDay(), //10-1
             new ChristmasDay(), //12-25
@@ -59,7 +60,7 @@ namespace Cosmos.Business.Extensions.Holiday
         {
             new GoodFriday(),
             new EasterMonday(),
-            new PresidentsDay(),//7-3rd-monday
+            new PresidentsDay(), //7-3rd-monday
             new AscensionDay(),
         };
 

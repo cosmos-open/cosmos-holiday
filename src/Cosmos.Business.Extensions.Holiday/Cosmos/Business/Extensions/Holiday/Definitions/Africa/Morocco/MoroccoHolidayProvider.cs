@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Cosmos.Abstractions;
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.Business.Extensions.Holiday.Definitions;
 using Cosmos.I18N.Countries;
@@ -12,7 +13,7 @@ namespace Cosmos.Business.Extensions.Holiday
     /// <summary>
     /// Morocco holiday provider
     /// </summary>
-    public class MoroccoHolidayProvider : BaseDefinitionRegister
+    public class MoroccoHolidayProvider : BaseDefinitionRegister, IBizHolidayDefinition
     {
         private static IEnumerable<string> RegionCache { get; } = MoroccoRegions.GetAllRegonCodes();
 
