@@ -14,14 +14,10 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Austria.Public
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.Austria;
 
-        /// <summary>
-        /// Staatsfeiertag
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "Staatsfeiertag";
 
-        /// <summary>
-        /// Type of holiday
-        /// </summary>
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
         /// <inheritdoc />

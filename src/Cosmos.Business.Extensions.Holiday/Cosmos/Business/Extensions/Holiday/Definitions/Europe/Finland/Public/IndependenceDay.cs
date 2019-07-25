@@ -27,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Finland.Public
         public override int Day { get; set; } = 6;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_fi_independence_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_fi_independence";
     }
 }

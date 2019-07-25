@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.AlandIslands.Pub
     /// <summary>
     /// New Year's Day
     /// </summary>
-    public class NewYearsDay: BaseFixedHolidayFunc
+    public class NewYearsDay : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.AlandIslands;
@@ -27,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.AlandIslands.Pub
         public override int Day { get; set; } = 1;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_ax_newyearsday";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_ax_new_year";
     }
 }

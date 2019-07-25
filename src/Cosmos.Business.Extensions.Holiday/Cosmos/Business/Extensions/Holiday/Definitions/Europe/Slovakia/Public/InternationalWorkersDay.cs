@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Slovakia.Public
     /// <summary>
     /// International Workers' Day
     /// </summary>
-    public class InternationalWorkersDay: BaseFixedHolidayFunc
+    public class InternationalWorkersDay : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Slovakia;
@@ -27,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Slovakia.Public
         public override int Day { get; set; } = 1;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_sk_international_workers_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_sk_workers";
     }
 }

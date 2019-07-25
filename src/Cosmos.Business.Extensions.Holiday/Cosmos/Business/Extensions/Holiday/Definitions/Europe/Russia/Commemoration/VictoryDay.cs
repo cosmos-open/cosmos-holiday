@@ -27,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Russia.Commemora
         public override HolidayType HolidayType { get; set; } = HolidayType.Commemoration;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_ru_victory_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_ru_victory";
     }
 }

@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Albania.Public
     /// <summary>
     /// May Day
     /// </summary>
-    public class MayDay: BaseFixedHolidayFunc
+    public class MayDay : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Albania;

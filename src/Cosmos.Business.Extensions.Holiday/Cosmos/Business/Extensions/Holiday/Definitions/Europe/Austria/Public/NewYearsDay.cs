@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Austria.Public
     /// <summary>
     /// New Year's Day
     /// </summary>
-    public class NewYearsDay: BaseFixedHolidayFunc
+    public class NewYearsDay : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Austria;
@@ -14,14 +14,10 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Austria.Public
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.Austria;
 
-        /// <summary>
-        /// New Year's Day
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "Neujahr";
 
-        /// <summary>
-        /// Type of holiday
-        /// </summary>
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
         /// <inheritdoc />
@@ -31,7 +27,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Austria.Public
         public override int Day { get; set; } = 1;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_at_newyearsday";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_at_new_year";
 
         /// <inheritdoc />
         public override int? Since { get; } = 1967;

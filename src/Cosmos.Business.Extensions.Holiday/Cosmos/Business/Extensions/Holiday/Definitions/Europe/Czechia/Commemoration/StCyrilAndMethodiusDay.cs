@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Czechia.Commemor
     /// <summary>
     /// St. Cyril and Methodius Day
     /// </summary>
-    public class StCyrilAndMethodiusDay: BaseFixedHolidayFunc
+    public class StCyrilAndMethodiusDay : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Czechia;
@@ -27,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Czechia.Commemor
         public override int Day { get; set; } = 5;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_cz_stcyril_methodius_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_cz_stcyril_and_methodius";
     }
 }

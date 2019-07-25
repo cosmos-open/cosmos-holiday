@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Cosmos.Abstractions;
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.Business.Extensions.Holiday.Core.Helpers;
 using Cosmos.Business.Extensions.Holiday.Definitions;
@@ -7,6 +8,7 @@ using Cosmos.I18N.Countries;
 // ReSharper disable once CheckNamespace
 namespace Cosmos.Business.Extensions.Holiday
 {
+    using Definitions.Europe.Albania.Commemoration;
     using Definitions.Europe.Albania.Public;
     using Definitions.Europe.Albania.Religion;
     using Definitions.Europe.Albania.Tradition;
@@ -14,7 +16,7 @@ namespace Cosmos.Business.Extensions.Holiday
     /// <summary>
     /// Albania holiday provider
     /// </summary>
-    public class AlbaniaHolidayProvider : BaseDefinitionRegister
+    public class AlbaniaHolidayProvider : BaseDefinitionRegister, IBizHolidayDefinition, IBizRegionHolidayDefinition
     {
         /// <summary>
         /// Country or region
@@ -38,9 +40,9 @@ namespace Cosmos.Business.Extensions.Holiday
         /// <summary>
         /// Geta all fixed holiday funcs
         /// </summary>
-        protected override List<IFixedHolidayFunc> AllFixedHolidayFuncs { get; } = AxFixedHolidayFuncs;
+        protected override List<IFixedHolidayFunc> AllFixedHolidayFuncs { get; } = AlFixedHolidayFuncs;
 
-        private static List<IFixedHolidayFunc> AxFixedHolidayFuncs = new List<IFixedHolidayFunc>
+        private static List<IFixedHolidayFunc> AlFixedHolidayFuncs = new List<IFixedHolidayFunc>
         {
             new NewYearsDay(), //1-1
             new SummerDay(), //3-14
@@ -55,9 +57,9 @@ namespace Cosmos.Business.Extensions.Holiday
         /// <summary>
         /// Gets all variable holiday funcs
         /// </summary>
-        protected override List<IVariableHolidayFunc> AllVariableHolidayFuncs { get; } = AxVariableHolidayFuncs;
+        protected override List<IVariableHolidayFunc> AllVariableHolidayFuncs { get; } = AlVariableHolidayFuncs;
 
-        private static List<IVariableHolidayFunc> AxVariableHolidayFuncs = new List<IVariableHolidayFunc>
+        private static List<IVariableHolidayFunc> AlVariableHolidayFuncs = new List<IVariableHolidayFunc>
         {
             new EasterSunday(),
             new EasterMonday(),

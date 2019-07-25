@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Belgium.Public
     /// <summary>
     /// Assumption Day
     /// </summary>
-    public class AssumptionDay: BaseFixedHolidayFunc
+    public class AssumptionDay : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Belgium;
@@ -14,14 +14,10 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Belgium.Public
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.Belgium;
 
-        /// <summary>
-        /// Assumption Day
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "Onze Lieve Vrouw hemelvaart";
 
-        /// <summary>
-        /// Type of holiday
-        /// </summary>
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
         /// <inheritdoc />

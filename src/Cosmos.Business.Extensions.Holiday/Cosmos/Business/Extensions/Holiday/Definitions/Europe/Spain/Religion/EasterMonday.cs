@@ -28,7 +28,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Spain.Religion
         protected override int OffsetEasterSunday { get; } = 1;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_es_easter_mondays";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_es_easter_monday";
 
         /// <inheritdoc />
         public override int? Since { get; } = 1642;

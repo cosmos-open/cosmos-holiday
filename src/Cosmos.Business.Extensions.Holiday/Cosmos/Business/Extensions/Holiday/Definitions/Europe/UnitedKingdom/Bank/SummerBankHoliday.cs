@@ -27,7 +27,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.UnitedKingdom.Ba
         public override HolidayType HolidayType { get; set; } = HolidayType.Bank;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_gb_summerbank";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_gb_summer_bank";
 
         /// <inheritdoc />
         public override int? Since { get; } = 1971;

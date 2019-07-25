@@ -29,7 +29,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Czechia.Public
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_cz_nationalization_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_cz_nationalization";
 
         /// <inheritdoc />
         public override int? Since { get; } = 1952;

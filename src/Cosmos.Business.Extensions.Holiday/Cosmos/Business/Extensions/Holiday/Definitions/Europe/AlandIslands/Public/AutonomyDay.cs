@@ -27,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.AlandIslands.Pub
         public override int Day { get; set; } = 9;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_ax_autonomy_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_ax_autonomy";
     }
 }

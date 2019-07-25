@@ -13,7 +13,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Germany.Commemor
 
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.Germany;
-        
+
         /// <inheritdoc />
         public override string Name { get; } = "Reformationstag";
 

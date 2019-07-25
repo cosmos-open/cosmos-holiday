@@ -27,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Spain.Public
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_es_labour_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_es_labour";
     }
 }

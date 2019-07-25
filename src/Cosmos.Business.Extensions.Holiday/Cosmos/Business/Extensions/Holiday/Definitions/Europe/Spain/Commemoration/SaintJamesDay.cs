@@ -30,6 +30,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Spain.Commemorat
         public override int Day { get; set; } = 25;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_es_stjames_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_es_james";
     }
 }

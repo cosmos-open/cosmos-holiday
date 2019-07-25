@@ -1,6 +1,6 @@
 using System.Collections.Generic;
+using Cosmos.Abstractions;
 using Cosmos.Business.Extensions.Holiday.Core;
-using Cosmos.Business.Extensions.Holiday.Core.Helpers;
 using Cosmos.Business.Extensions.Holiday.Definitions;
 using Cosmos.I18N.Countries;
 using Cosmos.I18N.Countries.Europe;
@@ -11,11 +11,12 @@ namespace Cosmos.Business.Extensions.Holiday
     using Definitions.Europe.Belgium.Commemoration;
     using Definitions.Europe.Belgium.Public;
     using Definitions.Europe.Belgium.Religion;
+    using Definitions.Europe.Belgium.Tradition;
 
     /// <summary>
     /// Belgium holiday provider
     /// </summary>
-    public class BelgiumHolidayProvider : BaseDefinitionRegister
+    public class BelgiumHolidayProvider : BaseDefinitionRegister, IBizHolidayDefinition
     {
         private static IEnumerable<string> RegionCache { get; } = BelgiumRegions.GetAllRegonCodes();
 

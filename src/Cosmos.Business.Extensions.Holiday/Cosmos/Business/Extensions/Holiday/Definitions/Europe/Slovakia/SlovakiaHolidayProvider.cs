@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Cosmos.Abstractions;
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.Business.Extensions.Holiday.Core.Helpers;
 using Cosmos.Business.Extensions.Holiday.Definitions;
@@ -11,11 +12,12 @@ namespace Cosmos.Business.Extensions.Holiday
     using Definitions.Europe.Slovakia.Commemoration;
     using Definitions.Europe.Slovakia.Public;
     using Definitions.Europe.Slovakia.Religion;
+    using Definitions.Europe.Slovakia.Tradition;
 
     /// <summary>
     /// Slovakia holiday provider
     /// </summary>
-    public class SlovakiaHolidayProvider : BaseDefinitionRegister
+    public class SlovakiaHolidayProvider : BaseDefinitionRegister, IBizHolidayDefinition
     {
         private static IEnumerable<string> RegionCache { get; } = Enumerable.Empty<string>();
 

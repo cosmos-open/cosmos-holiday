@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Cosmos.Abstractions;
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.Business.Extensions.Holiday.Core.Helpers;
 using Cosmos.Business.Extensions.Holiday.Core.Internals;
@@ -17,7 +18,7 @@ namespace Cosmos.Business.Extensions.Holiday
     /// <summary>
     /// United Kingdom holiday provider
     /// </summary>
-    public class UnitedKingdomHolidayProvider : BaseDefinitionRegister
+    public class UnitedKingdomHolidayProvider : BaseDefinitionRegister, IBizHolidayDefinition
     {
         private static IEnumerable<string> RegionCache { get; } = UnitedKingdomRegions.GetMainRegionCodes();
 

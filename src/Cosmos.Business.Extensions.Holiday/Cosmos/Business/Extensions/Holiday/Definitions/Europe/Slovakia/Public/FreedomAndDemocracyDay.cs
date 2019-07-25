@@ -27,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Slovakia.Public
         public override int Day { get; set; } = 17;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_sk_freedom_democracy";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_sk_freedom_and_democracy";
     }
 }

@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Andorra.Public
     /// <summary>
     /// National Holiday
     /// </summary>
-    public class NationalDay: BaseFixedHolidayFunc
+    public class NationalDay : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Andorra;
@@ -27,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Andorra.Public
         public override int Day { get; set; } = 14;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_ad_national_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_ad_national";
     }
 }

@@ -14,9 +14,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Belgium.Religion
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.Belgium;
 
-        /// <summary>
-        /// Easter Sunday
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "Pasen";
 
         /// <inheritdoc />

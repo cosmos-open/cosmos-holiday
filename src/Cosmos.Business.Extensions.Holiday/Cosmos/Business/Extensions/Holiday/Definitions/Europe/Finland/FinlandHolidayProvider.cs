@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Cosmos.Abstractions;
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.Business.Extensions.Holiday.Core.Helpers;
 using Cosmos.Business.Extensions.Holiday.Core.Internals;
@@ -11,11 +12,12 @@ namespace Cosmos.Business.Extensions.Holiday
 {
     using Definitions.Europe.Finland.Public;
     using Definitions.Europe.Finland.Religion;
+    using Definitions.Europe.Finland.Tradition;
 
     /// <summary>
     /// Finland holiday provider
     /// </summary>
-    public class FinlandHolidayProvider : BaseDefinitionRegister
+    public class FinlandHolidayProvider : BaseDefinitionRegister, IBizHolidayDefinition
     {
         private static IEnumerable<string> RegionCache { get; } = FinlandRegions.GetMainRegionCodes();
 

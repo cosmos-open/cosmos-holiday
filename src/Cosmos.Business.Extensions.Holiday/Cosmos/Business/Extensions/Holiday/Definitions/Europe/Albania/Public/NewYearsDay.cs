@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Albania.Public
     /// <summary>
     /// New Year's Day
     /// </summary>
-    public class NewYearsDay: BaseFixedHolidayFunc
+    public class NewYearsDay : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Albania;
@@ -22,7 +22,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Albania.Public
 
         /// <inheritdoc />
         public override (int Month, int Day)? FromDate { get; set; } = (1, 1);
-        
+
         /// <inheritdoc />
         public override (int Month, int Day)? ToDate { get; set; } = (1, 2);
 

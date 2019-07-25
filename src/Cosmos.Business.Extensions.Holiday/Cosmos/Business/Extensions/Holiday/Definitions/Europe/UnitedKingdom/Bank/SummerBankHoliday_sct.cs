@@ -34,7 +34,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.UnitedKingdom.Ba
         protected override DayOfWeek DayOfWeek { get; } = DayOfWeek.Monday;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_gb_summerbank_sct";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_gb_summer_bank_sct";
 
         /// <inheritdoc />
         public override int? Since { get; } = 1971;

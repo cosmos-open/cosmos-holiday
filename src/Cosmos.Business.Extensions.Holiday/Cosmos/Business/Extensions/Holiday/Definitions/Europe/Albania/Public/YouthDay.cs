@@ -27,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Albania.Public
         public override int Day { get; set; } = 8;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_al_youth_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_al_youth";
     }
 }

@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Czechia.Public
     /// <summary>
     /// New Year's Day
     /// </summary>
-    public class NewYearsDay: BaseFixedHolidayFunc
+    public class NewYearsDay : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Czechia;
@@ -27,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Czechia.Public
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_cz_new_years_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_cz_new_year";
     }
 }

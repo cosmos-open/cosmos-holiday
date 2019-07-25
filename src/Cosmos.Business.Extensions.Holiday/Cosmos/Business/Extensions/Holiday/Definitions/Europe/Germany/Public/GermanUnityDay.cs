@@ -27,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Germany.Public
         public override int Day { get; set; } = 3;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_de_unity_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_de_unity";
     }
 }

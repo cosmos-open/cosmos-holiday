@@ -3,7 +3,10 @@ using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Belgium.Public
 {
-    public class NewYearsDay: BaseFixedHolidayFunc
+    /// <summary>
+    /// New Year's Day
+    /// </summary>
+    public class NewYearsDay : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Belgium;
@@ -11,14 +14,10 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Belgium.Public
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.Belgium;
 
-        /// <summary>
-        /// New Year's Day
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "Nieuwjaar";
 
-        /// <summary>
-        /// Type of holiday
-        /// </summary>
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
         /// <inheritdoc />
@@ -28,8 +27,8 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Belgium.Public
         public override int Day { get; set; } = 1;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_be_newyearsday";
-        
+        public override string I18NIdentityCode { get; } = "i18n_holiday_be_new_year";
+
         /// <inheritdoc />
         public override int? Since { get; } = 1967;
     }

@@ -38,6 +38,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.UnitedKingdom.Pu
         protected override int SundayShift { get; } = 1;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_gb_newyear2day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_gb_new_year_2";
     }
 }

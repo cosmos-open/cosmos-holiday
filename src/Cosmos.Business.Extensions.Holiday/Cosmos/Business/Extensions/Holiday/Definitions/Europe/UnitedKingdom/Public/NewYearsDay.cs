@@ -20,13 +20,13 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.UnitedKingdom.Pu
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_gb_newyearsday";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_gb_new_year";
 
         /// <inheritdoc />
         public override DailyAnswer ToDailyAnswer(int year)
         {
             var calculationDay = DateTimeFactory.Create(year, 1, 1);
-            
+
             //当元旦为周末时，使用 Region 定义器来定义
             if (WeekendManager.GetWeekendDictionary(CountryCode.GB).IsWeekend(calculationDay))
                 return null;

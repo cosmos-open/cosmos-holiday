@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Cosmos.Abstractions;
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.Business.Extensions.Holiday.Core.Helpers;
 using Cosmos.Business.Extensions.Holiday.Definitions;
@@ -9,11 +10,12 @@ namespace Cosmos.Business.Extensions.Holiday
 {
     using Definitions.Europe.AlandIslands.Public;
     using Definitions.Europe.AlandIslands.Religion;
+    using Definitions.Europe.AlandIslands.Tradition;
 
     /// <summary>
     /// AlandIslands holiday provider
     /// </summary>
-    public class AlandIslandsHolidayProvider : BaseDefinitionRegister
+    public class AlandIslandsHolidayProvider : BaseDefinitionRegister, IBizHolidayDefinition, IBizRegionHolidayDefinition
     {
         /// <summary>
         /// Country or region

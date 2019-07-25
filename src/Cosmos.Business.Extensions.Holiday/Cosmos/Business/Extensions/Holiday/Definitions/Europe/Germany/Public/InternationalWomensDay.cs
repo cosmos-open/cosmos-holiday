@@ -30,7 +30,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Germany.Public
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_de_womens_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_de_women";
 
         /// <inheritdoc />
         public override int? Since { get; } = 2019;

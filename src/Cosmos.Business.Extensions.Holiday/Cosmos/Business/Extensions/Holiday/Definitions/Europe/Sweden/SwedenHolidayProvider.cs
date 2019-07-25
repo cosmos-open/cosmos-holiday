@@ -1,21 +1,21 @@
 using System.Collections.Generic;
 using System.Linq;
+using Cosmos.Abstractions;
 using Cosmos.Business.Extensions.Holiday.Core;
-using Cosmos.Business.Extensions.Holiday.Core.Helpers;
 using Cosmos.Business.Extensions.Holiday.Definitions;
 using Cosmos.I18N.Countries;
 
 // ReSharper disable once CheckNamespace
 namespace Cosmos.Business.Extensions.Holiday
 {
-    using Definitions.Europe.Sweden.Commemoration;
+    using Definitions.Europe.Sweden.Tradition;
     using Definitions.Europe.Sweden.Public;
     using Definitions.Europe.Sweden.Religion;
 
     /// <summary>
     /// Sweden holiday provider
     /// </summary>
-    public class SwedenHolidayProvider : BaseDefinitionRegister
+    public class SwedenHolidayProvider : BaseDefinitionRegister, IBizHolidayDefinition
     {
         private static IEnumerable<string> RegionCache { get; } = Enumerable.Empty<string>();
 
@@ -55,7 +55,7 @@ namespace Cosmos.Business.Extensions.Holiday
 
         private static List<IVariableHolidayFunc> SeVariableHolidayFuncs = new List<IVariableHolidayFunc>
         {
-            new MidsummerDay(),//6-3rd-staurday
+            new MidsummerDay(), //6-3rd-staurday
             new AllSaintsDay(), //11-1st-monday
             new AscensionDay(),
             new EasterMonday(),

@@ -27,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Andorra.Public
         public override int Day { get; set; } = 1;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_ad_newyearsday";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_ad_new_year";
     }
 }

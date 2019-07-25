@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Finland.Religion
     /// <summary>
     /// Epiphany
     /// </summary>
-    public class Epiphany: BaseFixedHolidayFunc
+    public class Epiphany : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Finland;

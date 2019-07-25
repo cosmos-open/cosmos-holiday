@@ -6,6 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Spain.Public
     /// <summary>
     /// Regional Holiday
     /// </summary>
+    // ReSharper disable once InconsistentNaming
     public class RegionalHoliday_ga0517 : BaseFixedHolidayFunc
     {
         /// <inheritdoc />

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
+using Cosmos.Abstractions;
 using Cosmos.Business.Extensions.Holiday.Core;
-using Cosmos.Business.Extensions.Holiday.Core.Helpers;
 using Cosmos.Business.Extensions.Holiday.Definitions;
 using Cosmos.I18N.Countries;
 using Cosmos.I18N.Countries.Europe;
@@ -9,11 +9,12 @@ using Cosmos.I18N.Countries.Europe;
 namespace Cosmos.Business.Extensions.Holiday
 {
     using Definitions.Europe.Andorra.Public;
+    using Definitions.Europe.Andorra.Religion;
 
     /// <summary>
     /// Andorra holiday provider
     /// </summary>
-    public class AndorraHolidayProvider : BaseDefinitionRegister
+    public class AndorraHolidayProvider : BaseDefinitionRegister, IBizHolidayDefinition
     {
         private static IEnumerable<string> RegionCache { get; } = AndorraRegions.GetAllRegonCodes();
 
@@ -51,8 +52,7 @@ namespace Cosmos.Business.Extensions.Holiday
         /// </summary>
         protected override List<IVariableHolidayFunc> AllVariableHolidayFuncs { get; } = AdVariableHolidayFuncs;
 
-        private static List<IVariableHolidayFunc> AdVariableHolidayFuncs = new List<IVariableHolidayFunc>
-            { };
+        private static List<IVariableHolidayFunc> AdVariableHolidayFuncs = new List<IVariableHolidayFunc>();
 
         /// <summary>
         /// Get sources

@@ -3,6 +3,10 @@ using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Spain.Public
 {
+    /// <summary>
+    /// Regional Holiday
+    /// </summary>
+    // ReSharper disable once InconsistentNaming
     public class RegionalHoliday_lo0609 : BaseFixedHolidayFunc
     {
         /// <inheritdoc />

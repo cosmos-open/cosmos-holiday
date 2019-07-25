@@ -17,14 +17,10 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.UnitedKingdom.Co
         /// <inheritdoc />
         public override string RegionCode { get; } = "GB-NIR";
 
-        /// <summary>
-        /// Battle of the Boyne
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "Battle of the Boyne";
 
-        /// <summary>
-        /// Type of holiday
-        /// </summary>
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Commemoration;
 
         /// <inheritdoc />

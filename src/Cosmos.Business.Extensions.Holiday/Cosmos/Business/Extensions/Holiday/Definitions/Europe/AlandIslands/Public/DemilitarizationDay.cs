@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.AlandIslands.Pub
     /// <summary>
     /// Demilitarization Day
     /// </summary>
-    public class DemilitarizationDay: BaseFixedHolidayFunc
+    public class DemilitarizationDay : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.AlandIslands;
@@ -27,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.AlandIslands.Pub
         public override int Day { get; set; } = 30;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_ax_demilitarization_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_ax_demilitarization";
     }
 }

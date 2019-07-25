@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.UnitedKingdom.Co
     /// <summary>
     /// Saint Patrick's Day
     /// </summary>
-    public class SaintPatrickDay: BaseFixedHolidayFunc
+    public class SaintPatrickDay : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.UnitedKingdom;
@@ -17,14 +17,10 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.UnitedKingdom.Co
         /// <inheritdoc />
         public override string RegionCode { get; } = "GB-NIR";
 
-        /// <summary>
-        /// Saint Patrick's Day
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "Saint Patrick's Day";
 
-        /// <summary>
-        /// Type of holiday
-        /// </summary>
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Commemoration;
 
         /// <inheritdoc />
@@ -34,6 +30,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.UnitedKingdom.Co
         public override int Day { get; set; } = 17;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_gb_saint_patrick";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_gb_patrick";
     }
 }

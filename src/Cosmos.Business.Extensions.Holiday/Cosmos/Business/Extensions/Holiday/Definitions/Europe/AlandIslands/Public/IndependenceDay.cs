@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.AlandIslands.Pub
     /// <summary>
     /// Independence Day
     /// </summary>
-    public class IndependenceDay: BaseFixedHolidayFunc
+    public class IndependenceDay : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.AlandIslands;
@@ -27,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.AlandIslands.Pub
         public override int Day { get; set; } = 6;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_ax_independence_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_ax_independence";
     }
 }

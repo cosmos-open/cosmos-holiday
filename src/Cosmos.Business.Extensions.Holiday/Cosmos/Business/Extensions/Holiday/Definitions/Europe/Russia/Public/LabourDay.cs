@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Russia.Public
     /// <summary>
     /// Labour Day
     /// </summary>
-    public class LabourDay: BaseFixedHolidayFunc
+    public class LabourDay : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Russia;
@@ -27,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Russia.Public
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_ru_labour_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_ru_labour";
     }
 }

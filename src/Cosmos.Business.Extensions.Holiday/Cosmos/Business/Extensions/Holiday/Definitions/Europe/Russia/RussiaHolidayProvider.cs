@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
+using Cosmos.Abstractions;
 using Cosmos.Business.Extensions.Holiday.Core;
-using Cosmos.Business.Extensions.Holiday.Core.Helpers;
 using Cosmos.Business.Extensions.Holiday.Definitions;
 using Cosmos.I18N.Countries;
 
@@ -10,11 +10,12 @@ namespace Cosmos.Business.Extensions.Holiday
 {
     using Definitions.Europe.Russia.Commemoration;
     using Definitions.Europe.Russia.Public;
+    using Definitions.Europe.Russia.Religion;
 
     /// <summary>
     /// Russia holiday provider
     /// </summary>
-    public class RussiaHolidayProvider : BaseDefinitionRegister
+    public class RussiaHolidayProvider : BaseDefinitionRegister, IBizHolidayDefinition
     {
         private static IEnumerable<string> RegionCache { get; } = Enumerable.Empty<string>();
 

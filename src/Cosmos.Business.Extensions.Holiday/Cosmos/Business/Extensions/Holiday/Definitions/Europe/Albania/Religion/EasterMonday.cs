@@ -24,6 +24,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Albania.Religion
         protected override int OffsetEasterSunday { get; } = 1;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_al_easter_mondays";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_al_easter_monday";
     }
 }

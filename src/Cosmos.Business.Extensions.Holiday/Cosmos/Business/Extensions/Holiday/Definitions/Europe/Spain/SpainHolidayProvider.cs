@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Cosmos.Abstractions;
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.Business.Extensions.Holiday.Core.Helpers;
 using Cosmos.Business.Extensions.Holiday.Definitions;
@@ -11,11 +12,12 @@ namespace Cosmos.Business.Extensions.Holiday
     using Definitions.Europe.Spain.Commemoration;
     using Definitions.Europe.Spain.Public;
     using Definitions.Europe.Spain.Religion;
+    using Definitions.Europe.Spain.Tradition;
 
     /// <summary>
     /// Spain holiday provider
     /// </summary>
-    public class SpainHolidayProvider : BaseDefinitionRegister
+    public class SpainHolidayProvider : BaseDefinitionRegister, IBizHolidayDefinition
     {
         private static IEnumerable<string> RegionCache { get; } = Enumerable.Empty<string>();
 
@@ -53,7 +55,7 @@ namespace Cosmos.Business.Extensions.Holiday
             new RegionalHoliday_cm0531(), //5-31
             new RegionalHoliday_lo0609(), //6-9
             new RegionalHoliday_mu0609(), //6-9
-            new StJohnsDay(), //6-24
+            new StJoansDay(), //6-24
             new SaintJamesDay(), //7-25
             new Assumption(), //8-15
             new MunicipalHoliday(), //9-2

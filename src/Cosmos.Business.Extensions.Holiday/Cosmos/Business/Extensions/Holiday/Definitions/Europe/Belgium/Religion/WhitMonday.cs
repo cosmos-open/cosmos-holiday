@@ -24,6 +24,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Belgium.Religion
         protected override int OffsetEasterSunday { get; } = 1 + 7 * 7;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_be_whitMonday";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_be_whit_monday";
     }
 }

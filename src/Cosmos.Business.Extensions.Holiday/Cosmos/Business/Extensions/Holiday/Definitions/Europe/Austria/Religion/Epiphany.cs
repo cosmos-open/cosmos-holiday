@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Austria.Religion
     /// <summary>
     /// Epiphany
     /// </summary>
-    public class Epiphany: BaseFixedHolidayFunc
+    public class Epiphany : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Austria;
@@ -14,14 +14,10 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Austria.Religion
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.Austria;
 
-        /// <summary>
-        /// Heilige Drei Könige
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "Heilige Drei Könige";
 
-        /// <summary>
-        /// Type of holiday
-        /// </summary>
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Religion;
 
         /// <inheritdoc />

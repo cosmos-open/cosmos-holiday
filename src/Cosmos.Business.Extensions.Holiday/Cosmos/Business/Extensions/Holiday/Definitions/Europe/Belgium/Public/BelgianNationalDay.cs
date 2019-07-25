@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Belgium.Public
     /// <summary>
     /// Belgian National Day
     /// </summary>
-    public class BelgianNationalDay: BaseFixedHolidayFunc
+    public class BelgianNationalDay : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Belgium;
@@ -14,14 +14,10 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Belgium.Public
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.Belgium;
 
-        /// <summary>
-        /// National Day
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "Nationale feestdag";
 
-        /// <summary>
-        /// Type of holiday
-        /// </summary>
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
         /// <inheritdoc />
@@ -31,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Belgium.Public
         public override int Day { get; set; } = 21;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_be_national_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_be_national";
     }
 }

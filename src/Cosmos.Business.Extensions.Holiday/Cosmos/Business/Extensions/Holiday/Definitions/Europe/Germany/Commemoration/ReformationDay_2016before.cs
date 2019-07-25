@@ -7,17 +7,17 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Germany.Commemor
     /// <summary>
     /// Reformation Day
     /// </summary>
-    public class ReformationDay2016Before: BaseFixedHolidayFunc
+    public class ReformationDay2016Before : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Germany;
 
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.Germany;
-        
+
         /// <inheritdoc />
         public override List<string> RegionCodes { get; set; } = new List<string> {"DE-BB", "DE-MV", "DE-SN", "DE-ST", "DE-TH"};
-        
+
         /// <inheritdoc />
         public override string Name { get; } = "Reformationstag";
 

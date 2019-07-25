@@ -27,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Spain.Public
         public override int Day { get; set; } = 1;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_es_newyearsday";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_es_new_year";
     }
 }

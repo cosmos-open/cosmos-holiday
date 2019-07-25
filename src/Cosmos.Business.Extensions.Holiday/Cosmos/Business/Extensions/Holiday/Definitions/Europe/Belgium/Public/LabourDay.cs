@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Belgium.Public
     /// <summary>
     /// Labour Day
     /// </summary>
-    public class LabourDay: BaseFixedHolidayFunc
+    public class LabourDay : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Belgium;
@@ -14,14 +14,10 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Belgium.Public
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.Belgium;
 
-        /// <summary>
-        /// Labour Day
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "Dag van de arbeid";
 
-        /// <summary>
-        /// Type of holiday
-        /// </summary>
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
         /// <inheritdoc />
@@ -31,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Belgium.Public
         public override int Day { get; set; } = 1;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_be_labourday";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_be_labour";
     }
 }

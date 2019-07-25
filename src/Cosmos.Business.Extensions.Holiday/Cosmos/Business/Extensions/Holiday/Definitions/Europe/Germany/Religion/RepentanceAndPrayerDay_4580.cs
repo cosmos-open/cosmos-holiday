@@ -16,7 +16,11 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Germany.Religion
         public override Country BelongsToCountry { get; } = Country.Germany;
 
         /// <inheritdoc />
-        public override List<string> RegionCodes { get; set; } = new List<string> {"DE-BW", "DE-BE", "DE-HB", "DE-HH", "DE-HE", "DE-NI", "DE-NW", "DE-RP", "DE-SL", "DE-SH"};
+        public override List<string> RegionCodes { get; set; } = new List<string>
+        {
+            "DE-BW", "DE-BE", "DE-HB", "DE-HH", "DE-HE",
+            "DE-NI", "DE-NW", "DE-RP", "DE-SL", "DE-SH"
+        };
 
         /// <inheritdoc />
         public override string Name { get; } = "Buß- und Bettag";

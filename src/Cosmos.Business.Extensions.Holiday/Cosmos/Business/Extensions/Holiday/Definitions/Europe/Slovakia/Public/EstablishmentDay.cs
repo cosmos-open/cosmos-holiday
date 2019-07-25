@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Slovakia.Public
     /// <summary>
     /// Day of the Establishment of the Slovak Republic
     /// </summary>
-    public class EstablishmentDay: BaseFixedHolidayFunc
+    public class EstablishmentDay : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Slovakia;
@@ -27,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Slovakia.Public
         public override int Day { get; set; } = 1;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_sk_establishment_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_sk_establishment";
     }
 }

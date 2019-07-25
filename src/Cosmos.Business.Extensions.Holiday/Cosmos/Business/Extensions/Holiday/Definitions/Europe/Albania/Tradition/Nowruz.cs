@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Albania.Traditio
     /// <summary>
     /// Nowruz
     /// </summary>
-    public class Nowruz: BaseFixedHolidayFunc
+    public class Nowruz : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Albania;
@@ -27,6 +27,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Albania.Traditio
         public override int Day { get; set; } = 22;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_al_summer_day";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_al_nowruz";
     }
 }

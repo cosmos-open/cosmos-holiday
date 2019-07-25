@@ -27,7 +27,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.UnitedKingdom.Pu
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_gb_newyearsday_sct";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_gb_new_year_sct";
 
         /// <inheritdoc />
         public override DailyAnswer ToDailyAnswer(int year)

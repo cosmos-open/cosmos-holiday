@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Austria.Religion
     /// <summary>
     /// Easter Monday
     /// </summary>
-    public class EasterMonday: CatholicVariableHolidayFunc
+    public class EasterMonday : CatholicVariableHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Austria;
@@ -24,8 +24,8 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Austria.Religion
         protected override int OffsetEasterSunday { get; } = 1;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_at_easter_mondays";
-        
+        public override string I18NIdentityCode { get; } = "i18n_holiday_at_easter_monday";
+
         /// <inheritdoc />
         public override int? Since { get; } = 1642;
     }

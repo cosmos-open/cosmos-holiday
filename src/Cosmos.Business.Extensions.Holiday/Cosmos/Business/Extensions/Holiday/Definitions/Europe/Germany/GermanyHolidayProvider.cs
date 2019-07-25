@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Cosmos.Abstractions;
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.Business.Extensions.Holiday.Core.Helpers;
 using Cosmos.Business.Extensions.Holiday.Definitions;
@@ -11,11 +12,12 @@ namespace Cosmos.Business.Extensions.Holiday
     using Definitions.Europe.Germany.Commemoration;
     using Definitions.Europe.Germany.Public;
     using Definitions.Europe.Germany.Religion;
+    using Definitions.Europe.Germany.Tradition;
 
     /// <summary>
     /// Germany holiday provider
     /// </summary>
-    public class GermanyHolidayProvider : BaseDefinitionRegister
+    public class GermanyHolidayProvider : BaseDefinitionRegister, IBizHolidayDefinition
     {
         private static IEnumerable<string> RegionCache { get; } = GermanyRegions.GetAllRegonCodes();
 
