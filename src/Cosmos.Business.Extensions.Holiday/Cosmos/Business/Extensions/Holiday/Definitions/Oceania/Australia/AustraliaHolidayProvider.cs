@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Cosmos.Abstractions;
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.Business.Extensions.Holiday.Core.Helpers;
 using Cosmos.Business.Extensions.Holiday.Definitions;
@@ -15,7 +16,7 @@ namespace Cosmos.Business.Extensions.Holiday
     /// <summary>
     /// Australia Holiday Provider
     /// </summary>
-    public class AustraliaHolidayProvider : BaseDefinitionRegister
+    public class AustraliaHolidayProvider : BaseDefinitionRegister, IBizHolidayDefinition
     {
         private static IEnumerable<string> RegionCache { get; } = AustraliaRegions.GetMainlandRegionCodes();
 

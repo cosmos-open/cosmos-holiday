@@ -19,7 +19,10 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Oceania.Australia.Publi
         public override Country BelongsToCountry { get; } = Country.Australia;
 
         /// <inheritdoc />
-        public override List<string> RegionCodes { get; set; } = new List<string> {"AU-ACT", "AU-NSW", "AU-NT", "AU-QLD", "AU-TAS", "AU-VIC", "AU-WA"};
+        public override List<string> RegionCodes { get; set; } = new List<string>
+        {
+            "AU-ACT", "AU-NSW", "AU-NT", "AU-QLD", "AU-TAS", "AU-VIC", "AU-WA"
+        };
 
         /// <inheritdoc />
         public override string Name { get; } = "Boxing Day";
@@ -28,7 +31,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Oceania.Australia.Publi
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_au_boxingday";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_au_boxing";
 
         /// <inheritdoc />
         public override DailyAnswer ToDailyAnswer(int year)

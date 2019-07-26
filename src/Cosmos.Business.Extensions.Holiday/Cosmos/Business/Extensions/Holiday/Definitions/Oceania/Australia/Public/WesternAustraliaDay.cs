@@ -14,7 +14,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Oceania.Australia.Publi
 
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.Australia;
-        
+
         /// <inheritdoc />
         public override string Name { get; } = "Western Australia Day";
 
@@ -22,7 +22,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Oceania.Australia.Publi
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_au_westernaustralia";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_au_western_australia";
 
         /// <inheritdoc />
         public override int Month { get; } = 6;

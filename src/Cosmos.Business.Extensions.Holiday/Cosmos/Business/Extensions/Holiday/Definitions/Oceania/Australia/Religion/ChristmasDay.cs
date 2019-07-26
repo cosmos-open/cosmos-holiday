@@ -1,7 +1,7 @@
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.I18N.Countries;
 
-namespace Cosmos.Business.Extensions.Holiday.Definitions.Oceania.Australia.Public
+namespace Cosmos.Business.Extensions.Holiday.Definitions.Oceania.Australia.Religion
 {
     /// <summary>
     /// Christmas Day
@@ -18,7 +18,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Oceania.Australia.Publi
         public override string Name { get; } = "Christmas Day";
 
         /// <inheritdoc />
-        public override HolidayType HolidayType { get; set; } = HolidayType.Public;
+        public override HolidayType HolidayType { get; set; } = HolidayType.Religion;
 
         /// <inheritdoc />
         public override int Month { get; } = 12;

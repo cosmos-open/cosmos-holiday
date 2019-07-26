@@ -9,7 +9,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Oceania.Australia.Publi
     /// <summary>
     /// Labour Day for AU-WA
     /// </summary>
-    public class LabourDayWa: BaseVariableHolidayFunc
+    public class LabourDayWa : BaseVariableHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Australia;
@@ -27,7 +27,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Oceania.Australia.Publi
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_au_newyearsday_wa";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_au_labour_wa";
 
         /// <inheritdoc />
         public override DailyAnswer ToDailyAnswer(int year)

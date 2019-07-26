@@ -27,7 +27,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Oceania.Australia.Publi
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_au_newyearsday_sct_nsw_sa";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_au_labour_sct_nsw_sa";
 
         /// <inheritdoc />
         public override DailyAnswer ToDailyAnswer(int year)

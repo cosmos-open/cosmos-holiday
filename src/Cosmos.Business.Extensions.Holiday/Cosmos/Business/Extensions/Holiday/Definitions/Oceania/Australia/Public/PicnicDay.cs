@@ -25,7 +25,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Oceania.Australia.Publi
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_au_picnicday";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_au_picnic";
 
         /// <inheritdoc />
         public override int Month { get; } = 8;

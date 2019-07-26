@@ -33,6 +33,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Oceania.Australia.Publi
         protected override int SundayShift { get; } = 1;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_au_australiaday";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_au_australia";
     }
 }

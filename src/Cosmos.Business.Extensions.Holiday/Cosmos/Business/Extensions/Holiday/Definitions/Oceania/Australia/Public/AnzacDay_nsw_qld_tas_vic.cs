@@ -18,14 +18,10 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Oceania.Australia.Publi
         /// <inheritdoc />
         public override List<string> RegionCodes { get; set; } = new List<string> {"AU-NSW", "AU-QLD", "AU-TAS", "AU-VIC"};
 
-        /// <summary>
-        /// National Day
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "Anzac Day";
 
-        /// <summary>
-        /// Type of holiday
-        /// </summary>
+        /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
         /// <inheritdoc />
@@ -35,6 +31,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Oceania.Australia.Publi
         public override int Day { get; set; } = 25;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_au_anzacday";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_au_anzac";
     }
 }
