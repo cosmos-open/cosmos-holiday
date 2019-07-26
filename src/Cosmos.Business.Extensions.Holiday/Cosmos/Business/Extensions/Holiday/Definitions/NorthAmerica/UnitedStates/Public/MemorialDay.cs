@@ -16,16 +16,14 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStat
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.UnitedStates;
 
-        /// <summary>
-        /// Memorial Day
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "Memorial Day";
 
         /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_us_memorialday";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_us_memorial";
 
         /// <inheritdoc />
         public override int? Since { get; } = 1868;

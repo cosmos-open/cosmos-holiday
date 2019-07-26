@@ -2,7 +2,7 @@ using System;
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.I18N.Countries;
 
-namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStates.Public
+namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStates.Commemoration
 {
     /// <summary>
     /// Father's day
@@ -15,13 +15,11 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStat
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.UnitedStates;
 
-        /// <summary>
-        /// Father's day
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "Father's Day";
 
         /// <inheritdoc />
-        public override HolidayType HolidayType { get; set; } = HolidayType.Public;
+        public override HolidayType HolidayType { get; set; } = HolidayType.Commemoration;
 
         /// <inheritdoc />
         public override int Month { get; } = 6;
@@ -33,7 +31,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStat
         protected override DayOfWeek DayOfWeek { get; } = DayOfWeek.Sunday;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_us_fathersday";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_us_father";
 
         /*
          * 世界上的第一个父亲节，1910年诞生在美国，是由住在美国华盛顿州斯波坎(Spokane) 的布鲁斯多德夫人

@@ -15,9 +15,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStat
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.UnitedStates;
 
-        /// <summary>
-        /// Martin Luther King, Jr. Day
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "Martin Luther King, Jr. Day";
 
         /// <inheritdoc />

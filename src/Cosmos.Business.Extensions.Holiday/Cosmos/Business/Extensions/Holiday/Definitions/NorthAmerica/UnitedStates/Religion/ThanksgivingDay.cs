@@ -15,13 +15,11 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStat
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.UnitedStates;
 
-        /// <summary>
-        /// Thanksgiving Day
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "Thanksgiving Day";
 
         /// <inheritdoc />
-        public override HolidayType HolidayType { get; set; } = HolidayType.Public;
+        public override HolidayType HolidayType { get; set; } = HolidayType.Religion;
 
         /// <inheritdoc />
         public override int Month { get; } = 11;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.I18N.Countries;
 
-namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStates.Public
+namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStates.Commemoration
 {
     /// <summary>
     /// Columbus Day
@@ -26,13 +26,11 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStat
             "US-RI", "US-SC", "US-TN", "US-UT", "US-VA", "US-WV"
         };
 
-        /// <summary>
-        /// Columbus Day
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "Columbus Day";
 
         /// <inheritdoc />
-        public override HolidayType HolidayType { get; set; } = HolidayType.Public;
+        public override HolidayType HolidayType { get; set; } = HolidayType.Commemoration;
 
         /// <inheritdoc />
         public override int Month { get; } = 10;
@@ -44,7 +42,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStat
         protected override DayOfWeek DayOfWeek { get; } = DayOfWeek.Monday;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_us_columbusday";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_us_columbus";
 
         /// <inheritdoc />
         public override int? Since { get; } = 1937;

@@ -15,9 +15,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStat
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.UnitedStates;
 
-        /// <summary>
-        /// Labor Day
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "Labor Day";
 
         /// <inheritdoc />
@@ -33,7 +31,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStat
         protected override DayOfWeek DayOfWeek { get; } = DayOfWeek.Monday;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_us_laborday";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_us_labor";
 
         /// <inheritdoc />
         public override int? Since { get; } = 1894;

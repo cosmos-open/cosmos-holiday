@@ -25,7 +25,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStat
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_us_inaugurationday";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_us_inauguration";
 
         /// <inheritdoc />
         public override DailyAnswer ToDailyAnswer(int year)

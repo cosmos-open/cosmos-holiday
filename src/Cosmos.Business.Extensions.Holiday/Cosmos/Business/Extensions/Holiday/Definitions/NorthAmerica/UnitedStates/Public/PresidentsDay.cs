@@ -5,7 +5,7 @@ using Cosmos.I18N.Countries;
 namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStates.Public
 {
     /// <summary>
-    /// President's Day
+    /// President's Day / Washington's Birthday
     /// </summary>
     public class PresidentsDay : WeekOffsetVariableHolidayFunc
     {
@@ -15,9 +15,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStat
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.UnitedStates;
 
-        /// <summary>
-        /// Washington's Birthday
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "President's Day";
 
         /// <inheritdoc />

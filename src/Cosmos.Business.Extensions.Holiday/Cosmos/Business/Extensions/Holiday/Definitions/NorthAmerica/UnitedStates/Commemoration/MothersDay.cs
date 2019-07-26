@@ -2,7 +2,7 @@ using System;
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.I18N.Countries;
 
-namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStates.Public
+namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStates.Commemoration
 {
     /// <summary>
     /// Mother's Day
@@ -15,13 +15,11 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStat
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.UnitedStates;
 
-        /// <summary>
-        /// Mother's day
-        /// </summary>
+        /// <inheritdoc />
         public override string Name { get; } = "Mother's Day";
 
         /// <inheritdoc />
-        public override HolidayType HolidayType { get; set; } = HolidayType.Public;
+        public override HolidayType HolidayType { get; set; } = HolidayType.Commemoration;
 
         /// <inheritdoc />
         public override int Month { get; } = 5;
@@ -33,7 +31,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStat
         protected override DayOfWeek DayOfWeek { get; } = DayOfWeek.Sunday;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_us_mothersday";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_us_mother";
 
         /*
          * 1914年，美国参众两议院将每年5月第2个星期日定为母亲节。

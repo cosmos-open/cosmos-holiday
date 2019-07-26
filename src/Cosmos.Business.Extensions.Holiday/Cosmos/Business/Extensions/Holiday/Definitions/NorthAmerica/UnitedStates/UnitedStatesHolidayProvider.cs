@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Cosmos.Abstractions;
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.Business.Extensions.Holiday.Core.Helpers;
 using Cosmos.Business.Extensions.Holiday.Core.Internals;
@@ -10,13 +11,14 @@ using Cosmos.I18N.Countries.NorthAmerica;
 // ReSharper disable once CheckNamespace
 namespace Cosmos.Business.Extensions.Holiday
 {
+    using Definitions.NorthAmerica.UnitedStates.Commemoration;
     using Definitions.NorthAmerica.UnitedStates.Public;
     using Definitions.NorthAmerica.UnitedStates.Religion;
 
     /// <summary>
     /// United States Holiday Provider
     /// </summary>
-    public class UnitedStatesHolidayProvider : BaseDefinitionRegister
+    public class UnitedStatesHolidayProvider : BaseDefinitionRegister, IBizHolidayDefinition
     {
         private static IEnumerable<string> RegionCache { get; } = UnitedStatesRegions.GetMainRegionCodes();
         private static IEnumerable<string> OverseasRegionCache { get; }
