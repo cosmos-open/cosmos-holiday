@@ -14,29 +14,8 @@
     <ItemGroup>
       <PackageReference Include="Cosmos.Extensions" Version="0.1.1-alpha3-123037" />
       <PackageReference Include="Cosmos.Extensions.DateTime" Version="0.1.1-alpha3-123037" />
-      <PackageReference Include="Cosmos.I18N" Version="0.0.1-alpha1-100007" />
+      <PackageReference Include="Cosmos.I18N.Countries" Version="0.0.1-alpha1-100030" />
       <PackageReference Include="Enums.NET" Version="2.3.2" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Cosmos\Business\Extensions\Holiday\Definitions\Asia\Japan\Commemoration" />
-      <Folder Include="Cosmos\Business\Extensions\Holiday\Definitions\Asia\Japan\Public" />
-      <Folder Include="Cosmos\Business\Extensions\Holiday\Definitions\Asia\Japan\Religion" />
-      <Folder Include="Cosmos\Business\Extensions\Holiday\Definitions\Europe\France\Commemoration" />
-      <Folder Include="Cosmos\Business\Extensions\Holiday\Definitions\Europe\France\Public" />
-      <Folder Include="Cosmos\Business\Extensions\Holiday\Definitions\Europe\France\Religion" />
-      <Folder Include="Cosmos\Business\Extensions\Holiday\Definitions\Europe\Germany\Commemoration" />
-      <Folder Include="Cosmos\Business\Extensions\Holiday\Definitions\Europe\Germany\Public" />
-      <Folder Include="Cosmos\Business\Extensions\Holiday\Definitions\Europe\Germany\Religion" />
-      <Folder Include="Cosmos\Business\Extensions\Holiday\Definitions\Europe\Russia\Commemoration" />
-      <Folder Include="Cosmos\Business\Extensions\Holiday\Definitions\Europe\Russia\Public" />
-      <Folder Include="Cosmos\Business\Extensions\Holiday\Definitions\Europe\Russia\Religion" />
-      <Folder Include="Cosmos\Business\Extensions\Holiday\Definitions\Europe\UnitedKingdom\Commemoration" />
-      <Folder Include="Cosmos\Business\Extensions\Holiday\Definitions\Europe\UnitedKingdom\Public" />
-      <Folder Include="Cosmos\Business\Extensions\Holiday\Definitions\Europe\UnitedKingdom\Religion" />
-      <Folder Include="Cosmos\Business\Extensions\Holiday\Definitions\SouthAmerica\Brazil\Commemoration" />
-      <Folder Include="Cosmos\Business\Extensions\Holiday\Definitions\SouthAmerica\Brazil\Public" />
-      <Folder Include="Cosmos\Business\Extensions\Holiday\Definitions\SouthAmerica\Brazil\Religion" />
     </ItemGroup>
 
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
