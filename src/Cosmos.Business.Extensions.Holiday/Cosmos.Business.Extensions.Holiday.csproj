@@ -18,6 +18,12 @@
       <PackageReference Include="Enums.NET" Version="2.3.2" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="Cosmos\Business\Extensions\Holiday\Definitions\**\i18n_holiday_*.*.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
         <DocumentationFile>Cosmos.Business.Extensions.Holiday.xml</DocumentationFile>
     </PropertyGroup>

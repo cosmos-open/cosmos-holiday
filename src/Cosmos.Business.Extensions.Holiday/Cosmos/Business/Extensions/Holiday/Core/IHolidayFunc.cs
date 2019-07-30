@@ -72,16 +72,6 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         /// </summary>
         string Name { get; }
 
-//        /// <summary>
-//        /// English Name of Holiday
-//        /// </summary>
-//        string EnglishName{get;}
-
-//        /// <summary>
-//        /// Chinese Name of Holiday
-//        /// </summary>
-//        string ChineseName{get;}
-
         #endregion
 
         #region Holiday I18n Code

@@ -5,6 +5,9 @@ using Cosmos.I18N.Countries;
 
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.UnitedKingdom.Public
 {
+    /// <summary>
+    /// New Year's Day
+    /// </summary>
     public class NewYearsDay : BaseVariableHolidayFunc
     {
         /// <inheritdoc />

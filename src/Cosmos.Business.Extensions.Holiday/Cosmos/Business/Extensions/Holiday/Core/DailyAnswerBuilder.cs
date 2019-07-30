@@ -24,6 +24,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         /// Create a new instance for <see cref="DailyAnswerBuilder"/>.
         /// </summary>
         /// <param name="name"></param>
+        /// <param name="type"></param>
         /// <returns></returns>
         public static DailyAnswerBuilder Create(string name, HolidayType type)
         {
