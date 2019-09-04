@@ -4,9 +4,9 @@ using Cosmos.I18N.Countries;
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Andorra.Public
 {
     /// <summary>
-    /// National Holiday
+    /// Labour day
     /// </summary>
-    public class NationalDay : BaseFixedHolidayFunc
+    public class Labour: BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Andorra;
@@ -15,18 +15,18 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Andorra.Public
         public override Country BelongsToCountry { get; } = Country.Andorra;
 
         /// <inheritdoc />
-        public override string Name { get; } = "Mare de Déu de Meritxell";
+        public override string Name { get; } = "Festa del treball";
 
         /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
         /// <inheritdoc />
-        public override int Month { get; set; } = 9;
+        public override int Month { get; set; } = 5;
 
         /// <inheritdoc />
-        public override int Day { get; set; } = 8;
+        public override int Day { get; set; } = 1;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_ad_national";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_ad_labour";
     }
 }

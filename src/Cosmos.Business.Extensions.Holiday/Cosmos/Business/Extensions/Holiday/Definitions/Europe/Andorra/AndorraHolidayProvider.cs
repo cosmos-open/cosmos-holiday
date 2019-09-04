@@ -8,8 +8,10 @@ using Cosmos.I18N.Countries.Europe;
 // ReSharper disable once CheckNamespace
 namespace Cosmos.Business.Extensions.Holiday
 {
+    using Definitions.Europe.Andorra.Commemoration;
     using Definitions.Europe.Andorra.Public;
     using Definitions.Europe.Andorra.Religion;
+    using Definitions.Europe.Andorra.Tradition;
 
     /// <summary>
     /// Andorra holiday provider
@@ -42,9 +44,21 @@ namespace Cosmos.Business.Extensions.Holiday
         private static List<IFixedHolidayFunc> AdFixedHolidayFuncs = new List<IFixedHolidayFunc>
         {
             new NewYearsDay(), //1-1
+            new Epiphany(), //1-6
+            new Carnival(), //2-12
             new ConstitutionDay(), //3-14
-            new NationalDay(), //3-14
+            new Labour(), //5-1
+            new CanilloAnnualFestival(), //7-21 ~ 7-23
+            new EscaldesEngordanyAnnualFestival(), //7-15 ~ 7-26
+            new SantJuliàDeLòriaAnnualFestival(), //7-27 ~ 7-30
+            new AssumptionDay(), //8-15
+            new EncampAnnualFestival(), //8-15 ~ 8-16
+            new LaMassanaAnnualFestival(), //8-15 ~ 8-16
+            new OrdinoAnnualFestival(), //8-15 ~ 8-16
+            new NationalDay(), //9-8
+            new ImmaculateConception(), //12-8
             new ChristmasDay(), //12-25
+            new StStephensDay(), //12-26
         };
 
         /// <summary>
@@ -52,7 +66,13 @@ namespace Cosmos.Business.Extensions.Holiday
         /// </summary>
         protected override List<IVariableHolidayFunc> AllVariableHolidayFuncs { get; } = AdVariableHolidayFuncs;
 
-        private static List<IVariableHolidayFunc> AdVariableHolidayFuncs = new List<IVariableHolidayFunc>();
+        private static List<IVariableHolidayFunc> AdVariableHolidayFuncs = new List<IVariableHolidayFunc>
+        {
+            new GoodFriday(),
+            new EasterMonday(),
+            new WhitMonday(),
+            new AllSaintsDay(), //11-1st-saturday
+        };
 
         /// <summary>
         /// Get sources

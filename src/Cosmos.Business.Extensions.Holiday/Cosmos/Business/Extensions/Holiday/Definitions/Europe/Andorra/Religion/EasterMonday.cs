@@ -1,7 +1,7 @@
 using Cosmos.Business.Extensions.Holiday.Core;
 using Cosmos.I18N.Countries;
 
-namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Botswana.Religion
+namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Andorra.Religion
 {
     /// <summary>
     /// Easter Monday
@@ -9,13 +9,13 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Botswana.Religio
     public class EasterMonday : CatholicVariableHolidayFunc
     {
         /// <inheritdoc />
-        public override Country Country { get; } = Country.Botswana;
+        public override Country Country { get; } = Country.Andorra;
 
         /// <inheritdoc />
-        public override Country BelongsToCountry { get; } = Country.Botswana;
+        public override Country BelongsToCountry { get; } = Country.Andorra;
 
         /// <inheritdoc />
-        public override string Name { get; } = "Easter Monday";
+        public override string Name { get; } = "Dilluns de Pasqua";
 
         /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Religion;
@@ -24,6 +24,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Botswana.Religio
         protected override int OffsetEasterSunday { get; } = 1;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_bw_easter_monday";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_ad_easter_monday";
     }
 }
