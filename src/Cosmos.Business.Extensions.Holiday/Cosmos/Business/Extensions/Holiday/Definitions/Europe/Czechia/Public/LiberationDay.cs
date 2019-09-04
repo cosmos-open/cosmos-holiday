@@ -15,7 +15,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Czechia.Public
         public override Country BelongsToCountry { get; } = Country.Czechia;
 
         /// <inheritdoc />
-        public override string Name { get; } = "Den vítězství - Den osvobození od fašismu";
+        public override string Name { get; } = "Den vítězství";
 
         /// <inheritdoc />
         public override int Month { get; set; } = 5;

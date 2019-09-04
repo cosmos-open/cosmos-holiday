@@ -15,7 +15,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Slovakia.Public
         public override Country BelongsToCountry { get; } = Country.Slovakia;
 
         /// <inheritdoc />
-        public override string Name { get; } = "Sviatok Panny Márie Sedembolestnej";
+        public override string Name { get; } = "Sedembolestná Panna Mária";
 
         /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;

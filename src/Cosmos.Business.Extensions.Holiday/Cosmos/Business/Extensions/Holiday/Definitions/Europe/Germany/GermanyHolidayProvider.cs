@@ -49,6 +49,7 @@ namespace Cosmos.Business.Extensions.Holiday
             new InternationalWomensDay(), //3-8
             new LabourDay(), //5-1
             new AssumptionDay(), //8-15
+            new WorldChildrensDay(), //9-20
             new GermanUnityDay(), //10-3
             new ReformationDay2016Before(), //10-31
             new ReformationDay2017(), //10-31

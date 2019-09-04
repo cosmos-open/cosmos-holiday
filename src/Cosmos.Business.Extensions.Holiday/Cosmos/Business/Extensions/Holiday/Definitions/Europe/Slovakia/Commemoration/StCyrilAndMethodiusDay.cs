@@ -15,7 +15,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Slovakia.Commemo
         public override Country BelongsToCountry { get; } = Country.Slovakia;
 
         /// <inheritdoc />
-        public override string Name { get; } = "Sviatok svätého Cyrila a Metoda";
+        public override string Name { get; } = "Sviatok svätého Cyrila a svätého Metoda";
 
         /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Commemoration;

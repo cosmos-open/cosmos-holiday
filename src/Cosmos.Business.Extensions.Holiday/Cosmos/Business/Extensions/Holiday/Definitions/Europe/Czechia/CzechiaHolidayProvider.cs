@@ -51,10 +51,10 @@ namespace Cosmos.Business.Extensions.Holiday
             new JanHusDay(), //7-6
             new StWenceslasDay(), //9-28
             new CzechStatehoodDay(), //9-28
-            new FreedomDemocracyDay(), //10-28
             new IndependentCzechoslovakStateDay(), //10-28
             new NationalizationDay(), //10-28
             new AllSaintsDay(), //11-1
+            new FreedomDemocracyDay(), //11-17
             new ImmaculateConception(), //12-8
             new ChristmasEve(), //12-24
             new ChristmasDay(), //12-25
@@ -68,7 +68,6 @@ namespace Cosmos.Business.Extensions.Holiday
 
         private static List<IVariableHolidayFunc> CzVariableHolidayFuncs = new List<IVariableHolidayFunc>
         {
-            new EasterSunday(),
             new EasterMonday(),
             new GoodFriday(),
         };

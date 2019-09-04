@@ -19,13 +19,13 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Czechia.Public
         public override Country BelongsToCountry { get; } = Country.Czechia;
 
         /// <inheritdoc />
-        public override string Name { get; } = "Den boje za svobodu a demokracii";
+        public override string Name { get; } = "Den boje za svobodu a demokracii a Mezinárodní den studentstva";
 
         /// <inheritdoc />
-        public override int Month { get; set; } = 10;
+        public override int Month { get; set; } = 11;
 
         /// <inheritdoc />
-        public override int Day { get; set; } = 28;
+        public override int Day { get; set; } = 17;
 
         /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;

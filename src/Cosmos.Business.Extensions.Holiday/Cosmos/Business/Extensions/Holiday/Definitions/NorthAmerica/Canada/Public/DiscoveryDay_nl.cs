@@ -4,9 +4,10 @@ using Cosmos.I18N.Countries;
 namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.Canada.Public
 {
     /// <summary>
-    /// National holiday (June 24)
+    /// Discovery Day (June 24)
     /// </summary>
-    public class NationalHoliday : WeekShiftVariableHolidayFunc
+    // ReSharper disable once InconsistentNaming
+    public class DiscoveryDay_nl : WeekShiftVariableHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Canada;
@@ -15,16 +16,16 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.Canada.Pub
         public override Country BelongsToCountry { get; } = Country.Canada;
 
         /// <inheritdoc />
-        public override string RegionCode { get; } = "CA-QC";
+        public override string RegionCode { get; } = "CA-NL";
 
         /// <inheritdoc />
-        public override string Name { get; } = "Fête nationale du Québec";
+        public override string Name { get; } = "Discovery Day";
 
         /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_ca_national_holiday";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_ca_discovery_nl";
 
         /// <inheritdoc />
         public override int Month { get; } = 6;

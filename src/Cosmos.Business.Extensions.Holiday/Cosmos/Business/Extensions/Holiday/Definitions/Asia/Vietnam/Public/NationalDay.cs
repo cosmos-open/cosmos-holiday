@@ -21,10 +21,10 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Vietnam.Public
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
         /// <inheritdoc />
-        public override int Month { get; set; } = 10;
+        public override int Month { get; set; } = 9;
 
         /// <inheritdoc />
-        public override int Day { get; set; } = 1;
+        public override int Day { get; set; } = 2;
 
         /// <inheritdoc />
         public override string I18NIdentityCode { get; } = "i18n_holiday_nv_national";

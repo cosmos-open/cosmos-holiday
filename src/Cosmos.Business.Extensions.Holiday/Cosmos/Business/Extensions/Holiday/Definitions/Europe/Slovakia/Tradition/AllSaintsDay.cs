@@ -17,7 +17,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Slovakia.Traditi
         public override Country BelongsToCountry { get; } = Country.Slovakia;
 
         /// <inheritdoc />
-        public override string Name { get; } = "Sviatok všetkých svätých";
+        public override string Name { get; } = "Sviatok Všetkých svätých";
 
         /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Tradition;
