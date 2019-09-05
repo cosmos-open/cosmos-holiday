@@ -13,7 +13,7 @@ namespace Cosmos.Business.Extensions.Holiday
     using Definitions.NorthAmerica.Bahamas.Commemoration;
 
     /// <summary>
-    /// United States Holiday Provider
+    /// Bahamas Holiday Provider
     /// </summary>
     public class BahamasHolidayProvider : BaseDefinitionRegister, IBizHolidayDefinition
     {

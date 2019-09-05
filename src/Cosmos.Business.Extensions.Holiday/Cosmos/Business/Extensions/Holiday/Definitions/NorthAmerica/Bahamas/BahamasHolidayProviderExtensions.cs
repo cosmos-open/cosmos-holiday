@@ -9,7 +9,7 @@ namespace Cosmos.Business.Extensions.Holiday
     public static class BahamasHolidayProviderExtensions
     {
         /// <summary>
-        /// Use United States holiday provider
+        /// Use Bahamas holiday provider
         /// </summary>
         /// <param name="options"></param>
         /// <param name="holidayTypes"></param>
