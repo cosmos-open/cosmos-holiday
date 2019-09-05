@@ -15,7 +15,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core.Helpers
 
         public static int GetLeapMonthAndCache(this ChineseLunisolarCalendar calendar, int year)
         {
-            if (LeapMonthCache.TryGetValue(year, out int result))
+            if (LeapMonthCache.TryGetValue(year, out var result))
                 return result;
             result = calendar.GetLeapMonth(year);
             LeapMonthCache.TryAdd(year, result);
