@@ -48,6 +48,7 @@ namespace Cosmos.Business.Extensions.Holiday
             new LabourDay(), //5-1
             new MayRevolution(), //5-25
             new Miguel(), //6-17
+            new NationalFlagDay(),//6-20
             new Belgrano(), //6-20
             new IndependenceDay(), //7-9
             new NationalSovereigntyDay(), //11-20
@@ -64,6 +65,7 @@ namespace Cosmos.Business.Extensions.Holiday
         {
             new Carnival(),
             new Carnival48(),
+            new MaundyThursday(),
             new GoodFriday(),
         };
 
