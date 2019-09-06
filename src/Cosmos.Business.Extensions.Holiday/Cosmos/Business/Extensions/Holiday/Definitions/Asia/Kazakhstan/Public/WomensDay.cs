@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Kazakhstan.Public
     /// <summary>
     /// Woman's Day
     /// </summary>
-    public class WomansDay : BaseFixedHolidayFunc
+    public class WomensDay : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Kazakhstan;

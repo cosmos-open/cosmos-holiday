@@ -45,7 +45,7 @@ namespace Cosmos.Business.Extensions.Holiday
             new NewYearsDay(), //1-1
             new NewYearsDay2(), //1-2
             new NationUnityDay(), //1-5
-            new WomansDay(), //3-8
+            new WomensDay(), //3-8
             new Nauryz(), //3-21
             new HomelandProtectorDay(), //5-7
             new VictoryDay(), //5-9
