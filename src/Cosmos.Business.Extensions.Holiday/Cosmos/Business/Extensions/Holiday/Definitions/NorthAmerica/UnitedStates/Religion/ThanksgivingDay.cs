@@ -31,7 +31,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.UnitedStat
         protected override DayOfWeek DayOfWeek { get; } = DayOfWeek.Thursday;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_us_thanksgivingday";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_us_thanks_giving";
 
         /// <inheritdoc />
         public override int? Since { get; } = 1863;
