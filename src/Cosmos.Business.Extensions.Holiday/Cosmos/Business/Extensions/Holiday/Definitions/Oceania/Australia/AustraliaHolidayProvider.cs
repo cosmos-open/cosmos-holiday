@@ -73,6 +73,7 @@ namespace Cosmos.Business.Extensions.Holiday
             new CanberraDay(), //3月的第二个周一
             new LabourDayWa(), //3-1
             new LabourDayTasVic(), //3月第二个周一
+            new EightHoursDay(),//3-2nd-monday
             new AnzacDayActNtSaWa(), //4-25
             new LabourDayNtQld(), //5-1
             new WesternAustraliaDay(), //6月第一个周一
@@ -95,7 +96,16 @@ namespace Cosmos.Business.Extensions.Holiday
         {
             return new[]
             {
-                "https://en.wikipedia.org/wiki/Public_holidays_in_Australia"
+                "https://en.wikipedia.org/wiki/Public_holidays_in_Australia",
+                "http://www.australia.gov.au/about-australia/special-dates-and-events/public-holidays",
+                "http://www.cmd.act.gov.au/communication/holidays", //ACT
+                "http://www.industrialrelations.nsw.gov.au/oirwww/NSW_public_holidays/NSW_Public_Holidays.page?", //NSW
+                "http://www.ocpe.nt.gov.au/working_in_the_ntps/legislation/public_holidays",//NT
+                "https://www.qld.gov.au/recreation/travel/holidays/public",//QLD
+                "http://www.safework.sa.gov.au/show_page.jsp?id=2483",//SA
+                "http://worksafe.tas.gov.au/laws/public_holidays",//TAS
+                "http://www.business.vic.gov.au/victorian-public-holidays-and-daylight-saving/victorian-public-holidays",//VIC
+                "https://www.commerce.wa.gov.au/labour-relations/public-holidays-western-australia",//WA
             };
         }
     }
