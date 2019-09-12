@@ -48,7 +48,10 @@ namespace Cosmos.Business.Extensions.Holiday
             new BelgianNationalDay(), //7-21
             new AssumptionDay(), //8-15
             new AllSaintsDay(), //11-1
+            new AllSoulsDay(), //11-2
             new ArmisticeDay(), //11-11
+            new Koningsdag(), //11-15
+            new SaintNicholas(), //12-6
             new ChristmasDay(), //12-25
         };
 
@@ -62,7 +65,9 @@ namespace Cosmos.Business.Extensions.Holiday
             new EasterSunday(),
             new EasterMonday(),
             new AscensionDay(),
+            new Pentecost(),
             new WhitMonday(),
+            new MothersDay(), //5-2nd-sunday
         };
 
         /// <summary>
