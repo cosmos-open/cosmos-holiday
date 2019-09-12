@@ -38,6 +38,7 @@ namespace Cosmos.Business.Extensions.Holiday
         private static List<IFixedHolidayFunc> BbFixedHolidayFuncs = new List<IFixedHolidayFunc>
         {
             new NewYearsDay(), //1-1
+            new ErrolBarrowDay(),//1-21
             new LabourDay(), //5-1
             new NationalHeroesDay(), //4-28
             new EmancipationDay(), //8-1
@@ -51,7 +52,6 @@ namespace Cosmos.Business.Extensions.Holiday
 
         private static List<IVariableHolidayFunc> BbVariableHolidayFuncs = new List<IVariableHolidayFunc>
         {
-
             new EasterMonday(),
             new GoodFriday(),
             new WhitMonday(),
