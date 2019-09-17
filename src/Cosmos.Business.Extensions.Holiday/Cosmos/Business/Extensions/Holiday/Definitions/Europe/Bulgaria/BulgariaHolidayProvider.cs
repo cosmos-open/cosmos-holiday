@@ -43,9 +43,11 @@ namespace Cosmos.Business.Extensions.Holiday
         private static List<IFixedHolidayFunc> BgFixedHolidayFuncs = new List<IFixedHolidayFunc>
         {
             new NewYearsDay(), //1-1
+            new GrannyMarchDay(),//3-1
             new LiberationDay(), //3-3
             new InternationalWorkersDay(), //5-1
             new SaintGeorgesDay(), //5-6
+            new RadioAndTelevisionDay(),//5-7
             new SaintsCyrilAndMethodiusDay(), //5-24
             new UnificationDay(), //9-6
             new IndependenceDay(), //9-22
