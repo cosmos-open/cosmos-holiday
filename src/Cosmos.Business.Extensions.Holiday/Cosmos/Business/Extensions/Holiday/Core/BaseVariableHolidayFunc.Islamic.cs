@@ -10,7 +10,7 @@ namespace Cosmos.Business.Extensions.Holiday.Core
     public abstract class IslamicVariableHolidayFunc : BaseVariableHolidayFunc
     {
 
-        #region Chinese Date
+        #region Muslim Date
 
         /// <summary>
         /// 穆斯林月份
