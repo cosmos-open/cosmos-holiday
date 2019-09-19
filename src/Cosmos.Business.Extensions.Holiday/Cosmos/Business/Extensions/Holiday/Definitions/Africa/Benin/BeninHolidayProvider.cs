@@ -73,7 +73,8 @@ namespace Cosmos.Business.Extensions.Holiday
         {
             return new[]
             {
-                "https://en.wikipedia.org/wiki/Public_holidays_in_Benin"
+                "https://en.wikipedia.org/wiki/Public_holidays_in_Benin",
+                "https://fr.wikipedia.org/wiki/B%C3%A9nin#F%C3%AAtes_et_jours_f%C3%A9ri%C3%A9s"
             };
         }
     }
