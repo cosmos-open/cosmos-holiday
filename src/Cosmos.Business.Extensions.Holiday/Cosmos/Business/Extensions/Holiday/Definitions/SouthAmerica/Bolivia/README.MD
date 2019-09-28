@@ -1,5 +1,5 @@
-# The Republic of Botswana
+# Plurinational State of Bolivia
 
-博茨瓦纳（The Republic of Botswana，非洲，BW，BWA，072），博茨瓦纳共和国 
+玻利维亚（Plurinational State of Bolivia，南美洲，BO，BOL，068），多民族玻利维亚国
 
-Cosmos i18n code: i18n_country_boziwana
+Cosmos i18n code: i18n_country_boliweiya
