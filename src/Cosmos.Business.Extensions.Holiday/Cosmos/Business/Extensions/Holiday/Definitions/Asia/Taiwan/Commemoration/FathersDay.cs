@@ -59,6 +59,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Taiwan.Commemorati
          */
 
         /// <inheritdoc />
-        public override int? Since { get; } = 1945;
+        public override int? Since { get; set; } = 1945;
     }
 }

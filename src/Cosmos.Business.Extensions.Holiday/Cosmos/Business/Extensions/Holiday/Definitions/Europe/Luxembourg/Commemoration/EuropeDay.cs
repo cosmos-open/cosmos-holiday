@@ -30,6 +30,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Luxembourg.Comme
         public override string I18NIdentityCode { get; } = "i18n_holiday_lu_europe_day";
 
         /// <inheritdoc />
-        public override int? Since { get; } = 2019;
+        public override int? Since { get; set; } = 2019;
     }
 }

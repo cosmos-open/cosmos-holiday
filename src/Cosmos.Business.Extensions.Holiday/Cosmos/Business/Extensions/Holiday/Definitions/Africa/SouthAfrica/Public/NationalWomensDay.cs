@@ -30,6 +30,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.SouthAfrica.Publ
         public override string I18NIdentityCode { get; } = "i18n_holiday_za_women";
 
         /// <inheritdoc />
-        public override int? Since { get; } = 1995;
+        public override int? Since { get; set; } = 1995;
     }
 }

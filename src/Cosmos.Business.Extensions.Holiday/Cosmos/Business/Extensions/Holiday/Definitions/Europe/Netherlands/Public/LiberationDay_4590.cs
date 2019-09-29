@@ -30,10 +30,10 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Netherlands.Publ
         public override string I18NIdentityCode { get; } = "i18n_holiday_nl_lberation_4590";
 
         /// <inheritdoc />
-        public override int? Since { get; } = 1945;
+        public override int? Since { get; set; } = 1945;
 
         /// <inheritdoc />
-        public override int? End { get; } = 1989;
+        public override int? End { get; set; } = 1989;
 
         /// <inheritdoc />
         public override int? TimeStepValue { get; } = 5;

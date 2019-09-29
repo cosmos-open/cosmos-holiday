@@ -31,9 +31,9 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Japan.Public
         public override string I18NIdentityCode { get; } = "i18n_holiday_jp_coming_of_age2000b";
 
         /// <inheritdoc />
-        public override int? Since { get; } = 1949;
+        public override int? Since { get; set; } = 1949;
 
         /// <inheritdoc />
-        public override int? End { get; } = 1999;
+        public override int? End { get; set; } = 1999;
     }
 }

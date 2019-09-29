@@ -30,6 +30,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Oceania.NewZealand.Publ
         public override string I18NIdentityCode { get; } = "i18n_holiday_nz_anzac_2014b";
 
         /// <inheritdoc />
-        public override int? End { get; } = 2014;
+        public override int? End { get; set; } = 2014;
     }
 }

@@ -166,17 +166,33 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         /// <summary>
         /// Since...
         /// </summary>
-        public virtual int? Since { get; } = null;
+        public virtual int? Since { get; set; } = null;
 
         /// <summary>
         /// End...
         /// </summary>
-        public virtual int? End { get; } = null;
+        public virtual int? End { get; set; } = null;
 
         /// <summary>
         /// Time step value...
         /// </summary>
         public virtual int? TimeStepValue { get; } = null;
+
+        private int? OneOnlyYear { get; set; }
+
+        /// <summary>
+        /// One-time holiday...
+        /// </summary>
+        protected virtual int? OnlyYear
+        {
+            get => OneOnlyYear;
+            set
+            {
+                OneOnlyYear = value;
+                Since = OneOnlyYear;
+                End = OneOnlyYear;
+            }
+        }
 
         #endregion
 

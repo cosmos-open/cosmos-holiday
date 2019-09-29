@@ -30,6 +30,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Commemoratio
         public override string I18NIdentityCode { get; } = "i18n_holiday_cn_mao0909";
 
         /// <inheritdoc />
-        public override int? Since { get; } = 1976;
+        public override int? Since { get; set; } = 1976;
     }
 }

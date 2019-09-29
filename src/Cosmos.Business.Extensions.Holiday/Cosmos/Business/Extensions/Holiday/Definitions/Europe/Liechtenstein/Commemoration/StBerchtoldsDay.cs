@@ -30,6 +30,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Liechtenstein.Co
         public override string I18NIdentityCode { get; } = "i18n_holiday_li_berchtold";
 
         /// <inheritdoc />
-        public override int? Since { get; } = 1967;
+        public override int? Since { get; set; } = 1967;
     }
 }

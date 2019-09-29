@@ -30,7 +30,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Commemoratio
         public override string I18NIdentityCode { get; } = "i18n_holiday_cn_918";
 
         /// <inheritdoc />
-        public override int? Since { get; } = 1931;
+        public override int? Since { get; set; } = 1931;
 
         /*
          * 九一八事变（又称奉天事变、柳条湖事件）是日本在中国东北蓄意制造并发动的一场侵华战争，

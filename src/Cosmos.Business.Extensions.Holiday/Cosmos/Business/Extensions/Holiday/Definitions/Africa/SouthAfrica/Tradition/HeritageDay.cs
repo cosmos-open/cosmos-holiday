@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.SouthAfrica.Trad
     /// <summary>
     /// Heritage Day
     /// </summary>
-    public class HeritageDay: BaseFixedHolidayFunc
+    public class HeritageDay : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.SouthAfrica;
@@ -30,6 +30,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.SouthAfrica.Trad
         public override string I18NIdentityCode { get; } = "i18n_holiday_za_heritage";
 
         /// <inheritdoc />
-        public override int? Since { get; } = 1995;
+        public override int? Since { get; set; } = 1995;
     }
 }

@@ -31,6 +31,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Croatia.Traditio
         public override string I18NIdentityCode { get; } = "i18n_holiday_hr_all_saints";
 
         /// <inheritdoc />
-        public override int? Since { get; } = 1952;
+        public override int? Since { get; set; } = 1952;
     }
 }

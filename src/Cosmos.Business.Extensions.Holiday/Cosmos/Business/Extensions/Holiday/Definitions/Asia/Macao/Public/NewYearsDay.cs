@@ -49,6 +49,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Macao.Public
          * 也决定采用世界通用的公元纪年法，即我们所说的阳历。元旦，指西元纪年的岁首第一天。
          */
         /// <inheritdoc />
-        public override int? Since { get; } = 1912;
+        public override int? Since { get; set; } = 1912;
     }
 }

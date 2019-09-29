@@ -30,6 +30,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Egypt.Commemorat
         public override string I18NIdentityCode { get; } = "i18n_holiday_eg_revolution_day_2011";
 
         /// <inheritdoc />
-        public override int? Since { get; } = 2011;
+        public override int? Since { get; set; } = 2011;
     }
 }

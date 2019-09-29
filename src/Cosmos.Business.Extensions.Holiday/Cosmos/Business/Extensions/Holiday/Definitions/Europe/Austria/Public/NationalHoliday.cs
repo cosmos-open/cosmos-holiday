@@ -30,6 +30,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Austria.Public
         public override string I18NIdentityCode { get; } = "i18n_holiday_at_national";
 
         /// <inheritdoc />
-        public override int? Since { get; } = 1955;
+        public override int? Since { get; set; } = 1955;
     }
 }

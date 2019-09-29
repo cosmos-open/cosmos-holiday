@@ -31,6 +31,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Czechia.Public
         public override string I18NIdentityCode { get; } = "i18n_holiday_cz_independent_state";
 
         /// <inheritdoc />
-        public override int? Since { get; } = 1988;
+        public override int? Since { get; set; } = 1988;
     }
 }

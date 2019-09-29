@@ -34,6 +34,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Germany.Commemor
         public override string I18NIdentityCode { get; } = "i18n_holiday_de_reformation_day_2016b";
 
         /// <inheritdoc />
-        public override int? End { get; } = 2016;
+        public override int? End { get; set; } = 2016;
     }
 }

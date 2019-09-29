@@ -30,6 +30,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Estonia.Public
         public override string I18NIdentityCode { get; } = "i18n_holiday_ee_independence_restoration";
 
         /// <inheritdoc />
-        public override int? Since { get; } = 1991;
+        public override int? Since { get; set; } = 1991;
     }
 }

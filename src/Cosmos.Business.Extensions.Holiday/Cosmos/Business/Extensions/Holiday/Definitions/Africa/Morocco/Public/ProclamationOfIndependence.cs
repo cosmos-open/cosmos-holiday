@@ -30,6 +30,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Morocco.Public
         public override string I18NIdentityCode { get; } = "i18n_holiday_ma_proclamation_of_independence";
 
         /// <inheritdoc />
-        public override int? Since { get; } = 1956;
+        public override int? Since { get; set; } = 1956;
     }
 }

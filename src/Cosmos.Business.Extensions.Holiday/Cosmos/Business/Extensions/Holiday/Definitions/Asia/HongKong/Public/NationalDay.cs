@@ -35,6 +35,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.HongKong.Public
         public override string I18NIdentityCode { get; } = "i18n_holiday_hk_china10";
 
         /// <inheritdoc />
-        public override int? Since { get; } = 1949;
+        public override int? Since { get; set; } = 1949;
     }
 }

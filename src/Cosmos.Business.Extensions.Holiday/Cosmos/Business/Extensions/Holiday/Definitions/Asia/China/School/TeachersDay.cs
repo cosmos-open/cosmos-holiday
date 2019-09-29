@@ -30,7 +30,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.School
         public override string I18NIdentityCode { get; } = "i18n_holiday_cn_jiaoshi";
 
         /// <inheritdoc />
-        public override int? Since { get; } = 1985;
+        public override int? Since { get; set; } = 1985;
 
         /*
          * 教师节，旨在肯定教师为教育事业所做的贡献。在中国近现代史上，

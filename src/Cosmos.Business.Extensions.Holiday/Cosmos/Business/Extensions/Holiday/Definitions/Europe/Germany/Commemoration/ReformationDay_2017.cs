@@ -30,9 +30,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Germany.Commemor
         public override string I18NIdentityCode { get; } = "i18n_holiday_de_reformation_day2017";
 
         /// <inheritdoc />
-        public override int? Since { get; } = 2017;
-
-        /// <inheritdoc />
-        public override int? End { get; } = 2017;
+        protected override int? OnlyYear { get; set; } = 2017;
     }
 }

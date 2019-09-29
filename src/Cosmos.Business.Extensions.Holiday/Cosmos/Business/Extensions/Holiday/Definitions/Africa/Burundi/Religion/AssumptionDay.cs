@@ -31,6 +31,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Africa.Burundi.Religion
         public override string I18NIdentityCode { get; } = "i18n_holiday_bi_assumption_day";
 
         /// <inheritdoc />
-        public override int? Since { get; } = 1568;
+        public override int? Since { get; set; } = 1568;
     }
 }

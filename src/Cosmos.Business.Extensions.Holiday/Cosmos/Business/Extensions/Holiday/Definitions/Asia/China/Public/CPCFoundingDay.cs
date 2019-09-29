@@ -45,6 +45,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.China.Public
          */
 
         /// <inheritdoc />
-        public override int? Since { get; } = 1938;
+        public override int? Since { get; set; } = 1938;
     }
 }

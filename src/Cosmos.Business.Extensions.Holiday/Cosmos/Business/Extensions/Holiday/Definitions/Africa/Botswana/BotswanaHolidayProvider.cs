@@ -42,7 +42,7 @@ namespace Cosmos.Business.Extensions.Holiday
 
         private static List<IFixedHolidayFunc> BwFixedHolidayFuncs = new List<IFixedHolidayFunc>
         {
-            new NewYearsDay(), //1-1
+            new NewYearsDay(), //1-1, except mining industy
             new LabourDay(), //5-1
             new SirSeretseKhamaDay(), //7-1
             new IndependenceDay(), //9-30
@@ -72,7 +72,8 @@ namespace Cosmos.Business.Extensions.Holiday
         {
             return new[]
             {
-                "https://en.wikipedia.org/wiki/Public_holidays_in_Botswana"
+                "https://en.wikipedia.org/wiki/Public_holidays_in_Botswana",
+                "http://www.ilo.org/dyn/travail/docs/1766/Public%20Holidays%20Act.pdf"
             };
         }
     }

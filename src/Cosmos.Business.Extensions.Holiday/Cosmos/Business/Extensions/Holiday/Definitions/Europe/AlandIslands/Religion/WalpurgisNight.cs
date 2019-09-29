@@ -30,6 +30,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.AlandIslands.Rel
         public override string I18NIdentityCode { get; } = "i18n_holiday_ax_walpurgis_night";
 
         /// <inheritdoc />
-        public override int? Since { get; } = 1966;
+        public override int? Since { get; set; } = 1966;
     }
 }

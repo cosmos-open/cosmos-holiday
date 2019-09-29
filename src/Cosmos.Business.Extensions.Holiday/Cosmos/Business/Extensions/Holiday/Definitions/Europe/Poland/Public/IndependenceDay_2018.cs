@@ -30,9 +30,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Poland.Public
         public override string I18NIdentityCode { get; } = "i18n_holiday_pl_independence_100y";
 
         /// <inheritdoc />
-        public override int? Since { get; } = 2018;
-
-        /// <inheritdoc />
-        public override int? End { get; } = 2018;
+        protected override int? OnlyYear { get; set; } = 2018;
     }
 }

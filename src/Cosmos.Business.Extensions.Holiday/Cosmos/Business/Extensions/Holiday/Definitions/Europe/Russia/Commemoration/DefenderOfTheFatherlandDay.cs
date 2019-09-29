@@ -30,6 +30,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Russia.Commemora
         public override string I18NIdentityCode { get; } = "i18n_holiday_ru_defender_fatherland";
 
         /// <inheritdoc />
-        public override int? Since { get; } = 1918;
+        public override int? Since { get; set; } = 1918;
     }
 }

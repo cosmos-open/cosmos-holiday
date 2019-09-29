@@ -30,6 +30,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Ukraine.Public
         public override string I18NIdentityCode { get; } = "i18n_holiday_ua_women";
 
         /// <inheritdoc />
-        public override int? Since { get; } = 1913;
+        public override int? Since { get; set; } = 1913;
     }
 }

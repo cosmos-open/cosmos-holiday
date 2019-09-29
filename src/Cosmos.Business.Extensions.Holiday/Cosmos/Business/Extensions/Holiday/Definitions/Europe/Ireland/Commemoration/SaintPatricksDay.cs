@@ -32,6 +32,6 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Ireland.Commemor
         public override string I18NIdentityCode { get; } = "i18n_holiday_ie_patrick";
 
         /// <inheritdoc />
-        public override int? Since { get; } = 1903;
+        public override int? Since { get; set; } = 1903;
     }
 }
