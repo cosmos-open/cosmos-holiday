@@ -55,19 +55,20 @@ namespace Cosmos.Business.Extensions.Holiday
             new RegionalHoliday_cm0531(), //5-31
             new RegionalHoliday_lo0609(), //6-9
             new RegionalHoliday_mu0609(), //6-9
-            new StJoansDay(), //6-24
+            new StJoansDay(), //6-24 ES-CT
             new SaintJamesDay(), //7-25
             new Assumption(), //8-15
             new MunicipalHoliday(), //9-2
             new RegionalHoliday_ex0908(), //9-8
             new RegionalHoliday__o0908(), //9-8
-            new NationalDayOfCatalonia(), //9-11
+            new NationalDayOfCatalonia(), //9-11 ES-CT
             new RegionalHoliday_cb0915(), //9-15
             new RegionalHoliday_vc1009(), //10-9
             new ConstitutionDay(), //12-6
             new ImmaculateConception(), //12-8
             new ChristmasDay(), //12-25
             new StStephensDay(), //12-26
+            new SantEsteve(),//12-26 ES-CT
         };
 
         /// <summary>
@@ -77,6 +78,7 @@ namespace Cosmos.Business.Extensions.Holiday
 
         private static List<IVariableHolidayFunc> EsVariableHolidayFuncs = new List<IVariableHolidayFunc>
         {
+            new MareDeDéuDeLaMercè(),//9-24 ES-CT
             new AllSaintsDay(), //11-1st-monday
             new CorpusChristi(),
             new EasterMonday(),
