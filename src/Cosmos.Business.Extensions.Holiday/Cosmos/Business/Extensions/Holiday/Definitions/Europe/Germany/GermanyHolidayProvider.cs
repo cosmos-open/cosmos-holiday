@@ -48,6 +48,7 @@ namespace Cosmos.Business.Extensions.Holiday
             new Epiphany(), //1-6
             new InternationalWomensDay(), //3-8
             new LabourDay(), //5-1
+            new LiberationDayBe(),//5-8
             new AssumptionDay(), //8-15
             new WorldChildrensDay(), //9-20
             new GermanUnityDay(), //10-3
