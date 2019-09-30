@@ -40,9 +40,6 @@ namespace Cosmos.Business.Extensions.Holiday
             new NewYearsDay(), //1-1
             new MajorityRuleDay(), //1-10
             new PerryChristieDay(), //4-1
-            new IndependenceDay(), //7-10
-            new EmancipationDay(), //8-5
-            new NationalHeroesDay(), //10-12
             new ChristmasDay(), //12-25
             new StStephensDay(), //12-26
         };
@@ -52,10 +49,16 @@ namespace Cosmos.Business.Extensions.Holiday
 
         private static List<IVariableHolidayFunc> BsVariableHolidayFuncs = new List<IVariableHolidayFunc>
         {
-
             new EasterMonday(),
+            new EasterSunday(),
             new GoodFriday(),
+            new WhitSunday(),
             new WhitMonday(),
+            new MothersDay(),//5-2nd-sunday
+            new LabourDay(),//6-1st-friday
+            new IndependenceDay(), //7-10
+            new EmancipationDay(), //8-1st-monday
+            new NationalHeroesDay(), //10-12
         };
 
         /// <inheritdoc />

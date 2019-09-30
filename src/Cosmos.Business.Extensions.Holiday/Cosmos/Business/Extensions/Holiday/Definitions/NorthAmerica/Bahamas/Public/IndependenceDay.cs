@@ -6,7 +6,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.Bahamas.Pu
     /// <summary>
     /// Independence Day
     /// </summary>
-    public class IndependenceDay : BaseFixedHolidayFunc
+    public class IndependenceDay : WeekShiftVariableHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Bahamas;
@@ -21,10 +21,16 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.Bahamas.Pu
         public override HolidayType HolidayType { get; set; } = HolidayType.Public;
 
         /// <inheritdoc />
-        public override int Month { get; set; } = 7;
+        public override int Month { get; } = 7;
 
         /// <inheritdoc />
-        public override int Day { get; set; } = 10;
+        public override int Day { get; } = 10;
+
+        /// <inheritdoc />
+        protected override int SaturdayShift { get; } = 2;
+
+        /// <inheritdoc />
+        protected override int SundayShift { get; } = 1;
 
         /// <inheritdoc />
         public override string I18NIdentityCode { get; } = "i18n_holiday_bs_independence";
