@@ -5,7 +5,7 @@ using Cosmos.Business.Extensions.Holiday.Core.Extensions;
 using Cosmos.Date;
 using Cosmos.I18N.Countries;
 
-namespace Cosmos.Business.Extensions.Holiday.Definitions.Oceania.Australia.Public
+namespace Cosmos.Business.Extensions.Holiday.Definitions.Oceania.Australia.Religion
 {
     /// <summary>
     /// Boxing Day
@@ -28,7 +28,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Oceania.Australia.Publi
         public override string Name { get; } = "Boxing Day";
 
         /// <inheritdoc />
-        public override HolidayType HolidayType { get; set; } = HolidayType.Public;
+        public override HolidayType HolidayType { get; set; } = HolidayType.Religion;
 
         /// <inheritdoc />
         public override string I18NIdentityCode { get; } = "i18n_holiday_au_boxing";
