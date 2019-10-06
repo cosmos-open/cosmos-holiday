@@ -59,6 +59,8 @@ namespace Cosmos.Business.Extensions.Holiday
 
         private static List<IVariableHolidayFunc> ChVariableHolidayFuncs = new List<IVariableHolidayFunc>
         {
+            new MothersDay(), //5-2nd-sunday
+            new FathersDay(), //6-1st-sunday
             new JeûneFédéral(), //9-3rd-month
             new AllSaintsDay(), //11-1st-monday
             new AscensionDay(),
@@ -66,6 +68,7 @@ namespace Cosmos.Business.Extensions.Holiday
             new EasterMonday(),
             new GoodFriday(),
             new WhitMonday(),
+            new FederalDay(),//9-3rd-sunday
         };
 
         /// <summary>

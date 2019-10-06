@@ -4,7 +4,10 @@ using Cosmos.I18N.Countries;
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Switzerland.Public
 {
     /// <summary>
-    /// Swiss National Day
+    /// Swiss National Day<br />
+    /// de: Bundesfeiertag
+    /// fr: Fête nationnale
+    /// it: Giorno festivo federale
     /// </summary>
     public class SwissNationalDay : BaseFixedHolidayFunc
     {
