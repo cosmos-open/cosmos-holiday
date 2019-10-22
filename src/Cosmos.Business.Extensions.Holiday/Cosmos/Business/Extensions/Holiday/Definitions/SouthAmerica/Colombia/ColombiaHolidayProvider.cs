@@ -68,10 +68,12 @@ namespace Cosmos.Business.Extensions.Holiday
             new Carnival(),
             new Carnival48(),
             new GoodFriday(),
+            new PalmSunday(),
             new MaundyThursday(),
-            new AscensionDay(),
-            new CorpusChristi(),
-            new SacredHeart(),
+            new EasterSunday(),
+            new AscensionDay43(),
+            new CorpusChristi64(),
+            new SacredHeart71(),
         };
 
         /// <summary>

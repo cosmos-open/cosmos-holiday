@@ -6,14 +6,14 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.SouthAmerica.Colombia.R
     /// <summary>
     /// Ascension Day
     /// </summary>
-    public class AscensionDay: CatholicVariableHolidayFunc
+    public class AscensionDay43 : CatholicVariableHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Colombia;
 
         /// <inheritdoc />
         public override Country BelongsToCountry { get; } = Country.Colombia;
-        
+
         /// <inheritdoc />
         public override string Name { get; } = "Ascensión del señor";
 
@@ -21,7 +21,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.SouthAmerica.Colombia.R
         public override HolidayType HolidayType { get; set; } = HolidayType.Religion;
 
         /// <inheritdoc />
-        protected override int OffsetEasterSunday { get; } = 4 + 5 * 7;
+        protected override int OffsetEasterSunday { get; } = 4 + 4 + 5 * 7;
 
         /// <inheritdoc />
         public override string I18NIdentityCode { get; } = "i18n_holiday_co_ascension_day";
