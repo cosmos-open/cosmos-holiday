@@ -43,7 +43,8 @@ namespace Cosmos.Business.Extensions.Holiday
         private static List<IFixedHolidayFunc> CyFixedHolidayFuncs = new List<IFixedHolidayFunc>
         {
             new NewYearsDay(), //1-1
-            new Epiphany(),
+            new Epiphany(),//01-06
+            new Annunciation1821(),//3-25
             new CyprusNationalDay(), //4-1
             new LabourDay(), //5-1
             new DormitionOfTheTheotokos(), //8-15
@@ -61,6 +62,7 @@ namespace Cosmos.Business.Extensions.Holiday
 
         private static List<IVariableHolidayFunc> CyVariableHolidayFuncs = new List<IVariableHolidayFunc>
         {
+            new AshSunday(),
             new CleanMonday(),
             new GoodFriday(),
             new EasterMonday(),
