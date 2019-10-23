@@ -68,8 +68,14 @@ namespace Cosmos.Business.Extensions.Holiday
 
         private static List<IVariableHolidayFunc> CzVariableHolidayFuncs = new List<IVariableHolidayFunc>
         {
+            new UglyWednesday(),
+            new MaundyThursday(),
             new EasterMonday(),
             new GoodFriday(),
+            new HolySaturday(),
+            new EasterSunday(),
+            new MothersDay(),//5-2nd-sunday
+            
         };
 
         /// <summary>
