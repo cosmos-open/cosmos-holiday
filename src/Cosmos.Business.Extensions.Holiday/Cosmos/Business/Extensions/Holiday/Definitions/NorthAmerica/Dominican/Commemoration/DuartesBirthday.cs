@@ -4,7 +4,8 @@ using Cosmos.I18N.Countries;
 namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.Dominican.Commemoration
 {
     /// <summary>
-    /// Duarte's Birthday
+    /// Duarte's Birthday<br />
+    /// es: Día de Duarte
     /// </summary>
     public class DuartesBirthday : BaseFixedHolidayFunc
     {
@@ -15,7 +16,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.Dominican.
         public override Country BelongsToCountry { get; } = Country.Dominican;
 
         /// <inheritdoc />
-        public override string Name { get; } = "Duarte's Birthday";
+        public override string Name { get; } = "Día de Duarte";
 
         /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Commemoration;

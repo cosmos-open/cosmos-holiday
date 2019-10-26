@@ -4,7 +4,8 @@ using Cosmos.I18N.Countries;
 namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.Dominican.Commemoration
 {
     /// <summary>
-    /// Our Lady of Altagracia
+    /// Our Lady of Altagracia<br />
+    /// es: Nuestra Señora de la Altagracia
     /// </summary>
     public class OurLadyOfAltagracia : BaseFixedHolidayFunc
     {
@@ -15,7 +16,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.NorthAmerica.Dominican.
         public override Country BelongsToCountry { get; } = Country.Dominican;
 
         /// <inheritdoc />
-        public override string Name { get; } = "Our Lady of Altagracia";
+        public override string Name { get; } = "Nuestra Señora de la Altagracia";
 
         /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Commemoration;

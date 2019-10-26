@@ -56,6 +56,7 @@ namespace Cosmos.Business.Extensions.Holiday
         private static List<IVariableHolidayFunc> DoVariableHolidayFuncs = new List<IVariableHolidayFunc>
         {
             new GoodFriday(),
+            new CorpusChristi(),
         };
 
         /// <inheritdoc />
