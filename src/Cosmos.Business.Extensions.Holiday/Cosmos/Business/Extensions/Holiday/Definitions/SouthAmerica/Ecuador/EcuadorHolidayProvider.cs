@@ -45,10 +45,13 @@ namespace Cosmos.Business.Extensions.Holiday
             new NewYearsDay(), //1-1
             new InternationalWorkersDay(), //5-1
             new BattleOfPichincha(), //5-24
+            new TheBirthdayOfSimónBolívar(),//7-24
             new DeclarationOfIndependenceOfIndependenceOfQuito(), //8-10
             new IndependenceOfGuayaquil(), //10-9
+            new FlagDay(),//10-31
             new AllSoulsDay(), //11-2
             new IndependenceOfCuenca(), //11-3
+            new FoundationOfQuito(),//12-6
             new ChristmasDay(), //12-25
         };
 
