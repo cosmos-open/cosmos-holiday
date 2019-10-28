@@ -4,11 +4,10 @@ using Cosmos.I18N.Countries;
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Estonia.Commemoration
 {
     /// <summary>
-    /// Victory Day
-    /// <br />
-    /// et: võidupüha
+    /// All Souls' Day<br />
+    /// et: hingedepäev
     /// </summary>
-    public class VictoryDay : BaseFixedHolidayFunc
+    public class AllSoulsDay : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Estonia;
@@ -17,18 +16,18 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Estonia.Commemor
         public override Country BelongsToCountry { get; } = Country.Estonia;
 
         /// <inheritdoc />
-        public override string Name { get; } = "võidupüha and jaanilaupäev";
-
-        /// <inheritdoc />
-        public override int Month { get; set; } = 6;
-
-        /// <inheritdoc />
-        public override int Day { get; set; } = 23;
+        public override string Name { get; } = "hingedepäev";
 
         /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Commemoration;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_ee_victory";
+        public override int Month { get; set; } = 11;
+
+        /// <inheritdoc />
+        public override int Day { get; set; } = 2;
+
+        /// <inheritdoc />
+        public override string I18NIdentityCode { get; } = "i18n_holiday_ee_all_souls";
     }
 }

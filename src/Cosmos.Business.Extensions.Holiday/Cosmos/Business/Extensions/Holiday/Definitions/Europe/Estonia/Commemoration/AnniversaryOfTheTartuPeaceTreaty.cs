@@ -4,11 +4,10 @@ using Cosmos.I18N.Countries;
 namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Estonia.Commemoration
 {
     /// <summary>
-    /// Victory Day
-    /// <br />
-    /// et: võidupüha
+    /// Anniversary of the Tartu Peace Treaty<br />
+    /// et: Tartu rahulepingu aastapäev
     /// </summary>
-    public class VictoryDay : BaseFixedHolidayFunc
+    public class AnniversaryOfTheTartuPeaceTreaty : BaseFixedHolidayFunc
     {
         /// <inheritdoc />
         public override Country Country { get; } = Country.Estonia;
@@ -17,18 +16,18 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Europe.Estonia.Commemor
         public override Country BelongsToCountry { get; } = Country.Estonia;
 
         /// <inheritdoc />
-        public override string Name { get; } = "võidupüha and jaanilaupäev";
+        public override string Name { get; } = "Tartu rahulepingu aastapäev";
 
         /// <inheritdoc />
-        public override int Month { get; set; } = 6;
+        public override int Month { get; set; } = 2;
 
         /// <inheritdoc />
-        public override int Day { get; set; } = 23;
+        public override int Day { get; set; } = 2;
 
         /// <inheritdoc />
         public override HolidayType HolidayType { get; set; } = HolidayType.Commemoration;
 
         /// <inheritdoc />
-        public override string I18NIdentityCode { get; } = "i18n_holiday_ee_victory";
+        public override string I18NIdentityCode { get; } = "i18n_holiday_ee_anniversary_of_tartu_peace_treaty";
     }
 }

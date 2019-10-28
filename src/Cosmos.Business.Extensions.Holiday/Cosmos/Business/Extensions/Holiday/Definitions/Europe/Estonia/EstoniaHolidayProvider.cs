@@ -43,11 +43,20 @@ namespace Cosmos.Business.Extensions.Holiday
         private static List<IFixedHolidayFunc> EeFixedHolidayFuncs = new List<IFixedHolidayFunc>
         {
             new NewYearsDay(), //1-1
+            new Epiphany(), //1-6
+            new AnniversaryOfTheTartuPeaceTreaty(), //2-2
             new IndependenceDay(), //2-24
+            new NativeLanguageDay(), //3-14
             new SpringDay(), //5-1
+            new NationalFlagDay(), //6-4
+            new DayOfMourningAndCommemoration(), //6-14
             new VictoryDay(), //6-23
             new MidsummerDay(), //6-24
             new DayOfRestorationOfIndependence(), //8-20
+            new EuropeanDay(), //8-23
+            new ResistanceFightingDay(), //9-22
+            new AllSoulsDay(), //11-2
+            new DayOfDeclarationOfSovereignty(), //11-16
             new ChristmasEve(), //12-24
             new ChristmasDay(), //12-25
             new StStephensDay(), //12-26
@@ -63,6 +72,9 @@ namespace Cosmos.Business.Extensions.Holiday
             new EasterSunday(),
             new Pentecost(),
             new GoodFriday(),
+            new MothersDay(), //5-2nd-sunday
+            new GrandparentsDay(), //9-2nd-sunday
+            new FathersDay(), //11-2nd-sunday
         };
 
         /// <summary>
