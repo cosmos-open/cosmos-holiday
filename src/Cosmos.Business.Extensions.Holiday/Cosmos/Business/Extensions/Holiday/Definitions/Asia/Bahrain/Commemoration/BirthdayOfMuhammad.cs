@@ -20,7 +20,7 @@ namespace Cosmos.Business.Extensions.Holiday.Definitions.Asia.Bahrain.Commemorat
         public override string Name { get; } = "'المولد النبويّ'";
 
         /// <inheritdoc />
-        public override HolidayType HolidayType { get; set; } = HolidayType.Public;
+        public override HolidayType HolidayType { get; set; } = HolidayType.Commemoration;
 
         /// <inheritdoc />
         protected override IslamicMonths IslamicMonth { get; set; } = IslamicMonths.RabiAlAwwal;

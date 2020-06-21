@@ -39,10 +39,14 @@ namespace Cosmos.Business.Extensions.Holiday
         {
             new NewYearsDay(), //1-1
             new IndependenceDay(), //2-7
+            new CarriacouMaroonAndStringBandMusicFestival(),//4-23
             new LabourDay(), //5-1
             new IndianArrivalDay(), //5-1
             new Carnival(), //8-11
+            new KiraniDay(),//9-1
+            new AuntyTekSpiceWordFestival(),//10-15
             new ThanksgivingDay(), //10-25
+            new CamerhogneFolkFestival(),//12-4
             new ChristmasDay(), //12-25
             new BoxingDay(), //12-26
         };
@@ -56,7 +60,8 @@ namespace Cosmos.Business.Extensions.Holiday
             new EasterMonday(),
             new WhitMonday(),
             new CorpusChristi(),
-            new EmancipationDay(), //8-1
+            new EmancipationDay(), //8-1st-monday
+            new CarnivalMonday(),//8-2nd-monday
         };
 
         /// <inheritdoc />

@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "15 Nisan": [
+        {
+          "en": "Pesach"
+        },
+        {
+          "bs": "Pesah"
+        },
+        {
+          "de": "Pessach"
+        },
+        {
+          "hr": "Pesač"
+        },
+        {
+          "sq": "Pesach"
+        },
+        {
+          "sr": "Песах"
+        }
+      ]
+    },
+    {
+      "1 Tishrei": [
+        {
+          "en": "Rosh Hashanah"
+        },
+        {
+          "bs": "Roš Hašana"
+        },
+        {
+          "de": "Rosch Haschana"
+        },
+        {
+          "hr": "Roš Hašane"
+        },
+        {
+          "sq": "Rosh Hashanah"
+        },
+        {
+          "sr": "Рош Хашана"
+        }
+      ]
+    },
+    {
+      "10 Tishrei": [
+        {
+          "en": "Yom Kippur"
+        },
+        {
+          "bs": "Jom Kipur"
+        },
+        {
+          "de": "Jom Kippur"
+        },
+        {
+          "hr": "Jom Kipur"
+        },
+        {
+          "mk": "Јом Кипур"
+        },
+        {
+          "sq": "Yom Kippur"
+        },
+        {
+          "sr": "Јом Кипур"
+        }
+      ]
+    }
+  ],
+  "note": [
+    {
+      "15 Nisan": "Pesach"
+    },
+    {
+      "1 Tishrei": "Rosh Hashanah"
+    },
+    {
+      "10 Tishrei": "Yom Kippur"
+    }
+  ],
+  "type": 6
+}

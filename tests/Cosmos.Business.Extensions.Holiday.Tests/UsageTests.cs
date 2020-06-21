@@ -1,12 +1,11 @@
 using System;
 using System.Linq;
-using Cosmos.Business.Extensions.Holiday;
 using Cosmos.I18N.Countries;
 using Microsoft.Extensions.DependencyInjection;
 using Shouldly;
 using Xunit;
 
-namespace Cosmos.Extensions.Business.Holiday.Tests
+namespace Cosmos.Business.Extensions.Holiday.Tests
 {
     public class UsageTests
     {

@@ -122,6 +122,11 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         /// </summary>
         public abstract string I18NIdentityCode { get; }
 
+        /// <summary>
+        /// Globalization Key
+        /// </summary>
+        public virtual string GlobalizationKey => string.Empty;
+        
         #endregion
 
         #region Convert to DailyAnswer

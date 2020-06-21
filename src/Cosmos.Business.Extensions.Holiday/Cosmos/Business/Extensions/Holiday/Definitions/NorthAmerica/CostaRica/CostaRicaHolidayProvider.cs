@@ -55,6 +55,7 @@ namespace Cosmos.Business.Extensions.Holiday
         {
             new MaundyThursday(),
             new GoodFriday(),
+            new EasterSunday(),
         };
 
         /// <inheritdoc />

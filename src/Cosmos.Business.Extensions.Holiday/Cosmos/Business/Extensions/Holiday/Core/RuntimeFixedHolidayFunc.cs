@@ -169,6 +169,11 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         /// </summary>
         public string I18NIdentityCode { get; set; }
 
+        /// <summary>
+        /// Globalization Key
+        /// </summary>
+        public virtual string GlobalizationKey => string.Empty;
+
         #endregion
 
         #region To DailyAnswer

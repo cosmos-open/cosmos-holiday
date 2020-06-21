@@ -1,0 +1,1059 @@
+{
+  "data": [
+    {
+      "01-01": [
+        {
+          "en": "New Year's Day"
+        },
+        {
+          "am": "እንቁጣጣሽ"
+        },
+        {
+          "ar": "'عيد رأس السنة'"
+        },
+        {
+          "az": "Yeni il"
+        },
+        {
+          "be": "Новы год"
+        },
+        {
+          "bg": "Нова Година"
+        },
+        {
+          "bs": "Novogodisnji dan"
+        },
+        {
+          "ca": "Any nou"
+        },
+        {
+          "cz": "Nový rok"
+        },
+        {
+          "da": "Nytår"
+        },
+        {
+          "de": "Neujahr"
+        },
+        {
+          "el": "Πρωτοχρονιά"
+        },
+        {
+          "es": "Año Nuevo"
+        },
+        {
+          "et": "uusaasta"
+        },
+        {
+          "fi": " Uudenvuodenpäivä"
+        },
+        {
+          "fil": "Araw ng Bagong Taon"
+        },
+        {
+          "fo": " Nýggjársdagur"
+        },
+        {
+          "fr": " Nouvel An"
+        },
+        {
+          "hr": " Nova godina"
+        },
+        {
+          "hu": " Újév"
+        },
+        {
+          "hy": " Ամանոր"
+        },
+        {
+          "it": " Capodanno"
+        },
+        {
+          "is": " Nýársdagur"
+        },
+        {
+          "jp": "元日"
+        },
+        {
+          "kl": " ukiortaaq"
+        },
+        {
+          "ko": " 신정"
+        },
+        {
+          "lt": " Naujieji metai"
+        },
+        {
+          "lv": " Jaunais Gads"
+        },
+        {
+          "mg": " Taom-baovao"
+        },
+        {
+          "mk": " Нова Година"
+        },
+        {
+          "mt": " L-Ewwel tas-Sena"
+        },
+        {
+          "nl": " Nieuwjaar"
+        },
+        {
+          "no": " Første nyttårsdag"
+        },
+        {
+          "pap": " Aña Nobo"
+        },
+        {
+          "pl": " Nowy Rok"
+        },
+        {
+          "pt": " Ano Novo"
+        },
+        {
+          "ro": " Anul nou"
+        },
+        {
+          "ru": " Новый год"
+        },
+        {
+          "sl": " novo leto"
+        },
+        {
+          "sq": " Viti i Ri"
+        },
+        {
+          "sr": " Нова година"
+        },
+        {
+          "sv": " Nyårsdagen"
+        },
+        {
+          "sw": " Mwaka mpya"
+        },
+        {
+          "tr": " Yılbaşı"
+        },
+        {
+          "uk": " Новий Рік"
+        },
+        {
+          "vi": " Tết Dương lịch"
+        },
+        {
+          "zh": " 元旦"
+        }
+      ]
+    },
+    {
+      "01-06": [
+        {
+          "en": "Epiphany"
+        },
+        {
+          "am": "ብርሐነ ጥምቀት"
+        },
+        {
+          "da": "Åbenbaring"
+        },
+        {
+          "de": "Heilige Drei Könige"
+        },
+        {
+          "de-ch": "Dreikönigstag"
+        },
+        {
+          "es": "Día de los Reyes Magos"
+        },
+        {
+          "et": "kolmekuningapäev"
+        },
+        {
+          "fi": "Loppiainen"
+        },
+        {
+          "fr": "l'Épiphanie"
+        },
+        {
+          "el": "Θεοφάνεια"
+        },
+        {
+          "hr": "Bogojavljenje, Sveta tri kralja"
+        },
+        {
+          "it": "Befana"
+        },
+        {
+          "is": "Þrettándinn"
+        },
+        {
+          "nl": "Driekoningen"
+        },
+        {
+          "mk": "Богојавление"
+        },
+        {
+          "pl": "Święto Trzech Króli"
+        },
+        {
+          "sk": "Zjavenie Pána"
+        },
+        {
+          "sv": "Trettondedag jul"
+        },
+        {
+          "vi": "Lễ Hiển Linh"
+        }
+      ]
+    },
+    {
+      "02-02": [
+        {
+          "en": "Candlemas"
+        },
+        {
+          "de": "Lichtmess"
+        },
+        {
+          "vi": "Lễ Đức Mẹ dâng Chúa Giêsu trong đền thánh"
+        }
+      ]
+    },
+    {
+      "02-14": [
+        {
+          "en": "Valentine's Day"
+        },
+        {
+          "de": "Valentinstag"
+        },
+        {
+          "fr": "Saint-Valentin"
+        },
+        {
+          "nl": "Valentijnsdag"
+        },
+        {
+          "vi": "Lễ tình nhân"
+        }
+      ]
+    },
+    {
+      "03-08": [
+        {
+          "en": "International Women's Day"
+        },
+        {
+          "az": "Qadınlar günü"
+        },
+        {
+          "be": "Мiжнародны жаночы дзень"
+        },
+        {
+          "bg": "Ден на жената"
+        },
+        {
+          "fr": "Journée internationale des femmes"
+        },
+        {
+          "hu": "Nemzetközi nőnap"
+        },
+        {
+          "hy": "Կանանց տոն"
+        },
+        {
+          "ro": "Ziua Internationala a Femeii"
+        },
+        {
+          "ru": "Международный женский день"
+        },
+        {
+          "sl": "Mednarodni dan žena"
+        },
+        {
+          "uk": "Міжнародний жіночий день"
+        },
+        {
+          "vi": "Quốc tế Phụ nữ"
+        },
+        {
+          "zh": "国际妇女节"
+        },
+        {
+          "de": "Internationaler Frauentag"
+        }
+      ]
+    },
+    {
+      "03-19": [
+        {
+          "en": "Saint Joseph"
+        },
+        {
+          "de-at": "Josefitag"
+        },
+        {
+          "de": "Josefstag"
+        },
+        {
+          "es": "San José"
+        },
+        {
+          "it": "San Giuseppe"
+        },
+        {
+          "mt": "San Ġużepp"
+        },
+        {
+          "vi": "Kính Thánh Giuse"
+        }
+      ]
+    },
+    {
+      "04-01": [
+        {
+          "en": "April Fools' Day"
+        },
+        {
+          "sq": "Dita e Gënjeshtrave"
+        },
+        {
+          "vi": "Cá tháng tư"
+        }
+      ]
+    },
+    {
+      "05-01": [
+        {
+          "en": "Labour Day"
+        },
+        {
+          "en-us": "Labor Day"
+        },
+        {
+          "ar": "'يوم العمال'"
+        },
+        {
+          "be": "Дзень працы"
+        },
+        {
+          "bg": "Ден на труда"
+        },
+        {
+          "bs": "Radni dan"
+        },
+        {
+          "cz": "Svátek práce"
+        },
+        {
+          "de": "Tag der Arbeit"
+        },
+        {
+          "el": "Εργατική Πρωτομαγιά"
+        },
+        {
+          "es": "Fiesta del trabajo"
+        },
+        {
+          "et": "kevadpüha"
+        },
+        {
+          "fi": "Vappu"
+        },
+        {
+          "fil": "Araw ng mga Manggagawa"
+        },
+        {
+          "fr": "Fête du travail"
+        },
+        {
+          "hr": "Praznik rada"
+        },
+        {
+          "hu": "A munka ünnepe"
+        },
+        {
+          "hy": "Աշխատանքի օր"
+        },
+        {
+          "it": "Festa del Lavoro"
+        },
+        {
+          "is": "Hátíðisdagur Verkamanna"
+        },
+        {
+          "lt": "Tarptautinė darbo diena"
+        },
+        {
+          "lv": "Darba svētki"
+        },
+        {
+          "nl": "Dag van de Arbeid"
+        },
+        {
+          "no": "Arbeidernes dag"
+        },
+        {
+          "mg": "Fetin'ny asa"
+        },
+        {
+          "mk": "Ден на трудот"
+        },
+        {
+          "mt": "Jum il-Ħaddiem"
+        },
+        {
+          "pap": "Dia di Obrero"
+        },
+        {
+          "pl": "Święto Pracy"
+        },
+        {
+          "pt": "Dia do trabalhador"
+        },
+        {
+          "ro": "Ziua muncii"
+        },
+        {
+          "sk": "Sviatok práce"
+        },
+        {
+          "sl": "praznik dela"
+        },
+        {
+          "sq": "Dita Ndërkombëtare e Punonjësve"
+        },
+        {
+          "sr": "Празник рада"
+        },
+        {
+          "sv": "Första Maj"
+        },
+        {
+          "uk": "День міжнародної солідарності трудящих"
+        },
+        {
+          "vi": "Quốc tế Lao động"
+        },
+        {
+          "zh": "劳动节"
+        }
+      ]
+    },
+    {
+      "06-29": [
+        {
+          "en": "Saints Peter and Paul"
+        },
+        {
+          "de": "Peter und Paul"
+        },
+        {
+          "es": "San Pedro y San Pablo"
+        },
+        {
+          "fr": "Saint Pierre et Paul"
+        },
+        {
+          "it": "Santi Pietro e Paolo"
+        },
+        {
+          "mt": "L-Imnarja"
+        },
+        {
+          "vi": "Lễ kính Thánh Phêrô"
+        }
+      ]
+    },
+    {
+      "08-15": [
+        {
+          "en": "Assumption"
+        },
+        {
+          "de": "Mariä Himmelfahrt"
+        },
+        {
+          "es": "Asunción"
+        },
+        {
+          "fr": "Assomption"
+        },
+        {
+          "el": "Κοίμηση της Θεοτόκου"
+        },
+        {
+          "hr": "Velika Gospa"
+        },
+        {
+          "it": "Ferragosto"
+        },
+        {
+          "lt": "Žolinė"
+        },
+        {
+          "mg": "Asompsiona"
+        },
+        {
+          "mk": "Успение на Пресвета Богородица"
+        },
+        {
+          "mt": "Santa Marija"
+        },
+        {
+          "nl": "O.L.V. Hemelvaart"
+        },
+        {
+          "pl": "Wniebowzięcie Najświętszej Maryi Panny"
+        },
+        {
+          "pt": "Assunção de Maria"
+        },
+        {
+          "ro": "Adormirea Maicii Domnului"
+        },
+        {
+          "sl": "Marijino vnebovzetje"
+        },
+        {
+          "sq": "Shën Mëria e Gushtit"
+        },
+        {
+          "vi": "Đức Mẹ Lên Trời"
+        }
+      ]
+    },
+    {
+      "11-01": [
+        {
+          "en": "All Saints' Day"
+        },
+        {
+          "bs": "Dita e të gjithë Shenjtorëve"
+        },
+        {
+          "de": "Allerheiligen"
+        },
+        {
+          "es": "Todos los Santos"
+        },
+        {
+          "fi": "Pyhäinpäivä"
+        },
+        {
+          "fil": "Undás; Todos los Santos; Araw ng mga Santo"
+        },
+        {
+          "fr": "Toussaint"
+        },
+        {
+          "hr": "Svi sveti"
+        },
+        {
+          "hu": "Mindenszentek"
+        },
+        {
+          "it": "Ognissanti"
+        },
+        {
+          "lt": "Visų šventųjų diena"
+        },
+        {
+          "mg": "Fetin'ny olo-masina"
+        },
+        {
+          "mk": "Празникот на сите светци"
+        },
+        {
+          "nl": "Allerheiligen"
+        },
+        {
+          "pl": "Wszystkich Świętych"
+        },
+        {
+          "pt": "Todos os santos"
+        },
+        {
+          "sk": "Sviatok všetkých svätých"
+        },
+        {
+          "sq": "Të gjitha Saints"
+        },
+        {
+          "sr": "Сви Свети"
+        },
+        {
+          "sv": "Alla helgons dag"
+        },
+        {
+          "vi": "Lễ Các Thánh"
+        }
+      ]
+    },
+    {
+      "11-02": [
+        {
+          "en": "All Souls' Day"
+        },
+        {
+          "de": "Allerseelen"
+        },
+        {
+          "es": "Día de los Difuntos"
+        },
+        {
+          "et": "hingedepäev"
+        },
+        {
+          "fil": "Araw ng mga Kaluluwa"
+        },
+        {
+          "fr": "Fête des morts"
+        },
+        {
+          "hr": "Dušni dan"
+        },
+        {
+          "nl": "Allerzielen"
+        },
+        {
+          "pt": "Dia de Finados"
+        },
+        {
+          "vi": "Lễ Các Đẳng"
+        }
+      ]
+    },
+    {
+      "11-11": [
+        {
+          "en": "Saint Martin"
+        },
+        {
+          "de": "Sankt Martin (Faschingsbeginn)"
+        },
+        {
+          "nl": "Sint Maarten"
+        },
+        {
+          "vi": "Lễ thánh Martin"
+        }
+      ]
+    },
+    {
+      "12-06": [
+        {
+          "en": "Saint Nicholas"
+        },
+        {
+          "de": "Sankt Nikolaus"
+        },
+        {
+          "fr": "Saint-Nicolas"
+        },
+        {
+          "nl": "Sinterklaas"
+        },
+        {
+          "vi": "Thánh Saint Nicholas"
+        }
+      ]
+    },
+    {
+      "12-08": [
+        {
+          "en": "Immaculate Conception"
+        },
+        {
+          "de": "Mariä Empfängnis"
+        },
+        {
+          "es": "La inmaculada concepción"
+        },
+        {
+          "fr": "Immaculée Conception"
+        },
+        {
+          "it": "Immacolata Concezione"
+        },
+        {
+          "mt": "Il-Kunċizzjoni"
+        },
+        {
+          "pt": "Imaculada Conceição"
+        }
+      ]
+    },
+    {
+      "12-24": [
+        {
+          "en": "Christmas Eve"
+        },
+        {
+          "bg": "Бъдни вечер"
+        },
+        {
+          "bs": "Badnji dan"
+        },
+        {
+          "cz": "Štědrý den"
+        },
+        {
+          "da": "Juleaften"
+        },
+        {
+          "de": "Heiliger Abend"
+        },
+        {
+          "es": "Nochebuena"
+        },
+        {
+          "et": "jõululaupäev"
+        },
+        {
+          "fo": "Jólaaftan"
+        },
+        {
+          "fi": "Jouluaatto"
+        },
+        {
+          "fil": "Bisperas ng Pasko"
+        },
+        {
+          "fr": "Veille de Noël"
+        },
+        {
+          "hr": "Badnji dan"
+        },
+        {
+          "is": "Aðfangadagur"
+        },
+        {
+          "kl": "juulliaraq"
+        },
+        {
+          "lt": "Šv. Kūčios"
+        },
+        {
+          "lv": "Ziemassvētku vakars"
+        },
+        {
+          "nl": "Kerstavond"
+        },
+        {
+          "no": "Julaften"
+        },
+        {
+          "pt": "Noite de Natal"
+        },
+        {
+          "sk": "Štedrý deň"
+        },
+        {
+          "sq": "Nata e Krishtlindjes"
+        },
+        {
+          "sr": "Бадњи дан"
+        },
+        {
+          "sv": "Julafton"
+        },
+        {
+          "vi": "Đêm Giáng Sinh"
+        }
+      ]
+    },
+    {
+      "12-25": [
+        {
+          "en": "Christmas Day"
+        },
+        {
+          "am": "ልደተ-ለእግዚእነ/ ገና"
+        },
+        {
+          "bg": "Коледа"
+        },
+        {
+          "bn": "বড়দিন"
+        },
+        {
+          "bs": "Božić"
+        },
+        {
+          "de-at": "Christtag"
+        },
+        {
+          "ca": "Nadal"
+        },
+        {
+          "cz": "1. svátek vánoční"
+        },
+        {
+          "da": "1. Juledag"
+        },
+        {
+          "de": "Weihnachten"
+        },
+        {
+          "de-ch": "Weihnachtstag"
+        },
+        {
+          "el": "Χριστούγεννα"
+        },
+        {
+          "es": "Navidad"
+        },
+        {
+          "et": "esimene jõulupüha"
+        },
+        {
+          "fi": "Joulupäivä"
+        },
+        {
+          "fil": "Araw ng Pasko"
+        },
+        {
+          "fo": "Fyrsti jóladagur"
+        },
+        {
+          "fr": "Noël"
+        },
+        {
+          "hr": "Božić"
+        },
+        {
+          "hu": "Karácsony"
+        },
+        {
+          "hy": "Սուրբ Ծնունդ"
+        },
+        {
+          "it": "Natale"
+        },
+        {
+          "is": "Jóladagur"
+        },
+        {
+          "jp": "ノエル"
+        },
+        {
+          "kl": "juullerujussuaq"
+        },
+        {
+          "ko": "기독탄신일"
+        },
+        {
+          "lt": "Šv. Kalėdos"
+        },
+        {
+          "lv": "Ziemassvētki"
+        },
+        {
+          "mg": "Krismasy"
+        },
+        {
+          "mk": "Католички Божиќ"
+        },
+        {
+          "ms": "Hari Natal"
+        },
+        {
+          "mt": "Il-Milied"
+        },
+        {
+          "nl": "Kerstmis"
+        },
+        {
+          "no": "Første Juledag"
+        },
+        {
+          "pap": "Dia Pasco di Nascimento"
+        },
+        {
+          "pl": "Pierwszy dzień Bożego Narodzenia"
+        },
+        {
+          "pt": "Natal"
+        },
+        {
+          "ro": "Crăciunul"
+        },
+        {
+          "ru": "Рождество Христово"
+        },
+        {
+          "sk": "Prvý sviatok vianočný"
+        },
+        {
+          "sl": "božič"
+        },
+        {
+          "sq": "Krishtlindja"
+        },
+        {
+          "sr": "Католички Божић"
+        },
+        {
+          "sv": "Juldagen"
+        },
+        {
+          "sw": "Krismasi"
+        },
+        {
+          "vi": "Lễ Giáng Sinh"
+        }
+      ]
+    },
+    {
+      "12-26": [
+        {
+          "en": "Boxing Day"
+        },
+        {
+          "bg": "2-ри ден на Коледа"
+        },
+        {
+          "cz": "2. svátek vánoční"
+        },
+        {
+          "da": "2. Juledag"
+        },
+        {
+          "de": "2. Weihnachtstag"
+        },
+        {
+          "de-at": "Stefanitag"
+        },
+        {
+          "de-ch": "Stephanstag"
+        },
+        {
+          "el": "Δεύτερη μέρα των Χριστουγέννων"
+        },
+        {
+          "es": "San Esteban"
+        },
+        {
+          "et": "teine jõulupüha"
+        },
+        {
+          "fi": "2. joulupäivä"
+        },
+        {
+          "fo": "Fyrsti gerandisdagur eftir jóladag"
+        },
+        {
+          "fr": "Lendemain de Noël"
+        },
+        {
+          "hr": "Svetog Stjepana"
+        },
+        {
+          "hu": "Karácsony másnapja"
+        },
+        {
+          "it": "Santo Stefano"
+        },
+        {
+          "is": "Annar í jólum"
+        },
+        {
+          "kl": "juullip aappaa"
+        },
+        {
+          "lt": "2. Kalėdų diena"
+        },
+        {
+          "lv": "Otrie Ziemassvētki"
+        },
+        {
+          "nl": "Tweede kerstdag"
+        },
+        {
+          "no": "Andre juledag"
+        },
+        {
+          "pap": "Di dos Dia Pasco di Nascimento"
+        },
+        {
+          "pl": "Drugi dzień Bożego Narodzenia"
+        },
+        {
+          "ro": "Două zi de Crăciun"
+        },
+        {
+          "sk": "Druhý sviatok vianočný"
+        },
+        {
+          "sv": "Annandag jul"
+        },
+        {
+          "vi": "Ngày tặng quà"
+        }
+      ]
+    },
+    {
+      "12-31": [
+        {
+          "en": "New Year's Eve"
+        },
+        {
+          "da": "Nytårsaften"
+        },
+        {
+          "de": "Silvester"
+        },
+        {
+          "es": "Fin del Año"
+        },
+        {
+          "fi": "Uudenvuodenaatto"
+        },
+        {
+          "fil": "Bisperas ng Bagong Taon"
+        },
+        {
+          "fo": "Nýggjársaftan"
+        },
+        {
+          "fr": "Saint-Sylvestre"
+        },
+        {
+          "hu": "Szilveszter"
+        },
+        {
+          "hy": "Նոր տարվա գիշեր"
+        },
+        {
+          "is": "Gamlársdagur"
+        },
+        {
+          "it": "Ultimo dell’anno"
+        },
+        {
+          "jp": "大晦日"
+        },
+        {
+          "lv": "Vecgada vakars"
+        },
+        {
+          "nl": "Oudejaarsavond"
+        },
+        {
+          "no": "Nyttårsaften"
+        },
+        {
+          "pt": "Véspera de Ano Novo"
+        },
+        {
+          "sv": "Nyårsafton"
+        },
+        {
+          "vi": "Đêm giao thừa"
+        }
+      ]
+    }
+  ],
+  "type": 1
+}

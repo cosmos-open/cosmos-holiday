@@ -12,16 +12,17 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Cosmos.Extensions" Version="0.1.1-alpha3-123037" />
-      <PackageReference Include="Cosmos.Extensions.DateTime" Version="0.1.1-alpha3-123037" />
-      <PackageReference Include="Cosmos.I18N.Countries" Version="0.0.1-alpha1-100030" />
-      <PackageReference Include="Enums.NET" Version="2.3.2" />
+        <PackageReference Include="Cosmos.Extensions" Version="0.1.1-alpha3-123037" />
+        <PackageReference Include="Cosmos.Extensions.DateTime" Version="0.1.1-alpha3-123037" />
+        <PackageReference Include="Cosmos.I18N.Countries" Version="0.0.1-alpha1-100030" />
+        <PackageReference Include="Enums.NET" Version="2.3.2" />
     </ItemGroup>
 
     <ItemGroup>
-      <None Update="Cosmos\Business\Extensions\Holiday\Definitions\**\i18n_holiday_*.*.json">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </None>
+        <None Remove="Cosmos\Business\Extensions\Holiday\Globalization\i18n.*.json" />
+        <None Update="Cosmos\Business\Extensions\Holiday\Definitions\**\i18n_holiday_*.*.json" />
+        <EmbeddedResource Include="Cosmos\Business\Extensions\Holiday\Globalization\i18n.*.json" />
+        <EmbeddedResource Include="Cosmos\Business\Extensions\Holiday\Definitions\**\i18n_holiday_*.*.json" />
     </ItemGroup>
 
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

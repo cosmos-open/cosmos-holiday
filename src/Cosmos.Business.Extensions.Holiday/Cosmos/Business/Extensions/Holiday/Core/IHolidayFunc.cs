@@ -81,6 +81,11 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         /// </summary>
         string I18NIdentityCode { get; }
 
+        /// <summary>
+        /// Globalization Key
+        /// </summary>
+        string GlobalizationKey { get; }
+
         #endregion
 
     }

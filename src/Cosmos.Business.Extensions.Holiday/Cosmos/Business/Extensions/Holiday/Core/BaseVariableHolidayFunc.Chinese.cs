@@ -23,6 +23,15 @@ namespace Cosmos.Business.Extensions.Holiday.Core
 
         #endregion
 
+        #region Globalization Key
+
+        /// <inheritdoc />
+        public override string GlobalizationKey => $"chinese {MayZero(ChineseMonth)}-{MayZero(ChineseDay)}";
+
+        private static string MayZero(int value) => (100 + value).ToString().Right(2);
+
+        #endregion
+
         #region To daily answer
 
         /// <summary>

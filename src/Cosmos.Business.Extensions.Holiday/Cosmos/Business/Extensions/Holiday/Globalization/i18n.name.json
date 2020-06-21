@@ -1,0 +1,355 @@
+{
+  "data": [
+    {
+      "Abolition of Slavery": [
+        {
+          "en": "Abolition of Slavery"
+        },
+        {
+          "fr": "Abolition de l’esclavage"
+        },
+        {
+          "nl": "Afschaffing van de slavernij"
+        },
+        {
+          "vi": "Bãi bỏ chế độ Nô lệ"
+        }
+      ]
+    },
+    {
+      "Buß- und Bettag": [
+        {
+          "de": "Buß- und Bettag"
+        },
+        {
+          "en": "Day of Prayer and Repentance"
+        }
+      ]
+    },
+    {
+      "Constitution Day": [
+        {
+          "en": "Constitution Day"
+        },
+        {
+          "da": "Grundlovsdag"
+        },
+        {
+          "de": "Tag der Verfassung"
+        },
+        {
+          "ca": "Dia de la Constitució"
+        },
+        {
+          "es": "Día de la Constitución"
+        },
+        {
+          "fil": "Araw ng Saligang Batas"
+        },
+        {
+          "fo": "Grundlógardagur"
+        },
+        {
+          "hy": "Սահմանադրության օր"
+        },
+        {
+          "jp": "憲法記念日"
+        },
+        {
+          "ko": "제헌절"
+        },
+        {
+          "no": "Grunnlovsdagen"
+        },
+        {
+          "pt": "Dia da Constituição"
+        },
+        {
+          "ro": "Ziua Constituției"
+        },
+        {
+          "sk": "Deň Ústavy"
+        },
+        {
+          "sq": "Dita e Kushtetutës"
+        },
+        {
+          "uk": "День Конституції"
+        },
+        {
+          "vi": "Ngày pháp luật"
+        }
+      ]
+    },
+    {
+      "Fathers Day": [
+        {
+          "en": "Father's Day"
+        },
+        {
+          "et": "isadepäev"
+        },
+        {
+          "lt": "Tėvo diena"
+        },
+        {
+          "nl": "Vaderdag"
+        },
+        {
+          "pt": "Dia dos Pais"
+        },
+        {
+          "no": "Farsdag"
+        },
+        {
+          "vi": "Ngày của cha"
+        }
+      ]
+    },
+    {
+      "Independence Day": [
+        {
+          "en": "Independence Day"
+        },
+        {
+          "ar": "عيد الاستقلال"
+        },
+        {
+          "be": "Дзень Незалежнасцi"
+        },
+        {
+          "bg": "Ден на независимостта"
+        },
+        {
+          "bs": "Dan nezavisnosti"
+        },
+        {
+          "de": "Unabhängigkeitstag"
+        },
+        {
+          "es": "Día de la Independencia"
+        },
+        {
+          "et": "iseseisvuspäev"
+        },
+        {
+          "fi": "Itsenäisyyspäivä"
+        },
+        {
+          "fil": "Araw ng Kalayaan"
+        },
+        {
+          "fr": "Jour de l'Indépendance"
+        },
+        {
+          "hr": "Dan neovisnosti"
+        },
+        {
+          "hy": "Անկախության օր"
+        },
+        {
+          "mk": "Ден на независноста"
+        },
+        {
+          "mt": "Jum l-Indipendenza"
+        },
+        {
+          "nl": "Onafhankelijkheidsdag"
+        },
+        {
+          "pl": "Narodowe Święto Niepodległości"
+        },
+        {
+          "pt": "Dia da Independência"
+        },
+        {
+          "ro": "Ziua Independentei"
+        },
+        {
+          "sq": "Dita e Pavarësisë"
+        },
+        {
+          "sr": "Дан независности"
+        },
+        {
+          "sv": "Självständighetsdagen"
+        },
+        {
+          "sw": "Siku ya uhuru"
+        },
+        {
+          "uk": "День Незалежності"
+        },
+        {
+          "vi": "Ngày Độc lập"
+        }
+      ]
+    },
+    {
+      "Liberation Day": [
+        {
+          "en": "Liberation Day"
+        },
+        {
+          "no": "Frigjøringsdagen"
+        },
+        {
+          "sq": "Dita e Çlirimit"
+        },
+        {
+          "vi": "Ngày Thống nhất"
+        }
+      ]
+    },
+    {
+      "Mothers Day": [
+        {
+          "en": "Mother's Day"
+        },
+        {
+          "cz": "Den matek"
+        },
+        {
+          "da": "Mors Dag"
+        },
+        {
+          "de": "Muttertag"
+        },
+        {
+          "el": "Γιορτή της μητέρας"
+        },
+        {
+          "es": "Día de la Madre"
+        },
+        {
+          "et": "emadepäev"
+        },
+        {
+          "fi": "Äitien päivä"
+        },
+        {
+          "fr": "Fête des Mères"
+        },
+        {
+          "hr": "Majčin dan"
+        },
+        {
+          "hu": "Anyák napja"
+        },
+        {
+          "hy": "Ցեղասպանության զոհերի հիշատակի օր"
+        },
+        {
+          "is": "Mæðradagurinn"
+        },
+        {
+          "it": "Festa della mamma"
+        },
+        {
+          "lt": "Motinos diena"
+        },
+        {
+          "lv": "Mātes diena"
+        },
+        {
+          "nl": "Moederdag"
+        },
+        {
+          "no": "Morsdag"
+        },
+        {
+          "pt": "Dia das Mães"
+        },
+        {
+          "pl": "Dzień Matki"
+        },
+        {
+          "ro": "Ziua Mamei"
+        },
+        {
+          "sq": "Dita e Nënës"
+        },
+        {
+          "sv": "Mors dag"
+        },
+        {
+          "vi": "Ngày của mẹ"
+        }
+      ]
+    },
+    {
+      "National Holiday": [
+        {
+          "en": "National Holiday"
+        },
+        {
+          "de": "Nationalfeiertag"
+        },
+        {
+          "es": "Fiesta Nacional"
+        },
+        {
+          "fr": "Fête nationale"
+        },
+        {
+          "el": "εθνική επέτειος"
+        },
+        {
+          "nl": "Nationale feestdag"
+        },
+        {
+          "vi": "Quốc Lễ"
+        }
+      ]
+    },
+    {
+      "Public Holiday": [
+        {
+          "en": "Public Holiday"
+        },
+        {
+          "fr": "Jour férié légaux"
+        },
+        {
+          "pt": "Feriado Obrigatório"
+        },
+        {
+          "vi": "Nghỉ lễ Toàn Quốc"
+        }
+      ]
+    },
+    {
+      "Reformation Day": [
+        {
+          "en": "Reformation Day"
+        },
+        {
+          "de": "Reformationstag"
+        },
+        {
+          "es": "Día Nacional de las Iglesias Evangélicas y Protestantes"
+        },
+        {
+          "vi": "Kháng Cách"
+        }
+      ]
+    },
+    {
+      "Revolution Day": [
+        {
+          "en": "Revolution Day"
+        },
+        {
+          "es": "Día de la Revolución"
+        },
+        {
+          "nl": "Dag van de revolutie"
+        },
+        {
+          "vi": "Tổng khởi nghĩa"
+        }
+      ]
+    }
+  ],
+  "type": 2
+}

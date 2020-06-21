@@ -48,6 +48,7 @@ namespace Cosmos.Business.Extensions.Holiday
             new WorkersDay(), //5-1
             new AfricaDay(), //5-25
             new UnityDay(),//12-22
+            new ChristmasDay(),//12-25
         };
 
         /// <summary>

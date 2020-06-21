@@ -17,6 +17,23 @@ namespace Cosmos.Business.Extensions.Holiday.Core
 
         #endregion
 
+        #region Globalization Key
+
+        /// <summary>
+        /// Globalization Key
+        /// </summary>
+
+        public override string GlobalizationKey => $"easter{MayOffset(OffsetEasterSunday)}";
+
+        private static string MayOffset(int value)
+            => value > 0
+                ? $" {value}"
+                : value < 0
+                    ? $" -{0 - value}"
+                    : string.Empty;
+
+        #endregion
+
         /// <inheritdoc />
         public override DailyAnswer ToDailyAnswer(int year)
         {

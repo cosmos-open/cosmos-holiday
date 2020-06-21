@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Cosmos.Business.Extensions.Holiday.Core.Helpers;
+using Cosmos.Date;
 using Cosmos.I18N.Countries;
 using Cosmos.Joiners;
 
@@ -203,6 +204,16 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         /// </summary>
         public abstract string I18NIdentityCode { get; }
 
+        /// <summary>
+        /// Globalization Key
+        /// </summary>
+        public virtual string GlobalizationKey
+            => FromDate.HasValue
+                ? $"{MayZero(FromDate.Value.Month)}-{MayZero(FromDate.Value.Day)}"
+                : $"{MayZero(Month)}-{MayZero(Day)}";
+
+        private static string MayZero(int value) => (100 + value).ToString().Right(2);
+
         #endregion
 
         #region to daily answer
@@ -224,6 +235,9 @@ namespace Cosmos.Business.Extensions.Holiday.Core
                 builder.From(year, FromDate.Value).To(year, ToDate.Value);
             else
                 throw new InvalidDateTimeException("Invalid datetime when convert holiday definition to DailyAnswer.");
+
+            if (!FromDate.HasValue && !ToDate.HasValue && Length > 1)
+                builder.To(DateTimeFactory.Create(year, Month, Day).AddDays(Length - 1));
 
             if (Since.HasValue)
                 builder.Since(Since.Value);

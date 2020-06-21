@@ -1,6 +1,7 @@
 using Cosmos.Business.Extensions.Holiday.Core.Globalization;
 using Cosmos.Business.Extensions.Holiday.Core.Helpers;
 using Cosmos.I18N.Countries;
+using Humanizer;
 
 namespace Cosmos.Business.Extensions.Holiday.Core
 {
@@ -35,6 +36,16 @@ namespace Cosmos.Business.Extensions.Holiday.Core
         /// </summary>
         // ReSharper disable once UnusedAutoPropertyAccessor.Global
         protected virtual (IslamicMonths Month, int Day)? ToIslamicDate { get; set; }
+
+        #endregion
+
+        #region Globalization Key
+
+        /// <inheritdoc />
+        public override string GlobalizationKey
+            => FromIslamicDate.HasValue
+                ? $"{FromIslamicDate.Value.Day} {FromIslamicDate.Value.Month.Humanize()}"
+                : $"{IslamicDay} {IslamicMonth.Humanize()}";
 
         #endregion
 

@@ -26,7 +26,14 @@ ProjectSection(SolutionItems) = preProject
 	PublishToMyGet.bat = PublishToMyGet.bat
 EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cosmos.Extensions.Business.Holiday.Tests", "tests\Cosmos.Extensions.Business.Holiday.Tests\Cosmos.Extensions.Business.Holiday.Tests.csproj", "{BAB42ED0-8A41-4D92-A2A3-38648720342B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cosmos.Business.Extensions.Holiday.Tests", "tests\Cosmos.Business.Extensions.Holiday.Tests\Cosmos.Business.Extensions.Holiday.Tests.csproj", "{BAB42ED0-8A41-4D92-A2A3-38648720342B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Folder", "Solution Folder", "{DF9097E6-9F35-4D8D-8823-74CDB0507A52}"
+ProjectSection(SolutionItems) = preProject
+	README.md = README.md
+EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cosmos.Business.Extensions.Holiday.EmbeddedResTests", "tests\Cosmos.Business.Extensions.Holiday.EmbeddedResTests\Cosmos.Business.Extensions.Holiday.EmbeddedResTests.csproj", "{943CFA21-C54E-43C5-A18C-563CD7E5FA99}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +46,7 @@ Global
 		{9FE83D8C-DC8A-4493-BD3E-B61EE7B424A3} = {CDC11BCF-A868-4D85-9A12-B02A0E87D083}
 		{D3BA5131-B21E-4B41-A7B1-5CF3F3CE821B} = {CDC11BCF-A868-4D85-9A12-B02A0E87D083}
 		{BAB42ED0-8A41-4D92-A2A3-38648720342B} = {80737CAC-FA41-4875-84A5-AF8321D3A622}
+		{943CFA21-C54E-43C5-A18C-563CD7E5FA99} = {80737CAC-FA41-4875-84A5-AF8321D3A622}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{42D4F72A-932D-4508-B9D0-A7CFB08EC38B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -57,5 +65,9 @@ Global
 		{BAB42ED0-8A41-4D92-A2A3-38648720342B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAB42ED0-8A41-4D92-A2A3-38648720342B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BAB42ED0-8A41-4D92-A2A3-38648720342B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{943CFA21-C54E-43C5-A18C-563CD7E5FA99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{943CFA21-C54E-43C5-A18C-563CD7E5FA99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{943CFA21-C54E-43C5-A18C-563CD7E5FA99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{943CFA21-C54E-43C5-A18C-563CD7E5FA99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

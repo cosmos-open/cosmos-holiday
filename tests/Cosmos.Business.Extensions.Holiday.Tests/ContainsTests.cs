@@ -2,7 +2,7 @@ using Cosmos.Business.Extensions.Holiday.Core.Trees;
 using Shouldly;
 using Xunit;
 
-namespace Cosmos.Extensions.Business.Holiday.Tests
+namespace Cosmos.Business.Extensions.Holiday.Tests
 {
     public class ContainsTests
     {
